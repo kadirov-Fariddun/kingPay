@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KingPay | Требования к сайтам</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+           <!-- header -->
+           <header class="header">
+            <div class="container flex justify-between items-center h-[75px] w-full">
+            <!-- logotype -->
+            <a href="/" class="logo">
+                <img class="max-[400px]:w-[140px] max-[400px]:h-auto"  src="../images/Logo.png" alt="logotype" width="187px" heihgt="65px">
+            </a>
+            <!-- logotype end -->
+            <!-- top nav -->
+            <nav class="top-nav max-[768px]:hidden">
+                <ul class="flex items-center gap-x-[30px]">
+                <li><a href="./about.html" class="leading-[16px] text-[16px] text-black font-medium duration-[.3s] hover:duration-[.3s] hover:text-colorBlue">О нас</a></li>
+                <li><a href="./contact.html" class="leading-[16px] text-[16px] text-black font-medium duration-[.3s] hover:duration-[.3s] hover:text-colorBlue">Контакты</a></li>
+                <li>
+                    <button>
+                    <img src="../images/icons/search.svg" alt="search-icon" width="23px" heihgt="23px">
+                    </button>
+                </li>
+                <li class="flex gap-x-[10px] items-center">
+                    <a href="./auth.html" class="bg-btn-gradient w-[142px] h-[46px] rounded-[10px] font-medium text-white 
+                    text-[16px] leading-[16px] font-houschka duration-300 hover:duration-300 hover:bg-[#16128B] flex justify-center items-center">Войти в ЛК</a>
+                    <a href="./register.html" class="bg-btn-gradient w-[142px] h-[46px] rounded-[10px] font-medium text-white 
+                    text-[16px] leading-[16px] font-houschka duration-300 hover:duration-300 hover:bg-[#16128B] flex justify-center items-center">Регистрация</a>
+                </li>
+                </ul>
+            </nav>
+            <!-- top nav end -->
+            <!-- mobile menu -->
+                <button class="burger-btn hidden max-[768px]:flex">
+                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 24 24">
+                    <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path>
+                </svg>
+                </button>
+            <!-- mobile menu end -->
+    
+            </div>
+        </header>
+        <!-- main navbar -->
+        <nav class="navbar h-[70px] w-full bg-colorBlue max-[768px]:hidden">
+            <div class="container h-full">
+            <ul class="flex items-center h-full gap-x-[30px]">
+                <li><a href="/" class="font-houschka font-medium leading-[16px] text-[16px] duration-[.3s] hover:duration-[.3s] hover:text-white">Главная</a></li>
+                <li><a href="#" class="font-houschka font-medium leading-[16px] text-[16px] duration-[.3s] hover:duration-[.3s] hover:text-white">Тарифы</a></li>
+                <li><a href="#" class="font-houschka font-medium leading-[16px] text-[16px] duration-[.3s] hover:duration-[.3s] hover:text-white">Документация</a></li>
+                <li><a href="#" class="font-houschka font-medium leading-[16px] text-[16px] duration-[.3s] hover:duration-[.3s] hover:text-white">Новости</a></li>
+                <li><a href="#" class="font-houschka font-medium leading-[16px] text-[16px] duration-[.3s] hover:duration-[.3s] hover:text-white">Требования к сайтам</a></li>
+            </ul>
+            </div>
+        </nav>
+        <!-- main navbar end -->
+        <!-- mobile menu -->
+            <div class="mobile-menu fixed right-[-100%] top-0 max-w-[300px] h-full w-full bg-black min-[769px]:hidden duration-[.3s] z-50">
+            <aside>
+                <!-- top menu  -->
+                <ul class="pt-[40px]">
+                <button class="close-btn text-[30px] absolute left-[20px] top-[10px] text-white font-medium">&times;</button>
+                <li class="h-[40px] w-full">
+                    <a href="./about.html" class="flex justify-end items-center leading-[16px] 
+                    text-[16px] text-white font-medium h-full w-full px-[20px] border-b-2 border-colorBlue">
+                    О нас
+                    </a>
+                </li>
+                <li class="h-[40px] w-full">
+                    <a href="./contact.html" class="flex justify-end items-center leading-[16px] 
+                    text-[16px] text-white font-medium h-full w-full px-[20px] border-b-2 border-colorBlue">
+                    Контакты
+                    </a>
+                </li>
+                <li class="flex justify-end pr-[20px] pl-[20px] mt-[20px]">
+                    <a href="./auth.html" class="bg-btn-gradient w-full h-[46px] rounded-[10px] font-medium text-white 
+                    text-[16px] leading-[16px] font-houschka duration-300 hover:duration-300 hover:bg-[#16128B] flex justify-center items-center">Войти в ЛК</a>
+                </li>
+                <li class="flex justify-end pr-[20px] pl-[20px] mt-[20px]">
+                    <a href="./register.html" class="bg-btn-gradient w-full h-[46px] rounded-[10px] font-medium text-white 
+                    text-[16px] leading-[16px] font-houschka duration-300 hover:duration-300 hover:bg-[#16128B] flex justify-center items-center">Регистрация</a>
+                </li>
+                </ul>
+                <!-- top menu end -->
+                <!-- bottom menu -->
+                <ul class="mt-[20px]">
+                <h4 class="mb-[20px] text-white text-center">Другие страницы</h4>
+                <li class="h-[40px] w-full">
+                    <a href="/" class="flex justify-end items-center leading-[16px] 
+                    text-[16px] text-white font-medium h-full w-full px-[20px] border-b-2 border-colorBlue">
+                    Главная
+                    </a>
+                </li>
+                <li class="h-[40px] w-full">
+                    <a href="#" class="flex justify-end items-center leading-[16px] 
+                    text-[16px] text-white font-medium h-full w-full px-[20px] border-b-2 border-colorBlue">
+                    Тарифы
+                    </a>
+                </li>
+                <li class="h-[40px] w-full">
+                    <a href="#" class="flex justify-end items-center leading-[16px] 
+                    text-[16px] text-white font-medium h-full w-full px-[20px] border-b-2 border-colorBlue">
+                    Документация
+                    </a>
+                </li>
+                <li class="h-[40px] w-full">
+                    <a href="#" class="flex justify-end items-center leading-[16px] 
+                    text-[16px] text-white font-medium h-full w-full px-[20px] border-b-2 border-colorBlue">
+                    Новости
+                    </a>
+                </li>
+                <li class="h-[40px] w-full">
+                    <a href="#" class="flex justify-end items-center leading-[16px] 
+                    text-[16px] text-white font-medium h-full w-full px-[20px] border-b-2 border-colorBlue">
+                    Требования к сайтам
+                    </a>
+                </li>
+                </ul>
+                <!-- bottom menu end -->
+            </aside>
+            </div>
+            <!-- mobile menu end -->
+        <!-- header end -->
+
+        <!-- info -->
+         <section class="pt-[100px] pb-[100px]">
+            <div class="container">
+                <h1 class="title-page mb-[50px]">Требования для подключения </h1>
+                <p class="req-text !text-[20px] max-sm:!text-[18px] mb-[50px]">Ваш сайт должен соответствовать законодательству РФ, а также правилам платежных систем и систем электронных платежей.</p>
+                <h2 class="text-[20px] font-medium leading-[26px] text-colorBlack mb-[40px] max-sm:text-[18px]">
+                    Перед подачей заявки убедитесь, что ваш ресурс соответствует этим требованиям:
+                </h2>
+                <ul class="flex flex-col gap-y-[50px]">
+                    <li class="flex items-start gap-x-[20px]">
+                        <span class="flex items-center justify-center min-w-[40px] min-h-[40px] 
+                        rounded-full bg-colorBlue text-[20px] font-medium leading-[26px] text-colorBlack">1</span>
+                        <p class="req-text pt-[12px]">Пожалуйста, убедитесь, что ссылка открывается и ведет на ваш реальный работающий ресурс.</p>
+                    </li>
+                    <li class="flex items-start gap-x-[20px]">
+                        <span class="flex items-center justify-center min-w-[40px] min-h-[40px] 
+                        rounded-full bg-colorBlue text-[20px] font-medium leading-[26px] text-colorBlack">2</span>
+                        <p class="req-text pt-[12px]">Актуальная информация. Размещайте только те товары или услуги, которые вы планируете продавать, с указанием цен и подробным описанием.</p>
+                    </li>
+                    <li class="flex items-start gap-x-[20px]">
+                        <span class="flex items-center justify-center min-w-[40px] min-h-[40px] 
+                        rounded-full bg-colorBlue text-[20px] font-medium leading-[26px] text-colorBlack">3</span>
+                        <div>
+                            <p class="req-text pt-[12px]">
+                                 Разместите информацию о правилах получения и возврата. Если у вас есть товары,
+                                 добавьте информацию о способах доставки и правилах возврата. 
+                                 Если предлагаете услуги, укажите порядок их оказания и условия отказа.
+                                </p>
+                            <p class="req-text mt-[20px]">Также вы можете разместить оферту — для ООО и ИП доступен генератор оферт в личном кабинете.</p>
+                        </div>
+                        
+                    </li>
+                    <li class="flex items-start gap-x-[20px]">
+                        <span class="flex items-center justify-center min-w-[40px] min-h-[40px] 
+                        rounded-full bg-colorBlue text-[20px] font-medium leading-[26px] text-colorBlack">4</span>
+                        <p class="req-text pt-[13px]">Пожалуйста, убедитесь, что ссылка открывается и ведет на ваш реальный работающий ресурс.</p>
+                    </li>
+                    <li class="flex items-start gap-x-[20px]">
+                        <span class="flex items-center justify-center min-w-[40px] min-h-[40px] 
+                        rounded-full bg-colorBlue text-[20px] font-medium leading-[26px] text-colorBlack">5</span>
+                        <p class="req-text pt-[12px]">Пожалуйста, убедитесь, что ссылка открывается и ведет на ваш реальный работающий ресурс.</p>
+                    </li>
+                </ul>
+            </div>
+         </section>
+        <!-- info end -->
+
+        <!-- Вы уже готовы  -->
+        <section class="h-[500px] relative bg-gradient-reverse">
+            <img 
+                class="absolute top-0 right-0 object-cover z-0 w-full h-full" 
+                src="../images/lines-3.png" 
+                alt="bg"
+            >
+            <div class="max-w-[1140px] mx-auto flex gap-x-[120px] justify-start max-lg:gap-x-[60px] max-lg:pr-[20px] max-[400px]:pr-[0]">
+                <img class="z-10 relative top-[-80px] max-md:hidden" src="../images/iphone-12.png" alt="iphone-12" height="">
+                <div class="w-full h-[500px] flex justify-center flex-col z-10 relative gap-y-[50px] max-md:w-full max-md:px-[40px] max-[400px]:px-[20px]">
+                    <h2 class="font-bold text-white text-[50px] leading-[60.51px] uppercase max-lg:text-[40px] max-[500px]:text-[30px] max-[500px]:leading-[40px]">
+                        Вы уже готовы <br/>
+                        подключать платежи <br/>
+                        через kingpay?
+                    </h2>
+                    <button class="max-w-[380px] h-[60px] w-full flex items-center justify-center duration-[.3s] hover:duration-[.3s] hover:translate-y-[-3px] active:translate-y-[3px]
+                    font-medium text-[18px] leading-[21.78px] bg-colorBlue rounded-[10px]">Оставить заявку</button>
+                </div>
+            </div>
+        </section>
+        <!-- Вы уже готовы end -->
+         <div class="max-w-[1140px] mx-auto pt-[100px] pb-[50px] px-[20px]">
+            <ul class="flex items-center gap-x-[20px]">
+                <li class="min-h-[70px] min-w-[70px] rounded-full bg-head-gradient flex items-center justify-center max-[400px]:min-h-[40px] max-[400px]:min-w-[40px]">
+                    <img class="max-[400px]:w-[25px] max-[400px]:h-[25px]" src="../images/icons/sms-blue.svg" alt="sms" width="40px" height="40px">
+                </li>
+                <li>
+                    <p class="font-light text-[18px] leading-[26px] text-colorGray2 mb-[20px]">Остались вопросы?</p>
+                    <a class="leading-[26px] text-[22px] font-medium text-colorBlue" href="mail:support@kingpay.me">support@kingpay.me</a>
+                </li>
+            </ul> 
+         </div>
+         <section class="mb-[50px]">
+            <div class="container">
+                <div class="">
+                    <p class="text-[18px] text-colorGray2 font-light leading-[26px] p-[30px] rounded-[10px] border border-colorGray max-sm:text-[16px]">
+                        Мы не работаем с казино, пирамидами и прочими сомнительными проектами, а так же с проектами, что нарушают законодательство Российской Федерации.
+                    </p>
+                </div>
+            </div>
+         </section>
+        
+              
+
+          <!-- footer -->
+          <footer class="footer bg-colorBlue py-[30px]">
+            <div class="container">
+            <!-- top menu -->
+            <div class="footer-top-menu flex max-[768px]:flex-col max-[768px]:gap-y-5 max-[768px]:items-center">
+                <!-- logotype -->
+                <a href="#" class="inline-block mr-[108px] max-[768px]:mr-0"><img class="max-[400px]:w-[140px] max-[400px]:h-auto" src="../images/Logo.png" alt="logotype" width="187px" height="65px"/></a>
+                <!-- logotype end -->
+                <!-- other links -->
+                <div class="footer-links-top flex gap-x-[125px] mb-[30px] max-[1024px]:gap-x-[85px] max-[450px]:gap-x-[50px] max-[450px]:flex-col max-[450px]:gap-y-[30px]">
+                    <ul class="flex flex-col gap-y-[10px]">
+                    <li class="max-[450px]:text-center"><a href="#" class="font-houschka font-medium leading-[16px] text-[16px] duration-[.3s] hover:duration-[.3s] hover:text-white">Иностранные карты</a></li>
+                    <li class="max-[450px]:text-center"><a href="#" class="font-houschka font-medium leading-[16px] text-[16px] duration-[.3s] hover:duration-[.3s] hover:text-white">Публичная оферта</a></li>
+                    <li class="max-[450px]:text-center"><a href="#" class="font-houschka font-medium leading-[16px] text-[16px] duration-[.3s] hover:duration-[.3s] hover:text-white">Помощь</a></li>
+                    <li class="max-[450px]:text-center"><a href="#" class="font-houschka font-medium leading-[16px] text-[16px] duration-[.3s] hover:duration-[.3s] hover:text-white">Условия оплаты</a></li>
+                    <li class="max-[450px]:text-center"><a href="#" class="font-houschka font-medium leading-[16px] text-[16px] duration-[.3s] hover:duration-[.3s] hover:text-white">Инструкция по оплате</a></li>
+                    </ul>
+                    <ul class="flex flex-col gap-y-[10px]">
+                    <li class="max-[450px]:text-center"><a href="#" class="font-houschka font-medium leading-[16px] text-[16px] duration-[.3s] hover:duration-[.3s] hover:text-white">Онлайн касса по 54-Ф3</a></li>
+                    <li class="max-[450px]:text-center"><a href="#" class="font-houschka font-medium leading-[16px] text-[16px] duration-[.3s] hover:duration-[.3s] hover:text-white">Политика конфиденциальности</a></li>
+                    <li class="max-[450px]:text-center"><a href="#" class="font-houschka font-medium leading-[16px] text-[16px] duration-[.3s] hover:duration-[.3s] hover:text-white">Политика AML</a></li>
+                    <li class="max-[450px]:text-center"><a href="#" class="font-houschka font-medium leading-[16px] text-[16px] duration-[.3s] hover:duration-[.3s] hover:text-white">Защита данных</a></li>
+                    <li class="max-[450px]:text-center"><a href="#" class="font-houschka font-medium leading-[16px] text-[16px] duration-[.3s] hover:duration-[.3s] hover:text-white">Пользовательское соглашение</a></li>
+                    </ul>
+                </div>
+                <!-- other links end -->
+            </div>
+            <!-- top menu end  -->
+            <!-- bottom menu -->
+                <div class="footer-link-bottom flex justify-between">
+                <!-- social media -->
+                <ul class="flex gap-x-[30px]">
+                    <li><a href="#"><img class="max-[400px]:w-[35px] max-[400px]:h-auto" src="../images/icons/vk.svg" alt="social-media" width="40px" heihgt="40px"></a></li>
+                    <li><a href="#"><img class="max-[400px]:w-[35px] max-[400px]:h-auto" src="../images/icons/telegram.svg" alt="social-media" width="40px" heihgt="40px"></a></li>
+                </ul>
+                <!-- social media end -->
+                <div class="copyright font-houschka text-[20px] leading-[20px] font-medium max-[400px]:text-[17px]">© KINGPAY - 2024</div> 
+                </div>
+            <!-- bottom menu end -->
+            </div>
+            
+        </footer>
+        <!-- footer end -->
+    <script type="module" src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KingPay | регистрация пользователя</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- подключаем шрифт -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body class="bg-bgGray">
+    <div class="flex flex-col justify-center items-center px-5 max-[400px]:px-[10px]">
+        <img src="../images/Logo.png" class="mt-[41px] mb-[100px]" alt="logotype" width="187px" height="65px">
+        <div class="form-wrapper">
+            <form action="#" class="form-register">
+                <h1 class="font-light text-3xl text-black mb-[30px] text-center leading-[36.31px]">Регистрация</h1>
+                <p class="mb-[30px] text-colorGray2 text-[18px] font-light text-center">Уже в системе? <a href="./auth.html" class="font-normal text-colorBlue text-[18px] ml-[10px]">Войдите</a></p>
+                <div class="btns flex bg-[#f8f8f8] gap-x-5  mb-[20px] rounded-[10px] max-[500px]:w-full max-[500px]:max-w-[380px] max-[400px]:gap-x-[10px]">
+                    <button type="button" class="max-w-400-font-size-16 btn-country w-[180px] h-[60px] btn-active text-[18px] font-normal max-[500px]:max-w-[180px] max-[500px]:w-full">Россия</button>
+                    <button type="button" class="max-w-400-font-size-16 btn-country w-[180px] h-[60px] text-[18px] font-normal max-[500px]:max-w-[180px] max-[500px]:w-full">Другие страны</button>
+                </div>
+                <label class="form-register-label">
+                    <img src="../images/icons/user.svg" alt="user" heihgt="24px" width="24px">
+                    <input type="text" placeholder="Ф.И.О." class="form-register-input" required>
+                </label>
+                <label class="form-register-label">
+                    <img src="../images/icons/sms.svg" alt="email" heihgt="24px" width="24px">
+                    <input type="email" placeholder="Эл. почта" class="form-register-input">
+                </label>
+                <label class="form-register-label">
+                    <img src="../images/icons/lock.svg" alt="пароль" heihgt="24px" width="24px">
+                    <input type="password" placeholder="Пароль" class="form-register-input">
+                </label>
+                <label class="form-register-label">
+                    <img src="../images/icons/lock.svg" alt="пароль" heihgt="24px" width="24px">
+                    <input type="password" placeholder="Пароль" class="form-register-input">
+                </label>
+                <button type="submit" class="form-register-submit">Зарегистрироваться</button>
+            </form>
+            <p class="max-w-[560px] mb-[138px] leading-[24px] text-[16px] font-light text-colorGray2">
+                Нажимая на кнопку зарегистрироваться, вы подтверждаете, что ознакомлены с 
+                <a href="#" class="border-b border-colorGray2">требованиями к сайту</a> 
+                и даёте согласие на  
+                <a href="#" class="border-b border-colorGray2">обработку персональных данных</a>
+            </p>
+        </div>
+    </div>
+    <script type="module" src="../js/main.js"></script>
+</body>
+</html>

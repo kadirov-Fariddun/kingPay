@@ -1,0 +1,406 @@
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KingPay | Иностранные карты</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+   </head>
+   <body>
+        <!-- header -->
+    <header class="header">
+        <div class="container flex justify-between items-center h-[75px] w-full">
+        <!-- logotype -->
+        <a href="/" class="logo">
+            <img class="max-[400px]:w-[140px] max-[400px]:h-auto"  src="../images/Logo.png" alt="logotype" width="187px" heihgt="65px">
+        </a>
+        <!-- logotype end -->
+        <!-- top nav -->
+        <nav class="top-nav max-[768px]:hidden">
+            <ul class="flex items-center gap-x-[30px]">
+            <li><a href="./about.html" class="leading-[16px] text-[16px] text-black font-medium duration-[.3s] hover:duration-[.3s] hover:text-colorBlue">О нас</a></li>
+            <li><a href="./contact.html" class="leading-[16px] text-[16px] text-black font-medium duration-[.3s] hover:duration-[.3s] hover:text-colorBlue">Контакты</a></li>
+            <li>
+                <button>
+                <img src="../images/icons/search.svg" alt="search-icon" width="23px" heihgt="23px">
+                </button>
+            </li>
+            <li class="flex gap-x-[10px] items-center">
+                <a href="./auth.html" class="bg-btn-gradient w-[142px] h-[46px] rounded-[10px] font-medium text-white 
+                text-[16px] leading-[16px] font-houschka duration-300 hover:duration-300 hover:bg-[#16128B] flex justify-center items-center">Войти в ЛК</a>
+                <a href="./register.html" class="bg-btn-gradient w-[142px] h-[46px] rounded-[10px] font-medium text-white 
+                text-[16px] leading-[16px] font-houschka duration-300 hover:duration-300 hover:bg-[#16128B] flex justify-center items-center">Регистрация</a>
+            </li>
+            </ul>
+        </nav>
+        <!-- top nav end -->
+        <!-- mobile menu -->
+            <button class="burger-btn hidden max-[768px]:flex">
+            <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 24 24">
+                <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path>
+            </svg>
+            </button>
+        <!-- mobile menu end -->
+
+        </div>
+    </header>
+    <!-- main navbar -->
+    <nav class="navbar h-[70px] w-full bg-colorBlue max-[768px]:hidden">
+        <div class="container h-full">
+        <ul class="flex items-center h-full gap-x-[30px]">
+            <li><a href="/" class="font-houschka font-medium leading-[16px] text-[16px] duration-[.3s] hover:duration-[.3s] hover:text-white">Главная</a></li>
+            <li><a href="#" class="font-houschka font-medium leading-[16px] text-[16px] duration-[.3s] hover:duration-[.3s] hover:text-white">Тарифы</a></li>
+            <li><a href="#" class="font-houschka font-medium leading-[16px] text-[16px] duration-[.3s] hover:duration-[.3s] hover:text-white">Документация</a></li>
+            <li><a href="#" class="font-houschka font-medium leading-[16px] text-[16px] duration-[.3s] hover:duration-[.3s] hover:text-white">Новости</a></li>
+            <li><a href="./requirements.html" class="font-houschka font-medium leading-[16px] text-[16px] duration-[.3s] hover:duration-[.3s] hover:text-white">Требования к сайтам</a></li>
+        </ul>
+        </div>
+    </nav>
+    <!-- main navbar end -->
+    <!-- mobile menu -->
+        <div class="mobile-menu fixed right-[-100%] top-0 max-w-[300px] h-full w-full bg-black min-[769px]:hidden duration-[.3s] z-50">
+        <aside>
+            <!-- top menu  -->
+            <ul class="pt-[40px]">
+            <button class="close-btn text-[30px] absolute left-[20px] top-[10px] text-white font-medium">&times;</button>
+            <li class="h-[40px] w-full">
+                <a href="./about.html" class="flex justify-end items-center leading-[16px] 
+                text-[16px] text-white font-medium h-full w-full px-[20px] border-b-2 border-colorBlue">
+                О нас
+                </a>
+            </li>
+            <li class="h-[40px] w-full">
+                <a href="./contact.html" class="flex justify-end items-center leading-[16px] 
+                text-[16px] text-white font-medium h-full w-full px-[20px] border-b-2 border-colorBlue">
+                Контакты
+                </a>
+            </li>
+            <li class="flex justify-end pr-[20px] pl-[20px] mt-[20px]">
+                <a href="./auth.html" class="bg-btn-gradient w-full h-[46px] rounded-[10px] font-medium text-white 
+                text-[16px] leading-[16px] font-houschka duration-300 hover:duration-300 hover:bg-[#16128B] flex justify-center items-center">Войти в ЛК</a>
+            </li>
+            <li class="flex justify-end pr-[20px] pl-[20px] mt-[20px]">
+                <a href="./register.html" class="bg-btn-gradient w-full h-[46px] rounded-[10px] font-medium text-white 
+                text-[16px] leading-[16px] font-houschka duration-300 hover:duration-300 hover:bg-[#16128B] flex justify-center items-center">Регистрация</a>
+            </li>
+            </ul>
+            <!-- top menu end -->
+            <!-- bottom menu -->
+            <ul class="mt-[20px]">
+            <h4 class="mb-[20px] text-white text-center">Другие страницы</h4>
+            <li class="h-[40px] w-full">
+                <a href="/" class="flex justify-end items-center leading-[16px] 
+                text-[16px] text-white font-medium h-full w-full px-[20px] border-b-2 border-colorBlue">
+                Главная
+                </a>
+            </li>
+            <li class="h-[40px] w-full">
+                <a href="#" class="flex justify-end items-center leading-[16px] 
+                text-[16px] text-white font-medium h-full w-full px-[20px] border-b-2 border-colorBlue">
+                Тарифы
+                </a>
+            </li>
+            <li class="h-[40px] w-full">
+                <a href="#" class="flex justify-end items-center leading-[16px] 
+                text-[16px] text-white font-medium h-full w-full px-[20px] border-b-2 border-colorBlue">
+                Документация
+                </a>
+            </li>
+            <li class="h-[40px] w-full">
+                <a href="#" class="flex justify-end items-center leading-[16px] 
+                text-[16px] text-white font-medium h-full w-full px-[20px] border-b-2 border-colorBlue">
+                Новости
+                </a>
+            </li>
+            <li class="h-[40px] w-full">
+                <a href="./requirements.html" class="flex justify-end items-center leading-[16px] 
+                text-[16px] text-white font-medium h-full w-full px-[20px] border-b-2 border-colorBlue">
+                Требования к сайтам
+                </a>
+            </li>
+            </ul>
+            <!-- bottom menu end -->
+        </aside>
+        </div>
+    <!-- mobile menu end -->
+        <!-- header end -->
+
+
+        <!-- head-wrapper -->
+        <div class="head-wrapper bg-contain bg-center bg-no-repeat w-full h-[480px] bg-head-gradient relative">
+                <img 
+                    class="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] w-auto h-[480px] object-cover z-0" 
+                    src="../images/head-bg.png" 
+                    alt="bg"
+                >
+            <div class="container flex items-center h-full">
+                
+                <h1 class="font-bold text-[50px] leading-[60.51px] text-white z-10 relative uppercase
+                max-[600px]:text-[40px] max-[450px]:text-[30px] max-[450px]:leading-[40px] max-[450px]:object-right-bottom">
+                    Принимаем<br/>
+                    иностранные карты!
+                </h1>
+            </div>
+        </div>
+        <!-- head-wrapper end -->
+        <!-- Принимаем оплаты по картам СНГ, Европы, США. -->
+         <section class="py-[100px]">
+            <div class="container">
+                <h2 class="title-page mb-[50px]">Принимаем оплаты по картам СНГ, Европы, США.</h2>
+                <ul class="flex items-center gap-x-[30px] max-[450px]:flex-col max-[450px]:gap-y-[20px]">
+                    <li><img class="max-[450px]:w-[250px]" src="../images/card-1.png" alt="card" width="150px" height="100px"></li>
+                    <li><img class="max-[450px]:w-[250px]" src="../images/card-2.png" alt="card" width="150px" height="100px"></li>
+                    <li><img class="max-[450px]:w-[250px]" src="../images/card-3.png" alt="card" width="150px" height="100px"></li>
+                </ul>
+            </div>
+         </section>
+         <!-- Принимаем оплаты по картам СНГ, Европы, США. end -->
+         <!-- Как происходит оплата: -->
+          <div>
+            <div class="container">
+                <h2 class="title-page mb-[76px]">Как происходит оплата:</h2>
+            </div>
+            <section class="flex justify-center head-wrapper bg-contain bg-center bg-no-repeat w-full h-[480px] bg-gradient relative px-[80px] max-[1280px]:px-[20px] max-lg:pb-[40px] max-[450px]:h-auto">
+                <img 
+                    class="absolute top-0 left-0 h-[480px] object-cover z-0 w-full" 
+                    src="../images/lines.png" 
+                    alt="bg"
+                >
+                <div class="h-full relative w-[50%] flex justify-center max-lg:hidden">
+                    <img class="relative top-[-60px] h-[120%] max-[1280px]:left-[-100px]" src="../images/iphone-12.png" alt="iphone" width="auto" >
+                    <img class="absolute right-[10%] top-[40px]" src="../images/pay-form.png" alt="form" width="240px" height="290px">
+                </div>
+                <ul class="w-[50%] h-full pt-[56px] relative max-lg:w-full">
+                    <li class="flex gap-x-[20px] pb-[40px] relative max-[768px]:pb-[20px]">
+                        <span class="absolute bg-[#3597C0] w-[2px] h-full left-[29px] top-0 z-0"></span>
+                        <span class="flex items-center justify-center min-w-[60px] h-[60px] 
+                        rounded-full bg-colorBlue border-[5px] border-[#0182AA80] z-[1] font-bold text-white leading-[29.05px] text-[24px]">1</span>
+                        <div class="float-right">
+                            <p class="title-btn" onclick="showText(this)">Клиент вводит данные карты на единой платежной странице</p>
+                            <p class="text-show text-show-active">
+                                Если вы используете иностранную карту для оплаты, сумма будет списана 
+                                в валюте вашей карты. Расчет производится по курсу обмена, 
+                                установленному банком, выпустившим вашу карту, на момент транзакции
+                            </p>
+                        </div>
+                    </li>
+                    <li class="flex gap-x-[20px] pb-[40px] relative max-[768px]:pb-[20px]">
+                        <span class="absolute bg-[#3597C0] w-[2px] h-full left-[29px] top-0 z-0"></span>
+                        <span class="flex items-center justify-center min-w-[60px] h-[60px] 
+                        rounded-full bg-colorBlue border-[5px] border-[#0182AA80] z-[1] font-bold text-white leading-[29.05px] text-[24px]">2</span>
+                        <div class="float-right">
+                            <p class="title-btn" onclick="showText(this)">Выбираете в системе какой картой оплатить российской или иностранной</p>
+                            <p class="text-show">
+                                Если вы используете иностранную карту для оплаты, сумма будет списана 
+                                в валюте вашей карты. Расчет производится по курсу обмена, 
+                                установленному банком, выпустившим вашу карту, на момент транзакции
+                            </p>
+                        </div>
+                    </li>
+                    <li class="flex gap-x-[20px] pb-[40px] relative max-[768px]:pb-[20px]">
+                        <span class="flex items-center justify-center min-w-[60px] h-[60px] 
+                        rounded-full bg-colorBlue border-[5px] border-[#0182AA80] z-[1] font-bold text-white leading-[29.05px] text-[24px]">3</span>
+                        <div class="float-right">
+                            <p class="title-btn" onclick="showText(this)">На ваш баланс поступит сумма покупки в рублях за вычетом комиссии KingPay</p>
+                            <p class="text-show">
+                                Если вы используете иностранную карту для оплаты, сумма будет списана 
+                                в валюте вашей карты. Расчет производится по курсу обмена, 
+                                установленному банком, выпустившим вашу карту, на момент транзакции
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+         <!-- Как происходит оплата: end -->
+         <!-- Комиссия сервиса KingPay -->
+          <section class="py-[100px]">
+            <div class="container flex gap-x-[36px] max-xl:items-center max-lg:flex-col max-lg:items-start max-lg:gap-y-[20px]">
+                <div class="info">
+                    <h2 class="title-page max-w-[650px] mb-[50px] text-[rgba(41, 45, 50, 1)] max-md:mb-[30px]">
+                        Комиссия сервиса KingPay 
+                        при оплате иностранными картами  от 10%
+                    </h2>
+                    <p class="font-light text-[18px] leading-[26px] text-[rgba(41, 45, 50, 1)] max-w-[650px] max-md:text-[16px]">
+                        Важно отметить, что ваша текущая тарифная ставка по 
+                        оплатам сохраняется при использовании любых карт, 
+                        выпущенных на территории РФ, включая МИР, Visa и Mastercard.
+                    </p>
+                </div>
+                <img class="max-xl:h-[130px] max-lg:h-[158px] max-md:h-auto max-md:object-contain" src="../images/cards.png" alt="cards" width="600px" height="158px">
+            </div>
+          </section>
+         <!-- Комиссия сервиса KingPay end -->
+
+         <!-- Подключите KingPay  для приёма платежей -->
+          <section class="flex justify-center head-wrapper bg-contain bg-center bg-no-repeat w-full min-h-[480px] bg-gradient-reverse relative max-[450px]:h-auto">
+                <img 
+                    class="absolute top-0 left-0 object-cover z-0 w-full h-full" 
+                    src="../images/lines-2.png" 
+                    alt="bg"
+                >
+                <div class="container relative flex">
+                    <div class=" pt-[100px] pb-[60px] h-full max-lg:z-10">
+                        <h2 class="leading-[60.51px] text-[50px] text-white font-bold max-w-[771px] uppercase 
+                        mb-[50px] max-[1432px]:text-[40px] max-md:w-full max-md:text-[30px] max-md:leading-[40px]">Подключите KingPay  для приёма платежей</h2>
+                        <p class="text-[30px] font-medium leading-[36.31px]
+                         text-white mb-[100px] max-[1432px]:text-[25px] max-[1340px]:mb-[70px]">Подключаем при обороте от <span class="text-nowrap">1 000 000</span> RUB</p>
+                        <ul class="flex items-center gap-x-[20px]">
+                            <li class="min-h-[70px] min-w-[70px] rounded-full bg-head-gradient flex items-center justify-center max-[400px]:min-h-[40px] max-[400px]:min-w-[40px]">
+                                <img class="max-[400px]:w-[25px] max-[400px]:h-[25px]" src="../images/icons/sms-blue.svg" alt="sms" width="40px" height="40px">
+                            </li>
+                            <li>
+                                <p class="font-light text-[18px] leading-[26px] text-white mb-[20px]">Мы предоставляем поддержку на всех этапах сотрудничества</p>
+                                <a class="leading-[26px] text-[22px] font-medium text-white" href="mail:support@kingpay.me">support@kingpay.me</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <img class="max-[1320px]:w-[30%] max-[1320px]:h-auto 
+                    max-[1320px]:object-contain 
+                    max-lg:absolute max-lg:right-0 max-lg:z-0 max-lg:hidden" src="../images/iphone-rotate.png" alt="iphone-12">
+                </div>
+          </section>
+         <!-- Подключите KingPay  для приёма платежей end -->
+         <!-- Часто задаваемые вопросы -->
+          <section class="faq pt-[100px] mb-[100px]">
+            <div class="container">
+                <h1 class="title-page mb-[50px] uppercase">Часто задаваемые вопросы</h1>
+                <ul class="grid grid-cols-[1fr,1fr] gap-x-[30px] gap-y-[30px] max-md:grid-cols-1">
+                    <li class="faq-answer">
+                        <button type="button" class="min-w-[30px] min-h-[30px]" onclick="showText2(this)"><img src="../images/arrow-bottom.png" alt="btn" width="100%" height="100%"></button>
+                        <div class="faq-info">
+                            <h3 class="font-medium text-[18px] leading-[21.78px] text-black mb-[30px] cursor-pointer" onclick="showText2(this)">Какие карты можно принимать?</h3>
+                            <p class="faq-answer-text faq-answer-text-active">
+                                Опция по приёму платежей с зарубежных карт 
+                                отключается  в Личном кабинете Robokassa по запросу.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="faq-answer">
+                        <button type="button" onclick="showText2(this)" class="min-w-[30px] min-h-[30px]"><img src="../images/arrow-bottom.png" alt="btn" width="100%" height="100%"></button>
+                        <div class="faq-info">
+                            <h3 class="font-medium text-[18px] leading-[21.78px] text-black mb-[30px] cursor-pointer" onclick="showText2(this)">Как подключить приём иностранных карт?</h3>
+                            <p class="faq-answer-text">
+                                Опция по приёму платежей с зарубежных карт 
+                                отключается  в Личном кабинете Robokassa по запросу.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="faq-answer">
+                        <button type="button" class="min-w-[30px] min-h-[30px]" onclick="showText2(this)"><img src="../images/arrow-bottom.png" alt="btn" width="100%" height="100%"></button>
+                        <div class="faq-info">
+                            <h3 class="font-medium text-[18px] leading-[21.78px] text-black mb-[30px] cursor-pointer" onclick="showText2(this)">Какая комиссия при оплате иностранной картой?</h3>
+                            <p class="faq-answer-text">
+                                Опция по приёму платежей с зарубежных карт 
+                                отключается  в Личном кабинете Robokassa по запросу.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="faq-answer">
+                        <button type="button" class="min-w-[30px] min-h-[30px]" onclick="showText2(this)"><img src="../images/arrow-bottom.png" alt="btn" width="100%" height="100%"></button>
+                        <div class="faq-info">
+                            <h3 class="font-medium text-[18px] leading-[21.78px] text-black mb-[30px] cursor-pointer" onclick="showText2(this)">Как происходит оплата из-за границы?</h3>
+                            <p class="faq-answer-text">
+                                Опция по приёму платежей с зарубежных карт 
+                                отключается  в Личном кабинете Robokassa по запросу.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="faq-answer">
+                        <button type="button" class="min-w-[30px] min-h-[30px]" onclick="showText2(this)"><img src="../images/arrow-bottom.png" alt="btn" width="100%" height="100%"></button>
+                        <div class="faq-info">
+                            <h3 onclick="showText2(this)" class="font-medium text-[18px] leading-[21.78px] text-black mb-[30px] cursor-pointer">Есть ли лимиты по сумме платежа?</h3>
+                            <p class="faq-answer-text">
+                                Опция по приёму платежей с зарубежных карт 
+                                отключается  в Личном кабинете Robokassa по запросу.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="faq-answer">
+                        <button type="button" class="min-w-[30px] min-h-[30px]" onclick="showText2(this)"><img src="../images/arrow-bottom.png" alt="btn" width="100%" height="100%"></button>
+                        <div class="faq-info">
+                            <h3 class="font-medium text-[18px] leading-[21.78px] text-black mb-[30px] cursor-pointer" onclick="showText2(this)">Как отключить приём платежей с зарубежных карт?</h3>
+                            <p class="faq-answer-text">
+                                Опция по приёму платежей с зарубежных карт 
+                                отключается  в Личном кабинете Robokassa по запросу.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+          </section>
+         <!-- Часто задаваемые вопросы end -->
+
+        <!-- footer -->
+        <footer class="footer bg-colorBlue py-[30px]">
+            <div class="container">
+            <!-- top menu -->
+            <div class="footer-top-menu flex max-[768px]:flex-col max-[768px]:gap-y-5 max-[768px]:items-center">
+                <!-- logotype -->
+                <a href="#" class="inline-block mr-[108px] max-[768px]:mr-0"><img class="max-[400px]:w-[140px] max-[400px]:h-auto" src="../images/Logo.png" alt="logotype" width="187px" height="65px"/></a>
+                <!-- logotype end -->
+                <!-- other links -->
+                <div class="footer-links-top flex gap-x-[125px] mb-[30px] max-[1024px]:gap-x-[85px] max-[450px]:gap-x-[50px] max-[450px]:flex-col max-[450px]:gap-y-[30px]">
+                    <ul class="flex flex-col gap-y-[10px]">
+                    <li class="max-[450px]:text-center"><a href="#" class="font-houschka font-medium leading-[16px] text-[16px] duration-[.3s] hover:duration-[.3s] hover:text-white">Иностранные карты</a></li>
+                    <li class="max-[450px]:text-center"><a href="#" class="font-houschka font-medium leading-[16px] text-[16px] duration-[.3s] hover:duration-[.3s] hover:text-white">Публичная оферта</a></li>
+                    <li class="max-[450px]:text-center"><a href="#" class="font-houschka font-medium leading-[16px] text-[16px] duration-[.3s] hover:duration-[.3s] hover:text-white">Помощь</a></li>
+                    <li class="max-[450px]:text-center"><a href="#" class="font-houschka font-medium leading-[16px] text-[16px] duration-[.3s] hover:duration-[.3s] hover:text-white">Условия оплаты</a></li>
+                    <li class="max-[450px]:text-center"><a href="#" class="font-houschka font-medium leading-[16px] text-[16px] duration-[.3s] hover:duration-[.3s] hover:text-white">Инструкция по оплате</a></li>
+                    </ul>
+                    <ul class="flex flex-col gap-y-[10px]">
+                    <li class="max-[450px]:text-center"><a href="#" class="font-houschka font-medium leading-[16px] text-[16px] duration-[.3s] hover:duration-[.3s] hover:text-white">Онлайн касса по 54-Ф3</a></li>
+                    <li class="max-[450px]:text-center"><a href="#" class="font-houschka font-medium leading-[16px] text-[16px] duration-[.3s] hover:duration-[.3s] hover:text-white">Политика конфиденциальности</a></li>
+                    <li class="max-[450px]:text-center"><a href="#" class="font-houschka font-medium leading-[16px] text-[16px] duration-[.3s] hover:duration-[.3s] hover:text-white">Политика AML</a></li>
+                    <li class="max-[450px]:text-center"><a href="#" class="font-houschka font-medium leading-[16px] text-[16px] duration-[.3s] hover:duration-[.3s] hover:text-white">Защита данных</a></li>
+                    <li class="max-[450px]:text-center"><a href="#" class="font-houschka font-medium leading-[16px] text-[16px] duration-[.3s] hover:duration-[.3s] hover:text-white">Пользовательское соглашение</a></li>
+                    </ul>
+                </div>
+                <!-- other links end -->
+            </div>
+            <!-- top menu end  -->
+            <!-- bottom menu -->
+                <div class="footer-link-bottom flex justify-between">
+                <!-- social media -->
+                <ul class="flex gap-x-[30px]">
+                    <li><a href="#"><img class="max-[400px]:w-[35px] max-[400px]:h-auto" src="../images/icons/vk.svg" alt="social-media" width="40px" heihgt="40px"></a></li>
+                    <li><a href="#"><img class="max-[400px]:w-[35px] max-[400px]:h-auto" src="../images/icons/telegram.svg" alt="social-media" width="40px" heihgt="40px"></a></li>
+                </ul>
+                <!-- social media end -->
+                <div class="copyright font-houschka text-[20px] leading-[20px] font-medium max-[400px]:text-[17px]">© KINGPAY - 2024</div> 
+                </div>
+            <!-- bottom menu end -->
+            </div>
+            
+        </footer>
+        <!-- footer end -->
+         <script type="text/javascript">
+            function showText(obj) {
+                const parent = obj.parentElement; // Получаем родительский элемент
+                const texts = document.querySelectorAll('.text-show');
+                const doutherTag = parent.querySelector('.text-show');
+                for (let i = 0; i < texts.length; i++) {
+                    texts[i].classList.remove('text-show-active');
+                };
+                return doutherTag.classList.add('text-show-active');         
+                
+            }
+            function showText2(obj) {
+                const parent = obj.parentElement; // Получаем родительский элемент
+                const texts = document.querySelectorAll('.faq-answer-text');
+                const doutherTag = parent.querySelector('.faq-answer-text');
+                for (let i = 0; i < texts.length; i++) {
+                    texts[i].classList.remove('faq-answer-text-active');
+                };
+                return doutherTag.classList.add('faq-answer-text-active');         
+                
+            }
+         </script>
+    <script type="module" src="../js/main.js"></script>
+  </body>
+</html>
+
+

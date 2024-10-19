@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!-- header -->
+     <header class="header">
+      <div class="container flex justify-between items-center h-[75px] w-full">
+        <!-- logotype -->
+        <a href="/" class="logo">
+          <img class="max-[400px]:w-[140px] max-[400px]:h-auto"  src="/images/Logo.png" alt="logotype" width="187px" heihgt="65px">
+        </a>
+        <!-- logotype end -->
+         <!-- top nav -->
+        <nav class="top-nav max-[768px]:hidden">
+          <ul class="flex items-center gap-x-[30px]">
+            <li><a href="/pages/about.html" class="leading-[16px] text-[16px] text-black font-medium duration-[.3s] hover:duration-[.3s] hover:text-colorBlue">О нас</a></li>
+            <li><a href="/pages/contact.html" class="leading-[16px] text-[16px] text-black font-medium duration-[.3s] hover:duration-[.3s] hover:text-colorBlue">Контакты</a></li>
+            <li>
+              <button>
+                <img src="/images/icons/search.svg" alt="search-icon" width="23px" heihgt="23px">
+              </button>
+            </li>
+            <li class="flex gap-x-[10px] items-center">
+              <a href="/pages/auth.html" class="bg-btn-gradient w-[142px] h-[46px] rounded-[10px] font-medium text-white 
+              text-[16px] leading-[16px] font-houschka duration-300 hover:duration-300 hover:bg-[#16128B] flex justify-center items-center">Войти в ЛК</a>
+              <a href="/pages/register.html" class="bg-btn-gradient w-[142px] h-[46px] rounded-[10px] font-medium text-white 
+              text-[16px] leading-[16px] font-houschka duration-300 hover:duration-300 hover:bg-[#16128B] flex justify-center items-center">Регистрация</a>
+            </li>
+          </ul>
+        </nav>
+        <!-- top nav end -->
+         <!-- mobile menu -->
+          <button class="burger-btn hidden max-[768px]:flex">
+            <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 24 24">
+              <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path>
+            </svg>
+          </button>
+         <!-- mobile menu end -->
+
+      </div>
+    </header>
+    <!-- main navbar -->
+     <nav class="navbar h-[70px] w-full bg-colorBlue max-[768px]:hidden">
+      <div class="container h-full">
+        <ul class="flex items-center h-full gap-x-[30px]">
+          <li><a href="/" class="font-houschka font-medium leading-[16px] text-[16px] duration-[.3s] hover:duration-[.3s] hover:text-white">Главная</a></li>
+          <li><a href="#" class="font-houschka font-medium leading-[16px] text-[16px] duration-[.3s] hover:duration-[.3s] hover:text-white">Тарифы</a></li>
+          <li><a href="#" class="font-houschka font-medium leading-[16px] text-[16px] duration-[.3s] hover:duration-[.3s] hover:text-white">Документация</a></li>
+          <li><a href="#" class="font-houschka font-medium leading-[16px] text-[16px] duration-[.3s] hover:duration-[.3s] hover:text-white">Новости</a></li>
+          <li><a href="/pages/requirements.html" class="font-houschka font-medium leading-[16px] text-[16px] duration-[.3s] hover:duration-[.3s] hover:text-white">Требования к сайтам</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- main navbar end -->
+     <!-- mobile menu -->
+      <div class="mobile-menu fixed right-[-100%] top-0 max-w-[300px] h-full w-full bg-black min-[769px]:hidden duration-[.3s] z-50">
+        <aside>
+          <!-- top menu  -->
+          <ul class="pt-[40px]">
+            <button class="close-btn text-[30px] absolute left-[20px] top-[10px] text-white font-medium">&times;</button>
+            <li class="h-[40px] w-full">
+              <a href="/pages/about.html" class="flex justify-end items-center leading-[16px] 
+              text-[16px] text-white font-medium h-full w-full px-[20px] border-b-2 border-colorBlue">
+              О нас
+              </a>
+            </li>
+            <li class="h-[40px] w-full">
+              <a href="#" class="flex justify-end items-center leading-[16px] 
+              text-[16px] text-white font-medium h-full w-full px-[20px] border-b-2 border-colorBlue">
+              Контакты
+              </a>
+            </li>
+            <li class="flex justify-end pr-[20px] pl-[20px] mt-[20px]">
+              <a href="/pages/auth.html" class="bg-btn-gradient w-full h-[46px] rounded-[10px] font-medium text-white 
+              text-[16px] leading-[16px] font-houschka duration-300 hover:duration-300 hover:bg-[#16128B] flex justify-center items-center">Войти в ЛК</a>
+            </li>
+            <li class="flex justify-end pr-[20px] pl-[20px] mt-[20px]">
+              <a href="/pages/register.html" class="bg-btn-gradient w-full h-[46px] rounded-[10px] font-medium text-white 
+              text-[16px] leading-[16px] font-houschka duration-300 hover:duration-300 hover:bg-[#16128B] flex justify-center items-center">Регистрация</a>
+            </li>
+          </ul>
+          <!-- top menu end -->
+           <!-- bottom menu -->
+           <ul class="mt-[20px]">
+            <h4 class="mb-[20px] text-white text-center">Другие страницы</h4>
+            <li class="h-[40px] w-full">
+              <a href="/" class="flex justify-end items-center leading-[16px] 
+              text-[16px] text-white font-medium h-full w-full px-[20px] border-b-2 border-colorBlue">
+              Главная
+              </a>
+            </li>
+            <li class="h-[40px] w-full">
+              <a href="#" class="flex justify-end items-center leading-[16px] 
+              text-[16px] text-white font-medium h-full w-full px-[20px] border-b-2 border-colorBlue">
+              Тарифы
+              </a>
+            </li>
+            <li class="h-[40px] w-full">
+              <a href="#" class="flex justify-end items-center leading-[16px] 
+              text-[16px] text-white font-medium h-full w-full px-[20px] border-b-2 border-colorBlue">
+              Документация
+              </a>
+            </li>
+            <li class="h-[40px] w-full">
+              <a href="#" class="flex justify-end items-center leading-[16px] 
+              text-[16px] text-white font-medium h-full w-full px-[20px] border-b-2 border-colorBlue">
+              Новости
+              </a>
+            </li>
+            <li class="h-[40px] w-full">
+              <a href="/pages/requirements.html" class="flex justify-end items-center leading-[16px] 
+              text-[16px] text-white font-medium h-full w-full px-[20px] border-b-2 border-colorBlue">
+              Требования к сайтам
+              </a>
+            </li>
+          </ul>
+           <!-- bottom menu end -->
+        </aside>
+      </div>
+     <!-- mobile menu end -->
+    <!-- header end -->
+
+
+
+    <!-- секция тарифы -->
+     <section class="tariffs mt-[100px]">
+      <div class="container">
+        <h2 class="title-page mb-[50px]">Что может влиять на ваш тариф?</h2>
+        <p class="font-light font-inter text-[18px] leading-[26px] mb-[20px] max-[600px]:text-[16px]">Ваш тариф может быть адаптирован в соответствии с следующими условиями:</p>
+        <p class="font-light font-inter text-[18px] leading-[26px] mb-[20px] max-[600px]:text-[16px]"> — Тематика вашего бизнеса.</p>
+        <p class="font-light font-inter text-[18px] leading-[26px] mb-[20px] max-[600px]:text-[16px]"> — Ежемесячный оборот, генерируемый всеми вашими магазинами.</p>
+        <p class="font-light font-inter text-[18px] leading-[26px] max-[600px]:text-[16px]"> — Тип вашего регистрации у нас: юридическое лицо или индивидуальный предприниматель.</p>
+      </div>
+     </section>
+    <!-- секция тарифы end -->
+
+     <!-- tariffs pay -->
+      <section class="tariffs-pay mt-[100px]">
+        <div class="container">
+          <h2 class="mb-[50px] title-page">Тарифы на прием платежей</h2>
+          <p class="font-inter font-normal text-[20px] leading-[24.2px] mb-[30px] text-black">Российские карты - От 3%</p>
+          <ul class="flex gap-x-[60px] flex-wrap gap-y-[60px]">
+            <li class="w-[100px] h-[104px] flex justify-center items-center flex-col gap-y-[10px]">
+              <img class="max-[600px]:w-[45px] max-[600px]:h-[45px]" src="/images/logos_visa.png" alt="logotype" width="60px" height="60px">
+              <p class="font-medium text-colorBlack leading-[19.36px] text-[16px]">VISA</p>
+              <span class="font-light text-colorGray2 text-[16px] leading-[19.36px]">3%</span>
+            </li>
+            <li class="w-[100px] h-[104px] flex justify-center items-center flex-col gap-y-[10px]">
+              <img class="max-[600px]:w-[45px] max-[600px]:h-[45px]" src="/images/logos_mastercard.png" alt="logotype" width="60px" height="60px">
+              <p class="font-medium text-colorBlack leading-[19.36px] text-[16px]">Mastercard</p>
+              <span class="font-light text-colorGray2 text-[16px] leading-[19.36px]">3%</span>
+            </li>
+            <li class="w-[100px] h-[104px] flex justify-center items-center flex-col gap-y-[10px]">
+              <img class="max-[600px]:w-[45px] max-[600px]:h-[45px]" src="/images/logos_mir.png" alt="logotype" width="60px" height="60px">
+              <p class="font-medium text-colorBlack leading-[19.36px] text-[16px]">МИР</p>
+              <span class="font-light text-colorGray2 text-[16px] leading-[19.36px]">3%</span>
+            </li>
+            <li class="w-[100px] h-[104px] flex justify-center items-center flex-col gap-y-[10px]">
+              <img class="max-[600px]:w-[45px] max-[600px]:h-[45px]" src="/images/logos_spb.png" alt="logotype" width="60px" height="60px">
+              <p class="font-medium text-colorBlack leading-[19.36px] text-[16px]">СБП</p>
+              <span class="font-light text-colorGray2 text-[16px] leading-[19.36px]">3%</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+     <!-- tariffs pay end -->
+     <!-- electronic wallets -->
+      <section class="electronic-wallets mt-[70px]">
+        <div class="container">
+          <p class="font-inter font-normal text-[20px] leading-[24.2px] mb-[30px] text-black">Электронные кошельки - От 5%</p>
+          <ul class="flex gap-x-[60px] flex-wrap gap-y-[60px]">
+            <li class="w-[100px] h-[104px] flex justify-center items-center flex-col gap-y-[10px]">
+              <img class="max-[600px]:w-[45px] max-[600px]:h-[45px]" src="/images/logos_YooMoney.png" alt="logotype" width="60px" height="60px">
+              <p class="font-medium text-colorBlack leading-[19.36px] text-[16px]">ЮMoney</p>
+              <span class="font-light text-colorGray2 text-[16px] leading-[19.36px]">5%</span>
+            </li>
+            <li class="w-[100px] h-[104px] flex justify-center items-center flex-col gap-y-[10px]">
+              <img class="max-[600px]:w-[45px] max-[600px]:h-[45px]" src="/images/logos_webmoney.png" alt="logotype" width="60px" height="60px">
+              <p class="font-medium text-colorBlack leading-[19.36px] text-[16px]">Webmoney </p>
+              <span class="font-light text-colorGray2 text-[16px] leading-[19.36px]">5%</span>
+            </li>
+            <li class="w-[100px] h-[104px] flex justify-center items-center flex-col gap-y-[10px]">
+              <img class="max-[600px]:w-[45px] max-[600px]:h-[45px]" src="/images/logos_adv.png" alt="logotype" width="60px" height="60px">
+              <p class="font-medium text-colorBlack leading-[19.36px] text-[16px]">Advcash</p>
+              <span class="font-light text-colorGray2 text-[16px] leading-[19.36px]">5%</span>
+            </li>
+            <li class="min-w-[100px] h-[104px] flex justify-center items-center flex-col gap-y-[10px]">
+              <img class="max-[600px]:w-[45px] max-[600px]:h-[45px]" src="/images/logos_pm.png" alt="logotype" width="60px" height="60px">
+              <p class="font-medium text-colorBlack leading-[19.36px] text-[16px]">Perfect Money</p>
+              <span class="font-light text-colorGray2 text-[16px] leading-[19.36px]">5%</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+     <!-- electronic wallets end -->
+     <!-- crypto -->
+      <section class="crypto mt-[70px]">
+        <div class="container">
+          <p class="font-inter font-normal text-[20px] leading-[24.2px] mb-[30px] text-black">Криптовалюты - От 9%</p>
+          <ul class="flex gap-x-[60px] flex-wrap gap-y-[60px]">
+            <li class="w-[100px] h-[104px] flex justify-center items-center flex-col gap-y-[10px]">
+              <img class="max-[600px]:w-[45px] max-[600px]:h-[45px]" src="/images/logos_bitcoin.png" alt="logotype" width="60px" height="60px">
+              <p class="font-medium text-colorBlack leading-[19.36px] text-[16px]">Bitcoin</p>
+              <span class="font-light text-colorGray2 text-[16px] leading-[19.36px]">9%</span>
+            </li>
+            <li class="w-[100px] h-[104px] flex justify-center items-center flex-col gap-y-[10px]">
+              <img class="max-[600px]:w-[45px] max-[600px]:h-[45px]" src="/images/logos_ethereum.png" alt="logotype" width="60px" height="60px">
+              <p class="font-medium text-colorBlack leading-[19.36px] text-[16px]">Ethereum</p>
+              <span class="font-light text-colorGray2 text-[16px] leading-[19.36px]">9%</span>
+            </li>
+            <li class="w-[100px] h-[104px] flex justify-center items-center flex-col gap-y-[10px]">
+              <img class="max-[600px]:w-[45px] max-[600px]:h-[45px]" src="/images/logos_bitcoinCash.png" alt="logotype" width="60px" height="60px">
+              <p class="font-medium text-colorBlack leading-[19.36px] text-[16px]">Bitcoin Cash</p>
+              <span class="font-light text-colorGray2 text-[16px] leading-[19.36px]">9%</span>
+            </li>
+            <li class="min-w-[100px] h-[104px] flex justify-center items-center flex-col gap-y-[10px]">
+              <img class="max-[600px]:w-[45px] max-[600px]:h-[45px]" src="/images/logos_litecoin.png" alt="logotype" width="60px" height="60px">
+              <p class="font-medium text-colorBlack leading-[19.36px] text-[16px]">Litecoin</p>
+              <span class="font-light text-colorGray2 text-[16px] leading-[19.36px]">9%</span>
+            </li>
+            <li class="min-w-[100px] h-[104px] flex justify-center items-center flex-col gap-y-[10px]">
+              <img class="max-[600px]:w-[45px] max-[600px]:h-[45px]" src="/images/logos_dash.png" alt="logotype" width="60px" height="60px">
+              <p class="font-medium text-colorBlack leading-[19.36px] text-[16px]">Dash</p>
+              <span class="font-light text-colorGray2 text-[16px] leading-[19.36px]">9%</span>
+            </li>
+            <li class="min-w-[100px] h-[104px] flex justify-center items-center flex-col gap-y-[10px]">
+              <img class="max-[600px]:w-[45px] max-[600px]:h-[45px]" src="/images/logos_zCash.png" alt="logotype" width="60px" height="60px">
+              <p class="font-medium text-colorBlack leading-[19.36px] text-[16px]">Zcash</p>
+              <span class="font-light text-colorGray2 text-[16px] leading-[19.36px]">9%</span>
+            </li>
+            <li class="min-w-[100px] h-[104px] flex justify-center items-center flex-col gap-y-[10px]">
+              <img class="max-[600px]:w-[45px] max-[600px]:h-[45px]" src="/images/logos_dogecoin.png" alt="logotype" width="60px" height="60px">
+              <p class="font-medium text-colorBlack leading-[19.36px] text-[16px]">Dogecoin</p>
+              <span class="font-light text-colorGray2 text-[16px] leading-[19.36px]">9%</span>
+            </li>
+            <li class="min-w-[100px] h-[104px] flex justify-center items-center flex-col gap-y-[10px]">
+              <img class="max-[600px]:w-[45px] max-[600px]:h-[45px]" src="/images/logos_tether.png" alt="logotype" width="60px" height="60px">
+              <p class="font-medium text-colorBlack leading-[19.36px] text-[16px]">Tether</p>
+              <span class="font-light text-colorGray2 text-[16px] leading-[19.36px]">9%</span>
+            </li>
+            <li class="min-w-[100px] h-[104px] flex justify-center items-center flex-col gap-y-[10px]">
+              <img class="max-[600px]:w-[45px] max-[600px]:h-[45px]" src="/images/logos_toncoin.png" alt="logotype" width="60px" height="60px">
+              <p class="font-medium text-colorBlack leading-[19.36px] text-[16px]">Toncoin</p>
+              <span class="font-light text-colorGray2 text-[16px] leading-[19.36px]">9%</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+     <!-- crypto end -->
+          <!-- mobile -->
+          <section class="electronic-wallets mt-[70px]">
+            <div class="container">
+              <p class="font-inter font-normal text-[20px] leading-[24.2px] mb-[30px] text-black">Мобильная коммерция - От 7%</p>
+              <ul class="flex gap-x-[60px] flex-wrap gap-y-[60px]">
+                <li class="w-[100px] h-[104px] flex justify-center items-center flex-col gap-y-[10px]">
+                  <img class="max-[600px]:w-[45px] max-[600px]:h-[45px]" src="/images/logos_megafone.png" alt="logotype" width="60px" height="60px">
+                  <p class="font-medium text-colorBlack leading-[19.36px] text-[16px]">Мегафон</p>
+                  <span class="font-light text-colorGray2 text-[16px] leading-[19.36px]">7%</span>
+                </li>
+                <li class="w-[100px] h-[104px] flex justify-center items-center flex-col gap-y-[10px]">
+                  <img class="max-[600px]:w-[45px] max-[600px]:h-[45px]" src="/images/logos_beeline.png" alt="logotype" width="60px" height="60px">
+                  <p class="font-medium text-colorBlack leading-[19.36px] text-[16px]">Билайн </p>
+                  <span class="font-light text-colorGray2 text-[16px] leading-[19.36px]">7%</span>
+                </li>
+                <li class="w-[100px] h-[104px] flex justify-center items-center flex-col gap-y-[10px]">
+                  <img class="max-[600px]:w-[45px] max-[600px]:h-[45px]" src="/images/logos_tele.png" alt="logotype" width="60px" height="60px">
+                  <p class="font-medium text-colorBlack leading-[19.36px] text-[16px]">Теле2 </p>
+                  <span class="font-light text-colorGray2 text-[16px] leading-[19.36px]">7%</span>
+                </li>
+                <li class="min-w-[100px] h-[104px] flex justify-center items-center flex-col gap-y-[10px]">
+                  <img class="max-[600px]:w-[45px] max-[600px]:h-[45px]" src="/images/logos_mts.png" alt="logotype" width="60px" height="60px">
+                  <p class="font-medium text-colorBlack leading-[19.36px] text-[16px]">МТС</p>
+                  <span class="font-light text-colorGray2 text-[16px] leading-[19.36px]">7%</span>
+                </li>
+              </ul>
+            </div>
+          </section>
+         <!-- mobile end -->
+
+         <div class="container mt-[100px]">
+          <h2 class="mb-[50px] title-page mt-[50px]">Тарифы на вывод средств</h2>
+          <p class="font-light font-inter text-[18px] leading-[26px] mb-[20px] max-[600px]:text-[16px]">
+            Мы взимаем комиссию за вывод средств, но она либо не превышает, либо незначительно превышает комиссии, 
+            взимаемые самими платформами, через которые мы осуществляем выплаты.
+          </p>
+          <p class="font-light font-inter text-[18px] leading-[26px] mb-[20px] max-[600px]:text-[16px]">Тарифы на выплаты также зависят от:</p>
+          <p class="font-light font-inter text-[18px] leading-[26px] mb-[20px] max-[600px]:text-[16px]">—Сферы деятельности вашего магазина.</p>
+          <p class="font-light font-inter text-[18px] leading-[26px] max-[600px]:text-[16px]">— Вида вашего подключения к нашему сервису.</p>
+        </div>
+
+       
+        <section class="electronic-wallets mt-[50px] mb-[100px]">
+          <div class="container">
+            <p class="font-inter font-normal text-[20px] leading-[24.2px] mb-[30px] text-black"> Минимальная сумма вывода составляет 1000 RUB</p>
+            <ul class="flex gap-x-[60px] flex-wrap gap-y-[60px]">
+              <li class="w-[100px] h-[104px] flex justify-center items-center flex-col gap-y-[10px]">
+                <img class="max-[600px]:w-[45px] max-[600px]:h-[45px]" src="/images/logos_visa.png" alt="logotype" width="60px" height="60px">
+                <p class="font-medium text-colorBlack leading-[19.36px] text-[16px]">VISA</p>
+                <span class="font-light text-colorGray2 text-[16px] leading-[19.36px]">От 4%</span>
+              </li>
+              <li class="w-[100px] h-[104px] flex justify-center items-center flex-col gap-y-[10px]">
+                <img class="max-[600px]:w-[45px] max-[600px]:h-[45px]" src="/images/logos_mastercard.png" alt="logotype" width="60px" height="60px">
+                <p class="font-medium text-colorBlack leading-[19.36px] text-[16px]">Mastercard</p>
+                <span class="font-light text-colorGray2 text-[16px] leading-[19.36px]">От 4%</span>
+              </li>
+              <li class="w-[100px] h-[104px] flex justify-center items-center flex-col gap-y-[10px]">
+                <img class="max-[600px]:w-[45px] max-[600px]:h-[45px]" src="/images/logos_mir.png" alt="logotype" width="60px" height="60px">
+                <p class="font-medium text-colorBlack leading-[19.36px] text-[16px]">МИР</p>
+                <span class="font-light text-colorGray2 text-[16px] leading-[19.36px]">От 4%</span>
+              </li>
+              <li class="w-[100px] h-[104px] flex justify-center items-center flex-col gap-y-[10px]">
+                <img class="max-[600px]:w-[45px] max-[600px]:h-[45px]" src="/images/logos_spb.png" alt="logotype" width="60px" height="60px">
+                <p class="font-medium text-colorBlack leading-[19.36px] text-[16px]">СБП</p>
+                <span class="font-light text-colorGray2 text-[16px] leading-[19.36px]">От 4%</span>
+              </li>
+              
+            </ul>
+            <ul class="flex gap-x-[60px] mt-[60px] flex-wrap gap-y-[60px]">
+              <li class="w-[100px] h-[104px] flex justify-center items-center flex-col gap-y-[10px]">
+                <img class="max-[600px]:w-[45px] max-[600px]:h-[45px]" src="/images/logos_tether.png" alt="logotype" width="60px" height="60px">
+                <p class="font-medium text-colorBlack leading-[19.36px] text-[16px]">Tether </p>
+                <span class="font-light text-colorGray2 text-[16px] leading-[19.36px]">от 4%</span>
+              </li>
+              <li class="w-[100px] h-[104px] flex justify-center items-center flex-col gap-y-[10px]">
+                <img class="max-[600px]:w-[45px] max-[600px]:h-[45px]" src="/images/logos_webmoney.png" alt="logotype" width="60px" height="60px">
+                <p class="font-medium text-colorBlack leading-[19.36px] text-[16px]">Webmoney </p>
+                <span class="font-light text-colorGray2 text-[16px] leading-[19.36px]">от 5%</span>
+              </li>
+            </ul>
+            <ul class="mt-[30px]">
+              <li class="w-[100px] h-[104px] flex justify-center items-center flex-col gap-y-[10px]">
+                <img class="max-[600px]:w-[45px] max-[600px]:h-[45px]" src="/images/bi_phone.png" alt="logotype" width="60px" height="60px">
+                <span class="font-light text-colorGray2 text-[16px] leading-[19.36px]">от 5%</span>
+              </li>
+            </ul>
+          </div>
+          
+        </section>
+
+    <!-- footer -->
+     <footer class="footer bg-colorBlue py-[30px]">
+        <div class="container">
+          <!-- top menu -->
+          <div class="footer-top-menu flex max-[768px]:flex-col max-[768px]:gap-y-5 max-[768px]:items-center">
+            <!-- logotype -->
+            <a href="#" class="inline-block mr-[108px] max-[768px]:mr-0"><img class="max-[400px]:w-[140px] max-[400px]:h-auto" src="/images/Logo.png" alt="logotype" width="187px" height="65px"/></a>
+            <!-- logotype end -->
+             <!-- other links -->
+              <div class="footer-links-top flex gap-x-[125px] mb-[30px] max-[1024px]:gap-x-[85px] max-[450px]:gap-x-[50px] max-[450px]:flex-col max-[450px]:gap-y-[30px]">
+                <ul class="flex flex-col gap-y-[10px]">
+                  <li class="max-[450px]:text-center"><a href="/pages/cards.html" class="font-houschka font-medium leading-[16px] text-[16px] duration-[.3s] hover:duration-[.3s] hover:text-white">Иностранные карты</a></li>
+                  <li class="max-[450px]:text-center"><a href="#" class="font-houschka font-medium leading-[16px] text-[16px] duration-[.3s] hover:duration-[.3s] hover:text-white">Публичная оферта</a></li>
+                  <li class="max-[450px]:text-center"><a href="#" class="font-houschka font-medium leading-[16px] text-[16px] duration-[.3s] hover:duration-[.3s] hover:text-white">Помощь</a></li>
+                  <li class="max-[450px]:text-center"><a href="#" class="font-houschka font-medium leading-[16px] text-[16px] duration-[.3s] hover:duration-[.3s] hover:text-white">Условия оплаты</a></li>
+                  <li class="max-[450px]:text-center"><a href="#" class="font-houschka font-medium leading-[16px] text-[16px] duration-[.3s] hover:duration-[.3s] hover:text-white">Инструкция по оплате</a></li>
+                </ul>
+                <ul class="flex flex-col gap-y-[10px]">
+                  <li class="max-[450px]:text-center"><a href="#" class="font-houschka font-medium leading-[16px] text-[16px] duration-[.3s] hover:duration-[.3s] hover:text-white">Онлайн касса по 54-Ф3</a></li>
+                  <li class="max-[450px]:text-center"><a href="#" class="font-houschka font-medium leading-[16px] text-[16px] duration-[.3s] hover:duration-[.3s] hover:text-white">Политика конфиденциальности</a></li>
+                  <li class="max-[450px]:text-center"><a href="#" class="font-houschka font-medium leading-[16px] text-[16px] duration-[.3s] hover:duration-[.3s] hover:text-white">Политика AML</a></li>
+                  <li class="max-[450px]:text-center"><a href="#" class="font-houschka font-medium leading-[16px] text-[16px] duration-[.3s] hover:duration-[.3s] hover:text-white">Защита данных</a></li>
+                  <li class="max-[450px]:text-center"><a href="#" class="font-houschka font-medium leading-[16px] text-[16px] duration-[.3s] hover:duration-[.3s] hover:text-white">Пользовательское соглашение</a></li>
+                </ul>
+              </div>
+             <!-- other links end -->
+          </div>
+          <!-- top menu end  -->
+           <!-- bottom menu -->
+            <div class="footer-link-bottom flex justify-between">
+              <!-- social media -->
+              <ul class="flex gap-x-[30px]">
+                <li><a href="#"><img class="max-[400px]:w-[35px] max-[400px]:h-auto" src="/images/icons/vk.svg" alt="social-media" width="40px" heihgt="40px"></a></li>
+                <li><a href="#"><img class="max-[400px]:w-[35px] max-[400px]:h-auto" src="/images/icons/telegram.svg" alt="social-media" width="40px" heihgt="40px"></a></li>
+              </ul>
+              <!-- social media end -->
+               <div class="copyright font-houschka text-[20px] leading-[20px] font-medium max-[400px]:text-[17px]">© KINGPAY - 2024</div> 
+            </div>
+           <!-- bottom menu end -->
+        </div>
+        
+     </footer>
+    <!-- footer end -->
+    <script type="module" src="/js/main.js"></script>
+  </body>
+</html>

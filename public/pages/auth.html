@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KingPay | Авторизация пользователя</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- подключаем шрифт -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="flex h-screen">
+        <img class="max-[1024px]:hidden" src="../images/auth-bg.jpg" alt="bg" width="50%" height="100%">
+        <div class="w-2/4 flex justify-center items-center flex-col max-[1024px]:w-full">
+            <img src="../images/Logo.png" class="mb-[100px]" alt="logotype" width="187px" height="65px">
+            <form action="#" class="">
+                <label class="form-register-label">
+                    <img src="../images/icons/sms.svg" alt="email" heihgt="24px" width="24px">
+                    <input type="email" placeholder="Эл. почта" class="form-register-input" required>
+                </label>
+                <label class="form-register-label">
+                    <img src="../images/icons/lock.svg" alt="пароль" heihgt="24px" width="24px">
+                    <input type="password" placeholder="Пароль" class="form-register-input" required>
+                </label>
+                <div class="recaptcha flex justify-between  px-5 py-1 bg-[#f9f9f9] border border-colorGray mt-8 mb-5">
+                    <div class="checkbox flex items-center">
+                        <label class="w-[26px] h-[26px] border-[3px] border-colorGray rounded-sm relative flex justify-center items-center overflow-hidden">
+                            <input type="checkbox" name="recaptcha" required class="w-full h-full opacity-0">
+                        </label>
+                        <span class="ml-[20px] text-colorGray2 text-[18px]">I'm not a robot</span>
+                    </div>
+                    <img src="../images/recaptcha.webp" alt="recaptcha" width="90px" height="90px">
+                </div>
+                <a href="/pages/user/controlPanel.html" class="flex items-center justify-center form-register-submit">Войти</a>
+                <div class="flex justify-between items-center mt-[29.5px]">
+                    <a href="./register.html" class="text-[16px] text-colorGray2 leading-[19.36px] font-normal">Регистрация</a>
+                    <a href="#" class="text-[16px] text-colorGray2 leading-[19.36px] font-normal">Забыли пароль?</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script type="module" src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* подключаем шрифт */
+
+@font-face {
+    font-family: 'Houschka Pro';
+    src: url('../fonts/Houschka-pro/HouschkaPro-Medium.woff2') format('woff2'),
+         url('../fonts/Houschka-pro/HouschkaPro-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+*{
+    font-family: 'Inter','sans-serif';
+    scrollbar-width: thin;  /* Тонкий скроллбар */
+    scrollbar-color: #b0b0b0 transparent; 
+}
+
+/* Стилизация для WebKit-браузеров (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+    width: 8px;  /* Устанавливаем ширину скроллбара */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;  /* Прозрачный фон трека */
+    border-radius: 10px; /* Закругляем углы трека */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #b0b0b0;  /* Серый цвет ползунка */
+    border-radius: 10px;  /* Закругленные углы ползунка */
+    border: 2px solid transparent; /* Добавляем отступы, чтобы визуально скроллбар выглядел круглее */
+    background-clip: padding-box; /* Убираем пересечение фона с границами */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #888888;  /* Темнее при наведении */
+}
+
+::-webkit-scrollbar-thumb:active {
+    background-color: #6b6b6b;  /* Ещё темнее при клике */
+}
+
+/* Отключаем стрелки вверх и вниз */
+::-webkit-scrollbar-button {
+    display: none;
+}
+
+
+/* стили активной кнопки регистрации формы регистрации*/
+.form-register{
+    @apply pt-[50px] pb-[51px] bg-white pl-[75px] pr-[105px] mb-[30px] 
+    max-[600px]:pl-[20px] max-[600px]:pr-[20px] max-[600px]:flex max-[600px]:flex-col max-[600px]:items-center max-[400px]:px-[10px];
+}
+.max-w-400-font-size-16{
+    @apply max-[400px]:text-[16px];
+}
+.btn-active {
+    @apply border border-colorBlack rounded-[10px] bg-white;
+}
+/* стили инпутов формы регистрации*/
+.form-register-input{
+    @apply font-inter bg-transparent w-full outline-none pl-[10px] placeholder:font-normal placeholder:text-[18px] placeholder:text-colorGray max-[400px]:placeholder:text-[16px];
+}
+/* стили label формы регистрации*/
+.form-register-label{
+    @apply flex items-center pl-[20px] mb-[20px] rounded-[10px] bg-[#f8f8f8] w-[380px] h-[60px] max-[500px]:w-full max-[500px]:max-w-[380px];
+}
+/* стили button формы регистрации*/
+.form-register-submit{
+    @apply w-[380px] h-[60px] rounded-[10px] outline-none bg-colorBlue text-black text-[18px] font-normal duration-[.3s] 
+    hover:duration-[.3s] hover:translate-y-[-3px] active:translate-y-[3px] max-[500px]:w-full max-[500px]:max-w-[380px] max-[400px]:text-[16px];
+}
+
+/* container */
+    .container {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    @media (min-width: 640px) {
+        .container {
+            max-width: 640px;
+        }
+    }
+    @media (min-width: 768px) {
+        .container {
+            max-width: 768px;
+        }
+    }
+    @media (min-width: 1024px) {
+        .container {
+            max-width: 1024px;
+        }
+    }
+    @media (min-width: 1280px) {
+        .container {
+            max-width: 1280px;
+        }
+    }
+    @media (min-width: 1536px) {
+        .container {
+            max-width: 1536px;
+        }
+    }
+
+/* mobile menu active */
+.mobile-menu-active{
+    @apply right-0 duration-[.3s];
+}
+
+/* title */
+.title-page{
+    @apply font-inter font-medium text-[26px] text-colorBlack leading-[31.47px] uppercase max-[600px]:text-[22px] max-[400px]:text-[18px];
+}
+
+/* показываем текст */
+.text-show{
+    @apply font-normal text-[16px] leading-[19.36px] text-[#9DFFFCB2] max-w-[400px] pl-[20px] h-0 overflow-hidden max-lg:max-w-[100%] max-[500px]:text-[14px] ;
+}
+.text-show-active{
+    @apply h-auto;
+}
+.title-btn{
+    @apply text-[20px] leading-[24.2px] font-medium text-white max-w-[400px] mb-[21px] cursor-pointer max-lg:max-w-[100%] max-[500px]:text-[17px];
+}
+
+/* faq-answer */
+.faq-answer{
+    @apply flex gap-x-[30px] px-[30px] pt-[30px] pb-[40px] w-full 
+    items-start border border-[#47E1DD] my-0 mx-auto max-md:px-5 max-md:pb-[20px] h-fit;
+}
+
+.faq-answer-text {
+@apply  text-[16px] leading-[19.36px] text-colorGray2 font-light h-0 overflow-hidden;
+}
+.faq-answer-text-active{
+    @apply h-auto;
+}
+
+/* req text  */
+.req-text{
+    @apply text-[18px] font-light text-colorBlack leading-[26px] max-sm:text-[16px] max-sm:leading-[24px];
+}
+
+/* contant-title */
+.contant-title{
+    @apply text-[22px] leading-[26px] text-black font-normal;
+}
+.contant-title-blue{
+    @apply leading-[26px] text-[18px] font-normal text-colorBlue;
+}
+
+/* menu active */
+.menu-active{
+    @apply before:content-[''] before:w-[6px] before:h-full before:rounded-r-[5px] before:bg-colorBlue before:absolute before:left-0 before:top-0
+    max-[1400px]:before:w-full max-[1400px]:before:h-[3px] max-[1400px]:before:rounded-t-[5px] max-[1400px]:before:bottom-0 max-[1400px]:before:top-auto max-[1400px]:before:rounded-none;
+}
+.menu-active svg path{
+    fill: #000;
+}
+
+#activityCanvas {
+    background-color: white;
+    border: 1px solid black;
+}
+.chart-container {
+    width: 100%;
+    min-height: 204px;
+    max-width: 640px;
+}
