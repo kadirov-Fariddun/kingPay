@@ -4,6 +4,7 @@ export default {
     './index.html',           // Главный файл index.html
     './public/pages/**/*.html',      // Все файлы .html в папке pages и её подкаталогах
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       backgroundImage:{
@@ -17,7 +18,8 @@ export default {
         colorGray:'#B7B7B7',
         colorBlack:'#292D32',
         colorBlue:'#47E1DD',
-        colorGray2:'#6A6A6A'
+        colorGray2:'#6A6A6A',
+        dark:'#1b1b1b'
       },
       fontFamily:{
         inter: ['Inter', 'sans-serif'], 

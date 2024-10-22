@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KingPay | Вывод средств</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <!-- подключаем шрифт -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+    <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/airbnb.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/dark.css"/> -->
+</head>
+<body>
+    <div class="flex max-[1400px]:flex-col max-[1400px]:relative">
+        <aside class="w-[90px] min-h-screen bg-white relative max-[1400px]:w-full max-[1400px]:min-h-[85px] max-[1400px]:static max-[1400px]:top-0
+        dark:bg-[#1B1B1B]">
+            <!-- menu static -->
+             <div class="sticky left-0 top-0 pt-[20px] w-full min-h-screen pb-[20px] flex flex-col max-[1400px]:flex-row max-[1400px]:min-h-[85px]
+             max-[1400px]:px-[30px] max-[1400px]:items-center max-[1400px]:py-0 max-[1400px]:sticky max-[1400px]:top-0">
+                 <!-- logo -->
+                 <div class="w-full flex justify-center h-fit max-[1400px]:w-fit">
+                    <img class="logo max-sm:w-[30px] max-sm:h-auto" src="../../images/logo.svg" alt="logo" width="40px" height="56px">
+                </div>
+                <!-- menu -->
+                <ul class="mt-auto max-[1400px]:flex max-[1400px]:my-0 max-[1400px]:items-center
+                max-[1400px]:ml-auto max-[1400px]:h-[85px] max-[1400px]:gap-x-[40px] max-sm:gap-x-[20px]">
+                    <li class="menu-item">
+                        <span class="menu-item-text">Проекты</span>
+                        <a href="/pages/user/controlPanel.html" class="w-full flex justify-center items-center h-full  max-[1400px]:px-[5px]">
+                            <div class="relative w-fit">
+                                <span class="w-[26px] h-[26px] rounded-full flex justify-center items-center 
+                                text-[12px] leading-[14.52px] text-black font-medium 
+                                bg-colorBlue absolute right-0 translate-x-[50%] top-0 translate-y-[-50%]
+                                max-sm:w-[22px] max-sm:h-[22px] max-sm:text-[10px]">12</span>
+                                <svg class="max-sm:w-[24px]" width="32" height="32" viewBox="0 0 32 32" fill="" xmlns="http://www.w3.org/2000/svg">
+                                    <path class="dark:fill-[#b7b7b7]" d="M22.6666 30.3333H9.33329C3.45329 30.3333 1.66663 28.5467 1.66663 22.6667V9.33334C1.66663 
+                                    3.45334 3.45329 1.66667 9.33329 1.66667H11.3333C13.6666 1.66667 14.4 2.42667 15.3333 3.66667L17.3333 
+                                    6.33334C17.7733 6.92 17.84 7 18.6666 7H22.6666C28.5466 7 30.3333 8.78667 30.3333 14.6667V22.6667C30.3333 
+                                    28.5467 28.5466 30.3333 22.6666 30.3333ZM9.33329 3.66667C4.57329 3.66667 3.66663 4.57334 3.66663 
+                                    9.33334V22.6667C3.66663 27.4267 4.57329 28.3333 9.33329 28.3333H22.6666C27.4266 28.3333 28.3333 
+                                    27.4267 28.3333 22.6667V14.6667C28.3333 9.90667 27.4266 9 22.6666 9H18.6666C16.96 9 16.4 8.41334 15.7333 
+                                    7.53334L13.7333 4.86667C13.04 3.94667 12.84 3.66667 11.3333 3.66667H9.33329Z" fill="#6a6a6a"/>
+                                </svg> 
+                            </div>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <span class="menu-item-text">Выплаты</span>
+                        <a href="/pages/user/withdrawal.html" class="w-full flex justify-center items-center h-full max-[1400px]:px-[5px] menu-active">
+                            <div class="relative w-fit">
+                                <svg class="max-sm:w-[24px]" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path class="dark:fill-[#b7b7b7]"  fill-rule="evenodd" clip-rule="evenodd" d="M2.66663 16C2.11434 16 1.66663 16.4477 1.66663 17V18C1.66663 25.24 4.75996 28.3333 12 28.3333H20C27.24 28.3333 30.3333 25.24 30.3333 18V17C30.3333 16.4477 29.8856 16 29.3333 16C28.781 16 28.3333 16.4477 28.3333 17V18C28.3333 24.1467 26.1466 26.3333 20 26.3333H12C5.85329 26.3333 3.66663 24.1467 3.66663 18V17C3.66663 16.4477 3.21891 16 2.66663 16Z" fill="#6A6A6A"/>
+                                    <path class="dark:fill-[#b7b7b7]"  d="M19.9998 9.68001C19.7465 9.68001 19.4932 9.58668 19.2932 9.38668L15.9998 6.09336L12.7065 9.38668C12.3198 9.77335 11.6798 9.77335 11.2932 9.38668C10.9065 9.00001 10.9065 8.36002 11.2932 7.97335L15.2932 3.97335C15.6798 3.58668 16.3198 3.58668 16.7065 3.97335L20.7065 7.97335C21.0932 8.36002 21.0932 9.00001 20.7065 9.38668C20.5065 9.58668 20.2532 9.68001 19.9998 9.68001Z" fill="#6A6A6A"/>
+                                    <path class="dark:fill-[#b7b7b7]"  d="M16 20C15.4533 20 15 19.4274 15 18.7368V5.26316C15 4.57263 15.4533 4 16 4C16.5467 4 17 4.57263 17 5.26316V18.7368C17 19.4442 16.5467 20 16 20Z" fill="#6A6A6A"/>
+                                </svg>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <span class="menu-item-text">Кабинет</span>
+                        <a href="/pages/user/profile.html" class="w-full flex justify-center items-center h-full max-[1400px]:px-[5px]">
+                            <div class="relative w-fit">
+                                <svg class="max-sm:w-[24px]" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path class="dark:fill-[#b7b7b7]"   d="M16 17C11.7734 17 8.33337 13.56 8.33337 9.33332C8.33337 5.10666 11.7734 1.66666 16 1.66666C20.2267 1.66666 23.6667 5.10666 23.6667 9.33332C23.6667 13.56 20.2267 17 16 17ZM16 3.66666C12.88 3.66666 10.3334 6.21332 10.3334 9.33332C10.3334 12.4533 12.88 15 16 15C19.12 15 21.6667 12.4533 21.6667 9.33332C21.6667 6.21332 19.12 3.66666 16 3.66666Z" fill="#6A6A6A"/>
+                                    <path class="dark:fill-[#b7b7b7]"  d="M27.4535 30.3333C26.9069 30.3333 26.4535 29.88 26.4535 29.3333C26.4535 24.7333 21.7602 21 
+                                    16.0002 21C10.2402 21 5.54687 24.7333 5.54687 29.3333C5.54687 29.88 5.09354 
+                                    30.3333 4.54687 30.3333C4.00021 30.3333 3.54688 29.88 3.54688 29.3333C3.54688 23.64 9.13354 19 
+                                    16.0002 19C22.8669 19 28.4535 23.64 28.4535 29.3333C28.4535 29.88 28.0002 30.3333 27.4535 30.3333Z" fill="#6A6A6A"/>
+                                </svg>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <!-- menu end -->
+                 <!-- menu btn open -->
+                  <button class="menu-btn w-fit h-fit mx-auto mt-auto max-[1400px]:mt-0 max-[1400px]:w-fit max-[1400px]:mx-0 max-[1400px]:ml-[40px]">
+                    <img class="max-sm:w-[24px]" src="../../images/icons/menu.svg" alt="menu-btn" width="32px" height="32px">
+                  </button>
+                 <!-- menu btn open end -->
+                <!-- logo end -->
+             </div>
+             <!-- menu static -->
+        </aside>
+        <!-- content -->
+        <main class="flex-grow flex max-[1150px]:flex-col">
+            <!-- первая половина экрана -->
+            <div class="w-2/4 h-full bg-[#f8f8f8] pt-[70px] px-[20px] max-[1400px]:min-h-screen max-[1400px]:h-auto max-[1150px]:w-full 
+            max-[1150px]:h-fit max-md:pt-[20px] dark:bg-colorBlack">
+                <div class="wrapper max-w-[680px] mx-auto max-[1150px]:max-w-full">
+                    <h1 class="text-[42px] leading-[50.83px] font-light text-black mb-[50px] max-[1150px]:hidden dark:text-white">Вывод средств</h1>
+                    <div class="hidden max-[1150px]:flex max-[1150px]:items-center">
+                         <!--mob version шапка личного кабинета -->
+                        <div class="head-ls w-full mb-[50px] max-[1150px]:flex max-[1150px]:items-center">
+                            <h1 class="text-[32px] leading-[30.83px] font-light text-black max-md:text-[24px] max-[400px]:text-[20px] dark:text-white">Вывод средств</h1>
+                            <button class="relative h-[32px] w-[64px] rounded-[40px] bg-black max-[1150px]:ml-auto max-[1150px]:mr-[20px] black-theme-btn">
+                                <span class="w-[32px] h-[32px] rounded-full bg-transparent absolute right-0 top-0 flex items-center justify-center duration-[.3s]"><img src="../../images/icons/iconamoon_mode-dark-light.svg" alt="moon" width="24px" height="24px"></span>
+                            </button>
+                            <nav class="flex gap-x-[30px] items-center justify-end w-full max-[1150px]:w-fit max-md:hidden">
+                                <!-- balance -->
+                                <div class="py-[15px] px-[36px] rounded-[10px] border border-black max-xl:px-[15px]
+                                dark:border-white">
+                                    <p class="text-[14px] leading-[16.94px] font-normal text-colorGray2 dark:text-[#B7B7B7]">
+                                        Баланс 
+                                        <strong class="text-black text-[16px] leading-[19.36px] dark:text-white">315 780₽</strong></p>
+                                </div>
+                                <!-- balance end -->
+                                <!-- уведомления -->
+                                <div>
+                                    <button class="relative btn-notification" onclick="clickOpenBlock(this,'block-notification')">
+                                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path class="dark:fill-white" d="M16.0267 27.3733C12.92 27.3733 9.81332 26.88 6.86665 25.8933C5.74665 25.5067 4.89332 24.72 4.51999 23.6933C4.13332 22.6667 4.26665 21.5333 4.87999 20.52L6.41332 17.9733C6.73332 17.44 7.02665 16.3733 7.02665 15.7467V11.8933C7.02665 6.93333 11.0667 2.89333 16.0267 2.89333C20.9867 2.89333 25.0267 6.93333 25.0267 11.8933V15.7467C25.0267 16.36 25.32 17.44 25.64 17.9867L27.16 20.52C27.7333 21.48 27.84 22.64 27.4533 23.6933C27.0667 24.7467 26.2267 25.5467 25.1733 25.8933C22.24 26.88 19.1333 27.3733 16.0267 27.3733ZM16.0267 4.89333C12.1733 4.89333 9.02666 8.02667 9.02666 11.8933V15.7467C9.02666 16.72 8.62666 18.16 8.13332 19L6.59999 21.5467C6.30665 22.04 6.22666 22.56 6.39999 23C6.55999 23.4533 6.95999 23.8 7.50666 23.9867C13.08 25.8533 18.9867 25.8533 24.56 23.9867C25.04 23.8267 25.4133 23.4667 25.5867 22.9867C25.76 22.5067 25.72 21.9867 25.4533 21.5467L23.92 19C23.4133 18.1333 23.0267 16.7067 23.0267 15.7333V11.8933C23.0267 8.02667 19.8933 4.89333 16.0267 4.89333Z" fill="#292D32"/>
+                                            <path class="dark:fill-white" d="M18.5067 5.25333C18.4133 5.25333 18.32 5.24 18.2267 5.21333C17.84 5.10667 17.4667 5.02667 17.1067 4.97333C15.9733 4.82667 14.88 4.90667 13.8533 5.21333C13.48 5.33333 13.08 5.21333 12.8267 4.93333C12.5733 4.65333 12.4933 4.25333 12.64 3.89333C13.1867 2.49333 14.52 1.57333 16.04 1.57333C17.56 1.57333 18.8933 2.48 19.44 3.89333C19.5733 4.25333 19.5067 4.65333 19.2533 4.93333C19.0533 5.14667 18.7733 5.25333 18.5067 5.25333Z" fill="#292D32"/>
+                                            <path class="dark:fill-white" d="M16.0266 30.4133C14.7066 30.4133 13.4266 29.88 12.4933 28.9467C11.5599 28.0133 11.0266 26.7333 11.0266 25.4133H13.0266C13.0266 26.2 13.3466 26.9733 13.9066 27.5333C14.4666 28.0933 15.2399 28.4133 16.0266 28.4133C17.6799 28.4133 19.0266 27.0667 19.0266 25.4133H21.0266C21.0266 28.1733 18.7866 30.4133 16.0266 30.4133Z" fill="#292D32"/>
+                                        </svg>
+                                        <span class="w-[10px] h-[10px] rounded-full bg-[#47E1DD] border-2 border-white absolute right-[3px] top-[5px]"></span>
+                                          <!-- block с увидомлением -->
+                                            <div class="absolute right-[50%] top-[150%] py-[15px] px-[20px] bg-white shadow-[0_10px_32px_rgba(109,109,109,0.16)]
+                                            min-w-[250px] w-full rounded-[10px] hidden block-notification">
+                                                <h4 class="text-[15px] text-[#3c3c3c] font-bold text-left mb-[5px]">Уведомления</h4>
+                                                <p class="text-[#818181] text-[14px] text-left">У вас нет новых уведомлений</p>
+                                            </div>
+                                          <!-- block с увидомлением end -->
+                                    </button>
+                                    
+                                </div>
+                                <!-- уведомления end -->
+                                <!-- avatar -->
+                                <div class="w-[32px] h-[32px] rounded-full flex justify-center 
+                                items-center font-medium text-[18px] leading-[21.78px] text-black bg-[#47E1DD]">F</div>
+                                <!-- avatar end -->
+                               <!-- btn open settings -->
+                            <button class="relative" onclick="clickOpenBlock(this,'block-menu-settings')">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path class="dark:fill-white" d="M28 10.3333H4C3.45333 10.3333 3 9.88 3 9.33334C3 8.78667 3.45333 8.33334 4 8.33334H28C28.5467 8.33334 29 8.78667 29 9.33334C29 9.88 28.5467 10.3333 28 10.3333Z" fill="#292D32"/>
+                                    <path class="dark:fill-white" d="M28 17H4C3.45333 17 3 16.5467 3 16C3 15.4533 3.45333 15 4 15H28C28.5467 15 29 15.4533 29 16C29 16.5467 28.5467 17 28 17Z" fill="#292D32"/>
+                                    <path class="dark:fill-white" d="M28 23.6667H16C15.4533 23.6667 15 23.2133 15 22.6667C15 22.12 15.4533 21.6667 16 21.6667H28C28.5467 21.6667 29 22.12 29 22.6667C29 23.2133 28.5467 23.6667 28 23.6667Z" fill="#292D32"/>
+                                </svg>
+                                <!-- block с увидомлением -->
+                                <div class="absolute right-[50%] top-[150%] py-[10px]  bg-white shadow-[0_10px_32px_rgba(109,109,109,0.16)]
+                                 rounded-[10px] block-menu-settings h-fit hidden">
+                                    <ul>
+                                        <li class="w-full h-fit">
+                                            <a href="#" class="px-[25px] py-[10px] flex items-center justify-center text-[#1c1c1c] text-[15px] 
+                                        duration-[.2s] hover:duration-[.2s] hover:text-yellow-500 text-nowrap text-left">Личный кабинет</a>
+                                        </li>
+                                        <li class="w-full h-fit">
+                                            <a href="#" class="px-[25px] py-[10px] flex items-center justify-center text-[#1c1c1c] text-[15px] 
+                                        duration-[.2s] hover:duration-[.2s] hover:text-yellow-500 text-nowrap text-left">Безопасность</a>
+                                        </li>
+                                        <li class="w-full h-fit">
+                                            <a href="#" class="px-[25px] py-[10px] flex items-center justify-center text-[#1c1c1c] text-[15px] 
+                                        duration-[.2s] hover:duration-[.2s] hover:text-yellow-500 text-nowrap text-left">Помощь</a>
+                                        </li>
+                                        <li>
+                                            <a href="../auth.html" class="px-[25px] py-[10px] text-red-600 text-[15px] text-left">Выход</a>
+                                        </li>
+                                       
+                                    </ul>
+                                </div>
+                                <!-- block с увидомлением end -->
+                            </button>
+                           <!-- btn open settings end -->
+                            </nav>
+                        </div>
+                        <!--mob version шапка личного кабинета end -->
+                    </div>
+                    <!-- основной блок первой половины -->
+                     <div class="py-[40px] pl-[40px] pr-[28px] rounded-[20px] bg-white dark:bg-dark 
+                     max-[350px]:pl-[15px] max-[350px]:pr-[15px]">
+                        <div class="flex items-center justify-between mb-[40px]">
+                            <h2 class="title-page-h2">Новая выплата</h2>
+                            <button class="relative"onclick="clickOpenBlock(this,'block-menu-settings')">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path class="dark:fill-white" d="M10.7998 18.3C10.7998 17.9022 10.9578 17.5206 11.2391 17.2393C11.5204 16.958 11.902 16.8 12.2998 16.8C12.6976 16.8 13.0792 16.958 13.3605 17.2393C13.6418 17.5206 13.7998 17.9022 13.7998 18.3C13.7998 18.6978 13.6418 19.0794 13.3605 19.3607C13.0792 19.642 12.6976 19.8 12.2998 19.8C11.902 19.8 11.5204 19.642 11.2391 19.3607C10.9578 19.0794 10.7998 18.6978 10.7998 18.3ZM10.7998 12.3C10.7998 11.9022 10.9578 11.5206 11.2391 11.2393C11.5204 10.958 11.902 10.8 12.2998 10.8C12.6976 10.8 13.0792 10.958 13.3605 11.2393C13.6418 11.5206 13.7998 11.9022 13.7998 12.3C13.7998 12.6978 13.6418 13.0794 13.3605 13.3607C13.0792 13.642 12.6976 13.8 12.2998 13.8C11.902 13.8 11.5204 13.642 11.2391 13.3607C10.9578 13.0794 10.7998 12.6978 10.7998 12.3ZM10.7998 6.3C10.7998 5.90218 10.9578 5.52065 11.2391 5.23934C11.5204 4.95804 11.902 4.8 12.2998 4.8C12.6976 4.8 13.0792 4.95804 13.3605 5.23934C13.6418 5.52065 13.7998 5.90218 13.7998 6.3C13.7998 6.69783 13.6418 7.07936 13.3605 7.36066C13.0792 7.64197 12.6976 7.8 12.2998 7.8C11.902 7.8 11.5204 7.64197 11.2391 7.36066C10.9578 7.07936 10.7998 6.69783 10.7998 6.3Z" fill="black"/>
+                                </svg>
+                                 <!-- block с увидомлением -->
+                                 <div class="absolute right-[50%] top-[150%] py-[10px] bg-white shadow-[0_10px_32px_rgba(109,109,109,0.16)]
+                                 rounded-[10px] block-menu-settings h-fit hidden">
+                                    <ul>
+                                        <li class="w-full h-fit">
+                                            <a class="px-[25px] py-[10px] flex items-center justify-center text-[#1c1c1c] text-[15px]
+                                             text-nowrap text-left cursor-auto opacity-[.5]">Новая выплата</a>
+                                        </li>
+                                        <li class="w-full h-fit">
+                                            <a href="#" class="px-[25px] py-[10px] flex items-center justify-center text-[#1c1c1c] text-[15px] 
+                                        duration-[.2s] hover:duration-[.2s] hover:text-yellow-500 text-nowrap text-left">Массовые выплаты</a>
+                                        </li>
+                                       
+                                    </ul>
+                                </div>
+                                <!-- block с увидомлением end -->
+                            </button>
+                        </div>
+                        <!-- выбор каты -->
+                        <div class="flex gap-x-[40px] items-center mb-[20px]">
+                            <div class="h-[50px] max-w-[300px] w-full relative">
+                                <div class="absolute left-0 top-0 wrapper max-w-[300px] w-full h-full transition-all max-h-[50px] rounded-[10px] border border-black
+                                dark:border-white overflow-hidden bg-white dark:bg-dark z-10">
+                                    <button class="h-[50px] w-full flex items-center justify-between px-[20px]" onclick="showText(this),changeHtmlCard(this)">
+                                        <div class="flex items-center gap-x-[10px]">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path class="dark:fill-white" d="M22 9.25H2C1.59 9.25 1.25 8.91 1.25 8.5C1.25 8.09 1.59 7.75 2 7.75H22C22.41 7.75 22.75 8.09 22.75 8.5C22.75 8.91 22.41 9.25 22 9.25Z" fill="#292D32"/>
+                                                <path class="dark:fill-white" d="M8 17.25H6C5.59 17.25 5.25 16.91 5.25 16.5C5.25 16.09 5.59 15.75 6 15.75H8C8.41 15.75 8.75 16.09 8.75 16.5C8.75 16.91 8.41 17.25 8 17.25Z" fill="#292D32"/>
+                                                <path class="dark:fill-white" d="M14.5 17.25H10.5C10.09 17.25 9.75 16.91 9.75 16.5C9.75 16.09 10.09 15.75 10.5 15.75H14.5C14.91 15.75 15.25 16.09 15.25 16.5C15.25 16.91 14.91 17.25 14.5 17.25Z" fill="#292D32"/>
+                                                <path class="dark:fill-white" d="M17.56 21.25H6.44C2.46 21.25 1.25 20.05 1.25 16.11V7.89C1.25 3.95 2.46 2.75 6.44 2.75H17.55C21.53 2.75 22.74 3.95 22.74 7.89V16.1C22.75 20.05 21.54 21.25 17.56 21.25ZM6.44 4.25C3.3 4.25 2.75 4.79 2.75 7.89V16.1C2.75 19.2 3.3 19.74 6.44 19.74H17.55C20.69 19.74 21.24 19.2 21.24 16.1V7.89C21.24 4.79 20.69 4.25 17.55 4.25H6.44Z" fill="#292D32"/>
+                                            </svg>
+                                            <span class="text-page text-black block">Банковская карта</span>
+                                        </div>
+                                        <div>
+                                            <svg class="dark:fill-white arrow-rotate" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
+                                            </svg>
+                                        </div>
+                                    </button>
+                                    <!-- список кард -->
+                                    <div class="cards-show">
+                                        <label class="cursor-pointer h-[50px] w-full px-[20px] flex items-center gap-x-[10px] 
+                                        transition-all hover:transition-all dark:hover:bg-[#383838] hover:bg-colorGray">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path class="dark:fill-white" d="M22 9.25H2C1.59 9.25 1.25 8.91 1.25 8.5C1.25 8.09 1.59 7.75 2 7.75H22C22.41 7.75 22.75 8.09 22.75 8.5C22.75 8.91 22.41 9.25 22 9.25Z" fill="#292D32"/>
+                                                <path class="dark:fill-white" d="M8 17.25H6C5.59 17.25 5.25 16.91 5.25 16.5C5.25 16.09 5.59 15.75 6 15.75H8C8.41 15.75 8.75 16.09 8.75 16.5C8.75 16.91 8.41 17.25 8 17.25Z" fill="#292D32"/>
+                                                <path class="dark:fill-white" d="M14.5 17.25H10.5C10.09 17.25 9.75 16.91 9.75 16.5C9.75 16.09 10.09 15.75 10.5 15.75H14.5C14.91 15.75 15.25 16.09 15.25 16.5C15.25 16.91 14.91 17.25 14.5 17.25Z" fill="#292D32"/>
+                                                <path class="dark:fill-white" d="M17.56 21.25H6.44C2.46 21.25 1.25 20.05 1.25 16.11V7.89C1.25 3.95 2.46 2.75 6.44 2.75H17.55C21.53 2.75 22.74 3.95 22.74 7.89V16.1C22.75 20.05 21.54 21.25 17.56 21.25ZM6.44 4.25C3.3 4.25 2.75 4.79 2.75 7.89V16.1C2.75 19.2 3.3 19.74 6.44 19.74H17.55C20.69 19.74 21.24 19.2 21.24 16.1V7.89C21.24 4.79 20.69 4.25 17.55 4.25H6.44Z" fill="#292D32"/>
+                                            </svg>
+                                            <span class="text-page text-black">
+                                                Банковская карта
+                                            </span>
+                                            <input class="hidden" type="radio" name="bank-card" value="Банковская карта">
+                                        </label>
+                                        <label class="cursor-pointer h-[50px] w-full px-[20px] flex items-center gap-x-[10px] 
+                                        transition-all hover:transition-all dark:hover:bg-[#383838] hover:bg-colorGray">
+                                            <img src="/images/icons/sbp.png" alt="card" width="24px" height="24px">
+                                            <span class="text-page text-black">
+                                                СБП
+                                            </span>
+                                            <input class="hidden" type="radio" name="bank-card" value="СБП">
+                                        </label>
+                                        <label class="cursor-pointer h-[50px] w-full px-[20px] flex items-center gap-x-[10px] 
+                                        transition-all hover:transition-all dark:hover:bg-[#383838] hover:bg-colorGray">
+                                            <img src="/images/icons/tether.png" alt="card" width="24px" height="24px">
+                                            <span class="text-page text-black">
+                                                Tether
+                                            </span>
+                                            <input class="hidden" type="radio" name="bank-card" value="Tether">
+                                        </label>
+                                        <label class="cursor-pointer h-[50px] w-full px-[20px] flex items-center gap-x-[10px] 
+                                        transition-all hover:transition-all dark:hover:bg-[#383838] hover:bg-colorGray">
+                                            <img src="/images/icons/webmoney.png" alt="card" width="24px" height="24px">
+                                            <span class="text-page text-black">
+                                                Webmoney
+                                            </span>
+                                            <input class="hidden" type="radio" name="bank-card" value="Webmoney">
+                                        </label>
+                                        <label class="cursor-pointer h-[50px] w-full px-[20px] flex items-center gap-x-[10px] 
+                                        transition-all hover:transition-all dark:hover:bg-[#383838] hover:bg-colorGray">
+                                            <img src="/images/icons/visa.png" alt="card" width="24px" height="24px">
+                                            <span class="text-page text-black">
+                                                Visa
+                                            </span>
+                                            <input class="hidden" type="radio" name="bank-card" value="Webmoney">
+                                        </label>
+                                        <!-- <label class="cursor-pointer h-[50px] w-full px-[20px] flex items-center gap-x-[10px] 
+                                        transition-all hover:transition-all dark:hover:bg-[#383838] hover:bg-colorGray">
+                                            <img src="/images/icons/mastercard.png" alt="card" width="24px" height="24px">
+                                            <span class="text-page text-black">
+                                                Matercard
+                                            </span>
+                                            <input class="hidden" type="radio" name="bank-card" value="Webmoney">
+                                        </label> -->
+                                    </div>
+                                    <!-- список кард end -->
+                                </div>
+                            </div>
+                            <p class="pay-input-text">
+                                Платежная система
+                            </p>
+                        </div>
+                        <!-- выбор каты end -->
+                         <!-- получатель отправитель -->
+                         <div class="flex gap-x-[40px] items-center w-full mb-[20px]">
+                            <div class="flex items-center gap-x-[10px] max-w-[300px] w-full">
+                                <button type="button" class="btn-change-card btn-change-card-active">Отправитель</button>
+                                <button type="button" class="btn-change-card">Получатель</button>
+                            </div>
+                            <p class="pay-input-text">
+                                Плательшик комиссии
+                            </p>
+                         </div>
+                         <!-- получатель отправитель end -->
+                         <!-- сумма рубль -->
+                         <div class="flex gap-x-[40px] items-center w-full mb-[20px]">
+                            <label class="relative flex items-center gap-x-[10px] max-w-[300px] w-full">
+                                <input class="w-full px-[20px] h-[50px] bg-[#F8F8F8] text-[16px]
+                                outline-colorGray2 rounded-[10px] text-black dark:bg-colorBlack
+                                placeholder:text-colorGray2 dark:text-white" type="number" required placeholder="Сумма">
+                                <span class="absolute top-[50%] translate-y-[-50%] right-[20px] bg-[#f8f8f8] font-medium
+                                text-[18px] dark:bg-colorBlack dark:text-white">₽</span>
+                            </label>
+                            <p class="pay-input-text">
+                                Мин. сумма 5 000₽<br/>
+                                Макс. сумма 100 000₽
+                            </p>
+                         </div>
+                         <!-- сумма рубль end -->
+                         <!-- сумма Доллор -->
+                         <div class="flex gap-x-[40px] items-center w-full mb-[20px]">
+                            <label class="relative flex items-center gap-x-[10px] max-w-[300px] w-full">
+                                <input class="w-full px-[20px] h-[50px] bg-[#F8F8F8] text-[16px]
+                                outline-colorGray2 rounded-[10px] text-black
+                                placeholder:text-colorGray2 dark:bg-colorBlack
+                                dark:text-white" type="number" required placeholder="Сумма получения">
+                                <span class="absolute top-[50%] translate-y-[-50%] right-[20px] bg-[#f8f8f8] font-medium
+                                text-[18px] dark:bg-colorBlack dark:text-white">$</span>
+                            </label>
+                            <p class="pay-input-text">
+                                Комиссия: 1%<br/>
+                                Курс: 2,53
+                            </p>
+                         </div>
+                         <!-- сумма доллор end -->
+                          <!-- кнопка отправить -->
+                         <div class="flex gap-x-[40px] items-center w-full mb-[20px]">
+                            <button class="form-register-submit max-w-[300px] w-full !h-[50px] text-page !text-black">Отправить</button>
+                            <p class="pay-input-text">
+                                С учетом комиссии
+                            </p>
+                         </div>
+
+                          <!-- кнопка отправить end -->
+                         
+                     </div>
+                    <!-- основной блок первой половины end -->
+                    
+                </div>
+            </div>
+             <!-- вторая половина экрана -->
+            <div class="w-2/4 pt-[30px] pr-[60px] pl-[40px] pb-[55px] max-xl:p-[30px] max-[1400px]:bg-[#f8f8f8] max-[1150px]:w-full max-sm:p-[10px]
+            dark:bg-[#1b1b1b]">
+                <!-- шапка личного кабинета -->
+                <div class="head-ls w-full mb-[50px] max-[1150px]:hidden">
+                    <nav class="flex gap-x-[30px] items-center justify-end w-full">
+                        <button class="relative h-[32px] w-[64px] rounded-[40px] bg-black black-theme-btn">
+                            <span class="w-[32px] h-[32px] rounded-full bg-transparent absolute right-0 top-0 flex items-center justify-center duration-[.3s]"><img src="../../images/icons/iconamoon_mode-dark-light.svg" alt="moon" width="24px" height="24px"></span>
+                        </button>
+                        <!-- balance -->
+                         <div class="py-[15px] px-[36px] rounded-[10px] border border-black max-xl:px-[20px]
+                         dark:border-white dark:">
+                            <p class="text-[14px] leading-[16.94px] font-normal text-colorGray2 dark:text-[#B7B7B7]">
+                                Баланс 
+                                <strong class="text-black text-[16px] leading-[19.36px] dark:text-white">315 780₽</strong></p>
+                         </div>
+                        <!-- balance end -->
+                         <!-- уведомления -->
+                          <div class="">
+                            <button class="relative btn-notification" onclick="clickOpenBlock(this,'block-notification')">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path class="dark:fill-white" d="M16.0267 27.3733C12.92 27.3733 9.81332 26.88 6.86665 25.8933C5.74665 25.5067 4.89332 24.72 4.51999 23.6933C4.13332 22.6667 4.26665 21.5333 4.87999 20.52L6.41332 17.9733C6.73332 17.44 7.02665 16.3733 7.02665 15.7467V11.8933C7.02665 6.93333 11.0667 2.89333 16.0267 2.89333C20.9867 2.89333 25.0267 6.93333 25.0267 11.8933V15.7467C25.0267 16.36 25.32 17.44 25.64 17.9867L27.16 20.52C27.7333 21.48 27.84 22.64 27.4533 23.6933C27.0667 24.7467 26.2267 25.5467 25.1733 25.8933C22.24 26.88 19.1333 27.3733 16.0267 27.3733ZM16.0267 4.89333C12.1733 4.89333 9.02666 8.02667 9.02666 11.8933V15.7467C9.02666 16.72 8.62666 18.16 8.13332 19L6.59999 21.5467C6.30665 22.04 6.22666 22.56 6.39999 23C6.55999 23.4533 6.95999 23.8 7.50666 23.9867C13.08 25.8533 18.9867 25.8533 24.56 23.9867C25.04 23.8267 25.4133 23.4667 25.5867 22.9867C25.76 22.5067 25.72 21.9867 25.4533 21.5467L23.92 19C23.4133 18.1333 23.0267 16.7067 23.0267 15.7333V11.8933C23.0267 8.02667 19.8933 4.89333 16.0267 4.89333Z" fill="#292D32"/>
+                                    <path class="dark:fill-white" d="M18.5067 5.25333C18.4133 5.25333 18.32 5.24 18.2267 5.21333C17.84 5.10667 17.4667 5.02667 17.1067 4.97333C15.9733 4.82667 14.88 4.90667 13.8533 5.21333C13.48 5.33333 13.08 5.21333 12.8267 4.93333C12.5733 4.65333 12.4933 4.25333 12.64 3.89333C13.1867 2.49333 14.52 1.57333 16.04 1.57333C17.56 1.57333 18.8933 2.48 19.44 3.89333C19.5733 4.25333 19.5067 4.65333 19.2533 4.93333C19.0533 5.14667 18.7733 5.25333 18.5067 5.25333Z" fill="#292D32"/>
+                                    <path class="dark:fill-white" d="M16.0266 30.4133C14.7066 30.4133 13.4266 29.88 12.4933 28.9467C11.5599 28.0133 11.0266 26.7333 11.0266 25.4133H13.0266C13.0266 26.2 13.3466 26.9733 13.9066 27.5333C14.4666 28.0933 15.2399 28.4133 16.0266 28.4133C17.6799 28.4133 19.0266 27.0667 19.0266 25.4133H21.0266C21.0266 28.1733 18.7866 30.4133 16.0266 30.4133Z" fill="#292D32"/>
+                                </svg>
+                                <span class="w-[10px] h-[10px] rounded-full bg-[#47E1DD] border-2 border-white absolute right-[3px] top-[5px]"></span>
+                                <!-- block с увидомлением -->
+                                <div class="absolute right-[50%] top-[150%] py-[15px] px-[20px] bg-white shadow-[0_10px_32px_rgba(109,109,109,0.16)]
+                                min-w-[250px] w-full rounded-[10px] hidden block-notification">
+                                    <h4 class="text-[15px] text-[#3c3c3c] font-bold text-left mb-[5px]">Уведомления</h4>
+                                    <p class="text-[#818181] text-[14px] text-left">У вас нет новых уведомлений</p>
+                                </div>
+                                <!-- block с увидомлением end -->
+                            </button>
+                          </div>
+                         <!-- уведомления end -->
+                          <!-- avatar -->
+                           <div class="w-[32px] h-[32px] rounded-full flex justify-center 
+                           items-center font-medium text-[18px] leading-[21.78px] text-black bg-[#47E1DD]">F</div>
+                          <!-- avatar end -->
+                           <!-- btn open settings -->
+                            <button class="relative" onclick="clickOpenBlock(this,'block-menu-settings')">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path class="dark:fill-white" d="M28 10.3333H4C3.45333 10.3333 3 9.88 3 9.33334C3 8.78667 3.45333 8.33334 4 8.33334H28C28.5467 8.33334 29 8.78667 29 9.33334C29 9.88 28.5467 10.3333 28 10.3333Z" fill="#292D32"/>
+                                    <path class="dark:fill-white" d="M28 17H4C3.45333 17 3 16.5467 3 16C3 15.4533 3.45333 15 4 15H28C28.5467 15 29 15.4533 29 16C29 16.5467 28.5467 17 28 17Z" fill="#292D32"/>
+                                    <path class="dark:fill-white" d="M28 23.6667H16C15.4533 23.6667 15 23.2133 15 22.6667C15 22.12 15.4533 21.6667 16 21.6667H28C28.5467 21.6667 29 22.12 29 22.6667C29 23.2133 28.5467 23.6667 28 23.6667Z" fill="#292D32"/>
+                                </svg>
+                                <!-- block с увидомлением -->
+                                <div class="absolute right-[50%] top-[150%] py-[10px]  bg-white shadow-[0_10px_32px_rgba(109,109,109,0.16)]
+                                 rounded-[10px] block-menu-settings h-fit hidden">
+                                    <ul>
+                                        <li class="w-full h-fit">
+                                            <a href="#" class="px-[25px] py-[10px] flex items-center justify-center text-[#1c1c1c] text-[15px] 
+                                        duration-[.2s] hover:duration-[.2s] hover:text-yellow-500 text-nowrap text-left">Личный кабинет</a>
+                                        </li>
+                                        <li class="w-full h-fit">
+                                            <a href="#" class="px-[25px] py-[10px] flex items-center justify-center text-[#1c1c1c] text-[15px] 
+                                        duration-[.2s] hover:duration-[.2s] hover:text-yellow-500 text-nowrap text-left">Безопасность</a>
+                                        </li>
+                                        <li class="w-full h-fit">
+                                            <a href="#" class="px-[25px] py-[10px] flex items-center justify-center text-[#1c1c1c] text-[15px] 
+                                        duration-[.2s] hover:duration-[.2s] hover:text-yellow-500 text-nowrap text-left">Помощь</a>
+                                        </li>
+                                        <li>
+                                            <a href="../auth.html" class="px-[25px] py-[10px] text-red-600 text-[15px] text-left">Выход</a>
+                                        </li>
+                                       
+                                    </ul>
+                                </div>
+                                <!-- block с увидомлением end -->
+                            </button>
+                           <!-- btn open settings end -->
+                    </nav>
+                </div>
+                <!-- шапка личного кабинета end -->
+                 <!-- history -->
+                  <div class="flex justify-between items-center max-[1400px]:bg-white dark:max-[1400px]:bg-[#1B1B1B] max-[1400px]:p-[20px]">
+                    <h2 class="text-[30px] leading-[36.31px] font-light text-black mb-[50px] 
+                    max-[1400px]:text-[24px] max-[1400px]:mb-0 max-sm:text-[20px] dark:text-white">История выводов</h2>
+                  </div>
+                  <!-- каленьдарь и други настройки -->
+                    <div class="flex gap-x-[30px] mb-[40px] max-md:w-full max-md:overflow-x-auto max-md:whitespace-nowrap">
+                        <!-- статус -->
+                         <div class="block max-w-[160px] w-full max-md:min-w-[160px]">
+                            <span class="top-title">статус</span>
+                            <div class="h-[24px] max-w-[160px] w-full relative max-md:min-w-[160px]">
+                                <div class="absolute left-0 top-0 wrapper max-w-[160px] w-full h-full transition-all max-h-[24px]
+                                    dark:border-white overflow-hidden bg-white dark:bg-dark z-10 overflow-y-hidden">
+                                    <button class="h-[24px] w-full flex items-center justify-between max-md:h-auto" onclick="showText(this),changeHtmlCard(this)">
+                                        <div class="flex items-center">
+                                            <span class="text-[18px] leading-[21.78px] font-normal text-black
+                                            dark:text-white max-xl:text-[14px] max-md:text-[18px]">Все статусы</span>
+                                        </div>
+                                        <div>
+                                            <svg class="dark:fill-white arrow-rotate" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
+                                            </svg>
+                                        </div>
+                                    </button>
+                                    <!-- список кард -->
+                                    <div class="cards-show">
+                                        <label class="status-item">
+                                            <span class="text-page text-black">
+                                                Все статусы
+                                            </span>
+                                            <input class="hidden" type="radio" name="status" value="Все статусы">
+                                        </label>
+                                        <label class="status-item">
+                                            <span class="text-page text-black">
+                                               Выплачен
+                                            </span>
+                                            <input class="hidden" type="radio" name="status" value="Выплачен">
+                                        </label>
+                                        <label class="status-item">
+                                            <span class="text-page text-black">
+                                                В процессе
+                                            </span>
+                                            <input class="hidden" type="radio" name="status" value=" В процессе">
+                                        </label>
+                                        <label class="status-item">
+                                            <span class="text-page text-black">
+                                                Отклонен
+                                            </span>
+                                            <input class="hidden" type="radio" name="status" value="Отклонен">
+                                        </label>
+                                        <label class="status-item">
+                                            <span class="text-page text-black">
+                                                Заблокирован
+                                            </span>
+                                            <input class="hidden" type="radio" name="status" value="Заблокирован">
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                         </div>
+                           
+                        <!-- статус end -->
+                        <!-- каленьдарь -->
+                         <div class="max-md:min-w-[220px]">
+                            <span class="top-title">Период</span>
+                            <div class="flex items-center">
+                                <!-- <input class="font-normal text-[18px] 
+                                leading-[21.78px] text-black bg-transparent max-w-[90px] dark:text-white" type="text" id="startDate" placeholder="Выберите дату">
+                                <span class="mx-[5px] text-black dark:text-white">-</span>
+                                <input class="font-normal text-[18px] 
+                                leading-[21.78px] dark:text-white text-black bg-transparent max-w-[90px]" type="text" id="endDate" placeholder="Выберите дату"> -->
+                                <input class="font-normal text-[18px] cursor-pointer text-center
+                                leading-[21.78px] text-black bg-transparent max-w-[100px] dark:text-white"  type="text" id="startDate" placeholder="Выберите начальную дату">
+                                <span class="mx-[5px] text-black dark:text-white">-</span>
+                                <input class="font-normal text-[18px] cursor-pointer text-center
+                                leading-[21.78px] text-black bg-transparent max-w-[100px] dark:text-white" type="text" id="endDate" placeholder="Выберите конечную дату">
+                            </div>
+                         </div>
+                       
+                        <!-- каленьдарь end -->
+                         <!-- поиск -->
+                          <div class="flex items-end mr-auto max-md:min-w-[180px]">
+                            <label class="relative h-[40px] input-placeholder-before-parent"
+                             onclick="activeClassPlaceholder(this,'input-placeholder-before','span-placeholder','span-placeholder-active')">
+                                <span class="span-placeholder ">Поиск</span>
+                                <input type="text" class="input-placeholder-before">
+                            </label>
+                          </div>
+                         <!-- поиск end -->
+                          <!-- download -->
+                          <div class="flex items-center max-md:min-w-[40px]">
+                            <a href="#">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path class="dark:fill-white" fill-rule="evenodd" clip-rule="evenodd" d="M2.36305 16C1.89032 16 1.53018 16.4312 1.66239 16.8851C2.54376 19.9106 4.8741 21.25 9 21.25H15C19.1259 21.25 21.4562 19.9106 22.3376 16.8851C22.4698 16.4312 22.1097 16 21.6369 16C21.2804 16 20.9776 16.2516 20.8711 16.5919C20.1578 18.8712 18.3746 19.75 15 19.75H9C5.62537 19.75 3.84224 18.8712 3.12891 16.5919C3.02243 16.2516 2.71956 16 2.36305 16Z" fill="#292D32"/>
+                                    <path class="dark:fill-white" d="M14.9999 10.5025C14.8099 10.5025 14.6199 10.5725 14.4699 10.7225L11.9999 13.1925L9.52994 10.7225C9.23994 10.4325 8.75994 10.4325 8.46994 10.7225C8.17994 11.0125 8.17994 11.4925 8.46994 11.7825L11.4699 14.7825C11.7599 15.0725 12.2399 15.0725 12.5299 14.7825L15.5299 11.7825C15.8199 11.4925 15.8199 11.0125 15.5299 10.7225C15.3799 10.5725 15.1899 10.5025 14.9999 10.5025Z" fill="#292D32"/>
+                                    <path class="dark:fill-white" d="M12 2.76245C11.59 2.76245 11.25 3.19193 11.25 3.70982V13.8151C11.25 14.333 11.59 14.7625 12 14.7625C12.41 14.7625 12.75 14.333 12.75 13.8151V3.70982C12.75 3.17929 12.41 2.76245 12 2.76245Z" fill="#292D32"/>
+                                </svg>
+                            </a>
+                          </div>
+                          
+                          <!-- download end -->
+                       
+                    </div>
+                  
+                  <!-- каленьдарь и други настройки end -->
+                  <ul class="w-full overflow-y-auto overflow-hidden max-md:overflow-x-auto max-md:w-full h-[500px] mb-[30px] max-[1400px]:bg-white dark:max-[1400px]:bg-[#1B1B1B]">
+                    <!-- head -->
+                    <li class="history-item-pay gap-x-[5px]">
+                        <p class="flex-[2] text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap
+                        max-md:min-w-[120px]">№ Выплаты</p>
+                        <p class="flex-[3] text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap max-md:min-w-[170px]">Счет получателя</p>
+                        <strong class="flex-[2] text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap max-md:min-w-[120px]">Сумма</strong>
+                        <span class="flex-[3] text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap max-md:min-w-[150px]">Дата</span>
+                        <span class="flex-[2] text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap text-center max-md:min-w-[100px]">Статус</span>
+                    </li>
+                    <!-- head end -->
+                    <li class="history-item-pay">
+                        <p class="flex-[2] text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[120px]">9837646</p>
+                        <p class="flex-[3] text-[16px] leading-[19.36]  text-colorGray2 font-light flex items-center gap-x-[10px]
+                        text-nowrap max-md:min-w-[170px]">
+                            <img src="/images/icons/mastercard.png" alt="card" width="24px" height="24px">
+                            <strong class="text-[16px] leading-[19.36px] font-semibold text-black dark:text-white ">424566765</strong>
+                        </p>
+                        <div class="flex-[2] text-[16px] leading-[19.36px] font-semibold text-colorBlack text-nowrap dark:text-white max-md:min-w-[120px]">12 540 ₽</div>
+                        <div class="flex-[3] flex gap-x-[10px] text-[16px] leading-[19.36] text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[150px]">
+                            <span>25 мая 2024</span>
+                            <span>16:35</span>
+                        </div>
+                        <span class="flex-[2] flex justify-center max-md:min-w-[100px]">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.2346 11.0586C16.8119 11.0586 16.4692 11.4532 16.4692 11.9402C16.4692 12.4271 16.8119 12.8218 17.2346 12.8218C17.6574 12.8218 18 12.4271 18 11.9402C18 11.4532 17.6574 11.0586 17.2346 11.0586Z" stroke="#B7B7B7" stroke-linejoin="round"/>
+                                <path d="M14.2332 13.9698C13.0343 13.6199 12.1176 11.4414 12.1176 11.4414C12.1176 11.4414 11.201 13.6192 10.0021 13.9698C8.80318 14.3196 8.13646 14.1158 7.5708 13.8534C7.5708 13.8534 8.54606 15.8273 8.54606 16.8287H15.6886C15.6886 15.8273 16.6638 13.8534 16.6638 13.8534C16.0982 14.1158 15.4315 14.3203 14.2326 13.9698H14.2332Z" stroke="#B7B7B7" stroke-linejoin="round"/>
+                                <path d="M7.70713 12.2782C7.86889 11.8284 7.68344 11.3127 7.29291 11.1264C6.90238 10.9401 6.45466 11.1537 6.2929 11.6035C6.13113 12.0533 6.31659 12.569 6.70712 12.7553C7.09764 12.9417 7.54537 12.728 7.70713 12.2782Z" stroke="#B7B7B7" stroke-linejoin="round"/>
+                                <path d="M12.6597 9.87044C12.9586 9.52616 12.9586 8.96798 12.6597 8.6237C12.3608 8.27942 11.8762 8.27942 11.5773 8.6237C11.2784 8.96798 11.2784 9.52616 11.5773 9.87044C11.8762 10.2147 12.3608 10.2147 12.6597 9.87044Z" stroke="#B7B7B7" stroke-linejoin="round"/>
+                                <circle cx="12" cy="12" r="11.5" stroke="#B7B7B7"/>
+                            </svg>
+                        </span>
+                    </li>
+                    <li class="history-item-pay">
+                        <p class="flex-[2] text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[120px]">9837646</p>
+                        <p class="flex-[3] text-[16px] leading-[19.36]  text-colorGray2 font-light flex items-center gap-x-[10px]
+                        text-nowrap max-md:min-w-[170px]">
+                            <img src="/images/icons/visa.png" alt="card" width="24px" height="24px">
+                            <strong class="text-[16px] leading-[19.36px] font-semibold text-black dark:text-white ">424566765</strong>
+                        </p>
+                        <div class="flex-[2] text-[16px] leading-[19.36px] font-semibold text-colorBlack text-nowrap dark:text-white max-md:min-w-[120px]">12 540 ₽</div>
+                        <div class="flex-[3] flex gap-x-[10px] text-[16px] leading-[19.36] text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[150px]">
+                            <span>25 мая 2024</span>
+                            <span>16:35</span>
+                        </div>
+                        <span class="flex-[2] flex justify-center max-md:min-w-[100px]">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.2346 11.0586C16.8119 11.0586 16.4692 11.4532 16.4692 11.9402C16.4692 12.4271 16.8119 12.8218 17.2346 12.8218C17.6574 12.8218 18 12.4271 18 11.9402C18 11.4532 17.6574 11.0586 17.2346 11.0586Z" stroke="#22D98C" stroke-linejoin="round"/>
+                                <path d="M14.2332 13.9698C13.0343 13.6199 12.1176 11.4414 12.1176 11.4414C12.1176 11.4414 11.201 13.6192 10.0021 13.9698C8.80318 14.3196 8.13646 14.1158 7.5708 13.8534C7.5708 13.8534 8.54606 15.8273 8.54606 16.8287H15.6886C15.6886 15.8273 16.6638 
+                                13.8534 16.6638 13.8534C16.0982 14.1158 15.4315 14.3203 14.2326 13.9698H14.2332Z" stroke="#22D98C" stroke-linejoin="round"/>
+                                <path d="M7.70713 12.2782C7.86889 11.8284 7.68344 11.3127 7.29291 11.1264C6.90238 10.9401 6.45466 11.1537 6.2929 11.6035C6.13113 12.0533 6.31659 12.569 6.70712 12.7553C7.09764 12.9417 7.54537 12.728 7.70713 12.2782Z" stroke="#22D98C" stroke-linejoin="round"/>
+                                <path d="M12.6597 9.87044C12.9586 9.52616 12.9586 8.96798 12.6597 8.6237C12.3608 8.27942 11.8762 8.27942 11.5773 8.6237C11.2784 8.96798 11.2784 9.52616 11.5773 9.87044C11.8762 10.2147 12.3608 10.2147 12.6597 9.87044Z" stroke="#22D98C" stroke-linejoin="round"/>
+                                <circle cx="12" cy="12" r="11.5" stroke="#22D98C"/>
+                            </svg>
+                        </span>
+                    </li>
+                    <li class="history-item-pay">
+                        <p class="flex-[2] text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[120px]">9837646</p>
+                        <p class="flex-[3] text-[16px] leading-[19.36]  text-colorGray2 font-light flex items-center gap-x-[10px]
+                        text-nowrap max-md:min-w-[170px]">
+                            <img src="/images/icons/tether.png" alt="card" width="24px" height="24px">
+                            <strong class="text-[16px] leading-[19.36px] font-semibold text-black dark:text-white ">424566765</strong>
+                        </p>
+                        <div class="flex-[2] text-[16px] leading-[19.36px] font-semibold text-colorBlack text-nowrap dark:text-white max-md:min-w-[120px]">12 540 ₽</div>
+                        <div class="flex-[3] flex gap-x-[10px] text-[16px] leading-[19.36] text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[150px]">
+                            <span>25 мая 2024</span>
+                            <span>16:35</span>
+                        </div>
+                        <span class="flex-[2] flex justify-center max-md:min-w-[100px]">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.2346 11.0586C16.8119 11.0586 16.4692 11.4532 16.4692 11.9402C16.4692 12.4271 16.8119 12.8218 17.2346 12.8218C17.6574 12.8218 18 12.4271 18 11.9402C18 11.4532 17.6574 11.0586 17.2346 11.0586Z" stroke="#ED2727" stroke-linejoin="round"/>
+                                <path d="M14.2332 13.9698C13.0343 13.6199 12.1176 11.4414 12.1176 11.4414C12.1176 11.4414 11.201 13.6192 10.0021 13.9698C8.80318 14.3196 8.13646 14.1158 7.5708 13.8534C7.5708 13.8534 8.54606 15.8273 8.54606 16.8287H15.6886C15.6886 15.8273 16.6638 13.8534 16.6638 13.8534C16.0982 14.1158 15.4315 14.3203 14.2326 13.9698H14.2332Z" stroke="#ED2727" stroke-linejoin="round"/>
+                                <path d="M7.70713 12.2782C7.86889 11.8284 7.68344 11.3127 7.29291 11.1264C6.90238 10.9401 6.45466 11.1537 6.2929 11.6035C6.13113 12.0533 6.31659 12.569 6.70712 12.7553C7.09764 12.9417 7.54537 12.728 7.70713 12.2782Z" stroke="#ED2727" stroke-linejoin="round"/>
+                                <path d="M12.6597 9.87044C12.9586 9.52616 12.9586 8.96798 12.6597 8.6237C12.3608 8.27942 11.8762 8.27942 11.5773 8.6237C11.2784 8.96798 11.2784 9.52616 11.5773 9.87044C11.8762 10.2147 12.3608 10.2147 12.6597 9.87044Z" stroke="#ED2727" stroke-linejoin="round"/>
+                                <circle cx="12" cy="12" r="11.5" stroke="#ED2727"/>
+                                <line x1="3.35355" y1="3.64645" x2="20.3536" y2="20.6464" stroke="#ED2727"/>
+                            </svg>
+                        </span>
+                    </li>
+                    <li class="history-item-pay">
+                        <p class="flex-[2] text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[120px]">9837646</p>
+                        <p class="flex-[3] text-[16px] leading-[19.36]  text-colorGray2 font-light flex items-center gap-x-[10px]
+                        text-nowrap max-md:min-w-[170px]">
+                            <img src="/images/icons/visa.png" alt="card" width="24px" height="24px">
+                            <strong class="text-[16px] leading-[19.36px] font-semibold text-black dark:text-white ">424566765</strong>
+                        </p>
+                        <div class="flex-[2] text-[16px] leading-[19.36px] font-semibold text-colorBlack text-nowrap dark:text-white max-md:min-w-[120px]">12 540 ₽</div>
+                        <div class="flex-[3] flex gap-x-[10px] text-[16px] leading-[19.36] text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[150px]">
+                            <span>25 мая 2024</span>
+                            <span>16:35</span>
+                        </div>
+                        <span class="flex-[2] flex justify-center max-md:min-w-[100px]">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.2346 11.0586C16.8119 11.0586 16.4692 11.4532 16.4692 11.9402C16.4692 12.4271 16.8119 12.8218 17.2346 12.8218C17.6574 12.8218 18 12.4271 18 11.9402C18 11.4532 17.6574 11.0586 17.2346 11.0586Z" stroke="#ED2727" stroke-linejoin="round"/>
+                                <path d="M14.2332 13.9698C13.0343 13.6199 12.1176 11.4414 12.1176 11.4414C12.1176 11.4414 11.201 13.6192 10.0021 13.9698C8.80318 14.3196 8.13646 14.1158 7.5708 13.8534C7.5708 13.8534 8.54606 15.8273 8.54606 16.8287H15.6886C15.6886 15.8273 16.6638 13.8534 16.6638 13.8534C16.0982 14.1158 15.4315 14.3203 14.2326 13.9698H14.2332Z" stroke="#ED2727" stroke-linejoin="round"/>
+                                <path d="M7.70713 12.2782C7.86889 11.8284 7.68344 11.3127 7.29291 11.1264C6.90238 10.9401 6.45466 11.1537 6.2929 11.6035C6.13113 12.0533 6.31659 12.569 6.70712 12.7553C7.09764 12.9417 7.54537 12.728 7.70713 12.2782Z" stroke="#ED2727" stroke-linejoin="round"/>
+                                <path d="M12.6597 9.87044C12.9586 9.52616 12.9586 8.96798 12.6597 8.6237C12.3608 8.27942 11.8762 8.27942 11.5773 8.6237C11.2784 8.96798 11.2784 9.52616 11.5773 9.87044C11.8762 10.2147 12.3608 10.2147 12.6597 9.87044Z" stroke="#ED2727" stroke-linejoin="round"/>
+                                <circle cx="12" cy="12" r="11.5" stroke="#ED2727"/>
+                                <line x1="3.35355" y1="3.64645" x2="20.3536" y2="20.6464" stroke="#ED2727"/>
+                            </svg>
+                        </span>
+                    </li>
+                    <li class="history-item-pay">
+                        <p class="flex-[2] text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[120px]">9837646</p>
+                        <p class="flex-[3] text-[16px] leading-[19.36]  text-colorGray2 font-light flex items-center gap-x-[10px]
+                        text-nowrap max-md:min-w-[170px]">
+                            <img src="/images/icons/sbp.png" alt="card" width="24px" height="24px">
+                            <strong class="text-[16px] leading-[19.36px] font-semibold text-black dark:text-white ">424566765</strong>
+                        </p>
+                        <div class="flex-[2] text-[16px] leading-[19.36px] font-semibold text-colorBlack text-nowrap dark:text-white max-md:min-w-[120px]">12 540 ₽</div>
+                        <div class="flex-[3] flex gap-x-[10px] text-[16px] leading-[19.36] text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[150px]">
+                            <span>25 мая 2024</span>
+                            <span>16:35</span>
+                        </div>
+                        <span class="flex-[2] flex justify-center max-md:min-w-[100px]">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.2346 11.0586C16.8119 11.0586 16.4692 11.4532 16.4692 11.9402C16.4692 12.4271 16.8119 12.8218 17.2346 12.8218C17.6574 12.8218 18 12.4271 18 11.9402C18 11.4532 17.6574 11.0586 17.2346 11.0586Z" stroke="#ED2727" stroke-linejoin="round"/>
+                                <path d="M14.2332 13.9698C13.0343 13.6199 12.1176 11.4414 12.1176 11.4414C12.1176 11.4414 11.201 13.6192 10.0021 13.9698C8.80318 14.3196 8.13646 14.1158 7.5708 13.8534C7.5708 13.8534 8.54606 15.8273 8.54606 16.8287H15.6886C15.6886 15.8273 16.6638 13.8534 16.6638 13.8534C16.0982 14.1158 15.4315 14.3203 14.2326 13.9698H14.2332Z" stroke="#ED2727" stroke-linejoin="round"/>
+                                <path d="M7.70713 12.2782C7.86889 11.8284 7.68344 11.3127 7.29291 11.1264C6.90238 10.9401 6.45466 11.1537 6.2929 11.6035C6.13113 12.0533 6.31659 12.569 6.70712 12.7553C7.09764 12.9417 7.54537 12.728 7.70713 12.2782Z" stroke="#ED2727" stroke-linejoin="round"/>
+                                <path d="M12.6597 9.87044C12.9586 9.52616 12.9586 8.96798 12.6597 8.6237C12.3608 8.27942 11.8762 8.27942 11.5773 8.6237C11.2784 8.96798 11.2784 9.52616 11.5773 9.87044C11.8762 10.2147 12.3608 10.2147 12.6597 9.87044Z" stroke="#ED2727" stroke-linejoin="round"/>
+                                <circle cx="12" cy="12" r="11.5" stroke="#ED2727"/>
+                                <line x1="3.35355" y1="3.64645" x2="20.3536" y2="20.6464" stroke="#ED2727"/>
+                            </svg>
+                        </span>
+                    </li>
+                    <li class="history-item-pay">
+                        <p class="flex-[2] text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[120px]">9837646</p>
+                        <p class="flex-[3] text-[16px] leading-[19.36]  text-colorGray2 font-light flex items-center gap-x-[10px]
+                        text-nowrap max-md:min-w-[170px]">
+                            <img src="/images/icons/visa.png" alt="card" width="24px" height="24px">
+                            <strong class="text-[16px] leading-[19.36px] font-semibold text-black dark:text-white ">424566765</strong>
+                        </p>
+                        <div class="flex-[2] text-[16px] leading-[19.36px] font-semibold text-colorBlack text-nowrap dark:text-white max-md:min-w-[120px]">12 540 ₽</div>
+                        <div class="flex-[3] flex gap-x-[10px] text-[16px] leading-[19.36] text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[150px]">
+                            <span>25 мая 2024</span>
+                            <span>16:35</span>
+                        </div>
+                        <span class="flex-[2] flex justify-center max-md:min-w-[100px]">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.2346 11.0586C16.8119 11.0586 16.4692 11.4532 16.4692 11.9402C16.4692 12.4271 16.8119 12.8218 17.2346 12.8218C17.6574 12.8218 18 12.4271 18 11.9402C18 11.4532 17.6574 11.0586 17.2346 11.0586Z" stroke="#ED2727" stroke-linejoin="round"/>
+                                <path d="M14.2332 13.9698C13.0343 13.6199 12.1176 11.4414 12.1176 11.4414C12.1176 11.4414 11.201 13.6192 10.0021 13.9698C8.80318 14.3196 8.13646 14.1158 7.5708 13.8534C7.5708 13.8534 8.54606 15.8273 8.54606 16.8287H15.6886C15.6886 15.8273 16.6638 13.8534 16.6638 13.8534C16.0982 14.1158 15.4315 14.3203 14.2326 13.9698H14.2332Z" stroke="#ED2727" stroke-linejoin="round"/>
+                                <path d="M7.70713 12.2782C7.86889 11.8284 7.68344 11.3127 7.29291 11.1264C6.90238 10.9401 6.45466 11.1537 6.2929 11.6035C6.13113 12.0533 6.31659 12.569 6.70712 12.7553C7.09764 12.9417 7.54537 12.728 7.70713 12.2782Z" stroke="#ED2727" stroke-linejoin="round"/>
+                                <path d="M12.6597 9.87044C12.9586 9.52616 12.9586 8.96798 12.6597 8.6237C12.3608 8.27942 11.8762 8.27942 11.5773 8.6237C11.2784 8.96798 11.2784 9.52616 11.5773 9.87044C11.8762 10.2147 12.3608 10.2147 12.6597 9.87044Z" stroke="#ED2727" stroke-linejoin="round"/>
+                                <circle cx="12" cy="12" r="11.5" stroke="#ED2727"/>
+                                <line x1="3.35355" y1="3.64645" x2="20.3536" y2="20.6464" stroke="#ED2727"/>
+                            </svg>
+                        </span>
+                    </li>
+                    <li class="history-item-pay">
+                        <p class="flex-[2] text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[120px]">9837646</p>
+                        <p class="flex-[3] text-[16px] leading-[19.36]  text-colorGray2 font-light flex items-center gap-x-[10px]
+                        text-nowrap max-md:min-w-[170px]">
+                            <img src="/images/icons/tether.png" alt="card" width="24px" height="24px">
+                            <strong class="text-[16px] leading-[19.36px] font-semibold text-black dark:text-white ">424566765</strong>
+                        </p>
+                        <div class="flex-[2] text-[16px] leading-[19.36px] font-semibold text-colorBlack text-nowrap dark:text-white max-md:min-w-[120px]">12 540 ₽</div>
+                        <div class="flex-[3] flex gap-x-[10px] text-[16px] leading-[19.36] text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[150px]">
+                            <span>25 мая 2024</span>
+                            <span>16:35</span>
+                        </div>
+                        <span class="flex-[2] flex justify-center max-md:min-w-[100px]">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.2346 11.0586C16.8119 11.0586 16.4692 11.4532 16.4692 11.9402C16.4692 12.4271 16.8119 12.8218 17.2346 12.8218C17.6574 12.8218 18 12.4271 18 11.9402C18 11.4532 17.6574 11.0586 17.2346 11.0586Z" stroke="#ED2727" stroke-linejoin="round"/>
+                                <path d="M14.2332 13.9698C13.0343 13.6199 12.1176 11.4414 12.1176 11.4414C12.1176 11.4414 11.201 13.6192 10.0021 13.9698C8.80318 14.3196 8.13646 14.1158 7.5708 13.8534C7.5708 13.8534 8.54606 15.8273 8.54606 16.8287H15.6886C15.6886 15.8273 16.6638 13.8534 16.6638 13.8534C16.0982 14.1158 15.4315 14.3203 14.2326 13.9698H14.2332Z" stroke="#ED2727" stroke-linejoin="round"/>
+                                <path d="M7.70713 12.2782C7.86889 11.8284 7.68344 11.3127 7.29291 11.1264C6.90238 10.9401 6.45466 11.1537 6.2929 11.6035C6.13113 12.0533 6.31659 12.569 6.70712 12.7553C7.09764 12.9417 7.54537 12.728 7.70713 12.2782Z" stroke="#ED2727" stroke-linejoin="round"/>
+                                <path d="M12.6597 9.87044C12.9586 9.52616 12.9586 8.96798 12.6597 8.6237C12.3608 8.27942 11.8762 8.27942 11.5773 8.6237C11.2784 8.96798 11.2784 9.52616 11.5773 9.87044C11.8762 10.2147 12.3608 10.2147 12.6597 9.87044Z" stroke="#ED2727" stroke-linejoin="round"/>
+                                <circle cx="12" cy="12" r="11.5" stroke="#ED2727"/>
+                                <line x1="3.35355" y1="3.64645" x2="20.3536" y2="20.6464" stroke="#ED2727"/>
+                            </svg>
+                        </span>
+                    </li>
+                    <li class="history-item-pay">
+                        <p class="flex-[2] text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[120px]">9837646</p>
+                        <p class="flex-[3] text-[16px] leading-[19.36]  text-colorGray2 font-light flex items-center gap-x-[10px]
+                        text-nowrap max-md:min-w-[170px]">
+                            <img src="/images/icons/visa.png" alt="card" width="24px" height="24px">
+                            <strong class="text-[16px] leading-[19.36px] font-semibold text-black dark:text-white ">424566765</strong>
+                        </p>
+                        <div class="flex-[2] text-[16px] leading-[19.36px] font-semibold text-colorBlack text-nowrap dark:text-white max-md:min-w-[120px]">12 540 ₽</div>
+                        <div class="flex-[3] flex gap-x-[10px] text-[16px] leading-[19.36] text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[150px]">
+                            <span>25 мая 2024</span>
+                            <span>16:35</span>
+                        </div>
+                        <span class="flex-[2] flex justify-center max-md:min-w-[100px]">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.2346 11.0586C16.8119 11.0586 16.4692 11.4532 16.4692 11.9402C16.4692 12.4271 16.8119 12.8218 17.2346 12.8218C17.6574 12.8218 18 12.4271 18 11.9402C18 11.4532 17.6574 11.0586 17.2346 11.0586Z" stroke="#ED2727" stroke-linejoin="round"/>
+                                <path d="M14.2332 13.9698C13.0343 13.6199 12.1176 11.4414 12.1176 11.4414C12.1176 11.4414 11.201 13.6192 10.0021 13.9698C8.80318 14.3196 8.13646 14.1158 7.5708 13.8534C7.5708 13.8534 8.54606 15.8273 8.54606 16.8287H15.6886C15.6886 15.8273 16.6638 13.8534 16.6638 13.8534C16.0982 14.1158 15.4315 14.3203 14.2326 13.9698H14.2332Z" stroke="#ED2727" stroke-linejoin="round"/>
+                                <path d="M7.70713 12.2782C7.86889 11.8284 7.68344 11.3127 7.29291 11.1264C6.90238 10.9401 6.45466 11.1537 6.2929 11.6035C6.13113 12.0533 6.31659 12.569 6.70712 12.7553C7.09764 12.9417 7.54537 12.728 7.70713 12.2782Z" stroke="#ED2727" stroke-linejoin="round"/>
+                                <path d="M12.6597 9.87044C12.9586 9.52616 12.9586 8.96798 12.6597 8.6237C12.3608 8.27942 11.8762 8.27942 11.5773 8.6237C11.2784 8.96798 11.2784 9.52616 11.5773 9.87044C11.8762 10.2147 12.3608 10.2147 12.6597 9.87044Z" stroke="#ED2727" stroke-linejoin="round"/>
+                                <circle cx="12" cy="12" r="11.5" stroke="#ED2727"/>
+                                <line x1="3.35355" y1="3.64645" x2="20.3536" y2="20.6464" stroke="#ED2727"/>
+                            </svg>
+                        </span>
+                    </li>
+                    <li class="history-item-pay">
+                        <p class="flex-[2] text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[120px]">9837646</p>
+                        <p class="flex-[3] text-[16px] leading-[19.36]  text-colorGray2 font-light flex items-center gap-x-[10px]
+                        text-nowrap max-md:min-w-[170px]">
+                            <img src="/images/icons/tether.png" alt="card" width="24px" height="24px">
+                            <strong class="text-[16px] leading-[19.36px] font-semibold text-black dark:text-white ">424566765</strong>
+                        </p>
+                        <div class="flex-[2] text-[16px] leading-[19.36px] font-semibold text-colorBlack text-nowrap dark:text-white max-md:min-w-[120px]">12 540 ₽</div>
+                        <div class="flex-[3] flex gap-x-[10px] text-[16px] leading-[19.36] text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[150px]">
+                            <span>25 мая 2024</span>
+                            <span>16:35</span>
+                        </div>
+                        <span class="flex-[2] flex justify-center max-md:min-w-[100px]">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.2346 11.0586C16.8119 11.0586 16.4692 11.4532 16.4692 11.9402C16.4692 12.4271 16.8119 12.8218 17.2346 12.8218C17.6574 12.8218 18 12.4271 18 11.9402C18 11.4532 17.6574 11.0586 17.2346 11.0586Z" stroke="#ED2727" stroke-linejoin="round"/>
+                                <path d="M14.2332 13.9698C13.0343 13.6199 12.1176 11.4414 12.1176 11.4414C12.1176 11.4414 11.201 13.6192 10.0021 13.9698C8.80318 14.3196 8.13646 14.1158 7.5708 13.8534C7.5708 13.8534 8.54606 15.8273 8.54606 16.8287H15.6886C15.6886 15.8273 16.6638 13.8534 16.6638 13.8534C16.0982 14.1158 15.4315 14.3203 14.2326 13.9698H14.2332Z" stroke="#ED2727" stroke-linejoin="round"/>
+                                <path d="M7.70713 12.2782C7.86889 11.8284 7.68344 11.3127 7.29291 11.1264C6.90238 10.9401 6.45466 11.1537 6.2929 11.6035C6.13113 12.0533 6.31659 12.569 6.70712 12.7553C7.09764 12.9417 7.54537 12.728 7.70713 12.2782Z" stroke="#ED2727" stroke-linejoin="round"/>
+                                <path d="M12.6597 9.87044C12.9586 9.52616 12.9586 8.96798 12.6597 8.6237C12.3608 8.27942 11.8762 8.27942 11.5773 8.6237C11.2784 8.96798 11.2784 9.52616 11.5773 9.87044C11.8762 10.2147 12.3608 10.2147 12.6597 9.87044Z" stroke="#ED2727" stroke-linejoin="round"/>
+                                <circle cx="12" cy="12" r="11.5" stroke="#ED2727"/>
+                                <line x1="3.35355" y1="3.64645" x2="20.3536" y2="20.6464" stroke="#ED2727"/>
+                            </svg>
+                        </span>
+                    </li>
+                  </ul>
+                 <!-- history end -->
+                  <!-- btn load more -->
+                   <button class="w-[200px] h-[40px] rounded-[10px] border border-black flex
+                   items-center justify-center mx-auto dark:border-white dark:text-white text-black
+                   font-normal text-[14px] leading-[16.94px] max-sm:mb-[40px]">
+                    Загрузить еще
+                   </button>
+                  <!-- btn load more end -->
+            </div>
+            <!-- вторая половина экрана end -->
+            
+        </main>
+        <!-- content end -->
+    </div>
+        
+    
+    <script type="module" src="../../js/main.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script> -->
+    <script type="text/javascript">
+        // скрипт каленьдаря 
+         // Получаем вчерашнюю дату
+    // const yesterday = new Date();
+    // yesterday.setDate(yesterday.getDate() - 1);
+
+    // // Инициализация первого календаря с выбором вчерашнего дня по умолчанию
+    // const startDatePicker = flatpickr("#startDate", {
+    //   dateFormat: "d.m.Y",
+    //   defaultDate: yesterday, // по умолчанию вчерашняя дата
+    //   maxDate: new Date(), // можно выбрать только до текущего дня
+    //   locale: {
+    //     firstDayOfWeek: 1 // неделя начинается с понедельника
+    //   },
+    //   onChange: function(selectedDates) {
+    //     // Получаем выбранную дату в первом календаре
+    //     const selectedDate = selectedDates[0];
+
+    //     // Обновляем параметры второго календаря
+    //     endDatePicker.set('minDate', selectedDate); // минимальная дата - выбранная в первом календаре
+    //     endDatePicker.set('maxDate', new Date()); // максимальная дата - текущая
+    //   }
+    // });
+
+    // // Инициализация второго календаря с выбором сегодняшнего дня по умолчанию
+    // const endDatePicker = flatpickr("#endDate", {
+    //   dateFormat: "d.m.Y",
+    //   defaultDate: new Date(), // по умолчанию текущий день
+    //   locale: {
+    //     firstDayOfWeek: 1 // неделя начинается с понедельника
+    //   },
+    //   maxDate: new Date(), // по умолчанию можно выбрать только до текущей даты
+    // });
+    var startPicker = new Pikaday({
+      field: document.getElementById('startDate'),
+      format: 'DD.MM.YYYY',
+      toString(date) {
+        const day = ('0' + date.getDate()).slice(-2);
+        const month = ('0' + (date.getMonth() + 1)).slice(-2);
+        const year = date.getFullYear();
+        return `${day}.${month}.${year}`;
+      },
+      onSelect: function(date) {
+        endPicker.setMinDate(date); // Устанавливаем минимальную дату для второго календаря
+      }
+    });
+
+    // Инициализация второго календаря (дата "До")
+    var endPicker = new Pikaday({
+      field: document.getElementById('endDate'),
+      format: 'DD.MM.YYYY',
+      minDate: new Date(), // Минимальная дата - текущий день
+      toString(date) {
+        const day = ('0' + date.getDate()).slice(-2);
+        const month = ('0' + (date.getMonth() + 1)).slice(-2);
+        const year = date.getFullYear();
+        return `${day}.${month}.${year}`;
+      }
+    });
+
+    // Устанавливаем вчерашнюю дату как стартовую для первого календаря
+    const yesterday = new Date();
+    yesterday.setDate(yesterday.getDate() - 1);
+    startPicker.setDate(yesterday);
+
+    // Устанавливаем сегодняшнюю дату как стартовую для второго календаря
+    const today = new Date();
+    endPicker.setDate(today);
+
+        function changeHtmlCard(btn){
+            const cards = document.querySelectorAll('.cards-show label');
+            let btnHtml = btn.querySelector('div');
+            const parent = btn.parentElement;
+            
+            cards.forEach(card=>{
+                card.onclick = ()=>{
+                    let labelHtml = card.innerHTML; 
+                    btnHtml.innerHTML = labelHtml;
+                    parent.classList.remove('cards-show-active');
+                }
+            })
+        }
+        function activeClassPlaceholder(btn,inputClass,spanClass,classActive){
+            const input = btn.parentElement.querySelector(`.${inputClass}`);
+            const span = btn.parentElement.querySelector(`.${spanClass}`)
+            input.onfocus = () =>  {
+                span.classList.add(classActive);
+            }
+            input.onblur = () => {
+                span.classList.remove(classActive);
+            } 
+        }
+        function showText(obj,classnames) {
+            const parent = obj.parentElement; // Получаем родительский элемент
+            return parent.classList.toggle('cards-show-active');                    
+        }
+        
+        function clickOpenBlock(btn,classNam) {
+            const block = btn.querySelector('.'+classNam);
+            return block.classList.toggle('active');
+        };
+    </script>
+</body>
+</html>

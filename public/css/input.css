@@ -10,6 +10,21 @@
     font-weight: 500;
     font-style: normal;
 }
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+/* для темной темы */
+body.dark .menu-active svg path{
+    fill: #fff;
+}
+
+img {
+    -webkit-user-drag: none; /* Safari and Chrome */
+    -moz-user-drag: none;    /* Firefox */
+    -ms-user-drag: none;     /* Internet Explorer and Edge */
+  }
 
 *{
     font-family: 'Inter','sans-serif';
@@ -118,10 +133,11 @@
 
 /* показываем текст */
 .text-show{
-    @apply font-normal text-[16px] leading-[19.36px] text-[#9DFFFCB2] max-w-[400px] pl-[20px] h-0 overflow-hidden max-lg:max-w-[100%] max-[500px]:text-[14px] ;
+    @apply font-normal text-[16px] leading-[19.36px] text-[#9DFFFCB2] max-w-[400px] pl-[20px] max-h-0 overflow-hidden max-lg:max-w-[100%] max-[500px]:text-[14px]
+    transition-all;
 }
 .text-show-active{
-    @apply h-auto;
+    @apply h-auto max-h-[200px] duration-300;
 }
 .title-btn{
     @apply text-[20px] leading-[24.2px] font-medium text-white max-w-[400px] mb-[21px] cursor-pointer max-lg:max-w-[100%] max-[500px]:text-[17px];
@@ -134,10 +150,10 @@
 }
 
 .faq-answer-text {
-@apply  text-[16px] leading-[19.36px] text-colorGray2 font-light h-0 overflow-hidden;
+@apply  text-[16px] leading-[19.36px] text-colorGray2 font-light max-h-0 overflow-hidden transition-all;
 }
 .faq-answer-text-active{
-    @apply h-auto;
+    @apply h-auto max-h-[200px] transition-all;
 }
 
 /* req text  */
@@ -171,3 +187,136 @@
     min-height: 204px;
     max-width: 640px;
 }
+
+/* history */
+.history-item{
+    @apply h-[50px] w-full px-[20px] rounded-[10px] flex items-center /*max-[1400px]:rounded-none*/ max-sm:text-nowrap max-sm:overflow-hidden
+    max-sm:overflow-x-auto;
+}
+.history-item-pay{
+    @apply h-[50px] w-full px-[20px] rounded-[10px] flex items-center /*max-[1400px]:rounded-none*/ max-sm:text-nowrap;
+}
+.history-item.gray{
+    @apply bg-[#FBFBFB] dark:bg-colorBlack;
+}
+.history-date{
+    @apply font-light text-[16px] leading-[19.36px] text-colorGray2 mr-[10px] dark:text-[#B7B7B7];
+}
+.history-time{
+    @apply font-light text-[16px] leading-[19.36px] text-colorGray2 dark:text-[#B7B7B7];
+}
+.history-title{
+    @apply leading-[19.36px] font-semibold text-[16px] text-black ml-[30px] max-sm:mr-[10px] dark:text-white;
+}
+.history-money{
+    @apply leading-[19.36px] text-[16px] font-semibold text-[#22D98C] block ml-auto;
+}
+.history-money.history-money-red{
+    @apply text-[#ED2727];
+}
+
+.menu-item{
+    @apply w-full relative h-[40px] mb-[30px] max-[1400px]:mb-0 max-[1400px]:h-[85px]
+}
+.menu-item-text{
+    @apply absolute top-[50%] right-[-100%] p-[5px] px-[10px] bg-black text-white translate-y-[-50%] text-[14px] hidden;
+}
+.menu-item:hover .menu-item-text{
+    @apply block;
+}
+
+.block-notification.active{
+    @apply block;
+}
+.block-menu-settings.active{
+    @apply block;
+}
+
+/* cards-show-active */
+
+.cards-show-active{
+    @apply max-h-[300px] h-auto transition-all overflow-hidden overflow-y-auto;
+}
+.cards-show-active .arrow-rotate{
+    transform-origin: center;
+    transform: rotate(180deg);
+}
+
+.btn-change-card{
+    @apply  h-[50px] max-w-[145px] w-full border border-colorGray
+    bg-[#f8f8f8] text-colorGray2 text-page rounded-[10px] dark:bg-colorBlack dark:text-colorGray dark:border-colorGray2;
+}
+.btn-change-card-active{
+    @apply border-black text-black bg-white dark:border-white dark:text-white dark:bg-dark; 
+}
+
+.status-item{
+    @apply cursor-pointer w-full h-[40px] flex items-center justify-start pl-[10px]
+    transition-all hover:transition-all dark:hover:bg-[#383838] hover:bg-[#ecebeb];
+}
+
+/* inpuit placeholder before style */
+.span-placeholder{
+    @apply absolute left-0 bottom-[10px] font-light 
+    text-colorGray text-[18px] leading-[21.78px] transition-all;
+}
+.span-placeholder-active{
+    @apply transition-all bottom-[20px] text-[14px] text-colorGray2 mb-[15px] block font-light leading-[16.94px] dark:text-colorGray;
+}
+
+.input-placeholder-before{
+    @apply max-w-[200px] w-full h-[40px] text-[14px] 
+    outline-none border-b border-colorGray focus:border-yellow-400 bg-transparent dark:text-white;
+}
+.pay-input-text{
+    @apply text-colorGray font-normal text-[14px] leading-[16.94px] max-md:hidden;
+}
+
+/* кастомные стили календаря */
+.pika-single {
+    font-family: 'Inter', sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    @apply dark:bg-colorBlack;
+  }
+
+  .pika-button {
+    background-color: #3B82F6;
+    color: white;
+    border-radius: 50%;
+    @apply dark:bg-dark dark:text-white;
+  }
+
+  .is-today .pika-button {
+    border: 2px solid #3B82F6;
+  }
+
+  .is-selected .pika-button {
+    background-color: #3B82F6 !important;
+    color: white !important;
+  }
+  .pika-select-year{
+    @apply dark:bg-colorBlack dark:text-white;
+  }
+  .pika-select-month{
+    @apply dark:bg-colorBlack dark:text-white;
+  }
+  .pika-label{
+    @apply dark:bg-dark dark:text-white;
+  }
+  .pika-single .is-disabled .pika-button{
+    @apply text-black bg-colorGray;
+  }
+
+/* title adn text */
+.title-page-h2{
+    @apply font-light text-[30px] text-black leading-[36.31px] dark:text-white;
+}
+.text-page{
+    @apply leading-[19.36px] font-normal text-[16px] dark:text-white;
+}
+
+.top-title{
+    @apply text-[14px] text-colorGray2 mb-[15px] block font-light leading-[16.94px] dark:text-colorGray;
+}
+
