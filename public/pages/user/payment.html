@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KingPay | Личные данные</title>
+    <title>KingPay | Платёжные данные</title>
     <link rel="stylesheet" href="../../css/style.css">
     <!-- подключаем шрифт -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -83,8 +83,8 @@
         </aside>
         <!-- content pl-[140px]  pr-[80px] max-[1400px]:px-[20px]-->
         <main class="block flex-grow bg-[#f8f8f8] dark:bg-colorBlack 
-        max-[1400px]:min-h-screen pt-[30px] profile-wrapper">
-            <div class="container max-[1280px]:max-w-full max-[500px]:px-0">
+        max-[1400px]:min-h-screen pt-[30px] profile-wrapper pb-[40px]">
+            <div class="max-[1536px]:max-w-full container max-[1280px]:max-w-full max-[500px]:px-0">
                      <!-- шапка личного кабинета -->
              <div class="head-ls w-full max-[1400px]:hidden ml-auto">
                 <nav class="flex gap-x-[30px] items-center justify-end w-full">
@@ -241,14 +241,14 @@
 
 
                 <!-- весь контент после заголовка -->
-                 <div class="flex gap-x-[70px] max-[1280px]:gap-x-[20px]
+                 <div class="flex gap-x-[70px] max-[1536px]:gap-x-[20px]
                  max-lg:flex-col max-lg:gap-y-[40px] ">
                     <!-- menu profile -->
                      <ul class="flex flex-col gap-y-[40px] menu-profile
                      max-lg:flex-row max-lg:gap-x-[20px] max-md:w-full max-md:overflow-hidden 
-                     max-md:overflow-x-auto max-[500px]:px-[20px]">
+                     max-md:overflow-x-auto max-[500px]:px-[20px] w-[205px]">
                         <li>
-                            <a href="/pages/user/profile.html" class="menu-profile-active">
+                            <a href="/pages/user/profile.html">
                                 <?xml version="1.0" encoding="UTF-8"?>
                                     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px">
                                     <path  d="m12 12.75c-3.17 0-5.75-2.58-5.75-5.75s2.58-5.75 5.75-5.75 5.75 2.58 5.75 5.75-2.58 5.75-5.75 5.75zm0-10c-2.34 0-4.25 1.91-4.25 4.25s1.91 4.25 4.25 4.25 4.25-1.91 4.25-4.25-1.91-4.25-4.25-4.25z" fill="#292D32"/>
@@ -258,7 +258,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="/pages/user/payment.html">
+                            <a href="/pages/user/payment.html"  class="menu-profile-active">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path  d="M22 9.25H2C1.59 9.25 1.25 8.91 1.25 8.5C1.25 8.09 1.59 7.75 2 7.75H22C22.41 7.75 22.75 8.09 22.75 8.5C22.75 8.91 22.41 9.25 22 9.25Z" fill="#292D32"/>
                                     <path  d="M8 17.25H6C5.59 17.25 5.25 16.91 5.25 16.5C5.25 16.09 5.59 15.75 6 15.75H8C8.41 15.75 8.75 16.09 8.75 16.5C8.75 16.91 8.41 17.25 8 17.25Z" fill="#292D32"/>
@@ -308,100 +308,208 @@
                      </ul>
                     <!-- menu profile end -->
 
-                    <!-- форма паспорт -->
-                     <div class="bg-white rounded-[20px] px-[40px] pt-[40px] pb-[73px] dark:bg-dark max-w-[550px] w-full
-                     max-xl:px-[25px] max-lg:max-w-full max-lg:rounded-none">
-                        <h2 class="font-light text-[30px] leading-[36.31px] text-black dark:text-white mb-[40px]
-                        max-sm:text-[24px]">Паспорт</h2>
-                        <form class="">
-                            <!-- фамилия -->
-                            <div class="profile-form-block">
-                                <span class="text-page text-black dark:text-white max-sm:text-[14px] text-nowrap">Фамилия</span>
-                                <input class="profile-form-input" type="text" required>
-                            </div>
-                            <!-- фамилия end -->
-                            <!-- Имя -->
-                            <div class="profile-form-block">
-                                <span class="text-page text-black dark:text-white max-sm:text-[14px] text-nowrap">Имя</span>
-                                <input class="profile-form-input" type="text" required>
-                            </div>
-                            <!-- Имя end -->
-                            <!-- Отчество -->
-                            <div class="profile-form-block">
-                                <span class="text-page text-black dark:text-white max-sm:text-[14px] text-nowrap">Отчество</span>
-                                <input class="profile-form-input" type="text" required>
-                            </div>
-                            <!-- Отчество end -->
-                            <!-- Дата рождения -->
-                            <div class="profile-form-block">
-                                <span class="text-page text-black dark:text-white max-sm:text-[14px] text-nowrap">Дата рождения</span>
-                                <input class="profile-form-input" type="text" required>
-                            </div>
-                            <!-- Дата рождения end -->
-                            <!-- Серия и номер -->
-                            <div class="profile-form-block">
-                                <span class="text-page text-black dark:text-white max-sm:text-[14px] text-nowrap">Серия и номер</span>
-                                <input class="profile-form-input" type="text" required>
-                            </div>
-                            <!-- Серия и номер end -->
-                             <p class="py-[26.5px] px-[20px] rounded-[5px] bg-[#EFEFEF]
-                             text-colorGray2 font-normal text-[14px] leading-[16.94px] 
-                             max-w-[420px] w-full m-auto mb-[20px] dark:bg-[#262626] dark:text-colorGray max-lg:max-w-full
-                             max-[500px]:hidden">
-                                Для изменения данных необходимо <a href="#" class="font-medium text-[#3DB7CC]">создать тикет</a>
-                                с запросом и приложить соответствующие документы
-                             </p>
-                             <!-- btn submit -->
-                              <button class="form-register-submit mx-auto block !h-[50px] max-[500px]:max-w-[150px] max-[500px]:w-full 
-                              max-[500px]:mx-0">
-                                Сохранить
-                              </button>
-                             <!-- btn submit end -->
-                        </form>
-                     </div>
-                    <!-- форма паспорт end -->
-                     <!-- контактные данные -->
-                      <div class="px-[40px] pt-[40px] pb-[105px] rounded-[20px] bg-white h-fit dark:bg-dark max-w-[550px] w-full
-                      max-[1280px]:px-[20px] max-lg:max-w-full">
-                        <h2 class="font-light text-[30px] leading-[36.31px] text-black dark:text-white mb-[40px]
-                        max-sm:text-[24px]">Контакты</h2>
-                        <div class="flex items-end max-w-[470px] w-full mb-[50px] max-lg:max-w-full max-lg:justify-between">
-                            <span class="block max-w-[200px] w-full text-page text-colorGray2 dark:text-colorGray max-lg:max-w-auto
-                            max-sm:text-[14px]">Электронная почта</span>
-                            <div class="flex justify-between max-lg:max-w-[485px] max-lg:w-full">
-                                <p class="text-[18px] leading-[21.78px] text-black font-normal dark:text-white text-nowrap 
-                                max-sm:text-[14px]">email***@gmail.com</p>
-                            </div>
-                        </div>
-                        <div class="flex items-end max-w-[470px] w-full mb-[50px] max-lg:max-w-full max-lg:justify-between">
-                            <span class="block max-w-[200px] w-full text-page text-colorGray2 dark:text-colorGray max-lg:max-w-auto
-                            max-sm:text-[14px]">Телефон</span>
-                            <div class="max-w-[60%] w-full flex justify-between max-lg:max-w-[485px] max-lg:w-full">
-                                <p class="mr-auto text-[18px] leading-[21.78px] text-black font-normal dark:text-white text-nowrap max-sm:text-[14px]">+7 (495) 765 56 22</p>
-                                <button class="w-[20px] h-[20px] ml-[10px]">
-                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M9.99984 4.16667V15.8333M4.1665 10H15.8332" stroke="#B7B7B7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
+                     <div class="flex flex-col gap-y-[40px] max-w-[550px] w-full max-lg:max-w-full">
+                         <!-- форма Данные карты -->
+                        <div class="bg-white rounded-[20px] px-[40px] pt-[40px] pb-[73px] dark:bg-dark max-w-[550px] w-full
+                        max-xl:px-[25px] max-lg:max-w-full max-lg:rounded-none">
+                            <h2 class="font-light text-[30px] leading-[36.31px] text-black dark:text-white mb-[40px]
+                            max-sm:text-[24px]">Банковская карта</h2>
+                            <form class="">
+                                <!-- Номер карты -->
+                                <div class="profile-payment-form-block">
+                                    <span class="max-w-[120px] w-full text-page text-black dark:text-white max-sm:text-[14px] text-nowrap
+                                    max-sm:max-w-full max-sm:mb-[20px]">Номер карты</span>
+                                    <input class="profile-payment-input" type="text" required>
+                                    <div class="h-[24px] max-w-[100px] w-full relative max-sm:min-w-[100px] max-sm:absolute 
+                                    max-sm:right-0 max-md:top-0">
+                                        <div class="absolute left-0 top-0 wrapper max-w-[100px] w-full h-full transition-all max-h-[24px]
+                                            dark:border-white overflow-hidden bg-white dark:bg-dark z-10 overflow-y-hidden">
+                                            <button class="h-[24px] w-full flex items-center justify-between max-md:h-auto" onclick="showText(this),changeHtmlCard(this)">
+                                                <div class="flex items-center">
+                                                    <span class="text-[18px] leading-[21.78px] font-normal text-black
+                                                    dark:text-white max-xl:text-[14px] max-md:text-[18px]">UAH</span>
+                                                </div>
+                                                <div>
+                                                    <svg class="dark:fill-white arrow-rotate" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                        <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
+                                                    </svg>
+                                                </div>
+                                            </button>
+                                            <!-- список кард -->
+                                            <div class="cards-show">
+                                                <label class="status-item">
+                                                    <span class="text-page text-black">
+                                                        UAH
+                                                    </span>
+                                                    <input class="hidden" type="radio" name="pay-type" value="UAH">
+                                                </label>
+                                                <label class="status-item">
+                                                    <span class="text-page text-black">
+                                                        KZT
+                                                    </span>
+                                                    <input class="hidden" type="radio" name="pay-type" value="KZT">
+                                                </label>
+                                                <label class="status-item">
+                                                    <span class="text-page text-black">
+                                                        RUB
+                                                    </span>
+                                                    <input class="hidden" type="radio" name="pay-type" value="RUB">
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Номер карты end -->
+                                <!-- СПБ -->
+                                <div class="profile-payment-form-block my-[50px]">
+                                    <span class="max-w-[120px] w-full text-page text-black dark:text-white max-sm:text-[14px] 
+                                    text-nowrap max-sm:max-w-full max-sm:mb-[20px]">СПБ</span>
+                                    <input class="profile-payment-input" type="text" required>
+                                    <div class="h-[24px] relative w-[100px] max-lg:right-0 max-sm:absolute 
+                                    max-sm:right-0 max-sm:top-0 max-sm:min-w-[200px]">
+                                        <div class="absolute left-0 top-0 wrapper h-full transition-all max-h-[24px]
+                                            dark:border-white overflow-hidden bg-white dark:bg-dark z-[9] overflow-y-hidden 
+                                            max-w-[100px] w-full max-md:max-w-[200px]">
+                                            <button class="h-[24px] w-[100px] max-md:max-w-[180px] max-md:w-full flex items-center justify-between max-md:h-auto" onclick="showText(this),changeHtmlCard(this)">
+                                                <div class="flex items-center">
+                                                    <span class="text-[18px] leading-[21.78px] font-normal text-black
+                                                    dark:text-white max-xl:text-[14px] max-md:text-[18px]
+                                                    truncate w-[55px] max-md:w-fit">Сбербанк</span>
+                                                </div>
+                                                <div>
+                                                    <svg class="dark:fill-white arrow-rotate" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                        <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
+                                                    </svg>
+                                                </div>
+                                            </button>
+                                            <!-- список кард -->
+                                            
+                                            <div class="cards-show max-w-[200px] w-full"> 
+                                                <label class="status-item">
+                                                    <span class="text-page text-black">Сбербанк</span>
+                                                    <input class="hidden" type="radio" name="bank-type" value="Сбербанк">
+                                                </label>
+                                                
+                                                <label class="status-item">
+                                                    <span class="text-page text-black">Тинькофф Банк</span>
+                                                    <input class="hidden" type="radio" name="bank-type" value="Тинькофф Банк">
+                                                </label>
+                                                
+                                                <label class="status-item">
+                                                    <span class="text-page text-black">Банк ВТБ</span>
+                                                    <input class="hidden" type="radio" name="bank-type" value="Банк ВТБ">
+                                                </label>
+                                                
+                                                <label class="status-item">
+                                                    <span class="text-page text-black">Альфа-Банк</span>
+                                                    <input class="hidden" type="radio" name="bank-type" value="Альфа-Банк">
+                                                </label>
+                                                
+                                                <label class="status-item">
+                                                    <span class="text-page text-black">Райффайзенбанк</span>
+                                                    <input class="hidden" type="radio" name="bank-type" value="Райффайзенбанк">
+                                                </label>
+                                                
+                                                <label class="status-item">
+                                                    <span class="text-page text-black">Банк Открытие</span>
+                                                    <input class="hidden" type="radio" name="bank-type" value="Банк Открытие">
+                                                </label>
+                                                
+                                                <label class="status-item">
+                                                    <span class="text-page text-black">Газпромбанк</span>
+                                                    <input class="hidden" type="radio" name="bank-type" value="Газпромбанк">
+                                                </label>
+                                                
+                                               
+                                                <!-- Остальные банки по аналогии -->
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- СПБ end -->
+                                
+                                <!-- btn submit -->
+                                <button class="form-register-submit max-w-[330px] ml-auto block !h-[50px] max-[500px]:max-w-[150px] max-[500px]:w-full 
+                                max-[500px]:mx-0">
+                                    Сохранить
                                 </button>
-                            </div>
-                            
+                                <!-- btn submit end -->
+                            </form>
                         </div>
-                        <div class="flex items-end max-w-[470px] w-full mb-[50px] max-lg:max-w-full max-lg:justify-between">
-                            <span class="block max-w-[200px] w-full text-page text-colorGray2 dark:text-colorGray max-lg:max-w-auto
-                            max-sm:text-[14px]">Телеграм</span>
-                            <div class="max-w-[60%] w-full flex justify-between max-lg:max-w-[485px] max-lg:w-full">
-                                <p class="mr-auto text-[18px] leading-[21.78px] text-black font-normal dark:text-white text-nowrap
-                                max-sm:text-[14px]">@765***22</p>
-                                <button class="w-[20px] h-[20px] ml-[10px]">
-                                    <svg width="20" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M5.03125 1.59375H4.875C4.96094 1.59375 5.03125 1.52344 5.03125 1.4375V1.59375ZM5.03125 1.59375H10.9688V1.4375C10.9688 1.52344 11.0391 1.59375 11.125 1.59375H10.9688V3H12.375V1.4375C12.375 0.748047 11.8145 0.1875 11.125 0.1875H4.875C4.18555 0.1875 3.625 0.748047 3.625 1.4375V3H5.03125V1.59375ZM14.875 3H1.125C0.779297 3 0.5 3.2793 0.5 3.625V4.25C0.5 4.33594 0.570312 4.40625 0.65625 4.40625H1.83594L2.31836 14.6211C2.34961 15.2871 2.90039 15.8125 3.56641 15.8125H12.4336C13.1016 15.8125 13.6504 15.2891 13.6816 14.6211L14.1641 4.40625H15.3438C15.4297 4.40625 15.5 4.33594 15.5 4.25V3.625C15.5 3.2793 15.2207 3 14.875 3ZM12.2832 14.4062H3.7168L3.24414 4.40625H12.7559L12.2832 14.4062Z" fill="#B7B7B7"/>
-                                    </svg>
+                        <!-- форма Данные карты end -->
+                        <!-- Мобильный телефон -->
+                        <div class="bg-white rounded-[20px] px-[40px] pt-[40px] pb-[73px] dark:bg-dark max-w-[550px] w-full
+                        max-xl:px-[25px] max-lg:max-w-full max-lg:rounded-none">
+                            <h2 class="font-light text-[30px] leading-[36.31px] text-black dark:text-white mb-[40px]
+                            max-sm:text-[24px]">Мобильный телефон</h2>
+                            <form class="">
+                                <!-- Номер телефона -->
+                                <div class="profile-payment-form-block mb-[50px] gap-x-[20px]">
+                                    <span class="max-w-[120px] w-full text-page text-black dark:text-white max-sm:text-[14px] 
+                                    text-nowrap max-sm:max-w-full max-sm:mb-[20px]">Номер телефона</span>
+                                    <input class="profile-payment-input !max-w-[310px] max-sm:!max-w-full" type="text" required>
+                                </div>
+                                <!-- Номер телефона end -->
+                                
+                                <!-- btn submit -->
+                                <button class="form-register-submit max-w-[310px] ml-auto block 
+                                !h-[50px] max-[500px]:max-w-[150px] max-[500px]:w-full 
+                                max-[500px]:mx-0">
+                                    Сохранить
                                 </button>
-                            </div>
+                                <!-- btn submit end -->
+                            </form>
                         </div>
-                      </div>
-                     <!-- контактные данные end -->
+                        <!-- Мобильный телефон end -->
 
+                     </div>
+                     <!-- первый блок end -->
+                      <!-- второй блок -->
+                      <div class="bg-white rounded-[20px] px-[40px] pt-[40px] pb-[73px] dark:bg-dark max-w-[550px] w-full
+                      max-xl:px-[25px] max-lg:max-w-full max-lg:rounded-none h-fit">
+                          <h2 class="font-light text-[30px] leading-[36.31px] text-black dark:text-white mb-[40px]
+                          max-sm:text-[24px]">Электронные деньги</h2>
+                          <form class="">
+                              <!-- Юмани -->
+                              <div class="profile-payment-form-block mb-[50px] gap-x-[20px]">
+                                  <span class="max-w-[120px] w-full text-page text-black dark:text-white max-sm:text-[14px] 
+                                  text-nowrap max-sm:max-w-full max-sm:mb-[20px]">Юмани</span>
+                                  <input class="profile-payment-input !max-w-[310px] max-sm:!max-w-full" type="text" required>
+                              </div>
+                              <!-- Юмани end -->
+                              <!-- WebMoney -->
+                              <div class="profile-payment-form-block mb-[50px] gap-x-[20px]">
+                                  <span class="max-w-[120px] w-full text-page text-black dark:text-white max-sm:text-[14px] 
+                                  text-nowrap max-sm:max-w-full max-sm:mb-[20px]">
+                                    Webmoney 
+                                    <sup class="text-colorGray leading-[21.78px] text-[14px]">WMZ</sup>
+                                  </span>
+                                  <input class="profile-payment-input !max-w-[310px] max-sm:!max-w-full" type="text" required>
+                              </div>
+                              <!-- WebMoney end -->
+                              <!-- WebMoney -->
+                              <div class="profile-payment-form-block mb-[50px] gap-x-[20px]">
+                                  <span class="max-w-[120px] w-full text-page text-black dark:text-white max-sm:text-[14px] 
+                                  text-nowrap max-sm:max-w-full max-sm:mb-[20px]">
+                                   Tether  
+                                    <sup class="text-colorGray leading-[21.78px] text-[14px]">TRC20</sup>
+                                  </span>
+                                  <input class="profile-payment-input !max-w-[310px] max-sm:!max-w-full" type="text" required>
+                              </div>
+                              <!-- WebMoney end -->
+                              
+                              <!-- btn submit -->
+                              <button class="form-register-submit max-w-[310px] ml-auto block 
+                              !h-[50px] max-[500px]:max-w-[150px] max-[500px]:w-full 
+                              max-[500px]:mx-0">
+                                  Сохранить
+                              </button>
+                              <!-- btn submit end -->
+                          </form>
+                      </div>
+                      <!-- второй блок end -->
+                   
                  </div>
                 <!-- весь контент после заголовка end -->
             </div>
@@ -432,6 +540,29 @@
             const block = btn.querySelector('.'+classNam);
             return block.classList.toggle('active');
         };
+        function changeHtmlCard(btn) {
+            const cards = document.querySelectorAll('.cards-show label');
+            let btnHtml = btn.querySelector('div');
+            const parent = btn.parentElement;
+            
+            cards.forEach(card => {
+                card.addEventListener('click', () => {
+                    // Создаем клон элемента span
+                    const selectedSpan = card.querySelector('span').cloneNode(true);
+                    
+                    // Находим элемент span внутри кнопки и очищаем его содержимое
+                    const buttonSpanChild = btnHtml.querySelector('span');
+                    buttonSpanChild.innerHTML = '';  // Очищаем предыдущий текст
+                    
+                    // Добавляем новый текст из выбранного label
+                    buttonSpanChild.appendChild(selectedSpan);
+                    
+                    
+                    // Закрываем список, убирая активный класс
+                    parent.classList.remove('cards-show-active');
+                });
+            });
+        }
     </script>
 </body>
 </html>

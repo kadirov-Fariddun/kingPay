@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KingPay | Управление проектом Способы оплаты</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- подключаем шрифт -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="flex max-[1400px]:flex-col max-[1400px]:relative">
+        <aside class="w-[90px] min-h-screen bg-white relative max-[1400px]:w-full max-[1400px]:min-h-[85px] max-[1400px]:static max-[1400px]:top-0
+        dark:bg-[#1B1B1B]">
+            <!-- menu static -->
+             <div class="sticky left-0 top-0 pt-[20px] w-full min-h-screen pb-[20px] flex flex-col max-[1400px]:flex-row max-[1400px]:min-h-[85px]
+             max-[1400px]:px-[30px] max-[1400px]:items-center max-[1400px]:py-0 max-[1400px]:sticky max-[1400px]:top-0">
+                 <!-- logo -->
+                 <div class="w-full flex justify-center h-fit max-[1400px]:w-fit">
+                    <img class="logo max-sm:w-[30px] max-sm:h-auto" src="/images/logo.svg" alt="logo" width="40px" height="56px">
+                </div>
+                <!-- menu -->
+                <ul class="mt-auto max-[1400px]:flex max-[1400px]:my-0 max-[1400px]:items-center
+                max-[1400px]:ml-auto max-[1400px]:h-[85px] max-[1400px]:gap-x-[40px] max-sm:gap-x-[20px]">
+                    <li class="menu-item">
+                        <span class="menu-item-text">Проекты</span>
+                        <a href="/pages/user/controlPanel.html" class="w-full flex justify-center items-center h-full  max-[1400px]:px-[5px]">
+                            <div class="relative w-fit">
+                                <span class="w-[26px] h-[26px] rounded-full flex justify-center items-center 
+                                text-[12px] leading-[14.52px] text-black font-medium 
+                                bg-colorBlue absolute right-0 translate-x-[50%] top-0 translate-y-[-50%]
+                                max-sm:w-[22px] max-sm:h-[22px] max-sm:text-[10px]">12</span>
+                                <svg class="max-sm:w-[24px]" width="32" height="32" viewBox="0 0 32 32" fill="" xmlns="http://www.w3.org/2000/svg">
+                                    <path class="dark:fill-[#b7b7b7]" d="M22.6666 30.3333H9.33329C3.45329 30.3333 1.66663 28.5467 1.66663 22.6667V9.33334C1.66663 
+                                    3.45334 3.45329 1.66667 9.33329 1.66667H11.3333C13.6666 1.66667 14.4 2.42667 15.3333 3.66667L17.3333 
+                                    6.33334C17.7733 6.92 17.84 7 18.6666 7H22.6666C28.5466 7 30.3333 8.78667 30.3333 14.6667V22.6667C30.3333 
+                                    28.5467 28.5466 30.3333 22.6666 30.3333ZM9.33329 3.66667C4.57329 3.66667 3.66663 4.57334 3.66663 
+                                    9.33334V22.6667C3.66663 27.4267 4.57329 28.3333 9.33329 28.3333H22.6666C27.4266 28.3333 28.3333 
+                                    27.4267 28.3333 22.6667V14.6667C28.3333 9.90667 27.4266 9 22.6666 9H18.6666C16.96 9 16.4 8.41334 15.7333 
+                                    7.53334L13.7333 4.86667C13.04 3.94667 12.84 3.66667 11.3333 3.66667H9.33329Z" fill="#6a6a6a"/>
+                                </svg> 
+                            </div>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <span class="menu-item-text">Выплаты</span>
+                        <a href="/pages/user/withdrawal.html" class="w-full flex justify-center items-center h-full max-[1400px]:px-[5px]">
+                            <div class="relative w-fit">
+                                <svg class="max-sm:w-[24px]" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path class="dark:fill-[#b7b7b7]"  fill-rule="evenodd" clip-rule="evenodd" d="M2.66663 16C2.11434 16 1.66663 16.4477 1.66663 17V18C1.66663 25.24 4.75996 28.3333 12 28.3333H20C27.24 28.3333 30.3333 25.24 30.3333 18V17C30.3333 16.4477 29.8856 16 29.3333 16C28.781 16 28.3333 16.4477 28.3333 17V18C28.3333 24.1467 26.1466 26.3333 20 26.3333H12C5.85329 26.3333 3.66663 24.1467 3.66663 18V17C3.66663 16.4477 3.21891 16 2.66663 16Z" fill="#6A6A6A"/>
+                                    <path class="dark:fill-[#b7b7b7]"  d="M19.9998 9.68001C19.7465 9.68001 19.4932 9.58668 19.2932 9.38668L15.9998 6.09336L12.7065 9.38668C12.3198 9.77335 11.6798 9.77335 11.2932 9.38668C10.9065 9.00001 10.9065 8.36002 11.2932 7.97335L15.2932 3.97335C15.6798 3.58668 16.3198 3.58668 16.7065 3.97335L20.7065 7.97335C21.0932 8.36002 21.0932 9.00001 20.7065 9.38668C20.5065 9.58668 20.2532 9.68001 19.9998 9.68001Z" fill="#6A6A6A"/>
+                                    <path class="dark:fill-[#b7b7b7]"  d="M16 20C15.4533 20 15 19.4274 15 18.7368V5.26316C15 4.57263 15.4533 4 16 4C16.5467 4 17 4.57263 17 5.26316V18.7368C17 19.4442 16.5467 20 16 20Z" fill="#6A6A6A"/>
+                                </svg>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <span class="menu-item-text">Кабинет</span>
+                        <a href="/pages/user/profile.html" class="w-full flex justify-center items-center h-full max-[1400px]:px-[5px] menu-active">
+                            <div class="relative w-fit">
+                                <svg class="max-sm:w-[24px]" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path class="dark:fill-[#b7b7b7]"   d="M16 17C11.7734 17 8.33337 13.56 8.33337 9.33332C8.33337 5.10666 11.7734 1.66666 16 1.66666C20.2267 1.66666 23.6667 5.10666 23.6667 9.33332C23.6667 13.56 20.2267 17 16 17ZM16 3.66666C12.88 3.66666 10.3334 6.21332 10.3334 9.33332C10.3334 12.4533 12.88 15 16 15C19.12 15 21.6667 12.4533 21.6667 9.33332C21.6667 6.21332 19.12 3.66666 16 3.66666Z" fill="#6A6A6A"/>
+                                    <path class="dark:fill-[#b7b7b7]"  d="M27.4535 30.3333C26.9069 30.3333 26.4535 29.88 26.4535 29.3333C26.4535 24.7333 21.7602 21 
+                                    16.0002 21C10.2402 21 5.54687 24.7333 5.54687 29.3333C5.54687 29.88 5.09354 
+                                    30.3333 4.54687 30.3333C4.00021 30.3333 3.54688 29.88 3.54688 29.3333C3.54688 23.64 9.13354 19 
+                                    16.0002 19C22.8669 19 28.4535 23.64 28.4535 29.3333C28.4535 29.88 28.0002 30.3333 27.4535 30.3333Z" fill="#6A6A6A"/>
+                                </svg>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <!-- menu end -->
+                 <!-- menu btn open -->
+                  <button class="menu-btn w-fit h-fit mx-auto mt-auto max-[1400px]:mt-0 max-[1400px]:w-fit max-[1400px]:mx-0 max-[1400px]:ml-[40px]">
+                    <img class="max-sm:w-[24px]" src="/images/icons/menu.svg" alt="menu-btn" width="32px" height="32px">
+                  </button>
+                 <!-- menu btn open end -->
+                <!-- logo end -->
+             </div>
+             <!-- menu static -->
+        </aside>
+        <!-- content pl-[140px]  pr-[80px] max-[1400px]:px-[20px]-->
+        <main class="block flex-grow bg-[#f8f8f8] dark:bg-colorBlack 
+        max-[1400px]:min-h-screen pt-[30px] profile-wrapper pb-[40px]">
+            <div class="max-[1536px]:max-w-full container max-[1280px]:max-w-full max-[500px]:px-0">
+                <div class="flex items-start mb-[50px] max-[1400px]:mb-0">
+                     <!-- Основной заголовок -->
+                    <div>
+                        <p class="font-light text-[18px] leading-[21.78px] text-[#B7B7B7] mb-[20px] max-[500px]:pl-[20px]">Управление проектом</p>
+                        <h1 class="text-[42px] leading-[50.83px] font-light text-nowrap text-black max-[1400px]:hidden dark:text-white">DONATEBASE.CC</h1>     
+                    </div>
+                    <!-- Основной заголовок end -->
+                    <!-- шапка личного кабинета -->
+                    <div class="head-ls w-full max-[1400px]:hidden ml-auto">
+                        <nav class="flex gap-x-[30px] items-center justify-end w-full">
+                            <button class="relative h-[32px] w-[64px] rounded-[40px] bg-black black-theme-btn">
+                                <span class="w-[32px] h-[32px] rounded-full bg-transparent absolute right-0 top-0 flex items-center justify-center duration-[.3s]"><img src="/images/icons/iconamoon_mode-dark-light.svg" alt="moon" width="24px" height="24px"></span>
+                            </button>
+                            <!-- balance -->
+                            <div class="py-[15px] px-[36px] rounded-[10px] border border-black max-lg:px-[20px]
+                            dark:border-white dark:">
+                                <p class="text-[14px] leading-[16.94px] font-normal text-colorGray2 dark:text-[#B7B7B7]">
+                                    Баланс 
+                                    <strong class="text-black text-[16px] leading-[19.36px] dark:text-white">315 780₽</strong></p>
+                            </div>
+                            <!-- balance end -->
+                            <!-- уведомления -->
+                            <div class="">
+                                <button class="relative btn-notification" onclick="clickOpenBlock(this,'block-notification')">
+                                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path class="dark:fill-white" d="M16.0267 27.3733C12.92 27.3733 9.81332 26.88 6.86665 25.8933C5.74665 25.5067 4.89332 24.72 4.51999 23.6933C4.13332 22.6667 4.26665 21.5333 4.87999 20.52L6.41332 17.9733C6.73332 17.44 7.02665 16.3733 7.02665 15.7467V11.8933C7.02665 6.93333 11.0667 2.89333 16.0267 2.89333C20.9867 2.89333 25.0267 6.93333 25.0267 11.8933V15.7467C25.0267 16.36 25.32 17.44 25.64 17.9867L27.16 20.52C27.7333 21.48 27.84 22.64 27.4533 23.6933C27.0667 24.7467 26.2267 25.5467 25.1733 25.8933C22.24 26.88 19.1333 27.3733 16.0267 27.3733ZM16.0267 4.89333C12.1733 4.89333 9.02666 8.02667 9.02666 11.8933V15.7467C9.02666 16.72 8.62666 18.16 8.13332 19L6.59999 21.5467C6.30665 22.04 6.22666 22.56 6.39999 23C6.55999 23.4533 6.95999 23.8 7.50666 23.9867C13.08 25.8533 18.9867 25.8533 24.56 23.9867C25.04 23.8267 25.4133 23.4667 25.5867 22.9867C25.76 22.5067 25.72 21.9867 25.4533 21.5467L23.92 19C23.4133 18.1333 23.0267 16.7067 23.0267 15.7333V11.8933C23.0267 8.02667 19.8933 4.89333 16.0267 4.89333Z" fill="#292D32"/>
+                                        <path class="dark:fill-white" d="M18.5067 5.25333C18.4133 5.25333 18.32 5.24 18.2267 5.21333C17.84 5.10667 17.4667 5.02667 17.1067 4.97333C15.9733 4.82667 14.88 4.90667 13.8533 5.21333C13.48 5.33333 13.08 5.21333 12.8267 4.93333C12.5733 4.65333 12.4933 4.25333 12.64 3.89333C13.1867 2.49333 14.52 1.57333 16.04 1.57333C17.56 1.57333 18.8933 2.48 19.44 3.89333C19.5733 4.25333 19.5067 4.65333 19.2533 4.93333C19.0533 5.14667 18.7733 5.25333 18.5067 5.25333Z" fill="#292D32"/>
+                                        <path class="dark:fill-white" d="M16.0266 30.4133C14.7066 30.4133 13.4266 29.88 12.4933 28.9467C11.5599 28.0133 11.0266 26.7333 11.0266 25.4133H13.0266C13.0266 26.2 13.3466 26.9733 13.9066 27.5333C14.4666 28.0933 15.2399 28.4133 16.0266 28.4133C17.6799 28.4133 19.0266 27.0667 19.0266 25.4133H21.0266C21.0266 28.1733 18.7866 30.4133 16.0266 30.4133Z" fill="#292D32"/>
+                                    </svg>
+                                    <span class="w-[10px] h-[10px] rounded-full bg-[#47E1DD] border-2 border-white absolute right-[3px] top-[5px]"></span>
+                                    <!-- block с увидомлением -->
+                                    <div class="absolute right-[50%] top-[150%] py-[15px] px-[20px] bg-white shadow-[0_10px_32px_rgba(109,109,109,0.16)]
+                                    min-w-[250px] w-full rounded-[10px] hidden block-notification">
+                                        <h4 class="text-[15px] text-[#3c3c3c] font-bold text-left mb-[5px]">Уведомления</h4>
+                                        <p class="text-[#818181] text-[14px] text-left">У вас нет новых уведомлений</p>
+                                    </div>
+                                    <!-- block с увидомлением end -->
+                                </button>
+                            </div>
+                            <!-- уведомления end -->
+                            <!-- avatar -->
+                            <div class="w-[32px] h-[32px] rounded-full flex justify-center 
+                            items-center font-medium text-[18px] leading-[21.78px] text-black bg-[#47E1DD]">F</div>
+                            <!-- avatar end -->
+                            <!-- btn open settings -->
+                                <button class="relative" onclick="clickOpenBlock(this,'block-menu-settings')">
+                                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path class="dark:fill-white" d="M28 10.3333H4C3.45333 10.3333 3 9.88 3 9.33334C3 8.78667 3.45333 8.33334 4 8.33334H28C28.5467 8.33334 29 8.78667 29 9.33334C29 9.88 28.5467 10.3333 28 10.3333Z" fill="#292D32"/>
+                                        <path class="dark:fill-white" d="M28 17H4C3.45333 17 3 16.5467 3 16C3 15.4533 3.45333 15 4 15H28C28.5467 15 29 15.4533 29 16C29 16.5467 28.5467 17 28 17Z" fill="#292D32"/>
+                                        <path class="dark:fill-white" d="M28 23.6667H16C15.4533 23.6667 15 23.2133 15 22.6667C15 22.12 15.4533 21.6667 16 21.6667H28C28.5467 21.6667 29 22.12 29 22.6667C29 23.2133 28.5467 23.6667 28 23.6667Z" fill="#292D32"/>
+                                    </svg>
+                                    <!-- block с увидомлением -->
+                                    <div class="absolute right-[50%] top-[150%] py-[10px]  bg-white shadow-[0_10px_32px_rgba(109,109,109,0.16)]
+                                    rounded-[10px] block-menu-settings h-fit hidden">
+                                        <ul>
+                                            <li class="w-full h-fit">
+                                                <a href="#" class="px-[25px] py-[10px] flex items-center justify-center text-[#1c1c1c] text-[15px] 
+                                            duration-[.2s] hover:duration-[.2s] hover:text-yellow-500 text-nowrap text-left">Личный кабинет</a>
+                                            </li>
+                                            <li class="w-full h-fit">
+                                                <a href="#" class="px-[25px] py-[10px] flex items-center justify-center text-[#1c1c1c] text-[15px] 
+                                            duration-[.2s] hover:duration-[.2s] hover:text-yellow-500 text-nowrap text-left">Безопасность</a>
+                                            </li>
+                                            <li class="w-full h-fit">
+                                                <a href="/pages/user/support.html" class="px-[25px] py-[10px] flex items-center justify-center text-[#1c1c1c] text-[15px] 
+                                            duration-[.2s] hover:duration-[.2s] hover:text-yellow-500 text-nowrap text-left">Помощь</a>
+                                            </li>
+                                            <li>
+                                                <a href="../auth.html" class="px-[25px] py-[10px] text-red-600 text-[15px] text-left">Выход</a>
+                                            </li>
+                                        
+                                        </ul>
+                                    </div>
+                                    <!-- block с увидомлением end -->
+                                </button>
+                            <!-- btn open settings end -->
+                        </nav>
+                    </div>
+                    <!-- шапка личного кабинета end -->
+                </div>
+           
+            
+            <!-- первая половина экрана -->
+                     
+                    <div class="hidden max-[1400px]:block mb-[50px] max-[500px]:pl-[20px]">
+                         <!--mob version шапка личного кабинета -->
+                         <div class="head-ls w-full max-[1400px]:flex max-[1400px]:items-center">
+                            <h1 class="text-[32px] leading-[30.83px] font-light text-black max-md:text-[24px] max-[400px]:text-[20px] dark:text-white">Личный кабинет</h1>
+                            <button class="relative h-[32px] w-[64px] rounded-[40px] bg-black max-[1400px]:ml-auto max-[1400px]:mr-[20px] black-theme-btn">
+                                <span class="w-[32px] h-[32px] rounded-full bg-transparent absolute right-0 top-0 flex items-center justify-center duration-[.3s]"><img src="/images/icons/iconamoon_mode-dark-light.svg" alt="moon" width="24px" height="24px"></span>
+                            </button>
+                            <nav class="flex gap-x-[30px] items-center justify-end w-full max-[1400px]:w-fit max-md:hidden">
+                                <!-- balance -->
+                                <div class="py-[15px] px-[36px] rounded-[10px] border border-black max-lg:px-[15px]
+                                dark:border-white">
+                                    <p class="text-[14px] leading-[16.94px] font-normal text-colorGray2 dark:text-[#B7B7B7]">
+                                        Баланс 
+                                        <strong class="text-black text-[16px] leading-[19.36px] dark:text-white">315 780₽</strong></p>
+                                </div>
+                                <!-- balance end -->
+                                <!-- уведомления -->
+                                <div>
+                                    <button class="relative btn-notification" onclick="clickOpenBlock(this,'block-notification')">
+                                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path class="dark:fill-white" d="M16.0267 27.3733C12.92 27.3733 9.81332 26.88 6.86665 25.8933C5.74665 25.5067 4.89332 24.72 4.51999 23.6933C4.13332 22.6667 4.26665 21.5333 4.87999 20.52L6.41332 17.9733C6.73332 17.44 7.02665 16.3733 7.02665 15.7467V11.8933C7.02665 6.93333 11.0667 2.89333 16.0267 2.89333C20.9867 2.89333 25.0267 6.93333 25.0267 11.8933V15.7467C25.0267 16.36 25.32 17.44 25.64 17.9867L27.16 20.52C27.7333 21.48 27.84 22.64 27.4533 23.6933C27.0667 24.7467 26.2267 25.5467 25.1733 25.8933C22.24 26.88 19.1333 27.3733 16.0267 27.3733ZM16.0267 4.89333C12.1733 4.89333 9.02666 8.02667 9.02666 11.8933V15.7467C9.02666 16.72 8.62666 18.16 8.13332 19L6.59999 21.5467C6.30665 22.04 6.22666 22.56 6.39999 23C6.55999 23.4533 6.95999 23.8 7.50666 23.9867C13.08 25.8533 18.9867 25.8533 24.56 23.9867C25.04 23.8267 25.4133 23.4667 25.5867 22.9867C25.76 22.5067 25.72 21.9867 25.4533 21.5467L23.92 19C23.4133 18.1333 23.0267 16.7067 23.0267 15.7333V11.8933C23.0267 8.02667 19.8933 4.89333 16.0267 4.89333Z" fill="#292D32"/>
+                                            <path class="dark:fill-white" d="M18.5067 5.25333C18.4133 5.25333 18.32 5.24 18.2267 5.21333C17.84 5.10667 17.4667 5.02667 17.1067 4.97333C15.9733 4.82667 14.88 4.90667 13.8533 5.21333C13.48 5.33333 13.08 5.21333 12.8267 4.93333C12.5733 4.65333 12.4933 4.25333 12.64 3.89333C13.1867 2.49333 14.52 1.57333 16.04 1.57333C17.56 1.57333 18.8933 2.48 19.44 3.89333C19.5733 4.25333 19.5067 4.65333 19.2533 4.93333C19.0533 5.14667 18.7733 5.25333 18.5067 5.25333Z" fill="#292D32"/>
+                                            <path class="dark:fill-white" d="M16.0266 30.4133C14.7066 30.4133 13.4266 29.88 12.4933 28.9467C11.5599 28.0133 11.0266 26.7333 11.0266 25.4133H13.0266C13.0266 26.2 13.3466 26.9733 13.9066 27.5333C14.4666 28.0933 15.2399 28.4133 16.0266 28.4133C17.6799 28.4133 19.0266 27.0667 19.0266 25.4133H21.0266C21.0266 28.1733 18.7866 30.4133 16.0266 30.4133Z" fill="#292D32"/>
+                                        </svg>
+                                        <span class="w-[10px] h-[10px] rounded-full bg-[#47E1DD] border-2 border-white absolute right-[3px] top-[5px]"></span>
+                                          <!-- block с увидомлением -->
+                                            <div class="absolute right-[50%] top-[150%] py-[15px] px-[20px] bg-white shadow-[0_10px_32px_rgba(109,109,109,0.16)]
+                                            min-w-[250px] w-full rounded-[10px] hidden block-notification">
+                                                <h4 class="text-[15px] text-[#3c3c3c] font-bold text-left mb-[5px]">Уведомления</h4>
+                                                <p class="text-[#818181] text-[14px] text-left">У вас нет новых уведомлений</p>
+                                            </div>
+                                          <!-- block с увидомлением end -->
+                                    </button>
+                                    
+                                </div>
+                                <!-- уведомления end -->
+                                <!-- avatar -->
+                                <div class="w-[32px] h-[32px] rounded-full flex justify-center 
+                                items-center font-medium text-[18px] leading-[21.78px] text-black bg-[#47E1DD]">F</div>
+                                <!-- avatar end -->
+                               <!-- btn open settings -->
+                            <button class="relative" onclick="clickOpenBlock(this,'block-menu-settings')">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path class="dark:fill-white" d="M28 10.3333H4C3.45333 10.3333 3 9.88 3 9.33334C3 8.78667 3.45333 8.33334 4 8.33334H28C28.5467 8.33334 29 8.78667 29 9.33334C29 9.88 28.5467 10.3333 28 10.3333Z" fill="#292D32"/>
+                                    <path class="dark:fill-white" d="M28 17H4C3.45333 17 3 16.5467 3 16C3 15.4533 3.45333 15 4 15H28C28.5467 15 29 15.4533 29 16C29 16.5467 28.5467 17 28 17Z" fill="#292D32"/>
+                                    <path class="dark:fill-white" d="M28 23.6667H16C15.4533 23.6667 15 23.2133 15 22.6667C15 22.12 15.4533 21.6667 16 21.6667H28C28.5467 21.6667 29 22.12 29 22.6667C29 23.2133 28.5467 23.6667 28 23.6667Z" fill="#292D32"/>
+                                </svg>
+                                <!-- block с увидомлением -->
+                                <div class="absolute right-[50%] top-[150%] py-[10px]  bg-white shadow-[0_10px_32px_rgba(109,109,109,0.16)]
+                                 rounded-[10px] block-menu-settings h-fit hidden">
+                                    <ul>
+                                        <li class="w-full h-fit">
+                                            <a href="#" class="px-[25px] py-[10px] flex items-center justify-center text-[#1c1c1c] text-[15px] 
+                                        duration-[.2s] hover:duration-[.2s] hover:text-yellow-500 text-nowrap text-left">Личный кабинет</a>
+                                        </li>
+                                        <li class="w-full h-fit">
+                                            <a href="#" class="px-[25px] py-[10px] flex items-center justify-center text-[#1c1c1c] text-[15px] 
+                                        duration-[.2s] hover:duration-[.2s] hover:text-yellow-500 text-nowrap text-left">Безопасность</a>
+                                        </li>
+                                        <li class="w-full h-fit">
+                                            <a href="/pages/user/support.html" class="px-[25px] py-[10px] flex items-center justify-center text-[#1c1c1c] text-[15px] 
+                                        duration-[.2s] hover:duration-[.2s] hover:text-yellow-500 text-nowrap text-left">Помощь</a>
+                                        </li>
+                                        <li>
+                                            <a href="../auth.html" class="px-[25px] py-[10px] text-red-600 text-[15px] text-left">Выход</a>
+                                        </li>
+                                       
+                                    </ul>
+                                </div>
+                                <!-- block с увидомлением end -->
+                            </button>
+                           <!-- btn open settings end -->
+                            </nav>
+                        </div>
+                        <!--mob version шапка личного кабинета end -->
+                    </div>
+
+
+                <!-- весь контент после заголовка -->
+                 <div class="flex gap-x-[70px] max-[1536px]:gap-x-[20px]
+                 max-lg:flex-col max-lg:gap-y-[40px] ">
+                    <!-- menu profile -->
+                     <ul class="flex flex-col gap-y-[40px] menu-profile
+                     max-lg:flex-row max-lg:gap-x-[20px] max-md:w-full max-md:overflow-hidden 
+                     max-md:overflow-x-auto max-[500px]:px-[20px] w-[205px]">
+                        <li>
+                            <a href="/pages/user/project/settings.html">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 15.75C9.93 15.75 8.25 14.07 8.25 12C8.25 9.93 9.93 8.25 12 8.25C14.07 8.25 15.75 9.93 15.75 12C15.75 14.07 14.07 15.75 12 15.75ZM12 9.75C10.76 9.75 9.75 10.76 9.75 12C9.75 13.24 10.76 14.25 12 14.25C13.24 14.25 14.25 13.24 14.25 12C14.25 10.76 13.24 9.75 12 9.75Z" fill="black"/>
+                                    <path d="M15.21 22.19C15 22.19 14.79 22.16 14.58 22.11C13.96 21.94 13.44 21.55 13.11 21L12.99 20.8C12.4 19.78 11.59 19.78 11 20.8L10.89 20.99C10.56 21.55 10.04 21.95 9.42 22.11C8.79 22.28 8.14 22.19 7.59 21.86L5.87 20.87C5.26 20.52 4.82 19.95 4.63 19.26C4.45 18.57 4.54 17.86 4.89 17.25C5.18 16.74 5.26 16.28 5.09 15.99C4.92 15.7 4.49 15.53 3.9 15.53C2.44 15.53 1.25 14.34 1.25 12.88V11.12C1.25 9.66 2.44 8.47 3.9 8.47C4.49 8.47 4.92 8.3 5.09 8.01C5.26 7.72 5.19 7.26 4.89 6.75C4.54 6.14 4.45 5.42 4.63 4.74C4.81 4.05 5.25 3.48 5.87 3.13L7.6 2.14C8.73 1.47 10.22 1.86 10.9 3.01L11.02 3.21C11.61 4.23 12.42 4.23 13.01 3.21L13.12 3.02C13.8 1.86 15.29 1.47 16.43 2.15L18.15 3.14C18.76 3.49 19.2 4.06 19.39 4.75C19.57 5.44 19.48 6.15 19.13 6.76C18.84 7.27 18.76 7.73 18.93 8.02C19.1 8.31 19.53 8.48 20.12 8.48C21.58 8.48 22.77 9.67 22.77 11.13V12.89C22.77 14.35 21.58 15.54 20.12 15.54C19.53 15.54 19.1 15.71 18.93 16C18.76 16.29 18.83 16.75 19.13 17.26C19.48 17.87 19.58 18.59 19.39 19.27C19.21 19.96 18.77 20.53 18.15 20.88L16.42 21.87C16.04 22.08 15.63 22.19 15.21 22.19ZM12 18.49C12.89 18.49 13.72 19.05 14.29 20.04L14.4 20.23C14.52 20.44 14.72 20.59 14.96 20.65C15.2 20.71 15.44 20.68 15.64 20.56L17.37 19.56C17.63 19.41 17.83 19.16 17.91 18.86C17.99 18.56 17.95 18.25 17.8 17.99C17.23 17.01 17.16 16 17.6 15.23C18.04 14.46 18.95 14.02 20.09 14.02C20.73 14.02 21.24 13.51 21.24 12.87V11.11C21.24 10.48 20.73 9.96 20.09 9.96C18.95 9.96 18.04 9.52 17.6 8.75C17.16 7.98 17.23 6.97 17.8 5.99C17.95 5.73 17.99 5.42 17.91 5.12C17.83 4.82 17.64 4.58 17.38 4.42L15.65 3.43C15.22 3.17 14.65 3.32 14.39 3.76L14.28 3.95C13.71 4.94 12.88 5.5 11.99 5.5C11.1 5.5 10.27 4.94 9.7 3.95L9.59 3.75C9.34 3.33 8.78 3.18 8.35 3.43L6.62 4.43C6.36 4.58 6.16 4.83 6.08 5.13C6 5.43 6.04 5.74 6.19 6C6.76 6.98 6.83 7.99 6.39 8.76C5.95 9.53 5.04 9.97 3.9 9.97C3.26 9.97 2.75 10.48 2.75 11.12V12.88C2.75 13.51 3.26 14.03 3.9 14.03C5.04 14.03 5.95 14.47 6.39 15.24C6.83 16.01 6.76 17.02 6.19 18C6.04 18.26 6 18.57 6.08 18.87C6.16 19.17 6.35 19.41 6.61 19.57L8.34 20.56C8.55 20.69 8.8 20.72 9.03 20.66C9.27 20.6 9.47 20.44 9.6 20.23L9.71 20.04C10.28 19.06 11.11 18.49 12 18.49Z" fill="black"/>
+                                </svg>
+                                <span >Основное</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/pages/user/project/payment-methods.html" class="menu-profile-active">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path  d="M22 9.25H2C1.59 9.25 1.25 8.91 1.25 8.5C1.25 8.09 1.59 7.75 2 7.75H22C22.41 7.75 22.75 8.09 22.75 8.5C22.75 8.91 22.41 9.25 22 9.25Z" fill="#292D32"/>
+                                    <path  d="M8 17.25H6C5.59 17.25 5.25 16.91 5.25 16.5C5.25 16.09 5.59 15.75 6 15.75H8C8.41 15.75 8.75 16.09 8.75 16.5C8.75 16.91 8.41 17.25 8 17.25Z" fill="#292D32"/>
+                                    <path  d="M14.5 17.25H10.5C10.09 17.25 9.75 16.91 9.75 16.5C9.75 16.09 10.09 15.75 10.5 15.75H14.5C14.91 15.75 15.25 16.09 15.25 16.5C15.25 16.91 14.91 17.25 14.5 17.25Z" fill="#292D32"/>
+                                    <path  d="M17.56 21.25H6.44C2.46 21.25 1.25 20.05 1.25 16.11V7.89C1.25 3.95 2.46 2.75 6.44 2.75H17.55C21.53 2.75 22.74 3.95 22.74 7.89V16.1C22.75 20.05 21.54 21.25 17.56 21.25ZM6.44 4.25C3.3 4.25 2.75 4.79 2.75 7.89V16.1C2.75 19.2 3.3 19.74 6.44 19.74H17.55C20.69 19.74 21.24 19.2 21.24 16.1V7.89C21.24 4.79 20.69 4.25 17.55 4.25H6.44Z" fill="#292D32"/>
+                                </svg>
+                                <span>Способы оплаты</span>
+                            </a>
+                        </li>
+                        <li >
+                            <a href="/pages/user/project/statistics.html" >
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21 22.75H3C2.59 22.75 2.25 22.41 2.25 22C2.25 21.59 2.59 21.25 3 21.25H21C21.41 21.25 21.75 21.59 21.75 22C21.75 22.41 21.41 22.75 21 22.75Z" fill="#6A6A6A"/>
+                                    <path d="M5.59998 19.75H4C3.04 19.75 2.25 18.96 2.25 18V9.38C2.25 8.42 3.04 7.63 4 7.63H5.59998C6.55998 7.63 7.34998 8.42 7.34998 9.38V18C7.34998 18.96 6.55998 19.75 5.59998 19.75ZM4 9.12C3.86 9.12 3.75 9.23 3.75 9.37V18C3.75 18.14 3.86 18.25 4 18.25H5.59998C5.73998 18.25 5.84998 18.14 5.84998 18V9.38C5.84998 9.24 5.73998 9.13 5.59998 9.13H4V9.12Z" fill="#6A6A6A"/>
+                                    <path d="M12.7992 19.75H11.1992C10.2392 19.75 9.44922 18.96 9.44922 18V6.19C9.44922 5.23 10.2392 4.44 11.1992 4.44H12.7992C13.7592 4.44 14.5492 5.23 14.5492 6.19V18C14.5492 18.96 13.7592 19.75 12.7992 19.75ZM11.1992 5.94C11.0592 5.94 10.9492 6.05 10.9492 6.19V18C10.9492 18.14 11.0592 18.25 11.1992 18.25H12.7992C12.9392 18.25 13.0492 18.14 13.0492 18V6.19C13.0492 6.05 12.9392 5.94 12.7992 5.94H11.1992Z" fill="#6A6A6A"/>
+                                    <path d="M20.0004 19.75H18.4004C17.4404 19.75 16.6504 18.96 16.6504 18V3C16.6504 2.04 17.4404 1.25 18.4004 1.25H20.0004C20.9604 1.25 21.7504 2.04 21.7504 3V18C21.7504 18.96 20.9604 19.75 20.0004 19.75ZM18.4004 2.75C18.2604 2.75 18.1504 2.86 18.1504 3V18C18.1504 18.14 18.2604 18.25 18.4004 18.25H20.0004C20.1404 18.25 20.2504 18.14 20.2504 18V3C20.2504 2.86 20.1404 2.75 20.0004 2.75H18.4004Z" fill="#6A6A6A"/>
+                                </svg>
+                                <span>Статистика</span>
+                            </a>
+                        </li>
+                        <li >
+                            <a href="/pages/user/project/testing.html">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.88991 15.75C6.60991 15.75 6.34991 15.6 6.21991 15.34C6.02991 14.97 6.17991 14.52 6.55991 14.33C7.42991 13.9 8.16991 13.24 8.69991 12.44C8.87991 12.17 8.87991 11.83 8.69991 11.56C8.15991 10.76 7.41991 10.1 6.55991 9.66999C6.17991 9.48999 6.02991 9.03999 6.21991 8.65999C6.39991 8.28999 6.84991 8.13999 7.21991 8.32999C8.31991 8.87999 9.25991 9.70999 9.93991 10.73C10.4499 11.5 10.4499 12.5 9.93991 13.27C9.25991 14.29 8.31991 15.12 7.21991 15.67C7.11991 15.72 6.99991 15.75 6.88991 15.75Z" fill="#6A6A6A"/>
+                                    <path d="M17 15.75H13C12.59 15.75 12.25 15.41 12.25 15C12.25 14.59 12.59 14.25 13 14.25H17C17.41 14.25 17.75 14.59 17.75 15C17.75 15.41 17.41 15.75 17 15.75Z" fill="#6A6A6A"/>
+                                    <path d="M15 22.75H9C3.57 22.75 1.25 20.43 1.25 15V9C1.25 3.57 3.57 1.25 9 1.25H15C20.43 1.25 22.75 3.57 22.75 9V15C22.75 20.43 20.43 22.75 15 22.75ZM9 2.75C4.39 2.75 2.75 4.39 2.75 9V15C2.75 19.61 4.39 21.25 9 21.25H15C19.61 21.25 21.25 19.61 21.25 15V9C21.25 4.39 19.61 2.75 15 2.75H9Z" fill="#6A6A6A"/>
+                                </svg>
+                                <span >Тестирование</span>
+                            </a>
+                        </li>
+                        <li >
+                            <a href="/pages/user/project/widgets.html">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16.5 20.75H7.5C6.75 20.75 6.2 20.72 5.73 20.65C2.41 20.29 1.75 18.3 1.75 15V9C1.75 5.7 2.41 3.71 5.76 3.34C6.2 3.28 6.75 3.25 7.5 3.25H16.5C17.25 3.25 17.8 3.28 18.27 3.35C21.59 3.71 22.25 5.7 22.25 9V15C22.25 18.3 21.59 20.29 18.24 20.66C17.8 20.72 17.25 20.75 16.5 20.75ZM7.5 4.75C6.82 4.75 6.34 4.78 5.95 4.83C3.92 5.06 3.25 5.69 3.25 9V15C3.25 18.31 3.92 18.94 5.92 19.17C6.34 19.23 6.82 19.25 7.5 19.25H16.5C17.18 19.25 17.66 19.22 18.05 19.17C20.08 18.95 20.75 18.31 20.75 15V9C20.75 5.69 20.08 5.06 18.08 4.83C17.66 4.77 17.18 4.75 16.5 4.75H7.5Z" fill="#6A6A6A"/>
+                                    <path d="M17 10.75H13.5C13.09 10.75 12.75 10.41 12.75 10C12.75 9.59 13.09 9.25 13.5 9.25H17C17.41 9.25 17.75 9.59 17.75 10C17.75 10.41 17.41 10.75 17 10.75Z" fill="#6A6A6A"/>
+                                    <path d="M10.0996 11C9.54961 11 9.09961 10.55 9.09961 10C9.09961 9.45 9.53961 9 10.0996 9H10.1096C10.6596 9 11.1096 9.45 11.1096 10C11.1096 10.55 10.6596 11 10.0996 11Z" fill="#6A6A6A"/>
+                                    <path d="M7.09961 11C6.54961 11 6.09961 10.55 6.09961 10C6.09961 9.45 6.53961 9 7.09961 9C7.64961 9 8.09961 9.45 8.09961 10C8.09961 10.55 7.65961 11 7.09961 11Z" fill="#6A6A6A"/>
+                                    <path d="M16.9998 16.25H7.01977C6.60977 16.25 6.25977 15.91 6.25977 15.5C6.25977 15.09 6.58977 14.75 6.99977 14.75H16.9998C17.4098 14.75 17.7498 15.09 17.7498 15.5C17.7498 15.91 17.4098 16.25 16.9998 16.25Z" fill="#6A6A6A"/>
+                                </svg>
+                                <span >Виджеты</span>
+                            </a>
+                        </li>
+                     </ul>
+                    <!-- menu profile end -->
+
+                     <div class="max-w-[1160px] w-full max-lg:max-w-full">
+                         <!-- Настройки API -->
+                        <div class="bg-white rounded-[20px] px-[40px] pt-[40px] pb-[73px] dark:bg-dark max-w-[1160px] w-full
+                        max-lg:px-[25px] max-lg:max-w-full max-lg:rounded-none">
+                            <h2 class="font-light text-[30px] leading-[36.31px] text-black dark:text-white mb-[40px]
+                            max-sm:text-[24px]">Платёжные направления</h2>
+                            <form>
+                                <div class="flex gap-x-[60px] w-full max-xl:gap-x-[30px] max-md:flex-col max-md:gap-y-[50px]">
+                                     <!-- первый блока с картами -->
+                                    <div class="max-w-[340px] w-full max-md:max-w-full">
+                                        <div class="max-w-[342px] w-full items-center justify-between mb-[50px] flex max-md:max-w-full">
+                                            <div class="bank-card-item">
+                                                <img src="/images/logo-bank/1.png" alt="bank-card" width="30px" height="30px"/>
+                                                <div>
+                                                    <p>Банк. карта <sup>RUB, UAH, KZT</sup></p>
+                                                    <span>7,9%</span>
+                                                </div>
+                                            </div>
+                                            <div class="bank-card-from-item">
+                                                <div class="flex items-center gap-x-[40px] max-sm:w-full">
+                                                    <label>
+                                                        <button type="button" onclick="onToSwitch(this),switchActiveText(this)">
+                                                            <span></span>
+                                                        </button>
+                                                        <input class="hidden" name="bank-card" type="checkbox" value="Банк. карта RUB, UAH, KZT">
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="max-w-[342px] w-full items-center justify-between mb-[50px] flex max-md:max-w-full">
+                                            <div class="bank-card-item">
+                                                <img src="/images/logo-bank/2.png" alt="sbp" width="30px" height="30px"/>
+                                                <div>
+                                                    <p>СБП</p>
+                                                    <span>7,9%</span>
+                                                </div>
+                                            </div>
+                                            <div class="bank-card-from-item">
+                                                <div class="flex items-center gap-x-[40px] max-sm:w-full">
+                                                    <label>
+                                                        <button type="button" onclick="onToSwitch(this),switchActiveText(this)">
+                                                            <span></span>
+                                                        </button>
+                                                        <input class="hidden" name="sbp" type="checkbox" value="СБП">
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="max-w-[342px] w-full items-center justify-between mb-[50px] flex max-md:max-w-full">
+                                            <div class="bank-card-item">
+                                                <img src="/images/logo-bank/3.png" alt="yoomoney" width="30px" height="30px"/>
+                                                <div>
+                                                    <p>Юмани</p>
+                                                    <span>7,9%</span>
+                                                </div>
+                                            </div>
+                                            <div class="bank-card-from-item">
+                                                <div class="flex items-center gap-x-[40px] max-sm:w-full">
+                                                    <label>
+                                                        <button type="button" onclick="onToSwitch(this),switchActiveText(this)">
+                                                            <span></span>
+                                                        </button>
+                                                        <input class="hidden" name="yoomoney" type="checkbox" value="Юмани">
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="max-w-[342px] w-full items-center justify-between mb-[50px] flex max-md:max-w-full">
+                                            <div class="bank-card-item">
+                                                <img src="/images/logo-bank/4.png" alt="webmoney" width="30px" height="30px"/>
+                                                <div>
+                                                    <p>Webmoney</p>
+                                                    <span>7,9%</span>
+                                                </div>
+                                            </div>
+                                            <div class="bank-card-from-item">
+                                                <div class="flex items-center gap-x-[40px] max-sm:w-full">
+                                                    <label>
+                                                        <button type="button" onclick="onToSwitch(this),switchActiveText(this)">
+                                                            <span></span>
+                                                        </button>
+                                                        <input class="hidden" name="webmoney" type="checkbox" value="Webmoney">
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="max-w-[342px] w-full items-center justify-between mb-[50px] flex max-md:max-w-full">
+                                            <div class="bank-card-item">
+                                                <img src="/images/logo-bank/5.png" alt="advcash" width="30px" height="30px"/>
+                                                <div>
+                                                    <p>Advcash</p>
+                                                    <span>7,9%</span>
+                                                </div>
+                                            </div>
+                                            <div class="bank-card-from-item">
+                                                <div class="flex items-center gap-x-[40px] max-sm:w-full">
+                                                    <label>
+                                                        <button type="button" onclick="onToSwitch(this),switchActiveText(this)">
+                                                            <span></span>
+                                                        </button>
+                                                        <input class="hidden" name="advcash" type="checkbox" value="Advcash">
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="max-w-[342px] w-full items-center justify-between mb-[50px] flex max-md:max-w-full">
+                                            <div class="bank-card-item">
+                                                <img src="/images/logo-bank/6.png" alt="perfectmoney" width="30px" height="30px"/>
+                                                <div>
+                                                    <p>Perfect Money</p>
+                                                    <span>7,9%</span>
+                                                </div>
+                                            </div>
+                                            <div class="bank-card-from-item">
+                                                <div class="flex items-center gap-x-[40px] max-sm:w-full">
+                                                    <label>
+                                                        <button type="button" onclick="onToSwitch(this),switchActiveText(this)">
+                                                            <span></span>
+                                                        </button>
+                                                        <input class="hidden" name="perfectmoney" type="checkbox" value="Perfect Money">
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="max-w-[342px] w-full items-center justify-between flex max-md:max-w-full">
+                                            <div class="bank-card-item">
+                                                <img src="/images/logo-bank/7.png" alt="mir" width="30px" height="30px"/>
+                                                <div>
+                                                    <p>МИР</p>
+                                                    <span>7,9%</span>
+                                                </div>
+                                            </div>
+                                            <div class="bank-card-from-item">
+                                                <div class="flex items-center gap-x-[40px] max-sm:w-full">
+                                                    <label>
+                                                        <button type="button" onclick="onToSwitch(this),switchActiveText(this)">
+                                                            <span></span>
+                                                        </button>
+                                                        <input class="hidden" name="mir" type="checkbox" value="МИР">
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- первый блок с картами end -->
+                                    <!-- воторой блок с картами -->
+                                    <div class="max-w-[340px] w-full max-md:max-w-full">
+                                        <div class="max-w-[342px] w-full items-center justify-between mb-[50px] flex max-md:max-w-full">
+                                            <div class="bank-card-item">
+                                                <img src="/images/logo-bank/8.png" alt="bitcoin" width="30px" height="30px"/>
+                                                <div>
+                                                    <p>Bitcoin</p>
+                                                    <span>7,9%</span>
+                                                </div>
+                                            </div>
+                                            <div class="bank-card-from-item">
+                                                <div class="flex items-center gap-x-[40px] max-sm:w-full">
+                                                    <label>
+                                                        <button type="button" onclick="onToSwitch(this),switchActiveText(this)">
+                                                            <span></span>
+                                                        </button>
+                                                        <input class="hidden" name="bitcoin" type="checkbox" value="Bitcoin">
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="max-w-[342px] w-full items-center justify-between mb-[50px] flex max-md:max-w-full">
+                                            <div class="bank-card-item">
+                                                <img src="/images/logo-bank/9.png" alt="ethereum" width="30px" height="30px"/>
+                                                <div>
+                                                    <p>Ethereum</p>
+                                                    <span>7,9%</span>
+                                                </div>
+                                            </div>
+                                            <div class="bank-card-from-item">
+                                                <div class="flex items-center gap-x-[40px] max-sm:w-full">
+                                                    <label>
+                                                        <button type="button" onclick="onToSwitch(this),switchActiveText(this)">
+                                                            <span></span>
+                                                        </button>
+                                                        <input class="hidden" name="ethereum" type="checkbox" value="Ethereum">
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="max-w-[342px] w-full items-center justify-between mb-[50px] flex max-md:max-w-full">
+                                            <div class="bank-card-item">
+                                                <img src="/images/logo-bank/10.png" alt="bitcoincash" width="30px" height="30px"/>
+                                                <div>
+                                                    <p>Bitcoin Cash</p>
+                                                    <span>7,9%</span>
+                                                </div>
+                                            </div>
+                                            <div class="bank-card-from-item">
+                                                <div class="flex items-center gap-x-[40px] max-sm:w-full">
+                                                    <label>
+                                                        <button type="button" onclick="onToSwitch(this),switchActiveText(this)">
+                                                            <span></span>
+                                                        </button>
+                                                        <input class="hidden" name="bitcoincash" type="checkbox" value="Bitcoin Cash">
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="max-w-[342px] w-full items-center justify-between mb-[50px] flex max-md:max-w-full">
+                                            <div class="bank-card-item">
+                                                <img src="/images/logo-bank/11.png" alt="litecoin" width="30px" height="30px"/>
+                                                <div>
+                                                    <p>Litecoin</p>
+                                                    <span>7,9%</span>
+                                                </div>
+                                            </div>
+                                            <div class="bank-card-from-item">
+                                                <div class="flex items-center gap-x-[40px] max-sm:w-full">
+                                                    <label>
+                                                        <button type="button" onclick="onToSwitch(this),switchActiveText(this)">
+                                                            <span></span>
+                                                        </button>
+                                                        <input class="hidden" name="litecoin" type="checkbox" value="Litecoin">
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="max-w-[342px] w-full items-center justify-between mb-[50px] flex max-md:max-w-full">
+                                            <div class="bank-card-item">
+                                                <img src="/images/logo-bank/12.png" alt="dash" width="30px" height="30px"/>
+                                                <div>
+                                                    <p>Dash</p>
+                                                    <span>7,9%</span>
+                                                </div>
+                                            </div>
+                                            <div class="bank-card-from-item">
+                                                <div class="flex items-center gap-x-[40px] max-sm:w-full">
+                                                    <label>
+                                                        <button type="button" onclick="onToSwitch(this),switchActiveText(this)">
+                                                            <span></span>
+                                                        </button>
+                                                        <input class="hidden" name="dash" type="checkbox" value="Dash">
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="max-w-[342px] w-full items-center justify-between mb-[50px] flex max-md:max-w-full">
+                                            <div class="bank-card-item">
+                                                <img src="/images/logo-bank/13.png" alt="zcash" width="30px" height="30px"/>
+                                                <div>
+                                                    <p>Zcash</p>
+                                                    <span>7,9%</span>
+                                                </div>
+                                            </div>
+                                            <div class="bank-card-from-item">
+                                                <div class="flex items-center gap-x-[40px] max-sm:w-full">
+                                                    <label>
+                                                        <button type="button" onclick="onToSwitch(this),switchActiveText(this)">
+                                                            <span></span>
+                                                        </button>
+                                                        <input class="hidden" name="zcash" type="checkbox" value="Zcash">
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="max-w-[342px] w-full items-center justify-between flex max-md:max-w-full">
+                                            <div class="bank-card-item">
+                                                <img src="/images/logo-bank/14.png" alt="dogecoin" width="30px" height="30px"/>
+                                                <div>
+                                                    <p>Dogecoin</p>
+                                                    <span>7,9%</span>
+                                                </div>
+                                            </div>
+                                            <div class="bank-card-from-item">
+                                                <div class="flex items-center gap-x-[40px] max-sm:w-full">
+                                                    <label>
+                                                        <button type="button" onclick="onToSwitch(this),switchActiveText(this)">
+                                                            <span></span>
+                                                        </button>
+                                                        <input class="hidden" name="dogecoin" type="checkbox" value="Dogecoin">
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- второй блок с картами end -->
+                                    <!-- третий блок с картами -->
+                                    <div class="max-w-[340px] w-full max-md:max-w-full max-md:mb-[50px]">
+                                        <div class="max-w-[342px] w-full items-center justify-between mb-[50px] flex max-md:max-w-full">
+                                            <div class="bank-card-item">
+                                                <img src="/images/logo-bank/15.png" alt="tether" width="30px" height="30px"/>
+                                                <div>
+                                                    <p>Tether</p>
+                                                    <span>7,9%</span>
+                                                </div>
+                                            </div>
+                                            <div class="bank-card-from-item">
+                                                <div class="flex items-center gap-x-[40px] max-sm:w-full">
+                                                    <label>
+                                                        <button type="button" onclick="onToSwitch(this),switchActiveText(this)">
+                                                            <span></span>
+                                                        </button>
+                                                        <input class="hidden" name="tether" type="checkbox" value="Tether">
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="max-w-[342px] w-full items-center justify-between mb-[50px] flex max-md:max-w-full">
+                                            <div class="bank-card-item">
+                                                <img src="/images/logo-bank/16.png" alt="tonecoin" width="30px" height="30px"/>
+                                                <div>
+                                                    <p>Tonecoin</p>
+                                                    <span>7,9%</span>
+                                                </div>
+                                            </div>
+                                            <div class="bank-card-from-item">
+                                                <div class="flex items-center gap-x-[40px] max-sm:w-full">
+                                                    <label>
+                                                        <button type="button" onclick="onToSwitch(this),switchActiveText(this)">
+                                                            <span></span>
+                                                        </button>
+                                                        <input class="hidden" name="tonecoin" type="checkbox" value="Tonecoin">
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="max-w-[342px] w-full items-center justify-between mb-[50px] flex max-md:max-w-full">
+                                            <div class="bank-card-item">
+                                                <img src="/images/logo-bank/17.png" alt="megafon" width="30px" height="30px"/>
+                                                <div>
+                                                    <p>Мегафон</p>
+                                                    <span>7,9%</span>
+                                                </div>
+                                            </div>
+                                            <div class="bank-card-from-item">
+                                                <div class="flex items-center gap-x-[40px] max-sm:w-full">
+                                                    <label>
+                                                        <button type="button" onclick="onToSwitch(this),switchActiveText(this)">
+                                                            <span></span>
+                                                        </button>
+                                                        <input class="hidden" name="megafon" type="checkbox" value="Мегафон">
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="max-w-[342px] w-full items-center justify-between mb-[50px] flex max-md:max-w-full">
+                                            <div class="bank-card-item">
+                                                <img src="/images/logo-bank/18.png" alt="beeline" width="30px" height="30px"/>
+                                                <div>
+                                                    <p>Билайн</p>
+                                                    <span>7,9%</span>
+                                                </div>
+                                            </div>
+                                            <div class="bank-card-from-item">
+                                                <div class="flex items-center gap-x-[40px] max-sm:w-full">
+                                                    <label>
+                                                        <button type="button" onclick="onToSwitch(this),switchActiveText(this)">
+                                                            <span></span>
+                                                        </button>
+                                                        <input class="hidden" name="beeline" type="checkbox" value="Билайн">
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="max-w-[342px] w-full items-center justify-between mb-[50px] flex max-md:max-w-full">
+                                            <div class="bank-card-item">
+                                                <img src="/images/logo-bank/19.png" alt="tele2" width="30px" height="30px"/>
+                                                <div>
+                                                    <p>Теле 2</p>
+                                                    <span>7,9%</span>
+                                                </div>
+                                            </div>
+                                            <div class="bank-card-from-item">
+                                                <div class="flex items-center gap-x-[40px] max-sm:w-full">
+                                                    <label>
+                                                        <button type="button" onclick="onToSwitch(this),switchActiveText(this)">
+                                                            <span></span>
+                                                        </button>
+                                                        <input class="hidden" name="tele2" type="checkbox" value="Теле 2">
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="max-w-[342px] w-full items-center justify-between flex max-md:max-w-full">
+                                            <div class="bank-card-item">
+                                                <img src="/images/logo-bank/20.png" alt="mtc" width="30px" height="30px"/>
+                                                <div>
+                                                    <p>МТС</p>
+                                                    <span>7,9%</span>
+                                                </div>
+                                            </div>
+                                            <div class="bank-card-from-item">
+                                                <div class="flex items-center gap-x-[40px] max-sm:w-full">
+                                                    <label>
+                                                        <button type="button" onclick="onToSwitch(this),switchActiveText(this)">
+                                                            <span></span>
+                                                        </button>
+                                                        <input class="hidden" name="mtc" type="checkbox" value="МТС">
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- третий блок с картами end -->
+                                
+                                </div>
+                               
+                                <!-- btn submit -->
+                                <button class="form-register-submit mt-[50px]">
+                                    Сохранить
+                                </button>
+                                <!-- btn submit end -->
+                            </form>
+                        </div>
+                        <!-- Настройки API end -->
+                     </div>
+                     <!-- первый блок end -->
+                 </div>
+                <!-- весь контент после заголовка end -->
+            </div>
+           
+        </main>
+        <!-- content end -->
+    </div>
+        
+    
+    <script type="module" src="/js/main.js"></script>
+    <script type="text/javascript">
+         function clickOpenBlock(btn,classNam) {
+            const block = btn.querySelector('.'+classNam);
+            return block.classList.toggle('active');
+        };
+        function onToSwitch(btn){
+           return  btn.classList.toggle('active');
+        }
+        function showText(obj,classnames) {
+            const parent = obj.parentElement; // Получаем родительский элемент
+            return parent.classList.toggle('cards-show-active');                    
+        }
+        
+        function changeHtmlCard(btn) {
+            const cards = document.querySelectorAll('.cards-show label');
+            let btnHtml = btn.querySelector('div');
+            const parent = btn.parentElement;
+            
+            cards.forEach(card => {
+                card.addEventListener('click', () => {
+                    // Создаем клон элемента span
+                    const selectedSpan = card.querySelector('span').cloneNode(true);
+                    
+                    // Находим элемент span внутри кнопки и очищаем его содержимое
+                    const buttonSpanChild = btnHtml.querySelector('span');
+                    buttonSpanChild.innerHTML = '';  // Очищаем предыдущий текст
+                    
+                    // Добавляем новый текст из выбранного label
+                    buttonSpanChild.appendChild(selectedSpan);
+                    
+                    
+                    // Закрываем список, убирая активный класс
+                    parent.classList.remove('cards-show-active');
+                });
+            });
+        }
+
+        // переключаем на разрешено и запрешено
+        function switchActiveText (btn) {
+            const parent = btn.parentElement.parentElement;
+            const childSpan = parent.querySelectorAll('.switch-on-off');
+            console.log(childSpan);
+            
+            if(childSpan[0].classList.contains('active')){
+                childSpan[0].classList.remove('active');
+                childSpan[1].classList.add('active');
+            }else{
+                childSpan[1].classList.remove('active');
+                childSpan[0].classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>

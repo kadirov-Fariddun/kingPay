@@ -11,9 +11,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
     <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/airbnb.css"> -->
-    <!-- <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/dark.css"/> -->
 </head>
 <body>
     <div class="flex max-[1400px]:flex-col max-[1400px]:relative">
@@ -153,7 +150,7 @@
                                         duration-[.2s] hover:duration-[.2s] hover:text-yellow-500 text-nowrap text-left">Безопасность</a>
                                         </li>
                                         <li class="w-full h-fit">
-                                            <a href="#" class="px-[25px] py-[10px] flex items-center justify-center text-[#1c1c1c] text-[15px] 
+                                            <a href="/pages/user/support.html" class="px-[25px] py-[10px] flex items-center justify-center text-[#1c1c1c] text-[15px] 
                                         duration-[.2s] hover:duration-[.2s] hover:text-yellow-500 text-nowrap text-left">Помощь</a>
                                         </li>
                                         <li>
@@ -398,7 +395,7 @@
                                         duration-[.2s] hover:duration-[.2s] hover:text-yellow-500 text-nowrap text-left">Безопасность</a>
                                         </li>
                                         <li class="w-full h-fit">
-                                            <a href="#" class="px-[25px] py-[10px] flex items-center justify-center text-[#1c1c1c] text-[15px] 
+                                            <a href="/pages/user/support.html" class="px-[25px] py-[10px] flex items-center justify-center text-[#1c1c1c] text-[15px] 
                                         duration-[.2s] hover:duration-[.2s] hover:text-yellow-500 text-nowrap text-left">Помощь</a>
                                         </li>
                                         <li>
@@ -850,6 +847,7 @@
             const parent = obj.parentElement; // Получаем родительский элемент
             return parent.classList.toggle('cards-show-active');                    
         }
+        
         
         function clickOpenBlock(btn,classNam) {
             const block = btn.querySelector('.'+classNam);

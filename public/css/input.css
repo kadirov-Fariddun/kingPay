@@ -307,6 +307,162 @@ img {
   .pika-single .is-disabled .pika-button{
     @apply text-black bg-colorGray;
   }
+  /* меню личного кабинета */
+.menu-profile a{
+    @apply flex items-center gap-x-[10px] max-w-[205px] w-full 
+    ;
+}
+.menu-profile a.menu-profile-active span{
+    @apply text-black font-normal  dark:text-white
+    max-lg:pb-[10px] max-lg:border-black  max-lg:border-b-2 dark:max-lg:border-white;
+}
+.menu-profile .menu-profile-active svg path{
+    @apply fill-black dark:fill-white;
+}
+.menu-profile a svg path{
+    @apply fill-[#6a6a6a] dark:fill-colorGray;
+}
+.menu-profile a svg{
+    @apply max-lg:hidden;
+}
+.menu-profile a span{
+   @apply font-light text-[18px] text-[#6A6A6A] leading-[21.78px] dark:text-colorGray 
+   transition-all text-nowrap max-sm:text-[14px];
+}
+.menu-profile a:hover span{
+    color: #000;
+    transition: 150ms;
+}
+.menu-profile a:hover svg path{
+    fill: #000;
+    transition: 150ms;
+}
+/* profile form input */
+.profile-form-input{
+    @apply h-fit max-w-[300px] w-full border-b border-colorGray text-black outline-none focus:border-yellow-500
+    bg-transparent dark:text-white max-lg:max-w-[485px] max-[500px]:h-[40px] max-[500px]:text-[14px];
+}
+
+/* Для всех браузеров */
+.menu-profile {
+    @apply max-md:overflow-scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+/* Для Chrome, Edge и Safari */
+.menu-profile::-webkit-scrollbar {
+    display: none;
+}
+
+.profile-form-block{
+    @apply flex items-end max-w-[470px] w-full justify-between mb-[50px] max-lg:max-w-full
+    max-sm:gap-x-[20px] max-[500px]:flex-col max-[500px]:items-start;
+}
+
+/* profile-payment-form-block */
+.profile-payment-form-block{
+    @apply max-w-[470px] w-full flex items-center justify-between max-lg:max-w-full
+    max-sm:flex-col max-md:relative;
+}
+/* profile-payment-input */
+.profile-payment-input{
+    @apply max-w-[210px] w-full h-[50px] rounded-[10px] px-[20px] bg-[#f8f8f8] dark:bg-colorBlack dark:text-white
+    max-sm:max-w-full;
+}
+
+.profile-notification-from-item{
+    @apply max-w-[470px] w-full h-[50px] flex items-center justify-between max-lg:max-w-full;
+}
+.profile-notification-from-item button{
+    @apply w-[42px] h-[23.63px] rounded-[40px] bg-[#D9D9D9] relative
+    dark:bg-colorGray2;
+}
+.profile-notification-from-item button span{
+    @apply w-[23.63px] h-full rounded-full bg-white block border-[4px] border-[#D9D9D9] absolute left-0 
+    top-[50%] translate-y-[-50%] transition-all dark:bg-dark dark:border-colorGray2;
+}
+.profile-notification-from-item button.active{
+    @apply bg-black dark:bg-white;
+}
+.profile-notification-from-item button.active span{
+    @apply left-[20px] transition-all border-black dark:border-white;
+}
+.switch-on-off{
+    @apply font-normal text-[16px] text-colorGray leading-[19.36px] dark:text-colorGray2;
+}
+.switch-on-off.active{
+    @apply text-black dark:text-white;
+}
+
+/* bank-card-from-item */
+.bank-card-from-item{
+    @apply max-w-fit h-[50px] flex items-center justify-between max-lg:max-w-full;
+}
+.bank-card-from-item button{
+    @apply w-[42px] h-[23.63px]  bg-[#D9D9D9] relative
+    dark:bg-colorGray2;
+}
+.bank-card-from-item button span{
+    @apply w-[23.63px] h-full rounded-full bg-white block border-[4px] border-[#D9D9D9] absolute left-0 
+    top-[50%] translate-y-[-50%] transition-all dark:bg-dark dark:border-colorGray2;
+}
+.bank-card-from-item button.active{
+    @apply bg-black dark:bg-white;
+}
+.bank-card-from-item button.active span{
+    @apply left-[19px] transition-all border-black dark:border-white;
+}
+/* bank-card-item */
+.bank-card-item{
+    @apply flex items-center gap-x-[20px] max-w-[190px] w-full;
+}
+.bank-card-item p{
+    @apply text-[16px] leading-[19.36px] font-normal text-black text-nowrap dark:text-white;
+}
+.bank-card-item p sup{
+    @apply text-[11px] leading-[19.36px] font-normal text-colorGray;
+}
+.bank-card-item span{
+    @apply text-[14px] leading-[16.94px] text-colorGray;
+}
+
+/* modal history detail */
+.modal-detail-history{
+    @apply fixed top-0 left-0 w-full h-full bg-[rgb(0,0,0,.65)] z-50 backdrop-blur-[2px] overflow-hidden
+    hidden;
+}
+.modal-detail-history.active{
+    @apply block;
+}
+
+/* class="data-user */
+.data-user{
+    @apply py-[19px] px-[20px] rounded-[10px] border border-black dark:border-white cursor-pointer 
+    max-sm:px-[10px];
+}
+.data-user.active{
+    @apply border-colorBlue border-2;
+}
+/* widget-logo */
+.widget-logo{
+    @apply mb-[48px] mx-auto w-fit;
+}
+
+.my-message{
+    @apply p-[20px] bg-[#F8F8F8] rounded-t-[10px] rounded-bl-[10px] w-fit ml-auto dark:bg-colorBlack min-w-[200px] flex flex-col gap-y-[20px];
+}
+.my-message span,.he-message span{
+    @apply text-[12px] font-normal leading-[14.52px] text-colorGray block ml-auto;
+}
+
+.he-message{
+    @apply p-[10px] flex gap-x-[10px] items-start w-fit;
+}
+.he-message div:nth-child(2){
+    @apply p-[20px] max-w-[378px] w-full mr-auto bg-[#616161] rounded-b-[10px] 
+    rounded-tr-[10px] dark:bg-[#262626] flex flex-col gap-y-[20px];
+}
 
 /* title adn text */
 .title-page-h2{
