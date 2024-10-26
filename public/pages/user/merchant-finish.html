@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KingPay | Оплата</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <!-- подключаем шрифт -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body class="bg-[#F8F8F8] py-[100px] flex justify-center items-center">
+    <!-- wrapper -->
+     <div class="wrapper min-h-screen max-w-[680px] bg-white
+      w-full flex flex-col items-center px-[40px] py-[30px] max-sm:px-[20px] max-[500px]:px-[10px]">
+        <!-- logo -->
+         <div class="my-[50px] w-fit">
+            <img class="max-md:w-[170px] max-sm:w-[150px]" src="/images/logo-0.png" alt="logotype" width="200px" height="auto"/>
+         </div>
+        <!-- logo end -->
+         <!-- money -->
+          <div class="w-fit mb-[50px]">
+            <h3 class="leading-[29.05px] text-[24px] font-bold text-black text-center">1 050 ₽</h3>
+            <p class="font-light text-[18px] leading-[Center] text-colorGray2 text-center">Donatebest</p>
+          </div>
+         <!-- money end -->
+       <!-- steps -->
+        <ul class="pay-steps relative">
+            <span></span>
+            <li class="active z-[2]">
+                <div class="">
+                    1
+                </div>
+                <span>Способ оплаты</span>
+            </li>
+            <li class="active z-[2]">
+                <div>2</div>
+                <span>Подтверждение</span>
+            </li>
+            <li class="active z-[2]">
+                <div>3</div>
+                <span>Оплата</span>
+            </li>
+        </ul>
+       <!-- steps end -->
+        <h3 class="text-[18px] text-black font-light mb-[30px] leading-[21.78px] mt-[50px]">К оплате</h3>
+        <div id="root" class="max-w-[460px] w-full"></div>
+        <!--  -->
+     <!-- footer card -->
+     <div class="flex items-center justify-between w-full mt-auto">
+        <div class="flex gap-x-[10px]">
+            <img class="max-[500px]:w-[25px] max-[500px]:h-[25px]" src="/images/shield-tick.png" alt="security" width="40px" height="40px"/>
+            <p class="font-normal text-[18px] leading-[18px] text-colorGray 
+            max-[500px]:text-[14px]">Данные защищены <br/> по стандарту PCI DSS</p>
+        </div>
+        <button type="button" class="flex gap-x-[10px] border border-[#D9D9D9] rounded-[10px] 
+        h-[60px] items-center justify-center px-[20px]">
+            <img class="max-[500px]:w-[30px] max-[500px]:h-[30px]" src="/images/support-quest.png" alt="support" width="40px" height="40px"/>
+            <p class="font-normal text-[18px] leading-[18px] text-colorGray
+            max-[500px]:text-[12px]">ТЕХНИЧЕСКАЯ<br/> ПОДДЕРЖКА</p>
+        </button>
+    </div>
+    <!-- footer card end -->
+     </div>
+     
+    <p id="copy-text" class="max-w-[320px] w-full p-[10px] rounded-[20px] bg-black fixed 
+    bottom-[50px] left-[50%] translate-x-[-50%] text-white text-center hidden transition-all">
+        Текст успешно скопирован
+    </p>
+    <div class=""></div>
+    <!-- wrapper end -->
+    <script type="text/javascript">
+
+    const root = document.getElementById('root');
+        const paramsCardType = new URLSearchParams(window.location.search).get('cardType');
+        const paramsImgUrl = new URLSearchParams(window.location.search).get('imgUrl');
+        const bitcoin = ['bitcoin','ethereum','bitcoincash','litcoin','dash','zcash','dogecoin','tether','tonecoin'];
+        const cards = ['visa','mastercard','sbp','umoney','webmoney','advcash','pm'];
+        const mobile = ['beeline','megafone','mts'];
+
+         // Копировать код
+         function copyTextFromElement(elementId,copyBlock) {
+            const element = document.getElementById(elementId);
+            const textCopyBlock = document.getElementById(copyBlock);
+            console.log(textCopyBlock);
+            
+            if (!element) {
+                console.error(`Элемент с id "${elementId}" не найден.`);
+                return;
+            }
+
+            const text = element.innerText;
+
+            const textarea = document.createElement("textarea");
+            textarea.value = text;
+            document.body.appendChild(textarea);
+
+            textarea.select();
+            textarea.setSelectionRange(0, 99999);
+            document.execCommand("copy");
+
+            document.body.removeChild(textarea);
+            textCopyBlock.classList.remove('hidden');
+            textCopyBlock.classList.remove('opacity-0');
+            
+            setTimeout(() => {
+                textCopyBlock.classList.add('opacity-0');
+                setTimeout(() => {  
+                    textCopyBlock.classList.add('hidden');  
+                }, 500);
+            }, 1500);
+            console.log("Текст скопирован в буфер обмена:", text);
+        }
+
+        if(cards.includes(paramsCardType)){
+            root.innerHTML = `
+            <form>
+                <div class="flex gap-x-[10px] items-center h-[50px] mb-[30px] w-full">
+                    <img src="${paramsImgUrl}" alt="" width="30px" height="30px">
+                    <p class="text-black font-semibold text-[18px] leading-[21.78px]">1 079 ₽</p>
+                </div>
+                <div class="mb-[30px]">
+                    <p class="font-light text-[16px] leading-[19.36px] text-colorGray2">Номер карты</p>
+                    <div class="flex w-full justify-between h-[50px] items-center">
+                        <p id="copyCardNumber" class="whitespace-normal text-wrap break-words">45454 6566 78787 3223</p>
+                        <button type="button" onclick="copyTextFromElement('copyCardNumber','copy-text')">
+                            <img src="/images/document-copy.png" alt="" width="30px" height="30px">
+                        </button>
+                    </div>
+                </div>
+                <div class="mb-[10px]">
+                    <p class="font-light text-[16px] leading-[19.36px] text-colorGray2">Статус</p>
+                    <p class="font-normal text-[20px] leading-[24.2px] text-[#EB001B] h-[50px]
+                    flex items-center">Не оплачен</p>
+                </div>
+                <div class="rounded-[10px] p-[20px] bg-[#F8F8F8] mb-[10px] text-[14px] leading-[16.94px] text-colorGray font-light">
+                    Совершите перевод по реквизитам, указанные выше.  Оплата будет засчитана автоматически после получения перевода
+                </div>
+                <div class="rounded-[10px] p-[20px] bg-[#FFECEE] mb-[50px] text-[14px] leading-[16.94px] text-colorGray font-light">
+                    Необходимо перевести точную сумму одной транзакцией, в противном случае средства могут быть утеряны
+                </div>
+            </form>    
+            `;
+        }else if(bitcoin.includes(paramsCardType)){
+            root.innerHTML = `
+             <form>
+                <div class="flex gap-x-[10px] items-center h-[50px] mb-[30px] w-full">
+                    <img src="${paramsImgUrl}" alt="" width="30px" height="30px">
+                    <p class="text-black font-semibold text-[18px] leading-[21.78px]">0.00016500 BTC</p>
+                </div>
+                <div class="mb-[30px]">
+                    <p class="font-light text-[16px] leading-[19.36px] text-colorGray2">Адрес для оплаты</p>
+                    <div class="flex w-full justify-between h-[50px] items-center">
+                        <p id="copyCardNumber" class="whitespace-normal break-words text-wrap">bc1qc3qmyztn6t7l05gppwuhgjc2hmkfjz5fkfznys</p>
+                        <button type="button" onclick="copyTextFromElement('copyCardNumber','copy-text')">
+                            <img src="/images/document-copy.png" alt="" width="30px" height="30px">
+                        </button>
+                    </div>
+                </div>
+                <div class="mb-[10px]">
+                    <p class="font-light text-[16px] leading-[19.36px] text-colorGray2">Статус</p>
+                    <p class="font-normal text-[20px] leading-[24.2px] text-[#EB001B] h-[50px]
+                    flex items-center">Не оплачен</p>
+                </div>
+                <div class="mb-[30px] text-[14px] leading-[16.94px] text-colorGray2 font-light">
+                    Необходимо перевести точную сумму одной транзакцией. Оплата несколькими транзакциями не поддерживается
+                </div>
+                <button class="form-register-submit gap-x-[10px] flex justify-center items-center mb-[50px] !w-full">
+                    <img src="/images/gg_qr.png" alt="qrcode" width="24px" height="24px"/>
+                    <span>QR-код</span>
+                </button>
+            </form>     
+            `;
+        }else{
+            root.innerHTML = `
+           <form>
+                <div class="flex gap-x-[10px] items-center h-[50px] mb-[30px] w-full">
+                    <img src="${paramsImgUrl}" alt="" width="30px" height="30px">
+                    <p class="text-black font-semibold text-[18px] leading-[21.78px]">1 079 ₽</p>
+                </div>
+                <div class="mb-[30px]">
+                    <p class="font-light text-[16px] leading-[19.36px] text-colorGray2">Номер телефона</p>
+                    <div class="flex w-full justify-between h-[50px] items-center">
+                        <p id="copyNumber">+998933572014</p>
+                        <button type="button" onclick="copyTextFromElement('copyNumber','copy-text')">
+                            <img src="/images/document-copy.png" alt="" width="30px" height="30px">
+                        </button>
+                    </div>
+                </div>
+                <div class="mb-[10px]">
+                    <p class="font-light text-[16px] leading-[19.36px] text-colorGray2">Статус</p>
+                    <p class="font-normal text-[20px] leading-[24.2px] text-[#EB001B] h-[50px]
+                    flex items-center">Не оплачен</p>
+                </div>
+                <div class="rounded-[10px] p-[20px] bg-[#F8F8F8] mb-[10px] text-[14px] leading-[16.94px] text-colorGray font-light">
+                    Совершите перевод по реквизитам, указанные выше.  Оплата будет засчитана автоматически после получения перевода
+                </div>
+                <div class="rounded-[10px] p-[20px] bg-[#FFECEE] mb-[50px] text-[14px] leading-[16.94px] text-colorGray font-light">
+                    Необходимо перевести точную сумму одной транзакцией, в противном случае средства могут быть утеряны
+                </div>
+            </form>       
+            `;
+        }
+        
+        // data user change 
+        function dataUserSwitchActiveBtn () {
+            const btns = document.querySelectorAll('.merchant-card');
+            btns.forEach(btn=>{
+                btn.onclick = () => {
+                    btns.forEach(btn2=>btn2.classList.remove('active'));
+                    btn.classList.add('active');
+                }
+               
+            })
+        }
+        dataUserSwitchActiveBtn ();
+       
+       
+    </script>
+</body>
+</html>
