@@ -464,6 +464,55 @@ img {
     rounded-tr-[10px] dark:bg-[#262626] flex flex-col gap-y-[20px];
 }
 
+/* pay-steps */
+.pay-steps{
+    @apply flex max-w-[540px] w-full justify-center mx-auto items-center gap-x-[26px]
+    max-[500px]:gap-x-[15px] mb-[40px];
+}
+.pay-steps li {
+    @apply w-[140px] relative h-[93px];
+}
+.pay-steps > span{
+    @apply absolute left-[50%] translate-x-[-50%] top-[30px] z-[1]
+    h-[1px] w-[70%] bg-[#D9D9D9] block;
+}
+.pay-steps li div{
+    @apply flex items-center justify-center font-bold text-[24px] leading-[29.05px] text-white w-[60px] h-[60px] rounded-full bg-[#D9D9D9]
+    mb-[20px] text-center mx-auto max-[500px]:h-[45px] max-[500px]:w-[45px];
+}
+.pay-steps li.active div{
+    @apply flex items-center justify-center font-bold text-[24px] leading-[29.05px] text-white w-[60px] 
+    h-[60px] rounded-full bg-colorBlue max-[500px]:h-[45px] max-[500px]:w-[45px];
+}
+.pay-steps li span{
+    @apply text-center mx-auto block text-[18px] text-colorGray max-[500px]:text-[14px] leading-[16px] ;
+}
+.pay-steps li.active span{
+    @apply text-center mx-auto block text-[18px] text-black max-[500px]:text-[14px];
+}
+
+
+/* pay-cards-btn */
+.pay-cards-btn{
+    @apply flex gap-x-[20px] gap-[20px] mb-[40px] flex-wrap justify-center;
+}
+.pay-card-item{
+    @apply border border-[#D9D9D9] rounded-[5px] w-[80px] h-[80px] flex flex-col items-center justify-center 
+    gap-y-[10px] transition-all
+    hover:transition-all hover:border-colorBlue;
+}
+.pay-card-item p{
+    @apply text-[12px] font-light leading-[14.52px] text-colorGray2 text-center;
+}
+
+
+.merchant-card{
+    @apply h-[38px] px-[20px] rounded-[5px] border border-[#D9D9D9]
+    text-colorGray2 flex items-center justify-center cursor-pointer;
+}
+.merchant-card.active{
+    @apply text-black border-colorBlue;
+}
 /* title adn text */
 .title-page-h2{
     @apply font-light text-[30px] text-black leading-[36.31px] dark:text-white;

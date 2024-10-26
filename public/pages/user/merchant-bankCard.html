@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KingPay | Служба поддержки ticket</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <!-- подключаем шрифт -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body class="bg-[#F8F8F8] py-[100px] flex justify-center items-center">
+    <!-- wrapper -->
+     <div class="wrapper min-h-screen max-w-[680px] bg-white
+      w-full flex flex-col items-center px-[40px] py-[30px] max-sm:px-[20px] max-[500px]:px-[10px]">
+        <!-- logo -->
+         <div class="my-[50px] w-fit">
+            <img src="/images/logo-0.png" alt="logotype" width="248px" height="86px"/>
+         </div>
+        <!-- logo end -->
+         <!-- money -->
+          <div class="w-fit mb-[50px]">
+            <h3 class="leading-[29.05px] text-[24px] font-bold text-black text-center">1 050 ₽</h3>
+            <p class="font-light text-[18px] leading-[Center] text-colorGray2 text-center">Donatebest</p>
+          </div>
+         <!-- money end -->
+       <!-- steps -->
+        <ul class="pay-steps relative">
+            <span></span>
+            <li class="active z-[2]">
+                <div class="">
+                    1
+                </div>
+                <span>Способ оплаты</span>
+            </li>
+            <li class="active z-[2]">
+                <div>2</div>
+                <span>Подтверждение</span>
+            </li>
+            <li class="z-[2]">
+                <div>3</div>
+                <span>Оплата</span>
+            </li>
+        </ul>
+       <!-- steps end -->
+        <h3 class="text-[18px] text-black font-light mb-[30px] leading-[21.78px] mt-[50px]">К оплате</h3>
+        <div id="root" class="max-w-[460px] w-full"></div>
+        <!--  -->
+    <!-- footer card -->
+     <div class="flex items-center justify-between w-full mt-auto">
+        <div class="flex gap-x-[10px]">
+            <img class="max-[500px]:w-[25px] max-[500px]:h-[25px]" src="/images/shield-tick.png" alt="security" width="40px" height="40px"/>
+            <p class="font-normal text-[18px] leading-[18px] text-colorGray 
+            max-[500px]:text-[14px]">Данные защищены <br/> по стандарту PCI DSS</p>
+        </div>
+        <div class="flex gap-x-[10px]">
+            <img class="max-[500px]:w-[30px] max-[500px]:h-[30px]" src="/images/support-quest.png" alt="support" width="40px" height="40px"/>
+            <p class="font-normal text-[18px] leading-[18px] text-colorGray
+            max-[500px]:text-[12px]">ТЕХНИЧЕСКАЯ<br/> ПОДДЕРЖКА</p>
+        </div>
+     </div>
+     
+    <!-- footer card end -->
+     </div>
+     
+     
+    <!-- wrapper end -->
+    <script type="text/javascript">
+
+    const root = document.getElementById('root');
+        const paramsCardType = new URLSearchParams(window.location.search).get('cardType');
+        const paramsImgUrl = new URLSearchParams(window.location.search).get('imgUrl');
+        const bitcoin = ['bitcoin','ethereum','bitcoincash','litcoin','dash','zcash','dogecoin','tether','tonecoin'];
+        const cards = ['visa','mastercard','sbp','umoney','webmoney','advcash','pm'];
+        const mobile = ['beeline','megafone','mts'];
+        if(cards.includes(paramsCardType)){
+            root.innerHTML = `
+            <form>
+                <div class="flex gap-x-[10px] items-center h-[50px] mb-[30px] w-full">
+                    <img src="${paramsImgUrl}" alt="" width="30px" height="30px">
+                    <p class="text-black font-semibold text-[18px] leading-[21.78px]">1 079 ₽</p>
+                </div>
+                <div class="flex items-center gap-x-[10px] w-full mb-[30px]">
+                    <label class="merchant-card active">
+                        <span class="text-page">RUB</span>
+                        <input class="hidden" type="radio" name="method-pay" value="RUB">
+                    </label>
+                    <label class="merchant-card">
+                        <span class="text-page">UAH</span>
+                        <input class="hidden" type="radio" name="method-pay" value="UAH">
+                    </label>
+                    <label class="merchant-card">
+                        <span class="text-page">KZT</span>
+                        <input class="hidden" type="radio" name="method-pay" value="KZT">
+                    </label>
+                </div>
+                <label class="flex items-center pl-[20px] mb-[30px] rounded-[10px] bg-[#f8f8f8] h-[50px] w-full ">
+                    <img src="/images/icons/sms.svg" alt="email" heihgt="24px" width="24px">
+                    <input type="email" placeholder="Эл. почта" class="form-register-input !w-full" required>
+                </label>
+                <button class="form-register-submit !w-full mb-[50px]">Оплатить</button>
+            </form>    
+            `;
+        }else if(bitcoin.includes(paramsCardType)){
+            root.innerHTML = `
+            <form>
+                <div class="flex gap-x-[10px] items-center h-[50px] mb-[30px] w-full">
+                    <img src="${paramsImgUrl}" alt="" width="30px" height="30px">
+                    <p class="text-black font-semibold text-[18px] leading-[21.78px]">0.00016500 BTC</p>
+                </div>
+                <label class="flex items-center pl-[20px] mb-[30px] rounded-[10px] bg-[#f8f8f8] h-[50px] w-full ">
+                    <img src="/images/icons/sms.svg" alt="email" heihgt="24px" width="24px">
+                    <input type="email" placeholder="Эл. почта" class="form-register-input !w-full" required>
+                </label>
+                <button class="form-register-submit !w-full mb-[50px]">Оплатить</button>
+            </form>    
+            `;
+        }else{
+            root.innerHTML = `
+            <form>
+                <div class="flex gap-x-[10px] items-center h-[50px] mb-[30px] w-full">
+                    <img src="${paramsImgUrl}" alt="" width="30px" height="30px">
+                    <p class="text-black font-semibold text-[18px] leading-[21.78px]">1 000 ₽</p>
+                </div>
+                <label class="flex items-center pl-[20px] mb-[30px] rounded-[10px] bg-[#f8f8f8] h-[50px] w-full ">
+                    <img src="/images/icons/call.svg" alt="email" heihgt="24px" width="24px">
+                    <input type="text" placeholder="Номер телефона" class="form-register-input !w-full" required>
+                </label>
+                <label class="flex items-center pl-[20px] mb-[30px] rounded-[10px] bg-[#f8f8f8] h-[50px] w-full ">
+                    <img src="/images/icons/sms.svg" alt="email" heihgt="24px" width="24px">
+                    <input type="email" placeholder="Эл. почта" class="form-register-input !w-full" required>
+                </label>
+                <button class="form-register-submit !w-full mb-[50px]">Оплатить</button>
+            </form>    
+            `;
+        }
+        
+        // data user change 
+        function dataUserSwitchActiveBtn () {
+            const btns = document.querySelectorAll('.merchant-card');
+            btns.forEach(btn=>{
+                btn.onclick = () => {
+                    btns.forEach(btn2=>btn2.classList.remove('active'));
+                    btn.classList.add('active');
+                }
+               
+            })
+        }
+        dataUserSwitchActiveBtn ()
+       
+    </script>
+</body>
+</html>

@@ -425,10 +425,11 @@
                         </div>
                   </div>
                   
-                  <form class="pt-[20px] pb-[30px]">
-                    <div class="flex flex-col w-full">
+                  <form class="pt-[20px]">
+                    <div class="flex flex-col w-full pb-[30px] mb-auto max-h-[500px] overflow-hidden overflow-y-auto 
+                    gap-y-[10px] px-[10px]">
                         <div class="my-message">
-                            <p>Прошло 5 дней</p>
+                            <p class="text-page">Прошло 5 дней</p>
                             <span>19 мая 2024 20:34:22</span>
                         </div>
                         <div class="he-message">
@@ -468,10 +469,27 @@
                             </div>
                         </div>
                         <div class="my-message">
-                            <p>Прошло 5 дней</p>
+                            <p class="text-page">Прошло 5 дней</p>
                             <span>19 мая 2024 20:34:22</span>
                         </div>
-                        
+                        <div class="my-message">
+                            <p class="text-page">Прошло 5 дней</p>
+                            <span>19 мая 2024 20:34:22</span>
+                        </div>
+                        <div class="my-message">
+                            <p class="text-page">Прошло 5 дней</p>
+                            <span>19 мая 2024 20:34:22</span>
+                        </div>
+                    </div>
+                    <div class="relative w-full mt-auto ">
+                        <textarea placeholder="Напишите сообщение" class="w-full resize-none h-[70px] pt-[25px] px-[20px] rounded-[10px] bg-[#F8F8F8]
+                        dark:bg-colorBlack dark:text-white "></textarea>
+                        <label class="cursor-pointer w-[30px] h-[30px] absolute top-[50%] translate-y-[-50%] right-[20px]"> 
+                            <input class="hidden" type="file">
+                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path class="dark:fill-white" d="M12.6602 11.25V19.6787C12.6699 20.295 12.9216 20.8828 13.3609 21.3153C13.8002 21.7477 14.3919 21.99 15.0083 21.99C15.6247 21.99 16.2164 21.7477 16.6557 21.3153C17.095 20.8828 17.3467 20.295 17.3564 19.6787L17.3641 8.63084C17.3705 8.10404 17.2722 7.58121 17.075 7.09266C16.8779 6.60411 16.5857 6.15956 16.2154 5.78478C15.8451 5.40999 15.4042 5.11243 14.9181 4.90935C14.4319 4.70626 13.9103 4.60168 13.3835 4.60168C12.8567 4.60168 12.3351 4.70626 11.8489 4.90935C11.3628 5.11243 10.9218 5.40999 10.5516 5.78478C10.1813 6.15956 9.88913 6.60411 9.69195 7.09266C9.49478 7.58121 9.39654 8.10404 9.40293 8.63084V19.7531C9.3922 20.4948 9.529 21.2311 9.8054 21.9195C10.0818 22.6078 10.4923 23.2343 11.0129 23.7625C11.5336 24.2908 12.1541 24.7103 12.8383 24.9966C13.5226 25.2829 14.2569 25.4304 14.9986 25.4304C15.7404 25.4304 16.4747 25.2829 17.1589 24.9966C17.8432 24.7103 18.4637 24.2908 18.9843 23.7625C19.505 23.2343 19.9155 22.6078 20.1919 21.9195C20.4683 21.2311 20.6051 20.4948 20.5943 19.7531V9.35975" stroke="black" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"/>
+                            </svg>
+                        </label>
                     </div>
                   </form>
                  <!-- history end -->
