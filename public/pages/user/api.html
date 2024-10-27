@@ -19,7 +19,7 @@
              max-[1400px]:px-[30px] max-[1400px]:items-center max-[1400px]:py-0 max-[1400px]:sticky max-[1400px]:top-0">
                  <!-- logo -->
                  <div class="w-full flex justify-center h-fit max-[1400px]:w-fit">
-                    <img class="logo max-sm:w-[30px] max-sm:h-auto" src="../../images/logo.svg" alt="logo" width="40px" height="56px">
+                    <img class="logo max-sm:w-[30px] max-sm:h-auto" src="../../images/logo-small-black.svg" alt="logo" width="40px" height="56px">
                 </div>
                 <!-- menu -->
                 <ul class="mt-auto max-[1400px]:flex max-[1400px]:my-0 max-[1400px]:items-center
@@ -95,13 +95,13 @@
                      <div class="py-[15px] px-[36px] rounded-[10px] border border-black max-lg:px-[20px]
                      dark:border-white dark:">
                         <p class="text-[14px] leading-[16.94px] font-normal text-colorGray2 dark:text-[#B7B7B7]">
-                            Баланс 
-                            <strong class="text-black text-[16px] leading-[19.36px] dark:text-white">315 780₽</strong></p>
+                            Баланс:
+                            <strong class="text-black text-[16px] leading-[19.36px] dark:text-white">315 780 ₽</strong></p>
                      </div>
                     <!-- balance end -->
                      <!-- уведомления -->
                       <div class="">
-                        <button class="relative btn-notification" onclick="clickOpenBlock(this,'block-notification')">
+                        <button class="relative btn-notification" onclick="clickOpenBlock2(this,'block-notification')">
                             <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path class="dark:fill-white" d="M16.0267 27.3733C12.92 27.3733 9.81332 26.88 6.86665 25.8933C5.74665 25.5067 4.89332 24.72 4.51999 23.6933C4.13332 22.6667 4.26665 21.5333 4.87999 20.52L6.41332 17.9733C6.73332 17.44 7.02665 16.3733 7.02665 15.7467V11.8933C7.02665 6.93333 11.0667 2.89333 16.0267 2.89333C20.9867 2.89333 25.0267 6.93333 25.0267 11.8933V15.7467C25.0267 16.36 25.32 17.44 25.64 17.9867L27.16 20.52C27.7333 21.48 27.84 22.64 27.4533 23.6933C27.0667 24.7467 26.2267 25.5467 25.1733 25.8933C22.24 26.88 19.1333 27.3733 16.0267 27.3733ZM16.0267 4.89333C12.1733 4.89333 9.02666 8.02667 9.02666 11.8933V15.7467C9.02666 16.72 8.62666 18.16 8.13332 19L6.59999 21.5467C6.30665 22.04 6.22666 22.56 6.39999 23C6.55999 23.4533 6.95999 23.8 7.50666 23.9867C13.08 25.8533 18.9867 25.8533 24.56 23.9867C25.04 23.8267 25.4133 23.4667 25.5867 22.9867C25.76 22.5067 25.72 21.9867 25.4533 21.5467L23.92 19C23.4133 18.1333 23.0267 16.7067 23.0267 15.7333V11.8933C23.0267 8.02667 19.8933 4.89333 16.0267 4.89333Z" fill="#292D32"/>
                                 <path class="dark:fill-white" d="M18.5067 5.25333C18.4133 5.25333 18.32 5.24 18.2267 5.21333C17.84 5.10667 17.4667 5.02667 17.1067 4.97333C15.9733 4.82667 14.88 4.90667 13.8533 5.21333C13.48 5.33333 13.08 5.21333 12.8267 4.93333C12.5733 4.65333 12.4933 4.25333 12.64 3.89333C13.1867 2.49333 14.52 1.57333 16.04 1.57333C17.56 1.57333 18.8933 2.48 19.44 3.89333C19.5733 4.25333 19.5067 4.65333 19.2533 4.93333C19.0533 5.14667 18.7733 5.25333 18.5067 5.25333Z" fill="#292D32"/>
@@ -124,11 +124,10 @@
                       <!-- avatar end -->
                        <!-- btn open settings -->
                         <button class="relative" onclick="clickOpenBlock(this,'block-menu-settings')">
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path class="dark:fill-white" d="M28 10.3333H4C3.45333 10.3333 3 9.88 3 9.33334C3 8.78667 3.45333 8.33334 4 8.33334H28C28.5467 8.33334 29 8.78667 29 9.33334C29 9.88 28.5467 10.3333 28 10.3333Z" fill="#292D32"/>
-                                <path class="dark:fill-white" d="M28 17H4C3.45333 17 3 16.5467 3 16C3 15.4533 3.45333 15 4 15H28C28.5467 15 29 15.4533 29 16C29 16.5467 28.5467 17 28 17Z" fill="#292D32"/>
-                                <path class="dark:fill-white" d="M28 23.6667H16C15.4533 23.6667 15 23.2133 15 22.6667C15 22.12 15.4533 21.6667 16 21.6667H28C28.5467 21.6667 29 22.12 29 22.6667C29 23.2133 28.5467 23.6667 28 23.6667Z" fill="#292D32"/>
-                            </svg>
+                            <div class="menu-burger">
+                                <span></span>
+                                <span></span>
+                            </div>
                             <!-- block с увидомлением -->
                             <div class="absolute right-[50%] top-[150%] py-[10px]  bg-white shadow-[0_10px_32px_rgba(109,109,109,0.16)]
                              rounded-[10px] block-menu-settings h-fit hidden">
@@ -174,13 +173,13 @@
                                 <div class="py-[15px] px-[36px] rounded-[10px] border border-black max-lg:px-[15px]
                                 dark:border-white">
                                     <p class="text-[14px] leading-[16.94px] font-normal text-colorGray2 dark:text-[#B7B7B7]">
-                                        Баланс 
-                                        <strong class="text-black text-[16px] leading-[19.36px] dark:text-white">315 780₽</strong></p>
+                                        Баланс: 
+                                        <strong class="text-black text-[16px] leading-[19.36px] dark:text-white">315 780 ₽</strong></p>
                                 </div>
                                 <!-- balance end -->
                                 <!-- уведомления -->
                                 <div>
-                                    <button class="relative btn-notification" onclick="clickOpenBlock(this,'block-notification')">
+                                    <button class="relative btn-notification" onclick="clickOpenBlock2(this,'block-notification')">
                                         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path class="dark:fill-white" d="M16.0267 27.3733C12.92 27.3733 9.81332 26.88 6.86665 25.8933C5.74665 25.5067 4.89332 24.72 4.51999 23.6933C4.13332 22.6667 4.26665 21.5333 4.87999 20.52L6.41332 17.9733C6.73332 17.44 7.02665 16.3733 7.02665 15.7467V11.8933C7.02665 6.93333 11.0667 2.89333 16.0267 2.89333C20.9867 2.89333 25.0267 6.93333 25.0267 11.8933V15.7467C25.0267 16.36 25.32 17.44 25.64 17.9867L27.16 20.52C27.7333 21.48 27.84 22.64 27.4533 23.6933C27.0667 24.7467 26.2267 25.5467 25.1733 25.8933C22.24 26.88 19.1333 27.3733 16.0267 27.3733ZM16.0267 4.89333C12.1733 4.89333 9.02666 8.02667 9.02666 11.8933V15.7467C9.02666 16.72 8.62666 18.16 8.13332 19L6.59999 21.5467C6.30665 22.04 6.22666 22.56 6.39999 23C6.55999 23.4533 6.95999 23.8 7.50666 23.9867C13.08 25.8533 18.9867 25.8533 24.56 23.9867C25.04 23.8267 25.4133 23.4667 25.5867 22.9867C25.76 22.5067 25.72 21.9867 25.4533 21.5467L23.92 19C23.4133 18.1333 23.0267 16.7067 23.0267 15.7333V11.8933C23.0267 8.02667 19.8933 4.89333 16.0267 4.89333Z" fill="#292D32"/>
                                             <path class="dark:fill-white" d="M18.5067 5.25333C18.4133 5.25333 18.32 5.24 18.2267 5.21333C17.84 5.10667 17.4667 5.02667 17.1067 4.97333C15.9733 4.82667 14.88 4.90667 13.8533 5.21333C13.48 5.33333 13.08 5.21333 12.8267 4.93333C12.5733 4.65333 12.4933 4.25333 12.64 3.89333C13.1867 2.49333 14.52 1.57333 16.04 1.57333C17.56 1.57333 18.8933 2.48 19.44 3.89333C19.5733 4.25333 19.5067 4.65333 19.2533 4.93333C19.0533 5.14667 18.7733 5.25333 18.5067 5.25333Z" fill="#292D32"/>
@@ -204,11 +203,10 @@
                                 <!-- avatar end -->
                                <!-- btn open settings -->
                             <button class="relative" onclick="clickOpenBlock(this,'block-menu-settings')">
-                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path class="dark:fill-white" d="M28 10.3333H4C3.45333 10.3333 3 9.88 3 9.33334C3 8.78667 3.45333 8.33334 4 8.33334H28C28.5467 8.33334 29 8.78667 29 9.33334C29 9.88 28.5467 10.3333 28 10.3333Z" fill="#292D32"/>
-                                    <path class="dark:fill-white" d="M28 17H4C3.45333 17 3 16.5467 3 16C3 15.4533 3.45333 15 4 15H28C28.5467 15 29 15.4533 29 16C29 16.5467 28.5467 17 28 17Z" fill="#292D32"/>
-                                    <path class="dark:fill-white" d="M28 23.6667H16C15.4533 23.6667 15 23.2133 15 22.6667C15 22.12 15.4533 21.6667 16 21.6667H28C28.5467 21.6667 29 22.12 29 22.6667C29 23.2133 28.5467 23.6667 28 23.6667Z" fill="#292D32"/>
-                                </svg>
+                                <div class="menu-burger">
+                                    <span></span>
+                                    <span></span>
+                                </div>
                                 <!-- block с увидомлением -->
                                 <div class="absolute right-[50%] top-[150%] py-[10px]  bg-white shadow-[0_10px_32px_rgba(109,109,109,0.16)]
                                  rounded-[10px] block-menu-settings h-fit hidden">
@@ -334,7 +332,7 @@
                                     <div class="flex gap-x-[20px] max-w-[450px] w-full max-sm:max-w-full">
                                         <input class="profile-payment-input !max-w-[400px] w-full max-sm:!max-w-full h-[50px]"
                                         value="111111111111111111111" type="password" readonly>
-                                        <button type="button">
+                                        <button type="button" class="transition-[.3s] active:rotate-[-190deg]">
                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path class="dark:fill-colorGray" d="M14.55 22.42C14.22 22.42 13.91 22.2 13.82 21.86C13.71 21.46 13.95 21.05 14.36 20.94C18.42 19.87 21.25 16.19 21.25 11.99C21.25 6.89 17.1 2.74 12 2.74C7.67 2.74 4.83 5.27 3.5 6.8H6.44C6.85 6.8 7.19 7.14 7.19 7.55C7.19 7.96 6.86 8.31 6.44 8.31H2.01C1.96 8.31 1.87 8.3 1.8 8.28C1.71 8.25 1.63 8.21 1.56 8.16C1.47 8.1 1.4 8.02 1.35 7.93C1.3 7.84 1.26 7.73 1.25 7.62C1.25 7.59 1.25 7.57 1.25 7.54V3C1.25 2.59 1.59 2.25 2 2.25C2.41 2.25 2.75 2.59 2.75 3V5.39C4.38 3.64 7.45 1.25 12 1.25C17.93 1.25 22.75 6.07 22.75 12C22.75 16.88 19.46 21.16 14.74 22.4C14.68 22.41 14.61 22.42 14.55 22.42Z" fill="#292D32"/>
                                                 <path class="dark:fill-colorGray" d="M11.29 22.73C11.27 22.73 11.25 22.72 11.24 22.72C10.16 22.65 9.1 22.41 8.1 22.02C7.81 21.91 7.61 21.62 7.62 21.31C7.62 21.22 7.64 21.13 7.67 21.05C7.82 20.67 8.27 20.48 8.64 20.62C9.51 20.96 10.42 21.16 11.34 21.23C11.73 21.25 12.04 21.59 12.04 21.99L12.03 22.03C12.01 22.42 11.68 22.73 11.29 22.73ZM5.78 20.58C5.61 20.58 5.45 20.52 5.31 20.42C4.47 19.74 3.73 18.95 3.13 18.07C3.04 17.94 2.99 17.8 2.99 17.65C2.99 17.4 3.11 17.17 3.32 17.03C3.65 16.8 4.13 16.89 4.36 17.21C4.36 17.22 4.36 17.22 4.36 17.22C4.37 17.23 4.38 17.25 4.39 17.26C4.91 18.01 5.54 18.68 6.25 19.24C6.42 19.38 6.53 19.59 6.53 19.82C6.53 19.99 6.48 20.16 6.37 20.3C6.22 20.48 6.01 20.58 5.78 20.58ZM2.44 15.7C2.11 15.7 1.82 15.49 1.73 15.18C1.41 14.15 1.25 13.08 1.25 12V11.99C1.26 11.58 1.59 11.25 2 11.25C2.41 11.25 2.75 11.59 2.75 12C2.75 12.94 2.89 13.86 3.16 14.73C3.18 14.81 3.19 14.88 3.19 14.96C3.19 15.28 2.98 15.57 2.66 15.67C2.59 15.69 2.52 15.7 2.44 15.7Z" fill="#292D32"/>
@@ -392,6 +390,11 @@
            return  btn.classList.toggle('active');
         }
         function clickOpenBlock(btn,classNam) {
+            const block = btn.querySelector('.'+classNam);
+            btn.querySelector('.menu-burger').classList.toggle('active');
+            return block.classList.toggle('active');
+        };
+        function clickOpenBlock2(btn,classNam) {
             const block = btn.querySelector('.'+classNam);
             return block.classList.toggle('active');
         };

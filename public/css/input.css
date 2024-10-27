@@ -126,6 +126,26 @@ img {
     @apply right-0 duration-[.3s];
 }
 
+.menu-burger {
+    @apply w-[40px] h-[40px] gap-y-[5px] relative;
+}
+.menu-burger span:nth-child(1){
+    @apply w-[26px] h-[2px] bg-colorBlack dark:bg-white rounded-[10px] block transition-all origin-right 
+    absolute left-[50%] translate-x-[-50%] top-[calc(50%-3.5px)] translate-y-[-50%];
+}
+.menu-burger span:nth-child(2){
+    @apply w-[18px] h-[2px] bg-colorBlack dark:bg-white rounded-[10px] block transition-all origin-center 
+    absolute left-[50%] translate-x-[calc(-50%+4px)] top-[calc(50%+3.5px)]  translate-y-[-50%];
+}
+.menu-burger.active {
+    @apply items-center;
+}
+.menu-burger.active span:nth-child(1){
+    @apply transition-all rotate-[-45deg] top-[calc(50%-5.5px)];
+}
+.menu-burger.active span:nth-child(2){
+    @apply transition-all rotate-[45deg] w-[26px] ;
+}
 /* title */
 .title-page{
     @apply font-inter font-medium text-[26px] text-colorBlack leading-[31.47px] uppercase max-[600px]:text-[22px] max-[400px]:text-[18px];
@@ -190,11 +210,18 @@ img {
 
 /* history */
 .history-item{
-    @apply h-[50px] w-full px-[20px] rounded-[10px] flex items-center /*max-[1400px]:rounded-none*/ max-sm:text-nowrap max-sm:overflow-hidden
-    max-sm:overflow-x-auto;
+    @apply h-[50px] w-full px-[20px] rounded-[10px] flex items-center /*max-[1400px]:rounded-none*/ max-sm:text-nowrap max-sm:overflow-hidden;
+}
+.history-item-pay:nth-child(1){
+    @apply h-[50px] overflow-hidden w-full px-[20px] rounded-[10px] flex items-center /*max-[1400px]:rounded-none*/ max-sm:text-nowrap
+    transition-all z-0 overflow-x-auto ;
+}
+.history-item-pay.gray{
+    @apply bg-[#FBFBFB] dark:bg-colorBlack;
 }
 .history-item-pay{
-    @apply h-[50px] w-full px-[20px] rounded-[10px] flex items-center /*max-[1400px]:rounded-none*/ max-sm:text-nowrap;
+    @apply h-[50px] overflow-hidden w-full px-[20px] rounded-[10px] flex items-center /*max-[1400px]:rounded-none*/ max-sm:text-nowrap cursor-pointer 
+    transition-all hover:transition-all hover:bg-[#d1d1d1] z-0 overflow-x-auto dark:hover:bg-[rgb(0,0,0,.2)];
 }
 .history-item.gray{
     @apply bg-[#FBFBFB] dark:bg-colorBlack;
@@ -235,7 +262,7 @@ img {
 /* cards-show-active */
 
 .cards-show-active{
-    @apply max-h-[300px] h-auto transition-all overflow-hidden overflow-y-auto;
+    @apply max-h-[300px] h-auto transition-all overflow-hidden overflow-y-auto shadow-md dark:shadow-colorBlack;
 }
 .cards-show-active .arrow-rotate{
     transform-origin: center;
@@ -283,17 +310,23 @@ img {
   .pika-button {
     background-color: #3B82F6;
     color: white;
-    border-radius: 50%;
+    border-radius:50%;
+    width: 30px !important;
+     height: 30px !important;
+     display: flex !important;
+     align-items: center !important;
+     justify-content: center !important;
     @apply dark:bg-dark dark:text-white;
   }
-
   .is-today .pika-button {
     border: 2px solid #3B82F6;
+    border-radius: 50%;
   }
 
   .is-selected .pika-button {
     background-color: #3B82F6 !important;
     color: white !important;
+    border-radius: 50% !important;
   }
   .pika-select-year{
     @apply dark:bg-colorBlack dark:text-white;
@@ -375,11 +408,11 @@ img {
     @apply max-w-[470px] w-full h-[50px] flex items-center justify-between max-lg:max-w-full;
 }
 .profile-notification-from-item button{
-    @apply w-[42px] h-[23.63px] rounded-[40px] bg-[#D9D9D9] relative
+    @apply w-[42px] h-[24px] rounded-[40px] bg-[#D9D9D9] relative
     dark:bg-colorGray2;
 }
 .profile-notification-from-item button span{
-    @apply w-[23.63px] h-full rounded-full bg-white block border-[4px] border-[#D9D9D9] absolute left-0 
+    @apply w-[23px] h-full rounded-full bg-white block border-[3px] border-[#D9D9D9] absolute left-0 
     top-[50%] translate-y-[-50%] transition-all dark:bg-dark dark:border-colorGray2;
 }
 .profile-notification-from-item button.active{
@@ -404,7 +437,7 @@ img {
     dark:bg-colorGray2;
 }
 .bank-card-from-item button span{
-    @apply w-[23.63px] h-full rounded-full bg-white block border-[4px] border-[#D9D9D9] absolute left-0 
+    @apply w-[22px] h-[22px] rounded-full bg-white block border-[4px] border-[#D9D9D9] absolute left-0 
     top-[50%] translate-y-[-50%] transition-all dark:bg-dark dark:border-colorGray2;
 }
 .bank-card-from-item button.active{
@@ -447,6 +480,9 @@ img {
 /* widget-logo */
 .widget-logo{
     @apply mb-[48px] mx-auto w-fit;
+}
+.widget-logo svg path{
+    @apply dark:fill-white;
 }
 
 .my-message{
@@ -512,6 +548,10 @@ img {
 }
 .merchant-card.active{
     @apply text-black border-colorBlue;
+}
+
+.show-pay-history-detail{
+    @apply flex justify-center items-center mx-auto;
 }
 /* title adn text */
 .title-page-h2{

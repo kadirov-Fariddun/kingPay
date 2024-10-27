@@ -21,7 +21,7 @@
              max-[1400px]:px-[30px] max-[1400px]:items-center max-[1400px]:py-0 max-[1400px]:sticky max-[1400px]:top-0">
                  <!-- logo -->
                  <div class="w-full flex justify-center h-fit max-[1400px]:w-fit">
-                    <img class="logo max-sm:w-[30px] max-sm:h-auto" src="../../images/logo.svg" alt="logo" width="40px" height="56px">
+                    <img class="logo max-sm:w-[30px] max-sm:h-auto" src="../../images/logo-small-black.svg" alt="logo" width="40px" height="56px">
                 </div>
                 <!-- menu -->
                 <ul class="mt-auto max-[1400px]:flex max-[1400px]:my-0 max-[1400px]:items-center
@@ -102,8 +102,8 @@
                                 <div class="py-[15px] px-[36px] rounded-[10px] border border-black max-xl:px-[15px]
                                 dark:border-white">
                                     <p class="text-[14px] leading-[16.94px] font-normal text-colorGray2 dark:text-[#B7B7B7]">
-                                        Баланс 
-                                        <strong class="text-black text-[16px] leading-[19.36px] dark:text-white">315 780₽</strong></p>
+                                        Баланс:
+                                        <strong class="text-black text-[16px] leading-[19.36px] dark:text-white">315 780 ₽</strong></p>
                                 </div>
                                 <!-- balance end -->
                                 <!-- уведомления -->
@@ -132,11 +132,10 @@
                                 <!-- avatar end -->
                                <!-- btn open settings -->
                             <button class="relative" onclick="clickOpenBlock(this,'block-menu-settings')">
-                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path class="dark:fill-white" d="M28 10.3333H4C3.45333 10.3333 3 9.88 3 9.33334C3 8.78667 3.45333 8.33334 4 8.33334H28C28.5467 8.33334 29 8.78667 29 9.33334C29 9.88 28.5467 10.3333 28 10.3333Z" fill="#292D32"/>
-                                    <path class="dark:fill-white" d="M28 17H4C3.45333 17 3 16.5467 3 16C3 15.4533 3.45333 15 4 15H28C28.5467 15 29 15.4533 29 16C29 16.5467 28.5467 17 28 17Z" fill="#292D32"/>
-                                    <path class="dark:fill-white" d="M28 23.6667H16C15.4533 23.6667 15 23.2133 15 22.6667C15 22.12 15.4533 21.6667 16 21.6667H28C28.5467 21.6667 29 22.12 29 22.6667C29 23.2133 28.5467 23.6667 28 23.6667Z" fill="#292D32"/>
-                                </svg>
+                                <div class="menu-burger">
+                                    <span></span>
+                                    <span></span>
+                                </div>
                                 <!-- block с увидомлением -->
                                 <div class="absolute right-[50%] top-[150%] py-[10px]  bg-white shadow-[0_10px_32px_rgba(109,109,109,0.16)]
                                  rounded-[10px] block-menu-settings h-fit hidden">
@@ -171,7 +170,7 @@
                      max-[350px]:pl-[15px] max-[350px]:pr-[15px]">
                         <div class="flex items-center justify-between mb-[40px]">
                             <h2 class="title-page-h2">Новая выплата</h2>
-                            <button class="relative"onclick="clickOpenBlock(this,'block-menu-settings')">
+                            <button class="relative"onclick="clickOpenBlock2(this,'block-menu-settings')">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path class="dark:fill-white" d="M10.7998 18.3C10.7998 17.9022 10.9578 17.5206 11.2391 17.2393C11.5204 16.958 11.902 16.8 12.2998 16.8C12.6976 16.8 13.0792 16.958 13.3605 17.2393C13.6418 17.5206 13.7998 17.9022 13.7998 18.3C13.7998 18.6978 13.6418 19.0794 13.3605 19.3607C13.0792 19.642 12.6976 19.8 12.2998 19.8C11.902 19.8 11.5204 19.642 11.2391 19.3607C10.9578 19.0794 10.7998 18.6978 10.7998 18.3ZM10.7998 12.3C10.7998 11.9022 10.9578 11.5206 11.2391 11.2393C11.5204 10.958 11.902 10.8 12.2998 10.8C12.6976 10.8 13.0792 10.958 13.3605 11.2393C13.6418 11.5206 13.7998 11.9022 13.7998 12.3C13.7998 12.6978 13.6418 13.0794 13.3605 13.3607C13.0792 13.642 12.6976 13.8 12.2998 13.8C11.902 13.8 11.5204 13.642 11.2391 13.3607C10.9578 13.0794 10.7998 12.6978 10.7998 12.3ZM10.7998 6.3C10.7998 5.90218 10.9578 5.52065 11.2391 5.23934C11.5204 4.95804 11.902 4.8 12.2998 4.8C12.6976 4.8 13.0792 4.95804 13.3605 5.23934C13.6418 5.52065 13.7998 5.90218 13.7998 6.3C13.7998 6.69783 13.6418 7.07936 13.3605 7.36066C13.0792 7.64197 12.6976 7.8 12.2998 7.8C11.902 7.8 11.5204 7.64197 11.2391 7.36066C10.9578 7.07936 10.7998 6.69783 10.7998 6.3Z" fill="black"/>
                                 </svg>
@@ -348,8 +347,8 @@
                          <div class="py-[15px] px-[36px] rounded-[10px] border border-black max-xl:px-[20px]
                          dark:border-white dark:">
                             <p class="text-[14px] leading-[16.94px] font-normal text-colorGray2 dark:text-[#B7B7B7]">
-                                Баланс 
-                                <strong class="text-black text-[16px] leading-[19.36px] dark:text-white">315 780₽</strong></p>
+                                Баланс: 
+                                <strong class="text-black text-[16px] leading-[19.36px] dark:text-white">315 780 ₽</strong></p>
                          </div>
                         <!-- balance end -->
                          <!-- уведомления -->
@@ -377,11 +376,10 @@
                           <!-- avatar end -->
                            <!-- btn open settings -->
                             <button class="relative" onclick="clickOpenBlock(this,'block-menu-settings')">
-                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path class="dark:fill-white" d="M28 10.3333H4C3.45333 10.3333 3 9.88 3 9.33334C3 8.78667 3.45333 8.33334 4 8.33334H28C28.5467 8.33334 29 8.78667 29 9.33334C29 9.88 28.5467 10.3333 28 10.3333Z" fill="#292D32"/>
-                                    <path class="dark:fill-white" d="M28 17H4C3.45333 17 3 16.5467 3 16C3 15.4533 3.45333 15 4 15H28C28.5467 15 29 15.4533 29 16C29 16.5467 28.5467 17 28 17Z" fill="#292D32"/>
-                                    <path class="dark:fill-white" d="M28 23.6667H16C15.4533 23.6667 15 23.2133 15 22.6667C15 22.12 15.4533 21.6667 16 21.6667H28C28.5467 21.6667 29 22.12 29 22.6667C29 23.2133 28.5467 23.6667 28 23.6667Z" fill="#292D32"/>
-                                </svg>
+                                <div class="menu-burger">
+                                    <span></span>
+                                    <span></span>
+                                </div>
                                 <!-- block с увидомлением -->
                                 <div class="absolute right-[50%] top-[150%] py-[10px]  bg-white shadow-[0_10px_32px_rgba(109,109,109,0.16)]
                                  rounded-[10px] block-menu-settings h-fit hidden">
@@ -515,220 +513,182 @@
                     </div>
                   
                   <!-- каленьдарь и други настройки end -->
-                  <ul class="w-full overflow-y-auto overflow-hidden max-md:overflow-x-auto max-md:w-full h-[500px] mb-[30px] max-[1400px]:bg-white dark:max-[1400px]:bg-[#1B1B1B]">
+                  <ul class="max-md:w-full max-md:overflow-x-auto  h-[500px] mb-[30px] max-[1400px]:bg-white
+                  flex flex-col dark:max-[1400px]:bg-[#1B1B1B]">
                     <!-- head -->
                     <li class="history-item-pay gap-x-[5px]">
-                        <p class="flex-[2] text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap
+                        <p class="w-[15%] text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap
                         max-md:min-w-[120px]">№ Выплаты</p>
-                        <p class="flex-[3] text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap max-md:min-w-[170px]">Счет получателя</p>
-                        <strong class="flex-[2] text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap max-md:min-w-[120px]">Сумма</strong>
-                        <span class="flex-[3] text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap max-md:min-w-[150px]">Дата</span>
-                        <span class="flex-[2] text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap text-center max-md:min-w-[100px]">Статус</span>
+                        <p class="w-[27.5%] text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap max-md:min-w-[170px]">Счет получателя</p>
+                        <strong class="w-[15%] text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap max-md:min-w-[120px]">Сумма</strong>
+                        <span class="w-[27.5%] text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap max-md:min-w-[150px]">Дата</span>
+                        <span class="w-[15%] text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap text-center max-md:min-w-[100px]">Статус</span>
                     </li>
                     <!-- head end -->
-                    <li class="history-item-pay">
-                        <p class="flex-[2] text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[120px]">9837646</p>
-                        <p class="flex-[3] text-[16px] leading-[19.36]  text-colorGray2 font-light flex items-center gap-x-[10px]
+                    <li class="history-item-pay show-pay-history-detail">
+                        <p class="w-[15%] text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[120px]">9837646</p>
+                        <p class="w-[27.5%] text-[16px] leading-[19.36]  text-colorGray2 font-light flex items-center gap-x-[10px]
                         text-nowrap max-md:min-w-[170px]">
                             <img src="/images/icons/mastercard.png" alt="card" width="24px" height="24px">
                             <strong class="text-[16px] leading-[19.36px] font-semibold text-black dark:text-white ">424566765</strong>
                         </p>
-                        <div class="flex-[2] text-[16px] leading-[19.36px] font-semibold text-colorBlack text-nowrap dark:text-white max-md:min-w-[120px]">12 540 ₽</div>
-                        <div class="flex-[3] flex gap-x-[10px] text-[16px] leading-[19.36] text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[150px]">
+                        <div class="w-[15%] text-[16px] leading-[19.36px] font-semibold text-colorBlack text-nowrap dark:text-white max-md:min-w-[120px]">12 540 ₽</div>
+                        <div class="w-[27.5%] flex gap-x-[10px] text-[16px] leading-[19.36] text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[150px]">
                             <span>25 мая 2024</span>
                             <span>16:35</span>
                         </div>
-                        <span class="flex-[2] flex justify-center max-md:min-w-[100px]">
+                        <span class="w-[15%] flex justify-center max-md:min-w-[100px] ">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M17.2346 11.0586C16.8119 11.0586 16.4692 11.4532 16.4692 11.9402C16.4692 12.4271 16.8119 12.8218 17.2346 12.8218C17.6574 12.8218 18 12.4271 18 11.9402C18 11.4532 17.6574 11.0586 17.2346 11.0586Z" stroke="#B7B7B7" stroke-linejoin="round"/>
-                                <path d="M14.2332 13.9698C13.0343 13.6199 12.1176 11.4414 12.1176 11.4414C12.1176 11.4414 11.201 13.6192 10.0021 13.9698C8.80318 14.3196 8.13646 14.1158 7.5708 13.8534C7.5708 13.8534 8.54606 15.8273 8.54606 16.8287H15.6886C15.6886 15.8273 16.6638 13.8534 16.6638 13.8534C16.0982 14.1158 15.4315 14.3203 14.2326 13.9698H14.2332Z" stroke="#B7B7B7" stroke-linejoin="round"/>
-                                <path d="M7.70713 12.2782C7.86889 11.8284 7.68344 11.3127 7.29291 11.1264C6.90238 10.9401 6.45466 11.1537 6.2929 11.6035C6.13113 12.0533 6.31659 12.569 6.70712 12.7553C7.09764 12.9417 7.54537 12.728 7.70713 12.2782Z" stroke="#B7B7B7" stroke-linejoin="round"/>
-                                <path d="M12.6597 9.87044C12.9586 9.52616 12.9586 8.96798 12.6597 8.6237C12.3608 8.27942 11.8762 8.27942 11.5773 8.6237C11.2784 8.96798 11.2784 9.52616 11.5773 9.87044C11.8762 10.2147 12.3608 10.2147 12.6597 9.87044Z" stroke="#B7B7B7" stroke-linejoin="round"/>
-                                <circle cx="12" cy="12" r="11.5" stroke="#B7B7B7"/>
+                                <path d="M12 22.5C9.9233 22.5 7.89323 21.8842 6.16652 20.7304C4.4398 19.5767 3.09399 17.9368 2.29927 16.0182C1.50455 14.0996 1.29661 11.9884 1.70176 9.95156C2.1069 7.91476 3.10693 6.04383 4.57538 4.57538C6.04383 3.10693 7.91476 2.1069 9.95156 1.70176C11.9884 1.29661 14.0996 1.50455 16.0182 2.29927C17.9368 3.09399 19.5767 4.4398 20.7304 6.16652C21.8842 7.89323 22.5 9.9233 22.5 12C22.5 14.7848 21.3938 17.4555 19.4246 19.4246C17.4555 21.3938 14.7848 22.5 12 22.5ZM12 3C10.22 3 8.47992 3.52785 6.99987 4.51678C5.51983 5.50571 4.36628 6.91132 3.68509 8.55585C3.0039 10.2004 2.82567 12.01 3.17294 13.7558C3.5202 15.5016 4.37737 17.1053 5.63604 18.364C6.89472 19.6226 8.49836 20.4798 10.2442 20.8271C11.99 21.1743 13.7996 20.9961 15.4442 20.3149C17.0887 19.6337 18.4943 18.4802 19.4832 17.0001C20.4722 15.5201 21 13.78 21 12C21 9.61306 20.0518 7.32387 18.364 5.63604C16.6761 3.94822 14.387 3 12 3Z" fill="#B7B7B7"/>
+                                <path d="M15.4425 16.5L11.25 12.3075V5.25H12.75V11.685L16.5 15.4425L15.4425 16.5Z" fill="#B7B7B7"/>
                             </svg>
                         </span>
                     </li>
-                    <li class="history-item-pay">
-                        <p class="flex-[2] text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[120px]">9837646</p>
-                        <p class="flex-[3] text-[16px] leading-[19.36]  text-colorGray2 font-light flex items-center gap-x-[10px]
+                    <li class="history-item-pay gray">
+                        <p class="w-[15%] text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[120px]">9837646</p>
+                        <p class="w-[27.5%] text-[16px] leading-[19.36]  text-colorGray2 font-light flex items-center gap-x-[10px]
                         text-nowrap max-md:min-w-[170px]">
                             <img src="/images/icons/visa.png" alt="card" width="24px" height="24px">
                             <strong class="text-[16px] leading-[19.36px] font-semibold text-black dark:text-white ">424566765</strong>
                         </p>
-                        <div class="flex-[2] text-[16px] leading-[19.36px] font-semibold text-colorBlack text-nowrap dark:text-white max-md:min-w-[120px]">12 540 ₽</div>
-                        <div class="flex-[3] flex gap-x-[10px] text-[16px] leading-[19.36] text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[150px]">
+                        <div class="w-[15%] text-[16px] leading-[19.36px] font-semibold text-colorBlack text-nowrap dark:text-white max-md:min-w-[120px]">12 540 ₽</div>
+                        <div class="w-[27.5%] flex gap-x-[10px] text-[16px] leading-[19.36] text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[150px]">
                             <span>25 мая 2024</span>
                             <span>16:35</span>
                         </div>
-                        <span class="flex-[2] flex justify-center max-md:min-w-[100px]">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M17.2346 11.0586C16.8119 11.0586 16.4692 11.4532 16.4692 11.9402C16.4692 12.4271 16.8119 12.8218 17.2346 12.8218C17.6574 12.8218 18 12.4271 18 11.9402C18 11.4532 17.6574 11.0586 17.2346 11.0586Z" stroke="#22D98C" stroke-linejoin="round"/>
-                                <path d="M14.2332 13.9698C13.0343 13.6199 12.1176 11.4414 12.1176 11.4414C12.1176 11.4414 11.201 13.6192 10.0021 13.9698C8.80318 14.3196 8.13646 14.1158 7.5708 13.8534C7.5708 13.8534 8.54606 15.8273 8.54606 16.8287H15.6886C15.6886 15.8273 16.6638 
-                                13.8534 16.6638 13.8534C16.0982 14.1158 15.4315 14.3203 14.2326 13.9698H14.2332Z" stroke="#22D98C" stroke-linejoin="round"/>
-                                <path d="M7.70713 12.2782C7.86889 11.8284 7.68344 11.3127 7.29291 11.1264C6.90238 10.9401 6.45466 11.1537 6.2929 11.6035C6.13113 12.0533 6.31659 12.569 6.70712 12.7553C7.09764 12.9417 7.54537 12.728 7.70713 12.2782Z" stroke="#22D98C" stroke-linejoin="round"/>
-                                <path d="M12.6597 9.87044C12.9586 9.52616 12.9586 8.96798 12.6597 8.6237C12.3608 8.27942 11.8762 8.27942 11.5773 8.6237C11.2784 8.96798 11.2784 9.52616 11.5773 9.87044C11.8762 10.2147 12.3608 10.2147 12.6597 9.87044Z" stroke="#22D98C" stroke-linejoin="round"/>
-                                <circle cx="12" cy="12" r="11.5" stroke="#22D98C"/>
+                        <span class="w-[15%] flex justify-center max-md:min-w-[100px] ">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path class="fill-[#22D98C]" d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z"></path>
+                                <path class="fill-[#22D98C]" d="M9.999 13.587 7.7 11.292l-1.412 1.416 3.713 3.705 6.706-6.706-1.414-1.414z"></path>
                             </svg>
                         </span>
                     </li>
-                    <li class="history-item-pay">
-                        <p class="flex-[2] text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[120px]">9837646</p>
-                        <p class="flex-[3] text-[16px] leading-[19.36]  text-colorGray2 font-light flex items-center gap-x-[10px]
+                    <li class="history-item-pay show-pay-history-detail">
+                        <p class="w-[15%] text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[120px]">9837646</p>
+                        <p class="w-[27.5%] text-[16px] leading-[19.36]  text-colorGray2 font-light flex items-center gap-x-[10px]
                         text-nowrap max-md:min-w-[170px]">
                             <img src="/images/icons/tether.png" alt="card" width="24px" height="24px">
                             <strong class="text-[16px] leading-[19.36px] font-semibold text-black dark:text-white ">424566765</strong>
                         </p>
-                        <div class="flex-[2] text-[16px] leading-[19.36px] font-semibold text-colorBlack text-nowrap dark:text-white max-md:min-w-[120px]">12 540 ₽</div>
-                        <div class="flex-[3] flex gap-x-[10px] text-[16px] leading-[19.36] text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[150px]">
+                        <div class="w-[15%] text-[16px] leading-[19.36px] font-semibold text-colorBlack text-nowrap dark:text-white max-md:min-w-[120px]">12 540 ₽</div>
+                        <div class="w-[27.5%] flex gap-x-[10px] text-[16px] leading-[19.36] text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[150px]">
                             <span>25 мая 2024</span>
                             <span>16:35</span>
                         </div>
-                        <span class="flex-[2] flex justify-center max-md:min-w-[100px]">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M17.2346 11.0586C16.8119 11.0586 16.4692 11.4532 16.4692 11.9402C16.4692 12.4271 16.8119 12.8218 17.2346 12.8218C17.6574 12.8218 18 12.4271 18 11.9402C18 11.4532 17.6574 11.0586 17.2346 11.0586Z" stroke="#ED2727" stroke-linejoin="round"/>
-                                <path d="M14.2332 13.9698C13.0343 13.6199 12.1176 11.4414 12.1176 11.4414C12.1176 11.4414 11.201 13.6192 10.0021 13.9698C8.80318 14.3196 8.13646 14.1158 7.5708 13.8534C7.5708 13.8534 8.54606 15.8273 8.54606 16.8287H15.6886C15.6886 15.8273 16.6638 13.8534 16.6638 13.8534C16.0982 14.1158 15.4315 14.3203 14.2326 13.9698H14.2332Z" stroke="#ED2727" stroke-linejoin="round"/>
-                                <path d="M7.70713 12.2782C7.86889 11.8284 7.68344 11.3127 7.29291 11.1264C6.90238 10.9401 6.45466 11.1537 6.2929 11.6035C6.13113 12.0533 6.31659 12.569 6.70712 12.7553C7.09764 12.9417 7.54537 12.728 7.70713 12.2782Z" stroke="#ED2727" stroke-linejoin="round"/>
-                                <path d="M12.6597 9.87044C12.9586 9.52616 12.9586 8.96798 12.6597 8.6237C12.3608 8.27942 11.8762 8.27942 11.5773 8.6237C11.2784 8.96798 11.2784 9.52616 11.5773 9.87044C11.8762 10.2147 12.3608 10.2147 12.6597 9.87044Z" stroke="#ED2727" stroke-linejoin="round"/>
-                                <circle cx="12" cy="12" r="11.5" stroke="#ED2727"/>
-                                <line x1="3.35355" y1="3.64645" x2="20.3536" y2="20.6464" stroke="#ED2727"/>
+                        <span class="w-[15%] flex justify-center max-md:min-w-[100px] ">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path class="fill-[#22D98C]" d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z"></path>
+                                <path class="fill-[#22D98C]" d="M9.999 13.587 7.7 11.292l-1.412 1.416 3.713 3.705 6.706-6.706-1.414-1.414z"></path>
                             </svg>
                         </span>
                     </li>
-                    <li class="history-item-pay">
-                        <p class="flex-[2] text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[120px]">9837646</p>
-                        <p class="flex-[3] text-[16px] leading-[19.36]  text-colorGray2 font-light flex items-center gap-x-[10px]
+                    <li class="history-item-pay gray">
+                        <p class="w-[15%] text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[120px]">9837646</p>
+                        <p class="w-[27.5%] text-[16px] leading-[19.36]  text-colorGray2 font-light flex items-center gap-x-[10px]
                         text-nowrap max-md:min-w-[170px]">
                             <img src="/images/icons/visa.png" alt="card" width="24px" height="24px">
                             <strong class="text-[16px] leading-[19.36px] font-semibold text-black dark:text-white ">424566765</strong>
                         </p>
-                        <div class="flex-[2] text-[16px] leading-[19.36px] font-semibold text-colorBlack text-nowrap dark:text-white max-md:min-w-[120px]">12 540 ₽</div>
-                        <div class="flex-[3] flex gap-x-[10px] text-[16px] leading-[19.36] text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[150px]">
+                        <div class="w-[15%] text-[16px] leading-[19.36px] font-semibold text-colorBlack text-nowrap dark:text-white max-md:min-w-[120px]">12 540 ₽</div>
+                        <div class="w-[27.5%] flex gap-x-[10px] text-[16px] leading-[19.36] text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[150px]">
                             <span>25 мая 2024</span>
                             <span>16:35</span>
                         </div>
-                        <span class="flex-[2] flex justify-center max-md:min-w-[100px]">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M17.2346 11.0586C16.8119 11.0586 16.4692 11.4532 16.4692 11.9402C16.4692 12.4271 16.8119 12.8218 17.2346 12.8218C17.6574 12.8218 18 12.4271 18 11.9402C18 11.4532 17.6574 11.0586 17.2346 11.0586Z" stroke="#ED2727" stroke-linejoin="round"/>
-                                <path d="M14.2332 13.9698C13.0343 13.6199 12.1176 11.4414 12.1176 11.4414C12.1176 11.4414 11.201 13.6192 10.0021 13.9698C8.80318 14.3196 8.13646 14.1158 7.5708 13.8534C7.5708 13.8534 8.54606 15.8273 8.54606 16.8287H15.6886C15.6886 15.8273 16.6638 13.8534 16.6638 13.8534C16.0982 14.1158 15.4315 14.3203 14.2326 13.9698H14.2332Z" stroke="#ED2727" stroke-linejoin="round"/>
-                                <path d="M7.70713 12.2782C7.86889 11.8284 7.68344 11.3127 7.29291 11.1264C6.90238 10.9401 6.45466 11.1537 6.2929 11.6035C6.13113 12.0533 6.31659 12.569 6.70712 12.7553C7.09764 12.9417 7.54537 12.728 7.70713 12.2782Z" stroke="#ED2727" stroke-linejoin="round"/>
-                                <path d="M12.6597 9.87044C12.9586 9.52616 12.9586 8.96798 12.6597 8.6237C12.3608 8.27942 11.8762 8.27942 11.5773 8.6237C11.2784 8.96798 11.2784 9.52616 11.5773 9.87044C11.8762 10.2147 12.3608 10.2147 12.6597 9.87044Z" stroke="#ED2727" stroke-linejoin="round"/>
-                                <circle cx="12" cy="12" r="11.5" stroke="#ED2727"/>
-                                <line x1="3.35355" y1="3.64645" x2="20.3536" y2="20.6464" stroke="#ED2727"/>
+                        <span class="w-[15%] flex justify-center max-md:min-w-[100px] ">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path class="fill-[red]" d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path>
                             </svg>
                         </span>
                     </li>
-                    <li class="history-item-pay">
-                        <p class="flex-[2] text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[120px]">9837646</p>
-                        <p class="flex-[3] text-[16px] leading-[19.36]  text-colorGray2 font-light flex items-center gap-x-[10px]
+                    <li class="history-item-pay show-pay-history-detail">
+                        <p class="w-[15%] text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[120px]">9837646</p>
+                        <p class="w-[27.5%] text-[16px] leading-[19.36]  text-colorGray2 font-light flex items-center gap-x-[10px]
                         text-nowrap max-md:min-w-[170px]">
                             <img src="/images/icons/sbp.png" alt="card" width="24px" height="24px">
                             <strong class="text-[16px] leading-[19.36px] font-semibold text-black dark:text-white ">424566765</strong>
                         </p>
-                        <div class="flex-[2] text-[16px] leading-[19.36px] font-semibold text-colorBlack text-nowrap dark:text-white max-md:min-w-[120px]">12 540 ₽</div>
-                        <div class="flex-[3] flex gap-x-[10px] text-[16px] leading-[19.36] text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[150px]">
+                        <div class="w-[15%] text-[16px] leading-[19.36px] font-semibold text-colorBlack text-nowrap dark:text-white max-md:min-w-[120px]">12 540 ₽</div>
+                        <div class="w-[27.5%] flex gap-x-[10px] text-[16px] leading-[19.36] text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[150px]">
                             <span>25 мая 2024</span>
                             <span>16:35</span>
                         </div>
-                        <span class="flex-[2] flex justify-center max-md:min-w-[100px]">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M17.2346 11.0586C16.8119 11.0586 16.4692 11.4532 16.4692 11.9402C16.4692 12.4271 16.8119 12.8218 17.2346 12.8218C17.6574 12.8218 18 12.4271 18 11.9402C18 11.4532 17.6574 11.0586 17.2346 11.0586Z" stroke="#ED2727" stroke-linejoin="round"/>
-                                <path d="M14.2332 13.9698C13.0343 13.6199 12.1176 11.4414 12.1176 11.4414C12.1176 11.4414 11.201 13.6192 10.0021 13.9698C8.80318 14.3196 8.13646 14.1158 7.5708 13.8534C7.5708 13.8534 8.54606 15.8273 8.54606 16.8287H15.6886C15.6886 15.8273 16.6638 13.8534 16.6638 13.8534C16.0982 14.1158 15.4315 14.3203 14.2326 13.9698H14.2332Z" stroke="#ED2727" stroke-linejoin="round"/>
-                                <path d="M7.70713 12.2782C7.86889 11.8284 7.68344 11.3127 7.29291 11.1264C6.90238 10.9401 6.45466 11.1537 6.2929 11.6035C6.13113 12.0533 6.31659 12.569 6.70712 12.7553C7.09764 12.9417 7.54537 12.728 7.70713 12.2782Z" stroke="#ED2727" stroke-linejoin="round"/>
-                                <path d="M12.6597 9.87044C12.9586 9.52616 12.9586 8.96798 12.6597 8.6237C12.3608 8.27942 11.8762 8.27942 11.5773 8.6237C11.2784 8.96798 11.2784 9.52616 11.5773 9.87044C11.8762 10.2147 12.3608 10.2147 12.6597 9.87044Z" stroke="#ED2727" stroke-linejoin="round"/>
-                                <circle cx="12" cy="12" r="11.5" stroke="#ED2727"/>
-                                <line x1="3.35355" y1="3.64645" x2="20.3536" y2="20.6464" stroke="#ED2727"/>
+                        <span class="w-[15%] flex justify-center max-md:min-w-[100px] ">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path class="fill-[red]" d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path>
                             </svg>
                         </span>
                     </li>
-                    <li class="history-item-pay">
-                        <p class="flex-[2] text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[120px]">9837646</p>
-                        <p class="flex-[3] text-[16px] leading-[19.36]  text-colorGray2 font-light flex items-center gap-x-[10px]
+                    <li class="history-item-pay gray">
+                        <p class="w-[15%] text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[120px]">9837646</p>
+                        <p class="w-[27.5%] text-[16px] leading-[19.36]  text-colorGray2 font-light flex items-center gap-x-[10px]
                         text-nowrap max-md:min-w-[170px]">
                             <img src="/images/icons/visa.png" alt="card" width="24px" height="24px">
                             <strong class="text-[16px] leading-[19.36px] font-semibold text-black dark:text-white ">424566765</strong>
                         </p>
-                        <div class="flex-[2] text-[16px] leading-[19.36px] font-semibold text-colorBlack text-nowrap dark:text-white max-md:min-w-[120px]">12 540 ₽</div>
-                        <div class="flex-[3] flex gap-x-[10px] text-[16px] leading-[19.36] text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[150px]">
+                        <div class="w-[15%] text-[16px] leading-[19.36px] font-semibold text-colorBlack text-nowrap dark:text-white max-md:min-w-[120px]">12 540 ₽</div>
+                        <div class="w-[27.5%] flex gap-x-[10px] text-[16px] leading-[19.36] text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[150px]">
                             <span>25 мая 2024</span>
                             <span>16:35</span>
                         </div>
-                        <span class="flex-[2] flex justify-center max-md:min-w-[100px]">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M17.2346 11.0586C16.8119 11.0586 16.4692 11.4532 16.4692 11.9402C16.4692 12.4271 16.8119 12.8218 17.2346 12.8218C17.6574 12.8218 18 12.4271 18 11.9402C18 11.4532 17.6574 11.0586 17.2346 11.0586Z" stroke="#ED2727" stroke-linejoin="round"/>
-                                <path d="M14.2332 13.9698C13.0343 13.6199 12.1176 11.4414 12.1176 11.4414C12.1176 11.4414 11.201 13.6192 10.0021 13.9698C8.80318 14.3196 8.13646 14.1158 7.5708 13.8534C7.5708 13.8534 8.54606 15.8273 8.54606 16.8287H15.6886C15.6886 15.8273 16.6638 13.8534 16.6638 13.8534C16.0982 14.1158 15.4315 14.3203 14.2326 13.9698H14.2332Z" stroke="#ED2727" stroke-linejoin="round"/>
-                                <path d="M7.70713 12.2782C7.86889 11.8284 7.68344 11.3127 7.29291 11.1264C6.90238 10.9401 6.45466 11.1537 6.2929 11.6035C6.13113 12.0533 6.31659 12.569 6.70712 12.7553C7.09764 12.9417 7.54537 12.728 7.70713 12.2782Z" stroke="#ED2727" stroke-linejoin="round"/>
-                                <path d="M12.6597 9.87044C12.9586 9.52616 12.9586 8.96798 12.6597 8.6237C12.3608 8.27942 11.8762 8.27942 11.5773 8.6237C11.2784 8.96798 11.2784 9.52616 11.5773 9.87044C11.8762 10.2147 12.3608 10.2147 12.6597 9.87044Z" stroke="#ED2727" stroke-linejoin="round"/>
-                                <circle cx="12" cy="12" r="11.5" stroke="#ED2727"/>
-                                <line x1="3.35355" y1="3.64645" x2="20.3536" y2="20.6464" stroke="#ED2727"/>
+                        <span class="w-[15%] flex justify-center max-md:min-w-[100px] ">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path class="fill-[red]" d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path>
                             </svg>
                         </span>
                     </li>
-                    <li class="history-item-pay">
-                        <p class="flex-[2] text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[120px]">9837646</p>
-                        <p class="flex-[3] text-[16px] leading-[19.36]  text-colorGray2 font-light flex items-center gap-x-[10px]
+                    <li class="history-item-pay ">
+                        <p class="w-[15%] text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[120px]">9837646</p>
+                        <p class="w-[27.5%] text-[16px] leading-[19.36]  text-colorGray2 font-light flex items-center gap-x-[10px]
                         text-nowrap max-md:min-w-[170px]">
                             <img src="/images/icons/tether.png" alt="card" width="24px" height="24px">
                             <strong class="text-[16px] leading-[19.36px] font-semibold text-black dark:text-white ">424566765</strong>
                         </p>
-                        <div class="flex-[2] text-[16px] leading-[19.36px] font-semibold text-colorBlack text-nowrap dark:text-white max-md:min-w-[120px]">12 540 ₽</div>
-                        <div class="flex-[3] flex gap-x-[10px] text-[16px] leading-[19.36] text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[150px]">
+                        <div class="w-[15%] text-[16px] leading-[19.36px] font-semibold text-colorBlack text-nowrap dark:text-white max-md:min-w-[120px]">12 540 ₽</div>
+                        <div class="w-[27.5%] flex gap-x-[10px] text-[16px] leading-[19.36] text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[150px]">
                             <span>25 мая 2024</span>
                             <span>16:35</span>
                         </div>
-                        <span class="flex-[2] flex justify-center max-md:min-w-[100px]">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M17.2346 11.0586C16.8119 11.0586 16.4692 11.4532 16.4692 11.9402C16.4692 12.4271 16.8119 12.8218 17.2346 12.8218C17.6574 12.8218 18 12.4271 18 11.9402C18 11.4532 17.6574 11.0586 17.2346 11.0586Z" stroke="#ED2727" stroke-linejoin="round"/>
-                                <path d="M14.2332 13.9698C13.0343 13.6199 12.1176 11.4414 12.1176 11.4414C12.1176 11.4414 11.201 13.6192 10.0021 13.9698C8.80318 14.3196 8.13646 14.1158 7.5708 13.8534C7.5708 13.8534 8.54606 15.8273 8.54606 16.8287H15.6886C15.6886 15.8273 16.6638 13.8534 16.6638 13.8534C16.0982 14.1158 15.4315 14.3203 14.2326 13.9698H14.2332Z" stroke="#ED2727" stroke-linejoin="round"/>
-                                <path d="M7.70713 12.2782C7.86889 11.8284 7.68344 11.3127 7.29291 11.1264C6.90238 10.9401 6.45466 11.1537 6.2929 11.6035C6.13113 12.0533 6.31659 12.569 6.70712 12.7553C7.09764 12.9417 7.54537 12.728 7.70713 12.2782Z" stroke="#ED2727" stroke-linejoin="round"/>
-                                <path d="M12.6597 9.87044C12.9586 9.52616 12.9586 8.96798 12.6597 8.6237C12.3608 8.27942 11.8762 8.27942 11.5773 8.6237C11.2784 8.96798 11.2784 9.52616 11.5773 9.87044C11.8762 10.2147 12.3608 10.2147 12.6597 9.87044Z" stroke="#ED2727" stroke-linejoin="round"/>
-                                <circle cx="12" cy="12" r="11.5" stroke="#ED2727"/>
-                                <line x1="3.35355" y1="3.64645" x2="20.3536" y2="20.6464" stroke="#ED2727"/>
+                        <span class="w-[15%] flex justify-center max-md:min-w-[100px] ">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path class="fill-[red]" d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path>
                             </svg>
                         </span>
                     </li>
-                    <li class="history-item-pay">
-                        <p class="flex-[2] text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[120px]">9837646</p>
-                        <p class="flex-[3] text-[16px] leading-[19.36]  text-colorGray2 font-light flex items-center gap-x-[10px]
+                    <li class="history-item-pay gray">
+                        <p class="w-[15%] text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[120px]">9837646</p>
+                        <p class="w-[27.5%] text-[16px] leading-[19.36]  text-colorGray2 font-light flex items-center gap-x-[10px]
                         text-nowrap max-md:min-w-[170px]">
                             <img src="/images/icons/visa.png" alt="card" width="24px" height="24px">
                             <strong class="text-[16px] leading-[19.36px] font-semibold text-black dark:text-white ">424566765</strong>
                         </p>
-                        <div class="flex-[2] text-[16px] leading-[19.36px] font-semibold text-colorBlack text-nowrap dark:text-white max-md:min-w-[120px]">12 540 ₽</div>
-                        <div class="flex-[3] flex gap-x-[10px] text-[16px] leading-[19.36] text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[150px]">
+                        <div class="w-[15%] text-[16px] leading-[19.36px] font-semibold text-colorBlack text-nowrap dark:text-white max-md:min-w-[120px]">12 540 ₽</div>
+                        <div class="w-[27.5%] flex gap-x-[10px] text-[16px] leading-[19.36] text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[150px]">
                             <span>25 мая 2024</span>
                             <span>16:35</span>
                         </div>
-                        <span class="flex-[2] flex justify-center max-md:min-w-[100px]">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M17.2346 11.0586C16.8119 11.0586 16.4692 11.4532 16.4692 11.9402C16.4692 12.4271 16.8119 12.8218 17.2346 12.8218C17.6574 12.8218 18 12.4271 18 11.9402C18 11.4532 17.6574 11.0586 17.2346 11.0586Z" stroke="#ED2727" stroke-linejoin="round"/>
-                                <path d="M14.2332 13.9698C13.0343 13.6199 12.1176 11.4414 12.1176 11.4414C12.1176 11.4414 11.201 13.6192 10.0021 13.9698C8.80318 14.3196 8.13646 14.1158 7.5708 13.8534C7.5708 13.8534 8.54606 15.8273 8.54606 16.8287H15.6886C15.6886 15.8273 16.6638 13.8534 16.6638 13.8534C16.0982 14.1158 15.4315 14.3203 14.2326 13.9698H14.2332Z" stroke="#ED2727" stroke-linejoin="round"/>
-                                <path d="M7.70713 12.2782C7.86889 11.8284 7.68344 11.3127 7.29291 11.1264C6.90238 10.9401 6.45466 11.1537 6.2929 11.6035C6.13113 12.0533 6.31659 12.569 6.70712 12.7553C7.09764 12.9417 7.54537 12.728 7.70713 12.2782Z" stroke="#ED2727" stroke-linejoin="round"/>
-                                <path d="M12.6597 9.87044C12.9586 9.52616 12.9586 8.96798 12.6597 8.6237C12.3608 8.27942 11.8762 8.27942 11.5773 8.6237C11.2784 8.96798 11.2784 9.52616 11.5773 9.87044C11.8762 10.2147 12.3608 10.2147 12.6597 9.87044Z" stroke="#ED2727" stroke-linejoin="round"/>
-                                <circle cx="12" cy="12" r="11.5" stroke="#ED2727"/>
-                                <line x1="3.35355" y1="3.64645" x2="20.3536" y2="20.6464" stroke="#ED2727"/>
+                        <span class="w-[15%] flex justify-center max-md:min-w-[100px] show-pay-history-detail">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path class="fill-[#22D98C]" d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z"></path>
+                                <path class="fill-[#22D98C]" d="M9.999 13.587 7.7 11.292l-1.412 1.416 3.713 3.705 6.706-6.706-1.414-1.414z"></path>
                             </svg>
                         </span>
                     </li>
-                    <li class="history-item-pay">
-                        <p class="flex-[2] text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[120px]">9837646</p>
-                        <p class="flex-[3] text-[16px] leading-[19.36]  text-colorGray2 font-light flex items-center gap-x-[10px]
+                    <li class="history-item-pay show-pay-history-detail">
+                        <p class="w-[15%] text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[120px]">9837646</p>
+                        <p class="w-[27.5%] text-[16px] leading-[19.36]  text-colorGray2 font-light flex items-center gap-x-[10px]
                         text-nowrap max-md:min-w-[170px]">
                             <img src="/images/icons/tether.png" alt="card" width="24px" height="24px">
                             <strong class="text-[16px] leading-[19.36px] font-semibold text-black dark:text-white ">424566765</strong>
                         </p>
-                        <div class="flex-[2] text-[16px] leading-[19.36px] font-semibold text-colorBlack text-nowrap dark:text-white max-md:min-w-[120px]">12 540 ₽</div>
-                        <div class="flex-[3] flex gap-x-[10px] text-[16px] leading-[19.36] text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[150px]">
+                        <div class="w-[15%] text-[16px] leading-[19.36px] font-semibold text-colorBlack text-nowrap dark:text-white max-md:min-w-[120px]">12 540 ₽</div>
+                        <div class="w-[27.5%] flex gap-x-[10px] text-[16px] leading-[19.36] text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[150px]">
                             <span>25 мая 2024</span>
                             <span>16:35</span>
                         </div>
-                        <span class="flex-[2] flex justify-center max-md:min-w-[100px]">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M17.2346 11.0586C16.8119 11.0586 16.4692 11.4532 16.4692 11.9402C16.4692 12.4271 16.8119 12.8218 17.2346 12.8218C17.6574 12.8218 18 12.4271 18 11.9402C18 11.4532 17.6574 11.0586 17.2346 11.0586Z" stroke="#ED2727" stroke-linejoin="round"/>
-                                <path d="M14.2332 13.9698C13.0343 13.6199 12.1176 11.4414 12.1176 11.4414C12.1176 11.4414 11.201 13.6192 10.0021 13.9698C8.80318 14.3196 8.13646 14.1158 7.5708 13.8534C7.5708 13.8534 8.54606 15.8273 8.54606 16.8287H15.6886C15.6886 15.8273 16.6638 13.8534 16.6638 13.8534C16.0982 14.1158 15.4315 14.3203 14.2326 13.9698H14.2332Z" stroke="#ED2727" stroke-linejoin="round"/>
-                                <path d="M7.70713 12.2782C7.86889 11.8284 7.68344 11.3127 7.29291 11.1264C6.90238 10.9401 6.45466 11.1537 6.2929 11.6035C6.13113 12.0533 6.31659 12.569 6.70712 12.7553C7.09764 12.9417 7.54537 12.728 7.70713 12.2782Z" stroke="#ED2727" stroke-linejoin="round"/>
-                                <path d="M12.6597 9.87044C12.9586 9.52616 12.9586 8.96798 12.6597 8.6237C12.3608 8.27942 11.8762 8.27942 11.5773 8.6237C11.2784 8.96798 11.2784 9.52616 11.5773 9.87044C11.8762 10.2147 12.3608 10.2147 12.6597 9.87044Z" stroke="#ED2727" stroke-linejoin="round"/>
-                                <circle cx="12" cy="12" r="11.5" stroke="#ED2727"/>
-                                <line x1="3.35355" y1="3.64645" x2="20.3536" y2="20.6464" stroke="#ED2727"/>
+                        <span class="w-[15%] flex justify-center max-md:min-w-[100px] ">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path class="fill-[#22D98C]" d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z"></path>
+                                <path class="fill-[#22D98C]" d="M9.999 13.587 7.7 11.292l-1.412 1.416 3.713 3.705 6.706-6.706-1.414-1.414z"></path>
                             </svg>
                         </span>
                     </li>
@@ -748,10 +708,114 @@
         <!-- content end -->
     </div>
         
-    
+     <!-- modal Детали платежа -->
+     <div class="modal-detail-history">
+        <div class="flex items-center justify-center w-full h-full max-md:px-[20px]">
+            <div class="p-[70px] rounded-[20px] bg-white max-w-[780px] w-full dark:bg-colorBlack
+            max-sm:px-[20px] max-sm:py-[30px]">
+                <!-- title -->
+                 <div class="flex justify-between items-center mb-[40px] max-[400px]:flex-col max-[400px]:gap-y-[20px]">
+                    <h3 class="text-[30px] font-light leading-[36.31px] dark:text-white text-black
+                    max-[500px]:text-[20px] max-[400px]:w-full">Детали платежа</h3>
+                    <div class="h-[24px] max-w-[160px] w-full relative max-md:min-w-[160px] max-[400px]:max-w-full">
+                        <div class="absolute left-0 top-0 wrapper max-w-[160px] w-full h-full transition-all max-h-[24px]
+                            dark:border-white overflow-hidden bg-transparent z-10 overflow-y-hidden">
+                            <button class="h-[24px] w-full flex items-center justify-between max-md:h-auto" onclick="showText(this),changeHtmlCard(this)">
+                                <div class="flex items-center">
+                                    <span class="text-[18px] leading-[21.78px] font-normal text-black
+                                    dark:text-white max-xl:text-[14px] max-md:text-[18px]">Информация</span>
+                                </div>
+                                <div>
+                                    <svg class="dark:fill-white arrow-rotate" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                        <path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path>
+                                    </svg>
+                                </div>
+                            </button>
+                            <!-- список кард -->
+                            <div class="cards-show">
+                                <label class="status-item">
+                                    <span class="text-page text-black">
+                                        Информация
+                                    </span>
+                                    <input class="hidden" type="radio" name="info-pay-history" value="Информация">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+                <!-- title end -->
+                 <ul class="max-w-[350px] w-full flex flex-col gap-y-[30px] mb-[50px]">
+                    <li class="flex items-center justify-between">
+                        <p class="text-page !font-light text-colorGray2 dark:text-colorGray w-[50%]">№ Платежа</p>
+                        <span class="text-page w-[50%]">878-456-345</span>
+                    </li>
+                    <li class="flex items-center justify-between w-full">
+                        <p class="text-page !font-light text-colorGray2 dark:text-colorGray w-[50%]">Эл. почта</p>
+                        <span class="text-page w-[50%]">mail@mail.ru</span>
+                    </li>
+                    <li class="flex items-center justify-between w-full">
+                        <p class="text-page !font-light text-colorGray2 dark:text-colorGray w-[50%]">Метод</p>
+                        <span class="text-page w-[50%]">Банк. карта</span>
+                    </li>
+                    <li class="flex items-center justify-between w-full">
+                        <p class="text-page !font-light text-colorGray2 dark:text-colorGray w-[50%]">Сумма</p>
+                        <span class="text-page !font-semibold w-[50%]">12 540 ₽</span>
+                    </li>
+                    <li class="flex items-center justify-between w-full">
+                        <p class="text-page !font-light text-colorGray2 dark:text-colorGray w-[50%]">Комиссия</p>
+                        <span class="text-page !font-semibold w-[50%]">540 ₽</span>
+                    </li>
+                    <li class="flex items-center justify-between w-full">
+                        <p class="text-page !font-light text-colorGray2 dark:text-colorGray w-[50%]">Сумма зачисления</p>
+                        <span class="text-page !font-semibold w-[50%]">12 540 ₽</span>
+                    </li>
+                 </ul>
+                 <ul class="max-w-[350px] w-full flex flex-col gap-y-[30px]">
+                    <li class="flex items-center justify-between w-full">
+                        <p class="text-page !font-light text-colorGray2 dark:text-colorGray w-[50%]">№ Заказа</p>
+                        <span class="text-page w-[50%]">354354354</span>
+                    </li>
+                    <li class="flex items-center justify-between w-full">
+                        <p class="text-page !font-light text-colorGray2 dark:text-colorGray w-[50%]">Статус</p>
+                        <span class="text-page !text-[#22D98C] w-[50%]">Оплачен</span>
+                    </li>
+                    <li class="flex items-center justify-between w-full">
+                        <p class="text-page !font-light text-colorGray2 dark:text-colorGray w-[50%]">Дата создания</p>
+                        <span class="text-page w-[50%]">25 мая 2024</span>
+                    </li>
+                    <li class="flex items-center justify-between w-full">
+                        <p class="text-page !font-light text-colorGray2 dark:text-colorGray w-[50%]">Дата обработки</p>
+                        <span class="text-page !font-semibold w-[50%]">25 мая 2024</span>
+                    </li>
+                 </ul>
+            </div>
+        </div>
+     </div>
+    <!-- modal Детали платежа end -->
     <script type="module" src="../../js/main.js"></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script> -->
     <script type="text/javascript">
+        // показываем историю календаря детально 
+        function showPayHistroy () {
+            const btns = document.querySelectorAll('.show-pay-history-detail');
+            const modal = document.querySelector('.modal-detail-history') 
+            btns.forEach(btn => {
+                btn.onclick = (e) => {
+                    modal.classList.add('active');
+                }
+            })
+        }
+        function closePayHistroy () {
+            const modal = document.querySelector('.modal-detail-history') ;
+                modal.onclick = (e) => {
+                    if(e.target.className === 'flex items-center justify-center w-full h-full max-md:px-[20px]') {
+                        return modal.classList.remove('active');
+                    }
+                    
+                }
+        }
+        showPayHistroy();
+        closePayHistroy();
         // скрипт каленьдаря 
          // Получаем вчерашнюю дату
     // const yesterday = new Date();
@@ -784,32 +848,45 @@
     //   },
     //   maxDate: new Date(), // по умолчанию можно выбрать только до текущей даты
     // });
-    var startPicker = new Pikaday({
-      field: document.getElementById('startDate'),
-      format: 'DD.MM.YYYY',
-      toString(date) {
-        const day = ('0' + date.getDate()).slice(-2);
-        const month = ('0' + (date.getMonth() + 1)).slice(-2);
-        const year = date.getFullYear();
-        return `${day}.${month}.${year}`;
-      },
-      onSelect: function(date) {
-        endPicker.setMinDate(date); // Устанавливаем минимальную дату для второго календаря
-      }
-    });
+  // Конфигурация для русскоязычных месяцев и дней недели
+const russianI18n = {
+    previousMonth: 'Предыдущий месяц',
+    nextMonth: 'Следующий месяц',
+    months: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
+    weekdays: ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'],
+    weekdaysShort: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб']
+};
 
-    // Инициализация второго календаря (дата "До")
-    var endPicker = new Pikaday({
-      field: document.getElementById('endDate'),
-      format: 'DD.MM.YYYY',
-      minDate: new Date(), // Минимальная дата - текущий день
-      toString(date) {
+// Инициализация первого календаря (дата "От")
+var startPicker = new Pikaday({
+    field: document.getElementById('startDate'),
+    format: 'DD.MM.YYYY',
+    i18n: russianI18n, // Устанавливаем русский язык для календаря
+    toString(date) {
         const day = ('0' + date.getDate()).slice(-2);
         const month = ('0' + (date.getMonth() + 1)).slice(-2);
         const year = date.getFullYear();
         return `${day}.${month}.${year}`;
-      }
-    });
+    },
+    onSelect: function(date) {
+        endPicker.setMinDate(date); // Устанавливаем минимальную дату для второго календаря
+    }
+});
+
+// Инициализация второго календаря (дата "До")
+var endPicker = new Pikaday({
+    field: document.getElementById('endDate'),
+    format: 'DD.MM.YYYY',
+    minDate: new Date(), // Минимальная дата - текущий день
+    i18n: russianI18n, // Устанавливаем русский язык для календаря
+    toString(date) {
+        const day = ('0' + date.getDate()).slice(-2);
+        const month = ('0' + (date.getMonth() + 1)).slice(-2);
+        const year = date.getFullYear();
+        return `${day}.${month}.${year}`;
+    }
+});
+
 
     // Устанавливаем вчерашнюю дату как стартовую для первого календаря
     const yesterday = new Date();
@@ -850,6 +927,11 @@
         
         
         function clickOpenBlock(btn,classNam) {
+            const block = btn.querySelector('.'+classNam);
+            btn.querySelector('.menu-burger').classList.toggle('active');
+            return block.classList.toggle('active');
+        };
+        function clickOpenBlock2(btn,classNam) {
             const block = btn.querySelector('.'+classNam);
             return block.classList.toggle('active');
         };

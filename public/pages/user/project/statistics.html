@@ -21,7 +21,7 @@
              max-[1400px]:px-[30px] max-[1400px]:items-center max-[1400px]:py-0 max-[1400px]:sticky max-[1400px]:top-0">
                  <!-- logo -->
                  <div class="w-full flex justify-center h-fit max-[1400px]:w-fit">
-                    <img class="logo max-sm:w-[30px] max-sm:h-auto" src="/images/logo.svg" alt="logo" width="40px" height="56px">
+                    <img class="logo max-sm:w-[30px] max-sm:h-auto" src="/images/logo-small-black.svg" alt="logo" width="40px" height="56px">
                 </div>
                 <!-- menu -->
                 <ul class="mt-auto max-[1400px]:flex max-[1400px]:my-0 max-[1400px]:items-center
@@ -104,8 +104,8 @@
                             <div class="py-[15px] px-[36px] rounded-[10px] border border-black max-lg:px-[20px]
                             dark:border-white dark:">
                                 <p class="text-[14px] leading-[16.94px] font-normal text-colorGray2 dark:text-[#B7B7B7]">
-                                    Баланс 
-                                    <strong class="text-black text-[16px] leading-[19.36px] dark:text-white">315 780₽</strong></p>
+                                    Баланс:
+                                    <strong class="text-black text-[16px] leading-[19.36px] dark:text-white">315 780 ₽</strong></p>
                             </div>
                             <!-- balance end -->
                             <!-- уведомления -->
@@ -133,11 +133,10 @@
                             <!-- avatar end -->
                             <!-- btn open settings -->
                                 <button class="relative" onclick="clickOpenBlock(this,'block-menu-settings')">
-                                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path class="dark:fill-white" d="M28 10.3333H4C3.45333 10.3333 3 9.88 3 9.33334C3 8.78667 3.45333 8.33334 4 8.33334H28C28.5467 8.33334 29 8.78667 29 9.33334C29 9.88 28.5467 10.3333 28 10.3333Z" fill="#292D32"/>
-                                        <path class="dark:fill-white" d="M28 17H4C3.45333 17 3 16.5467 3 16C3 15.4533 3.45333 15 4 15H28C28.5467 15 29 15.4533 29 16C29 16.5467 28.5467 17 28 17Z" fill="#292D32"/>
-                                        <path class="dark:fill-white" d="M28 23.6667H16C15.4533 23.6667 15 23.2133 15 22.6667C15 22.12 15.4533 21.6667 16 21.6667H28C28.5467 21.6667 29 22.12 29 22.6667C29 23.2133 28.5467 23.6667 28 23.6667Z" fill="#292D32"/>
-                                    </svg>
+                                    <div class="menu-burger">
+                                        <span></span>
+                                        <span></span>
+                                    </div>
                                     <!-- block с увидомлением -->
                                     <div class="absolute right-[50%] top-[150%] py-[10px]  bg-white shadow-[0_10px_32px_rgba(109,109,109,0.16)]
                                     rounded-[10px] block-menu-settings h-fit hidden">
@@ -183,13 +182,13 @@
                                 <div class="py-[15px] px-[36px] rounded-[10px] border border-black max-lg:px-[15px]
                                 dark:border-white">
                                     <p class="text-[14px] leading-[16.94px] font-normal text-colorGray2 dark:text-[#B7B7B7]">
-                                        Баланс 
-                                        <strong class="text-black text-[16px] leading-[19.36px] dark:text-white">315 780₽</strong></p>
+                                        Баланс:
+                                        <strong class="text-black text-[16px] leading-[19.36px] dark:text-white">315 780 ₽</strong></p>
                                 </div>
                                 <!-- balance end -->
                                 <!-- уведомления -->
                                 <div>
-                                    <button class="relative btn-notification" onclick="clickOpenBlock(this,'block-notification')">
+                                    <button class="relative btn-notification" onclick="clickOpenBlock2(this,'block-notification')">
                                         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path class="dark:fill-white" d="M16.0267 27.3733C12.92 27.3733 9.81332 26.88 6.86665 25.8933C5.74665 25.5067 4.89332 24.72 4.51999 23.6933C4.13332 22.6667 4.26665 21.5333 4.87999 20.52L6.41332 17.9733C6.73332 17.44 7.02665 16.3733 7.02665 15.7467V11.8933C7.02665 6.93333 11.0667 2.89333 16.0267 2.89333C20.9867 2.89333 25.0267 6.93333 25.0267 11.8933V15.7467C25.0267 16.36 25.32 17.44 25.64 17.9867L27.16 20.52C27.7333 21.48 27.84 22.64 27.4533 23.6933C27.0667 24.7467 26.2267 25.5467 25.1733 25.8933C22.24 26.88 19.1333 27.3733 16.0267 27.3733ZM16.0267 4.89333C12.1733 4.89333 9.02666 8.02667 9.02666 11.8933V15.7467C9.02666 16.72 8.62666 18.16 8.13332 19L6.59999 21.5467C6.30665 22.04 6.22666 22.56 6.39999 23C6.55999 23.4533 6.95999 23.8 7.50666 23.9867C13.08 25.8533 18.9867 25.8533 24.56 23.9867C25.04 23.8267 25.4133 23.4667 25.5867 22.9867C25.76 22.5067 25.72 21.9867 25.4533 21.5467L23.92 19C23.4133 18.1333 23.0267 16.7067 23.0267 15.7333V11.8933C23.0267 8.02667 19.8933 4.89333 16.0267 4.89333Z" fill="#292D32"/>
                                             <path class="dark:fill-white" d="M18.5067 5.25333C18.4133 5.25333 18.32 5.24 18.2267 5.21333C17.84 5.10667 17.4667 5.02667 17.1067 4.97333C15.9733 4.82667 14.88 4.90667 13.8533 5.21333C13.48 5.33333 13.08 5.21333 12.8267 4.93333C12.5733 4.65333 12.4933 4.25333 12.64 3.89333C13.1867 2.49333 14.52 1.57333 16.04 1.57333C17.56 1.57333 18.8933 2.48 19.44 3.89333C19.5733 4.25333 19.5067 4.65333 19.2533 4.93333C19.0533 5.14667 18.7733 5.25333 18.5067 5.25333Z" fill="#292D32"/>
@@ -213,11 +212,10 @@
                                 <!-- avatar end -->
                                <!-- btn open settings -->
                             <button class="relative" onclick="clickOpenBlock(this,'block-menu-settings')">
-                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path class="dark:fill-white" d="M28 10.3333H4C3.45333 10.3333 3 9.88 3 9.33334C3 8.78667 3.45333 8.33334 4 8.33334H28C28.5467 8.33334 29 8.78667 29 9.33334C29 9.88 28.5467 10.3333 28 10.3333Z" fill="#292D32"/>
-                                    <path class="dark:fill-white" d="M28 17H4C3.45333 17 3 16.5467 3 16C3 15.4533 3.45333 15 4 15H28C28.5467 15 29 15.4533 29 16C29 16.5467 28.5467 17 28 17Z" fill="#292D32"/>
-                                    <path class="dark:fill-white" d="M28 23.6667H16C15.4533 23.6667 15 23.2133 15 22.6667C15 22.12 15.4533 21.6667 16 21.6667H28C28.5467 21.6667 29 22.12 29 22.6667C29 23.2133 28.5467 23.6667 28 23.6667Z" fill="#292D32"/>
-                                </svg>
+                                <div class="menu-burger">
+                                    <span></span>
+                                    <span></span>
+                                </div>
                                 <!-- block с увидомлением -->
                                 <div class="absolute right-[50%] top-[150%] py-[10px]  bg-white shadow-[0_10px_32px_rgba(109,109,109,0.16)]
                                  rounded-[10px] block-menu-settings h-fit hidden">
@@ -489,7 +487,86 @@
                                 <span class="w-[12%] text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap text-center max-md:min-w-[100px]">Статус</span>
                             </li>
                             <!-- head end -->
+                            <li class="history-item-pay gray">
+                                <p class="w-[12%] text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[120px]">9837646</p>
+                                <p class="w-[20%] text-page font-light text-nowrap max-md:min-w-[170px]">mail@mail.ru</p>
+                                <div class="w-[12%] text-[16px] leading-[19.36px] font-semibold text-colorBlack text-nowrap dark:text-white max-md:min-w-[120px]">12 540 ₽</div>
+                                <div class="w-[12%] text-page text-colorBlack font-light dark:text-colorGray max-md:min-w-[150px]">Банк. карта</div>
+                                <p class="w-[12%] text-left text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[120px]">9837646</p>
+                                <div class="w-[20%] flex gap-x-[10px] text-[16px] leading-[19.36] text-colorGray2 
+                                     font-light text-nowrap dark:text-colorGray max-md:min-w-[150px]">
+                                    <span>25 мая 2024</span>
+                                    <span>16:35</span>
+                                </div>
+                                <button class="show-pay-history-detail" type="button" class="w-[12%] flex justify-center max-md:min-w-[100px]">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 22.5C9.9233 22.5 7.89323 21.8842 6.16652 20.7304C4.4398 19.5767 3.09399 17.9368 2.29927 16.0182C1.50455 14.0996 1.29661 11.9884 1.70176 9.95156C2.1069 7.91476 3.10693 6.04383 4.57538 4.57538C6.04383 3.10693 7.91476 2.1069 9.95156 1.70176C11.9884 1.29661 14.0996 1.50455 16.0182 2.29927C17.9368 3.09399 19.5767 4.4398 20.7304 6.16652C21.8842 7.89323 22.5 9.9233 22.5 12C22.5 14.7848 21.3938 17.4555 19.4246 19.4246C17.4555 21.3938 14.7848 22.5 12 22.5ZM12 3C10.22 3 8.47992 3.52785 6.99987 4.51678C5.51983 5.50571 4.36628 6.91132 3.68509 8.55585C3.0039 10.2004 2.82567 12.01 3.17294 13.7558C3.5202 15.5016 4.37737 17.1053 5.63604 18.364C6.89472 19.6226 8.49836 20.4798 10.2442 20.8271C11.99 21.1743 13.7996 20.9961 15.4442 20.3149C17.0887 19.6337 18.4943 18.4802 19.4832 17.0001C20.4722 15.5201 21 13.78 21 12C21 9.61306 20.0518 7.32387 18.364 5.63604C16.6761 3.94822 14.387 3 12 3Z" fill="#B7B7B7"/>
+                                        <path d="M15.4425 16.5L11.25 12.3075V5.25H12.75V11.685L16.5 15.4425L15.4425 16.5Z" fill="#B7B7B7"/>
+                                    </svg>
+                                </button>
+                            </li>
                             <li class="history-item-pay">
+                                <p class="w-[12%] text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[120px]">9837646</p>
+                                <p class="w-[20%] text-page font-light text-nowrap max-md:min-w-[170px]">mail@mail.ru</p>
+                                <div class="w-[12%] text-[16px] leading-[19.36px] font-semibold text-colorBlack text-nowrap dark:text-white max-md:min-w-[120px]">12 540 ₽</div>
+                                <div class="w-[12%] text-page text-colorBlack font-light dark:text-colorGray max-md:min-w-[150px]">Банк. карта</div>
+                                <p class="w-[12%] text-left text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[120px]">9837646</p>
+                                <div class="w-[20%] flex gap-x-[10px] text-[16px] leading-[19.36] text-colorGray2 
+                                     font-light text-nowrap dark:text-colorGray max-md:min-w-[150px]">
+                                    <span>25 мая 2024</span>
+                                    <span>16:35</span>
+                                </div>
+                                <button class="show-pay-history-detail" type="button" class="w-[12%] flex justify-center max-md:min-w-[100px]">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M17.2346 11.0588C16.8119 11.0588 16.4692 11.4535 16.4692 11.9404C16.4692 12.4274 16.8119 12.822 17.2346 12.822C17.6574 12.822 18 12.4274 18 11.9404C18 11.4535 17.6574 11.0588 17.2346 11.0588Z" stroke="#22D98C" stroke-linejoin="round"/>
+                                        <path d="M14.2332 13.9695C13.0343 13.6196 12.1176 11.4412 12.1176 11.4412C12.1176 11.4412 11.201 13.6189 10.0021 13.9695C8.80318 14.3194 8.13646 14.1155 7.5708 13.8531C7.5708 13.8531 8.54606 15.827 8.54606 16.8285H15.6886C15.6886 15.827 16.6638 13.8531 16.6638 13.8531C16.0982 14.1155 15.4315 14.3201 14.2326 13.9695H14.2332Z" stroke="#22D98C" stroke-linejoin="round"/>
+                                        <path d="M7.70713 12.2785C7.86889 11.8286 7.68344 11.313 7.29291 11.1266C6.90238 10.9403 6.45466 11.1539 6.2929 11.6037C6.13113 12.0536 6.31659 12.5693 6.70712 12.7556C7.09764 12.9419 7.54537 12.7283 7.70713 12.2785Z" stroke="#22D98C" stroke-linejoin="round"/>
+                                        <path d="M12.6597 9.8702C12.9586 9.52592 12.9586 8.96773 12.6597 8.62345C12.3608 8.27917 11.8762 8.27917 11.5773 8.62345C11.2784 8.96773 11.2784 9.52592 11.5773 9.8702C11.8762 10.2145 12.3608 10.2145 12.6597 9.8702Z" stroke="#22D98C" stroke-linejoin="round"/>
+                                        <circle cx="12" cy="12" r="11.5" stroke="#22D98C"/>
+                                    </svg>
+                                </button>
+                            </li>
+                            <li class="history-item-pay gray">
+                                <p class="w-[12%] text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[120px]">9837646</p>
+                                <p class="w-[20%] text-page font-light text-nowrap max-md:min-w-[170px]">mail@mail.ru</p>
+                                <div class="w-[12%] text-[16px] leading-[19.36px] font-semibold text-colorBlack text-nowrap dark:text-white max-md:min-w-[120px]">12 540 ₽</div>
+                                <div class="w-[12%] text-page text-colorBlack font-light dark:text-colorGray max-md:min-w-[150px]">Банк. карта</div>
+                                <p class="w-[12%] text-left text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[120px]">9837646</p>
+                                <div class="w-[20%] flex gap-x-[10px] text-[16px] leading-[19.36] text-colorGray2 
+                                     font-light text-nowrap dark:text-colorGray max-md:min-w-[150px]">
+                                    <span>25 мая 2024</span>
+                                    <span>16:35</span>
+                                </div>
+                                <button class="show-pay-history-detail" type="button" class="w-[12%] flex justify-center max-md:min-w-[100px]">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M17.2346 11.0586C16.8119 11.0586 16.4692 11.4532 16.4692 11.9402C16.4692 12.4271 16.8119 12.8218 17.2346 12.8218C17.6574 12.8218 18 12.4271 18 11.9402C18 11.4532 17.6574 11.0586 17.2346 11.0586Z" stroke="#ED2727" stroke-linejoin="round"/>
+                                        <path d="M14.2332 13.9698C13.0343 13.6199 12.1176 11.4414 12.1176 11.4414C12.1176 11.4414 11.201 13.6192 10.0021 13.9698C8.80318 14.3196 8.13646 14.1158 7.5708 13.8534C7.5708 13.8534 8.54606 15.8273 8.54606 16.8287H15.6886C15.6886 15.8273 16.6638 13.8534 16.6638 13.8534C16.0982 14.1158 15.4315 14.3203 14.2326 13.9698H14.2332Z" stroke="#ED2727" stroke-linejoin="round"/>
+                                        <path d="M7.70713 12.2782C7.86889 11.8284 7.68344 11.3127 7.29291 11.1264C6.90238 10.9401 6.45466 11.1537 6.2929 11.6035C6.13113 12.0533 6.31659 12.569 6.70712 12.7553C7.09764 12.9417 7.54537 12.728 7.70713 12.2782Z" stroke="#ED2727" stroke-linejoin="round"/>
+                                        <path d="M12.6597 9.87044C12.9586 9.52616 12.9586 8.96798 12.6597 8.6237C12.3608 8.27942 11.8762 8.27942 11.5773 8.6237C11.2784 8.96798 11.2784 9.52616 11.5773 9.87044C11.8762 10.2147 12.3608 10.2147 12.6597 9.87044Z" stroke="#ED2727" stroke-linejoin="round"/>
+                                        <circle cx="12" cy="12" r="11.5" stroke="#ED2727"/>
+                                        <line x1="3.35355" y1="3.64645" x2="20.3536" y2="20.6464" stroke="#ED2727"/>
+                                    </svg>
+                                </button>
+                            </li>
+                            <li class="history-item-pay">
+                                <p class="w-[12%] text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[120px]">9837646</p>
+                                <p class="w-[20%] text-page font-light text-nowrap max-md:min-w-[170px]">mail@mail.ru</p>
+                                <div class="w-[12%] text-[16px] leading-[19.36px] font-semibold text-colorBlack text-nowrap dark:text-white max-md:min-w-[120px]">12 540 ₽</div>
+                                <div class="w-[12%] text-page text-colorBlack font-light dark:text-colorGray max-md:min-w-[150px]">Банк. карта</div>
+                                <p class="w-[12%] text-left text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[120px]">9837646</p>
+                                <div class="w-[20%] flex gap-x-[10px] text-[16px] leading-[19.36] text-colorGray2 
+                                     font-light text-nowrap dark:text-colorGray max-md:min-w-[150px]">
+                                    <span>25 мая 2024</span>
+                                    <span>16:35</span>
+                                </div>
+                                <button class="show-pay-history-detail" type="button" class="w-[12%] flex justify-center max-md:min-w-[100px]">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 22.5C9.9233 22.5 7.89323 21.8842 6.16652 20.7304C4.4398 19.5767 3.09399 17.9368 2.29927 16.0182C1.50455 14.0996 1.29661 11.9884 1.70176 9.95156C2.1069 7.91476 3.10693 6.04383 4.57538 4.57538C6.04383 3.10693 7.91476 2.1069 9.95156 1.70176C11.9884 1.29661 14.0996 1.50455 16.0182 2.29927C17.9368 3.09399 19.5767 4.4398 20.7304 6.16652C21.8842 7.89323 22.5 9.9233 22.5 12C22.5 14.7848 21.3938 17.4555 19.4246 19.4246C17.4555 21.3938 14.7848 22.5 12 22.5ZM12 3C10.22 3 8.47992 3.52785 6.99987 4.51678C5.51983 5.50571 4.36628 6.91132 3.68509 8.55585C3.0039 10.2004 2.82567 12.01 3.17294 13.7558C3.5202 15.5016 4.37737 17.1053 5.63604 18.364C6.89472 19.6226 8.49836 20.4798 10.2442 20.8271C11.99 21.1743 13.7996 20.9961 15.4442 20.3149C17.0887 19.6337 18.4943 18.4802 19.4832 17.0001C20.4722 15.5201 21 13.78 21 12C21 9.61306 20.0518 7.32387 18.364 5.63604C16.6761 3.94822 14.387 3 12 3Z" fill="#B7B7B7"/>
+                                        <path d="M15.4425 16.5L11.25 12.3075V5.25H12.75V11.685L16.5 15.4425L15.4425 16.5Z" fill="#B7B7B7"/>
+                                    </svg>
+                                </button>
+                            </li>
+                            <li class="history-item-pay gray">
                                 <p class="w-[12%] text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[120px]">9837646</p>
                                 <p class="w-[20%] text-page font-light text-nowrap max-md:min-w-[170px]">mail@mail.ru</p>
                                 <div class="w-[12%] text-[16px] leading-[19.36px] font-semibold text-colorBlack text-nowrap dark:text-white max-md:min-w-[120px]">12 540 ₽</div>
@@ -525,7 +602,7 @@
                                     </svg>
                                 </button>
                             </li>
-                            <li class="history-item-pay">
+                            <li class="history-item-pay gray">
                                 <p class="w-[12%] text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[120px]">9837646</p>
                                 <p class="w-[20%] text-page font-light text-nowrap max-md:min-w-[170px]">mail@mail.ru</p>
                                 <div class="w-[12%] text-[16px] leading-[19.36px] font-semibold text-colorBlack text-nowrap dark:text-white max-md:min-w-[120px]">12 540 ₽</div>
@@ -561,7 +638,7 @@
                                     </svg>
                                 </button>
                             </li>
-                            <li class="history-item-pay">
+                            <li class="history-item-pay gray">
                                 <p class="w-[12%] text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[120px]">9837646</p>
                                 <p class="w-[20%] text-page font-light text-nowrap max-md:min-w-[170px]">mail@mail.ru</p>
                                 <div class="w-[12%] text-[16px] leading-[19.36px] font-semibold text-colorBlack text-nowrap dark:text-white max-md:min-w-[120px]">12 540 ₽</div>
@@ -597,79 +674,7 @@
                                     </svg>
                                 </button>
                             </li>
-                            <li class="history-item-pay">
-                                <p class="w-[12%] text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[120px]">9837646</p>
-                                <p class="w-[20%] text-page font-light text-nowrap max-md:min-w-[170px]">mail@mail.ru</p>
-                                <div class="w-[12%] text-[16px] leading-[19.36px] font-semibold text-colorBlack text-nowrap dark:text-white max-md:min-w-[120px]">12 540 ₽</div>
-                                <div class="w-[12%] text-page text-colorBlack font-light dark:text-colorGray max-md:min-w-[150px]">Банк. карта</div>
-                                <p class="w-[12%] text-left text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[120px]">9837646</p>
-                                <div class="w-[20%] flex gap-x-[10px] text-[16px] leading-[19.36] text-colorGray2 
-                                     font-light text-nowrap dark:text-colorGray max-md:min-w-[150px]">
-                                    <span>25 мая 2024</span>
-                                    <span>16:35</span>
-                                </div>
-                                <button class="show-pay-history-detail" type="button" class="w-[12%] flex justify-center max-md:min-w-[100px]">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12 22.5C9.9233 22.5 7.89323 21.8842 6.16652 20.7304C4.4398 19.5767 3.09399 17.9368 2.29927 16.0182C1.50455 14.0996 1.29661 11.9884 1.70176 9.95156C2.1069 7.91476 3.10693 6.04383 4.57538 4.57538C6.04383 3.10693 7.91476 2.1069 9.95156 1.70176C11.9884 1.29661 14.0996 1.50455 16.0182 2.29927C17.9368 3.09399 19.5767 4.4398 20.7304 6.16652C21.8842 7.89323 22.5 9.9233 22.5 12C22.5 14.7848 21.3938 17.4555 19.4246 19.4246C17.4555 21.3938 14.7848 22.5 12 22.5ZM12 3C10.22 3 8.47992 3.52785 6.99987 4.51678C5.51983 5.50571 4.36628 6.91132 3.68509 8.55585C3.0039 10.2004 2.82567 12.01 3.17294 13.7558C3.5202 15.5016 4.37737 17.1053 5.63604 18.364C6.89472 19.6226 8.49836 20.4798 10.2442 20.8271C11.99 21.1743 13.7996 20.9961 15.4442 20.3149C17.0887 19.6337 18.4943 18.4802 19.4832 17.0001C20.4722 15.5201 21 13.78 21 12C21 9.61306 20.0518 7.32387 18.364 5.63604C16.6761 3.94822 14.387 3 12 3Z" fill="#B7B7B7"/>
-                                        <path d="M15.4425 16.5L11.25 12.3075V5.25H12.75V11.685L16.5 15.4425L15.4425 16.5Z" fill="#B7B7B7"/>
-                                    </svg>
-                                </button>
-                            </li>
-                            <li class="history-item-pay">
-                                <p class="w-[12%] text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[120px]">9837646</p>
-                                <p class="w-[20%] text-page font-light text-nowrap max-md:min-w-[170px]">mail@mail.ru</p>
-                                <div class="w-[12%] text-[16px] leading-[19.36px] font-semibold text-colorBlack text-nowrap dark:text-white max-md:min-w-[120px]">12 540 ₽</div>
-                                <div class="w-[12%] text-page text-colorBlack font-light dark:text-colorGray max-md:min-w-[150px]">Банк. карта</div>
-                                <p class="w-[12%] text-left text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[120px]">9837646</p>
-                                <div class="w-[20%] flex gap-x-[10px] text-[16px] leading-[19.36] text-colorGray2 
-                                     font-light text-nowrap dark:text-colorGray max-md:min-w-[150px]">
-                                    <span>25 мая 2024</span>
-                                    <span>16:35</span>
-                                </div>
-                                <button class="show-pay-history-detail" type="button" class="w-[12%] flex justify-center max-md:min-w-[100px]">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12 22.5C9.9233 22.5 7.89323 21.8842 6.16652 20.7304C4.4398 19.5767 3.09399 17.9368 2.29927 16.0182C1.50455 14.0996 1.29661 11.9884 1.70176 9.95156C2.1069 7.91476 3.10693 6.04383 4.57538 4.57538C6.04383 3.10693 7.91476 2.1069 9.95156 1.70176C11.9884 1.29661 14.0996 1.50455 16.0182 2.29927C17.9368 3.09399 19.5767 4.4398 20.7304 6.16652C21.8842 7.89323 22.5 9.9233 22.5 12C22.5 14.7848 21.3938 17.4555 19.4246 19.4246C17.4555 21.3938 14.7848 22.5 12 22.5ZM12 3C10.22 3 8.47992 3.52785 6.99987 4.51678C5.51983 5.50571 4.36628 6.91132 3.68509 8.55585C3.0039 10.2004 2.82567 12.01 3.17294 13.7558C3.5202 15.5016 4.37737 17.1053 5.63604 18.364C6.89472 19.6226 8.49836 20.4798 10.2442 20.8271C11.99 21.1743 13.7996 20.9961 15.4442 20.3149C17.0887 19.6337 18.4943 18.4802 19.4832 17.0001C20.4722 15.5201 21 13.78 21 12C21 9.61306 20.0518 7.32387 18.364 5.63604C16.6761 3.94822 14.387 3 12 3Z" fill="#B7B7B7"/>
-                                        <path d="M15.4425 16.5L11.25 12.3075V5.25H12.75V11.685L16.5 15.4425L15.4425 16.5Z" fill="#B7B7B7"/>
-                                    </svg>
-                                </button>
-                            </li>
-                            <li class="history-item-pay">
-                                <p class="w-[12%] text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[120px]">9837646</p>
-                                <p class="w-[20%] text-page font-light text-nowrap max-md:min-w-[170px]">mail@mail.ru</p>
-                                <div class="w-[12%] text-[16px] leading-[19.36px] font-semibold text-colorBlack text-nowrap dark:text-white max-md:min-w-[120px]">12 540 ₽</div>
-                                <div class="w-[12%] text-page text-colorBlack font-light dark:text-colorGray max-md:min-w-[150px]">Банк. карта</div>
-                                <p class="w-[12%] text-left text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[120px]">9837646</p>
-                                <div class="w-[20%] flex gap-x-[10px] text-[16px] leading-[19.36] text-colorGray2 
-                                     font-light text-nowrap dark:text-colorGray max-md:min-w-[150px]">
-                                    <span>25 мая 2024</span>
-                                    <span>16:35</span>
-                                </div>
-                                <button class="show-pay-history-detail" type="button" class="w-[12%] flex justify-center max-md:min-w-[100px]">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12 22.5C9.9233 22.5 7.89323 21.8842 6.16652 20.7304C4.4398 19.5767 3.09399 17.9368 2.29927 16.0182C1.50455 14.0996 1.29661 11.9884 1.70176 9.95156C2.1069 7.91476 3.10693 6.04383 4.57538 4.57538C6.04383 3.10693 7.91476 2.1069 9.95156 1.70176C11.9884 1.29661 14.0996 1.50455 16.0182 2.29927C17.9368 3.09399 19.5767 4.4398 20.7304 6.16652C21.8842 7.89323 22.5 9.9233 22.5 12C22.5 14.7848 21.3938 17.4555 19.4246 19.4246C17.4555 21.3938 14.7848 22.5 12 22.5ZM12 3C10.22 3 8.47992 3.52785 6.99987 4.51678C5.51983 5.50571 4.36628 6.91132 3.68509 8.55585C3.0039 10.2004 2.82567 12.01 3.17294 13.7558C3.5202 15.5016 4.37737 17.1053 5.63604 18.364C6.89472 19.6226 8.49836 20.4798 10.2442 20.8271C11.99 21.1743 13.7996 20.9961 15.4442 20.3149C17.0887 19.6337 18.4943 18.4802 19.4832 17.0001C20.4722 15.5201 21 13.78 21 12C21 9.61306 20.0518 7.32387 18.364 5.63604C16.6761 3.94822 14.387 3 12 3Z" fill="#B7B7B7"/>
-                                        <path d="M15.4425 16.5L11.25 12.3075V5.25H12.75V11.685L16.5 15.4425L15.4425 16.5Z" fill="#B7B7B7"/>
-                                    </svg>
-                                </button>
-                            </li>
-                            <li class="history-item-pay">
-                                <p class="w-[12%] text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[120px]">9837646</p>
-                                <p class="w-[20%] text-page font-light text-nowrap max-md:min-w-[170px]">mail@mail.ru</p>
-                                <div class="w-[12%] text-[16px] leading-[19.36px] font-semibold text-colorBlack text-nowrap dark:text-white max-md:min-w-[120px]">12 540 ₽</div>
-                                <div class="w-[12%] text-page text-colorBlack font-light dark:text-colorGray max-md:min-w-[150px]">Банк. карта</div>
-                                <p class="w-[12%] text-left text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[120px]">9837646</p>
-                                <div class="w-[20%] flex gap-x-[10px] text-[16px] leading-[19.36] text-colorGray2 
-                                     font-light text-nowrap dark:text-colorGray max-md:min-w-[150px]">
-                                    <span>25 мая 2024</span>
-                                    <span>16:35</span>
-                                </div>
-                                <button class="show-pay-history-detail" type="button" class="w-[12%] flex justify-center max-md:min-w-[100px]">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12 22.5C9.9233 22.5 7.89323 21.8842 6.16652 20.7304C4.4398 19.5767 3.09399 17.9368 2.29927 16.0182C1.50455 14.0996 1.29661 11.9884 1.70176 9.95156C2.1069 7.91476 3.10693 6.04383 4.57538 4.57538C6.04383 3.10693 7.91476 2.1069 9.95156 1.70176C11.9884 1.29661 14.0996 1.50455 16.0182 2.29927C17.9368 3.09399 19.5767 4.4398 20.7304 6.16652C21.8842 7.89323 22.5 9.9233 22.5 12C22.5 14.7848 21.3938 17.4555 19.4246 19.4246C17.4555 21.3938 14.7848 22.5 12 22.5ZM12 3C10.22 3 8.47992 3.52785 6.99987 4.51678C5.51983 5.50571 4.36628 6.91132 3.68509 8.55585C3.0039 10.2004 2.82567 12.01 3.17294 13.7558C3.5202 15.5016 4.37737 17.1053 5.63604 18.364C6.89472 19.6226 8.49836 20.4798 10.2442 20.8271C11.99 21.1743 13.7996 20.9961 15.4442 20.3149C17.0887 19.6337 18.4943 18.4802 19.4832 17.0001C20.4722 15.5201 21 13.78 21 12C21 9.61306 20.0518 7.32387 18.364 5.63604C16.6761 3.94822 14.387 3 12 3Z" fill="#B7B7B7"/>
-                                        <path d="M15.4425 16.5L11.25 12.3075V5.25H12.75V11.685L16.5 15.4425L15.4425 16.5Z" fill="#B7B7B7"/>
-                                    </svg>
-                                </button>
-                            </li>
-                            <li class="history-item-pay">
+                            <li class="history-item-pay gray">
                                 <p class="w-[12%] text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap dark:text-colorGray max-md:min-w-[120px]">9837646</p>
                                 <p class="w-[20%] text-page font-light text-nowrap max-md:min-w-[170px]">mail@mail.ru</p>
                                 <div class="w-[12%] text-[16px] leading-[19.36px] font-semibold text-colorBlack text-nowrap dark:text-white max-md:min-w-[120px]">12 540 ₽</div>
@@ -739,46 +744,46 @@
                 <!-- title end -->
                  <ul class="max-w-[350px] w-full flex flex-col gap-y-[30px] mb-[50px]">
                     <li class="flex items-center justify-between w-full">
-                        <p class="text-page !font-light text-colorGray2 dark:text-colorGray">№ Платежа</p>
-                        <span class="text-page">878-456-345</span>
+                        <p class="text-page !font-light text-colorGray2 dark:text-colorGray w-[50%]">№ Платежа</p>
+                        <span class="text-page w-[50%]">878-456-345</span>
                     </li>
                     <li class="flex items-center justify-between w-full">
-                        <p class="text-page !font-light text-colorGray2 dark:text-colorGray">Эл. почта</p>
-                        <span class="text-page">mail@mail.ru</span>
+                        <p class="text-page !font-light text-colorGray2 dark:text-colorGray w-[50%]">Эл. почта</p>
+                        <span class="text-page w-[50%]">mail@mail.ru</span>
                     </li>
                     <li class="flex items-center justify-between w-full">
-                        <p class="text-page !font-light text-colorGray2 dark:text-colorGray">Метод</p>
-                        <span class="text-page">Банк. карта</span>
+                        <p class="text-page !font-light text-colorGray2 dark:text-colorGray w-[50%]">Метод</p>
+                        <span class="text-page w-[50%]">Банк. карта</span>
                     </li>
                     <li class="flex items-center justify-between w-full">
-                        <p class="text-page !font-light text-colorGray2 dark:text-colorGray">Сумма</p>
-                        <span class="text-page !font-semibold">12 540 ₽</span>
+                        <p class="text-page !font-light text-colorGray2 dark:text-colorGray w-[50%]">Сумма</p>
+                        <span class="text-page !font-semibold w-[50%]">12 540 ₽</span>
                     </li>
                     <li class="flex items-center justify-between w-full">
-                        <p class="text-page !font-light text-colorGray2 dark:text-colorGray">Комиссия</p>
-                        <span class="text-page !font-semibold">540 ₽</span>
+                        <p class="text-page !font-light text-colorGray2 dark:text-colorGray w-[50%]">Комиссия</p>
+                        <span class="text-page !font-semibold w-[50%]">540 ₽</span>
                     </li>
                     <li class="flex items-center justify-between w-full">
-                        <p class="text-page !font-light text-colorGray2 dark:text-colorGray">Сумма зачисления</p>
-                        <span class="text-page !font-semibold">12 540 ₽</span>
+                        <p class="text-page !font-light text-colorGray2 dark:text-colorGray w-[50%]">Сумма зачисления</p>
+                        <span class="text-page !font-semibold w-[50%]">12 540 ₽</span>
                     </li>
                  </ul>
                  <ul class="max-w-[350px] w-full flex flex-col gap-y-[30px]">
                     <li class="flex items-center justify-between w-full">
-                        <p class="text-page !font-light text-colorGray2 dark:text-colorGray">№ Заказа</p>
-                        <span class="text-page">354354354</span>
+                        <p class="text-page !font-light text-colorGray2 dark:text-colorGray w-[50%]">№ Заказа</p>
+                        <span class="text-page w-[50%]">354354354</span>
                     </li>
                     <li class="flex items-center justify-between w-full">
-                        <p class="text-page !font-light text-colorGray2 dark:text-colorGray">Статус</p>
-                        <span class="text-page !text-[#22D98C]">Оплачен</span>
+                        <p class="text-page !font-light text-colorGray2 dark:text-colorGray w-[50%]">Статус</p>
+                        <span class="text-page !text-[#22D98C] w-[50%]">Оплачен</span>
                     </li>
                     <li class="flex items-center justify-between w-full">
-                        <p class="text-page !font-light text-colorGray2 dark:text-colorGray">Дата создания</p>
-                        <span class="text-page">25 мая 2024</span>
+                        <p class="text-page !font-light text-colorGray2 dark:text-colorGray w-[50%]">Дата создания</p>
+                        <span class="text-page w-[50%]">25 мая 2024</span>
                     </li>
                     <li class="flex items-center justify-between w-full">
-                        <p class="text-page !font-light text-colorGray2 dark:text-colorGray">Дата обработки</p>
-                        <span class="text-page !font-semibold">25 мая 2024</span>
+                        <p class="text-page !font-light text-colorGray2 dark:text-colorGray w-[50%]">Дата обработки</p>
+                        <span class="text-page !font-semibold w-[50%]">25 мая 2024</span>
                     </li>
                  </ul>
             </div>
@@ -789,7 +794,12 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script type="module" src="/js/main.js"></script>
     <script type="text/javascript">
-         function clickOpenBlock(btn,classNam) {
+        function clickOpenBlock(btn,classNam) {
+            const block = btn.querySelector('.'+classNam);
+            btn.querySelector('.menu-burger').classList.toggle('active');
+            return block.classList.toggle('active');
+        };
+        function clickOpenBlock2(btn,classNam) {
             const block = btn.querySelector('.'+classNam);
             return block.classList.toggle('active');
         };
@@ -911,141 +921,154 @@
     endPicker.setDate(today);
 
     // скрипт графика 
-      
+// Глобальная переменная для хранения экземпляра графика
+let activityChartInstance;
+
+function colorGrafike() {
+    // Проверяем, существует ли экземпляр графика, и уничтожаем его, если он уже создан
+    if (activityChartInstance) {
+        activityChartInstance.destroy();
+    }
+
+    // Получаем текущую тему из localStorage
+    const isDarkTheme = localStorage.getItem('theme') === 'dark';
+
+    // Получаем контекст холста
     const ctx = document.getElementById('activityChart').getContext('2d');
-        const activityChart = new Chart(ctx, {
-    type: 'line',
-    data: {
-        labels: ['30 апр', '2 мая', '4 мая', '6 мая', '8 мая', '10 мая', '12 мая', '14 мая','16 мая','18 мая','20 мая'],
-        datasets: [{
-            label: 'Активность',
-            data: [1000, 3100, 0, 0, 1500, 500, 500, 2000, 1000, 4000, 2000],
-            borderColor: 'turquoise',
-            borderWidth: 3,
-            tension: 0,
-            pointBackgroundColor: 'turquoise',
-            pointBorderColor: 'turquoise',
-            pointRadius: 0,
-            pointHoverRadius: 6,
-            fill: false,
-        }]
-    },
-    options: {
-        interaction: {
-            mode: 'index', // Подсказка будет отображаться по всей оси X
-            intersect: false, // Подсказка появится даже если курсор не на точке
+
+    // Создаем новый экземпляр графика и сохраняем его в activityChartInstance
+    activityChartInstance = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['30 апр', '2 мая', '4 мая', '6 мая', '8 мая', '10 мая', '12 мая', '14 мая','16 мая','18 мая','20 мая'],
+            datasets: [{
+                label: 'Активность',
+                data: [1000, 3100, 0, 0, 4500, 500, 3500, 2300, 100, 4000, 100],
+                borderColor: 'turquoise',
+                borderWidth: 3,
+                tension: 0,
+                pointBackgroundColor: 'turquoise',
+                pointBorderColor: 'turquoise',
+                pointRadius: 0,
+                pointHoverRadius: 6,
+                fill: false,
+            }]
         },
-        plugins: {
-            tooltip: {
-                backgroundColor: 'rgba(0,0,0)', // Темный фон для подсказки
-                //titleFont: { size: 16, color: '#fff' }, // Цвет и размер заголовка
-                bodyFont: { size: 14, color: '#fff' },  // Цвет и размер текста
-                callbacks: {
-                    // Убираем индикатор цвета
-                    labelColor: function(tooltipItem, chart) {
-                        return {
-                            borderColor: 'rgba(0, 0, 0, 0)',
-                            backgroundColor: 'rgba(0, 0, 0, 0)'
-                        };
-                    },
-                    // Заголовок для отображения времени
-                    title: function(value) {
-                        return `0 ₽`; // Добавляем строку с "0 Рублей"
-                    },
-                   
-                    // Тело подсказки
-                    label: function(tooltipItem) {
-                        let value = tooltipItem.raw;
-                        return `${value} шт.`; // Например: OП: 0 шт.
-                    },
-                    // Дополнительная информация (свой текст)
-                    afterBody:  function(tooltipItem) {
-                        let label = tooltipItem[0].label;
-                        return ` ${label}`; // Например: Время: 10:00
-                    },
-                }
+        options: {
+            interaction: {
+                mode: 'index',
+                intersect: false
             },
-            legend: {
-                display: false
-            },
-            annotation: {
-                annotations: {
-                    horizontalLine: {
-                        type: 'line',
-                        yMin: 1500,
-                        yMax: 1500,
-                        borderColor: 'black',
-                        borderWidth: 2,
-                        borderDash: [0] // Сплошная линия
-                    }
-                }
-            }
-        },
-        scales: {
-            y: {
-                beginAtZero: true,
-                max: 5000,
-                ticks: {
-                    stepSize: 1000,
-                    color:'#000',
-                    callback: function(value) {
-                        return value;
-                    },
-                    font: {
-                        size: 12, // Задаем размер шрифта
-                        family: 'Inter', // Задаем семейство шрифтов
-                        style: 'normal', // Задаем стиль шрифта
-                        weight: 'normal'
+            plugins: {
+                tooltip: {
+                    backgroundColor:'rgba(0,0,0)', // Темный или светлый фон
+                    bodyFont: { size: 14, color: '#fff' },  // Цвет текста
+                    callbacks: {
+                        labelColor: function() {
+                            return {
+                                borderColor: 'rgba(0, 0, 0, 0)',
+                                backgroundColor: 'rgba(0, 0, 0, 0)'
+                            };
+                        },
+                        title: function() {
+                            return `0 ₽`;
+                        },
+                        label: function(tooltipItem) {
+                            let value = tooltipItem.raw;
+                            return `${value} шт.`;
+                        },
+                        afterBody: function(tooltipItem) {
+                            let label = tooltipItem[0].label;
+                            return ` ${label}`;
+                        },
                     }
                 },
-                grid: {
-                    color: 'lightgrey'
-                }
-            },
-            x: {
-                 ticks: {
-                    color: '#000',
-                    font: {
-                        size: 12,
-                        family: 'Inter',
-                        style: 'normal',
-                        weight: 'normal'
-                    }
-                },
-                grid: {
+                legend: {
                     display: false
+                },
+                annotation: {
+                    annotations: {
+                        horizontalLine: {
+                            type: 'line',
+                            yMin: 1500,
+                            yMax: 1500,
+                            borderColor: isDarkTheme ? 'white' : 'black', // Цвет линии аннотации
+                            borderWidth: 2,
+                            borderDash: [0]
+                        }
+                    }
                 }
-            }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    max: 5000,
+                    ticks: {
+                        stepSize: 1000,
+                        color: isDarkTheme ? '#fff' : '#000', // Цвет меток оси Y
+                        callback: function(value) {
+                            return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+                        },
+                        font: {
+                            size: 12,
+                            family: 'Inter',
+                            style: 'normal',
+                            weight: 'normal'
+                        }
+                    },
+                    grid: {
+                        color: 'lightgrey'
+                    }
+                },
+                x: {
+                    ticks: {
+                        color: isDarkTheme ? '#fff' : '#000', // Цвет меток оси X
+                        font: {
+                            size: 12,
+                            family: 'Inter',
+                            style: 'normal',
+                            weight: 'normal'
+                        }
+                    },
+                    grid: {
+                        display: false
+                    }
+                }
+            },
+            responsive: true,
+            maintainAspectRatio: false
         },
-        responsive: true,
-        maintainAspectRatio: false
-    },
-    plugins: [{
-        beforeDraw: function(chart) {
-            var ctx = chart.ctx;
-            var chartArea = chart.chartArea;
-            ctx.save();
+        plugins: [{
+            beforeDraw: function(chart) {
+                var ctx = chart.ctx;
+                var chartArea = chart.chartArea;
+                ctx.save();
 
-            // Рисуем линию вдоль левого края
-            ctx.beginPath();
-            ctx.moveTo(chartArea.left, chartArea.top);
-            ctx.lineTo(chartArea.left, chartArea.bottom);
-            ctx.lineWidth = 1; // Уменьшаем ширину линии, если это необходимо
-            ctx.strokeStyle = 'black';
-            ctx.stroke();
+                // Линия вдоль левого края
+                ctx.beginPath();
+                ctx.moveTo(chartArea.left, chartArea.top);
+                ctx.lineTo(chartArea.left, chartArea.bottom);
+                ctx.lineWidth = 1;
+                ctx.strokeStyle = isDarkTheme ? 'white' : 'black'; // Цвет линии в зависимости от темы
+                ctx.stroke();
 
-            // Рисуем пунктирную линию вдоль нижнего края
-            ctx.beginPath();
-            ctx.moveTo(chartArea.left, chartArea.bottom);
-            ctx.lineTo(chartArea.right, chartArea.bottom);
-            ctx.lineWidth = 1; // Уменьшаем ширину линии, если это необходимо
-            ctx.strokeStyle = 'black';
-            ctx.stroke();
+                // Линия вдоль нижнего края
+                ctx.beginPath();
+                ctx.moveTo(chartArea.left, chartArea.bottom);
+                ctx.lineTo(chartArea.right, chartArea.bottom);
+                ctx.lineWidth = 1;
+                ctx.strokeStyle = isDarkTheme ? 'white' : 'black'; // Цвет линии в зависимости от темы
+                ctx.stroke();
 
-            ctx.restore();
-        }
-    }]
-});
+                ctx.restore();
+            }
+        }]
+    });
+}
+
+// Вызов функции для создания графика
+colorGrafike();
+document.addEventListener('click',()=>colorGrafike())
 
 
     </script>

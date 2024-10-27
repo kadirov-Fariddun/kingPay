@@ -84,7 +84,7 @@ function switchBlackTheme(){
                 img.src = '/images/icons/iconamoon_mode-dark-light.svg';
                 document.body.classList.remove('dark');
                 // меняем лого на обычный 
-                logo.src= '/images/logo.svg';
+                logo.src= '/images/logo-small-black.svg';
             }else{
                 ls.setItem('theme','dark');
                 icon.style.right = '50%';
