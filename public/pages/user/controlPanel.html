@@ -73,16 +73,22 @@
                 </ul>
                 <!-- menu end -->
                  <!-- menu btn open -->
-                  <button class="menu-btn w-fit h-fit mx-auto mt-auto max-[1400px]:mt-0 max-[1400px]:w-fit max-[1400px]:mx-0 max-[1400px]:ml-[40px]">
+                  <button class="menu-btn w-fit h-fit mx-auto mt-auto max-[1400px]:mt-0 max-[1400px]:w-fit max-[1400px]:mx-0 max-[1400px]:ml-[40px]
+                  max-md:hidden">
                     <img class="max-sm:w-[24px]" src="../../images/icons/menu.svg" alt="menu-btn" width="32px" height="32px">
                   </button>
+                  <div class="menu-burger main-menu-burger-mobile ml-[10px] 
+                  max-md:block">
+                    <span></span>
+                    <span></span>
+                </div>
                  <!-- menu btn open end -->
                 <!-- logo end -->
              </div>
              <!-- menu static -->
         </aside>
         <!-- content -->
-        <main class="flex-grow flex max-lg:flex-col">
+        <main class="flex-grow flex max-lg:flex-col relative">
             <!-- первая половина экрана -->
             <div class="w-2/4 h-full bg-[#f8f8f8] pt-[70px] px-[20px] max-[1400px]:min-h-screen max-[1400px]:h-auto max-lg:w-full 
             max-lg:h-fit max-md:pt-[20px] dark:bg-colorBlack">
@@ -215,31 +221,35 @@
                             <h2 class="font-light text-[30px] leading-[36.31px] text-black max-sm:text-[20px] dark:text-white">Проекты</h2>
                             <button type="button" class="text-[14px] leading-[16.94px] font-normal flex justify-center items-center 
                             duration-[.2s] hover:duration-[.2s] hover:translate-y-[-2px] active:translate-y-[2px] 
-                            h-[40px] max-w-[200px] w-full rounded-[10px] border border-black dark:text-white dark:border-white">+ Добавить новый</button>
+                            h-[40px] max-w-[200px] w-full rounded-[10px] border border-black dark:text-white dark:border-white
+                            max-sm:max-w-[150px]">+ Добавить новый</button>
                         </div>
                         <ul>
                             <li class="flex p-5 border border-white bg-white rounded-[20px] 
                             items-center dark:border-black dark:bg-[#1b1b1b]">
                                 <!-- ava -->
-                                <div class="w-[40px] h-[40px] rounded-full mr-[20px] bg-[#efefef] dark:bg-colorGray2">
+                                <div class="min-w-[40px] min-h-[40px] rounded-full mr-[20px] bg-[#efefef] dark:bg-colorGray2 max-sm:mr-[10px]
+                                max-sm:min-w-[30px] max-sm:min-h-[30px]">
                                 </div>
                                 <!-- ava end -->
                                  <!-- name -->
                                 <div class="mr-auto">
-                                    <strong class="font-semibold block leading-[21.78px] text-[18px] text-black mb-[5px] dark:text-white">Donatebest</strong>
-                                    <p class="text-colorGray2 text-[14px] font-light leading-[16.94px] dark:text-[#b7b7b7]">www.donatebest.cc</p>
+                                    <strong class="font-semibold block leading-[21.78px] text-[18px] text-black mb-[5px] dark:text-white
+                                    max-sm:text-[16px]">Donatebest</strong>
+                                    <p class="text-colorGray2 text-[14px] font-light leading-[16.94px] dark:text-[#b7b7b7]
+                                    max-sm:text-[12px]">www.donatebest.cc</p>
                                 </div>
                                 <!-- name end -->
                                  <!-- status -->
-                                  <div class="flex gap-x-[10px] items-center mr-[30px]">
+                                  <div class="flex gap-x-[10px] items-center mr-[30px] max-sm:hidden">
                                     <span class="w-[10px] h-[10px] rounded-full block bg-[#22D98C]"></span>
                                     <p class="font-medium text-[18px] leading-[21.78px] text-[#22D98C]">активен</p>
                                   </div>
                                  <!-- status end -->
                                   <!-- btns -->
                                    <div class="flex items-center gap-x-[20px]">
-                                     <button class="h-[40px] w-[40px] rounded-full border border-colorGray flex justify-center items-center">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                     <button class="h-[40px] w-[40px] rounded-full border border-colorGray flex justify-center items-center max-sm:w-[30px] max-sm:h-[30px]">
+                                        <svg class="h-[18px] w-[18px]" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path class="dark:fill-white" d="M22 7.25H16C15.59 7.25 15.25 6.91 15.25 6.5C15.25 6.09 15.59 5.75 16 5.75H22C22.41 5.75 22.75 6.09 22.75 6.5C22.75 6.91 22.41 7.25 22 7.25Z" fill="#292D32"/>
                                             <path class="dark:fill-white" d="M6 7.25H2C1.59 7.25 1.25 6.91 1.25 6.5C1.25 6.09 1.59 5.75 2 5.75H6C6.41 5.75 6.75 6.09 6.75 6.5C6.75 6.91 6.41 7.25 6 7.25Z" fill="#292D32"/>
                                             <path class="dark:fill-white" d="M10 10.75C7.66 10.75 5.75 8.84 5.75 6.5C5.75 4.16 7.66 2.25 10 2.25C12.34 2.25 14.25 4.16 14.25 6.5C14.25 8.84 12.34 10.75 10 10.75ZM10 3.75C8.48 3.75 7.25 4.98 7.25 6.5C7.25 8.02 8.48 9.25 10 9.25C11.52 9.25 12.75 8.02 12.75 6.5C12.75 4.98 11.52 3.75 10 3.75Z" fill="#292D32"/>
@@ -248,8 +258,8 @@
                                             <path class="dark:fill-white" d="M14 21.75C11.66 21.75 9.75 19.84 9.75 17.5C9.75 15.16 11.66 13.25 14 13.25C16.34 13.25 18.25 15.16 18.25 17.5C18.25 19.84 16.34 21.75 14 21.75ZM14 14.75C12.48 14.75 11.25 15.98 11.25 17.5C11.25 19.02 12.48 20.25 14 20.25C15.52 20.25 16.75 19.02 16.75 17.5C16.75 15.98 15.52 14.75 14 14.75Z" fill="#292D32"/>
                                         </svg>
                                      </button>
-                                     <a href="/pages/user/project/settings.html"  class="h-[40px] w-[40px] rounded-full border border-colorGray flex justify-center items-center">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                     <a href="/pages/user/project/settings.html"  class="h-[40px] w-[40px] rounded-full border border-colorGray flex justify-center items-center max-sm:h-[30px] max-sm:w-[30px]">
+                                        <svg class="h-[18px] w-[18px]" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path class="dark:fill-white" d="M22 22.75H2C1.59 22.75 1.25 22.41 1.25 22C1.25 21.59 1.59 21.25 2 21.25H22C22.41 21.25 22.75 21.59 22.75 22C22.75 22.41 22.41 22.75 22 22.75Z" fill="#292D32"/>
                                             <path class="dark:fill-white" d="M14.25 22.75H9.75C9.34 22.75 9 22.41 9 22V4C9 2.28 9.95 1.25 11.55 1.25H12.45C14.05 1.25 15 2.28 15 4V22C15 22.41 14.66 22.75 14.25 22.75ZM10.5 21.25H13.5V4C13.5 2.85 12.96 2.75 12.45 2.75H11.55C11.04 2.75 10.5 2.85 10.5 4V21.25Z" fill="#292D32"/>
                                             <path class="dark:fill-white" d="M7 22.75H3C2.59 22.75 2.25 22.41 2.25 22V10C2.25 8.28 3.13 7.25 4.6 7.25H5.4C6.87 7.25 7.75 8.28 7.75 10V22C7.75 22.41 7.41 22.75 7 22.75ZM3.75 21.25H6.25V10C6.25 8.75 5.7 8.75 5.4 8.75H4.6C4.3 8.75 3.75 8.75 3.75 10V21.25Z" fill="#292D32"/>
@@ -266,7 +276,7 @@
             </div>
              <!-- вторая половина экрана -->
             <div class="w-2/4 pt-[30px] pr-[60px] pl-[40px] pb-[55px] max-xl:p-[30px] max-[1400px]:bg-[#f8f8f8] max-lg:w-full max-sm:p-[10px]
-            dark:bg-[#1b1b1b]">
+            dark:bg-[#1b1b1b] max-sm:pb-[40px]">
                 <!-- шапка личного кабинета -->
                 <div class="head-ls w-full mb-[50px] max-lg:hidden">
                     <nav class="flex gap-x-[30px] items-center justify-end w-full">
@@ -354,7 +364,8 @@
                   <h3 class="mb-[20px] font-semibold text-[18px] leading-[21.78px] text-black max-[1400px]:bg-white 
                   max-[1400px]:mb-0 max-[1400px]:pb-[20px] max-[1400px]:pl-[20px] dark:text-white
                   dark:max-[1400px]:bg-[#1B1B1B]">25 мая</h3>
-                  <ul class="w-full overflow-y-auto overflow-hidden h-[600px] max-[1400px]:bg-white dark:max-[1400px]:bg-[#1B1B1B]">
+                  <ul class="w-full overflow-y-auto overflow-hidden h-[600px]
+                   max-[1400px]:bg-white dark:max-[1400px]:bg-[#1B1B1B] overflow-x-auto pb-[20px]">
                     <li class="history-item">
                         <p class="history-date">25 мая 2024</p>
                         <p class="history-time">14:05</p>
@@ -431,11 +442,98 @@
                  <!-- history end -->
             </div>
             <!-- вторая половина экрана end -->
-            
+              <!-- главное меню -->
+                <div class="">
+                    <!-- pc version -->
+                    <div class="max-md:!hidden fixed right-0 top-0 w-[calc(100%-90px)] h-full bg-black  flex-col justify-center pl-[200px]
+                    max-[1400px]:left-0 max-[1400px]:w-full max-[1400px]:h-full max-[1400px]:bottom-0 max-[1400px]:top-auto hidden main-menu
+                    max-xl:pl-[100px]">
+                        <!-- close btn -->
+                        <button type="button" class="mb-[50px] close-main-menu-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-white w-[40px] h-[40px]">
+                                <path d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z"></path>
+                            </svg>
+                        </button>
+                        <!-- close btn end -->
+                        <!-- menu -->
+                         <div class="flex gap-x-[200px] max-lg:gap-x-[100px]">
+                            <ul class="flex flex-col gap-y-[30px]">
+                                <p class="text-colorGray2 text-[16px] font-normal">Главное</p>
+                                <li><a href="/pages/about.html" class="text-[16px] text-white transition-all hover:transition-all
+                                    hover:text-yellow-500">О сервисе</a></li>
+                                <li><a href="#" class="text-[16px] text-white
+                                    transition-all hover:transition-all
+                                    hover:text-yellow-500">Новости</a></li>
+                                <li><a href="/pages/requirements.html" class="text-[16px] text-white
+                                    transition-all hover:transition-all
+                                    hover:text-yellow-500">Требования к сайтам</a></li>
+                                <li><a href="#" class="text-[16px] text-white
+                                    transition-all hover:transition-all
+                                    hover:text-yellow-500">Публичная оферта</a></li>
+                            </ul>
+                            <ul class="flex flex-col gap-y-[30px]">
+                                <p class="text-colorGray2 text-[16px] font-normal">Клиентам</p>
+                                <li><a href="/pages/user/support.html" class="text-[16px] text-white
+                                    transition-all hover:transition-all
+                                    hover:text-yellow-500">Помощь</a></li>
+                                <li><a href="#" class="text-[16px] text-white
+                                    transition-all hover:transition-all
+                                    hover:text-yellow-500">Тарифы</a></li>
+                                <li><a href="#" class="text-[16px] text-white
+                                    transition-all hover:transition-all
+                                    hover:text-yellow-500">CMS модули</a></li>
+                                <li><a href="#" class="text-[16px] text-white
+                                    transition-all hover:transition-all
+                                    hover:text-yellow-500">Документация</a></li>
+                            </ul>
+                            <ul class="flex flex-col gap-y-[30px]">
+                                <p class="text-colorGray2 text-[16px] font-normal">Плательщикам</p>
+                                <li><a href="/pages/contact.html" class="text-[16px] text-white
+                                    transition-all hover:transition-all
+                                    hover:text-yellow-500">Контакты</a></li>
+                                <li><a href="#" class="text-[16px] text-white
+                                    transition-all hover:transition-all
+                                    hover:text-yellow-500">Инструкция по оплате</a></li>
+                                <li><a href="#" class="text-[16px] text-white
+                                    transition-all hover:transition-all
+                                    hover:text-yellow-500">Условия оплаты</a></li>
+                            </ul>
+                         </div>
+                        <!-- menu end -->
+                         <!-- links social media -->
+                         <!-- <ul>
+
+                         </ul> -->
+                         <!-- links social media end -->
+                    </div>
+                    <!-- pc version end -->
+                    <!-- mobile version -->
+                    <div class="hidden bg-[rgb(0,0,0,.5)] main-menu-mobile fixed right-0 top-0 w-full h-full
+                     justify-end">
+                        <div class="max-w-[320px] w-full bg-white py-[40px] pl-[40px] relative">
+                            <p class="text-[16px] text-colorGray2 ">Баланс:</p>
+                            <strong class="text-[22px] font-bold text-black mb-[30px] block">
+                                0 ₽
+                            </strong>
+                            <ul class="flex flex-col gap-y-[25px]">
+                                <li><a href="/pages/user/controlPanel.html">Проекты</a></li>
+                                <li><a href="/pages/user/withdrawal.html">Выплаты</a></li>
+                                <li><a href="/pages/user/security.html">Безопасность</a></li>
+                                <li><a href="/pages/auth.html" class="text-red-600">Выход</a></li>
+                            </ul>
+                            <a href="/pages/user/support.html" class="text-black rounded-[10px] px-[20px] h-[40px] bg-yellow-500
+                            flex justify-center items-center max-w-[200px] w-full absolute bottom-[40px] left-[50%] translate-x-[-50%]">Служба поддержки</a>
+                        </div>
+                    </div>
+                    <!-- mobile version end -->
+                </div>
+            <!-- главное меню end -->
         </main>
         <!-- content end -->
+       
     </div>
-        
+
+       
     
     <script type="module" src="../../js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -449,6 +547,143 @@ function colorGrafike() {
         activityChartInstance.destroy();
     }
 
+    // Получаем контекст холста
+    const ctx = document.getElementById('activityChart').getContext('2d');
+
+    // Определяем, находится ли тема в "темном" режиме
+    const isDarkTheme = localStorage.getItem('theme') === 'dark';
+
+    // Создаем новый экземпляр графика и сохраняем его в activityChartInstance
+    activityChartInstance = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['0:00', '2:00', '4:00', '6:00', '8:00', '10:00', '12:00', '14:00'],
+            datasets: [{
+                label: 'Активность',
+                data: [1000, 3000, 0, 0, 0, 1500, 500, 500],
+                borderColor: 'turquoise',
+                borderWidth: 3,
+                tension: 0,
+                pointBackgroundColor: 'turquoise',
+                pointBorderColor: 'turquoise',
+                pointRadius: 0,
+                pointHoverRadius: 6,
+                fill: false,
+            }]
+        },
+        options: {
+            interaction: {
+                mode: 'index',
+                intersect: false
+            },
+            plugins: {
+                tooltip: {
+                    backgroundColor: 'rgba(0,0,0)',
+                    bodyFont: { size: 14, color: '#fff' },
+                    callbacks: {
+                        labelColor: function() {
+                            return {
+                                borderColor: 'rgba(0, 0, 0, 0)',
+                                backgroundColor: 'rgba(0, 0, 0, 0)'
+                            };
+                        },
+                        title: function() {
+                            return `0 ₽`;
+                        },
+                        label: function(tooltipItem) {
+                            let value = tooltipItem.raw;
+                            return `${value} шт.`;
+                        },
+                        afterBody: function(tooltipItem) {
+                            let label = tooltipItem[0].label;
+                            return ` ${label}`;
+                        },
+                    }
+                },
+                legend: {
+                    display: false
+                },
+                annotation: {
+                    annotations: {
+                        horizontalLine: {
+                            type: 'line',
+                            yMin: 1500,
+                            yMax: 1500,
+                            borderColor: isDarkTheme ? 'black' : 'white',
+                            borderWidth: 2,
+                            borderDash: [0]
+                        }
+                    }
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    max: 5000,
+                    ticks: {
+                        stepSize: 1000,
+                        color: isDarkTheme ? '#000' : '#fff',
+                        callback: function(value) {
+                            return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "); // Убираем запятые
+                        },
+                        font: {
+                            size: 12,
+                            family: 'Inter',
+                            style: 'normal',
+                            weight: 'normal'
+                        }
+                    },
+                    grid: {
+                        color: 'lightgrey'
+                    }
+                },
+                x: {
+                    ticks: {
+                        color: isDarkTheme ? '#000' : '#fff',
+                        font: {
+                            size: 12,
+                            family: 'Inter',
+                            style: 'normal',
+                            weight: 'normal'
+                        }
+                    },
+                    grid: {
+                        display: false
+                    }
+                }
+            },
+            responsive: true,
+            maintainAspectRatio: false
+        },
+        plugins: [{
+            beforeDraw: function(chart) {
+                var ctx = chart.ctx;
+                var chartArea = chart.chartArea;
+                ctx.save();
+
+                // Линия вдоль левого края
+                ctx.beginPath();
+                ctx.moveTo(chartArea.left, chartArea.top);
+                ctx.lineTo(chartArea.left, chartArea.bottom);
+                ctx.lineWidth = 1;
+                ctx.strokeStyle = isDarkTheme ? 'black' : 'white';
+                ctx.stroke();
+
+                // Пунктирная линия вдоль нижнего края
+                ctx.beginPath();
+                ctx.moveTo(chartArea.left, chartArea.bottom);
+                ctx.lineTo(chartArea.right, chartArea.bottom);
+                ctx.lineWidth = 1;
+                ctx.strokeStyle = isDarkTheme ? 'black' : 'white';
+                ctx.stroke();
+
+                ctx.restore();
+            }
+        }]
+    });
+}
+// defult grafike 
+function defaultGrafike() {
     // Получаем контекст холста
     const ctx = document.getElementById('activityChart').getContext('2d');
 
@@ -584,18 +819,49 @@ function colorGrafike() {
         }]
     });
 }
-
-        colorGrafike();
-        document.addEventListener('click',()=>colorGrafike());
+        defaultGrafike()
+        document.querySelectorAll('.black-theme-btn')[0].addEventListener('click',()=>colorGrafike());
+        document.querySelectorAll('.black-theme-btn')[1].addEventListener('click',()=>colorGrafike());
         function clickOpenBlock(btn,classNam) {
             const block = btn.querySelector('.'+classNam);
             btn.querySelector('.menu-burger').classList.toggle('active');
             return block.classList.toggle('active');
         };
+       
         function clickOpenBlock2(btn,classNam) {
             const block = btn.querySelector('.'+classNam);
             return block.classList.toggle('active');
         };
+
+        function openMainMenu () {
+            const btn = document.querySelector('.menu-btn');
+            const mainMenu = document.querySelector('.main-menu');
+            const closeBtn = document.querySelector('.close-main-menu-btn');
+            btn.onclick = () => {
+                mainMenu.classList.add('active')
+            }
+            closeBtn.onclick = () => {
+                mainMenu.classList.remove('active')
+            }
+        };
+       
+        function openMainMenuMobile() {
+            const btn = document.querySelector('.main-menu-burger-mobile');
+            
+            const block = document.querySelector('.main-menu-mobile');
+            console.log(btn,block);
+            btn.onclick = ()=>{
+                block.classList.add('active');
+            }
+            block.onclick = (e)=>{
+                if(e.target.className !== 'max-w-[320px] w-full bg-white py-[40px] pl-[40px] relative'){
+                    block.classList.remove('active')
+                }
+                
+            }
+        };
+        openMainMenu();
+        openMainMenuMobile();
     </script>
 </body>
 </html>

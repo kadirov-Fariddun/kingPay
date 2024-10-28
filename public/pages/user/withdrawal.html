@@ -75,7 +75,8 @@
                 </ul>
                 <!-- menu end -->
                  <!-- menu btn open -->
-                  <button class="menu-btn w-fit h-fit mx-auto mt-auto max-[1400px]:mt-0 max-[1400px]:w-fit max-[1400px]:mx-0 max-[1400px]:ml-[40px]">
+                  <button class="menu-btn w-fit h-fit mx-auto mt-auto max-[1400px]:mt-0
+                   max-[1400px]:w-fit max-[1400px]:mx-0 max-[1400px]:ml-[40px] ">
                     <img class="max-sm:w-[24px]" src="../../images/icons/menu.svg" alt="menu-btn" width="32px" height="32px">
                   </button>
                  <!-- menu btn open end -->
@@ -87,7 +88,7 @@
         <main class="flex-grow flex max-[1150px]:flex-col">
             <!-- первая половина экрана -->
             <div class="w-2/4 h-full bg-[#f8f8f8] pt-[70px] px-[20px] max-[1400px]:min-h-screen max-[1400px]:h-auto max-[1150px]:w-full 
-            max-[1150px]:h-fit max-md:pt-[20px] dark:bg-colorBlack">
+            max-[1150px]:h-fit max-md:pt-[20px] dark:bg-colorBlack max-[1150px]:min-h-[750px] max-md:min-h-[680px]">
                 <div class="wrapper max-w-[680px] mx-auto max-[1150px]:max-w-full">
                     <h1 class="text-[42px] leading-[50.83px] font-light text-black mb-[50px] max-[1150px]:hidden dark:text-white">Вывод средств</h1>
                     <div class="hidden max-[1150px]:flex max-[1150px]:items-center">
@@ -517,12 +518,11 @@
                   flex flex-col dark:max-[1400px]:bg-[#1B1B1B]">
                     <!-- head -->
                     <li class="history-item-pay gap-x-[5px]">
-                        <p class="w-[15%] text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap
-                        max-md:min-w-[120px]">№ Выплаты</p>
-                        <p class="w-[27.5%] text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap max-md:min-w-[170px]">Счет получателя</p>
-                        <strong class="w-[15%] text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap max-md:min-w-[120px]">Сумма</strong>
-                        <span class="w-[27.5%] text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap max-md:min-w-[150px]">Дата</span>
-                        <span class="w-[15%] text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap text-center max-md:min-w-[100px]">Статус</span>
+                        <p class="w-[15%] text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap">№ Выплаты</p>
+                        <p class="w-[27.5%] text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap">Счет получателя</p>
+                        <strong class="w-[15%] text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap">Сумма</strong>
+                        <span class="w-[27.5%] text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap">Дата</span>
+                        <span class="w-[15%] text-[16px] leading-[19.36]  text-colorGray2 font-light text-nowrap text-center">Статус</span>
                     </li>
                     <!-- head end -->
                     <li class="history-item-pay show-pay-history-detail">
@@ -595,8 +595,9 @@
                             <span>16:35</span>
                         </div>
                         <span class="w-[15%] flex justify-center max-md:min-w-[100px] ">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                <path class="fill-[red]" d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" >
+                                <path class="fill-[red]" d="M9.172 16.242 12 13.414l2.828 2.828 1.414-1.414L13.414 12l2.828-2.828-1.414-1.414L12 10.586 9.172 7.758 7.758 9.172 10.586 12l-2.828 2.828z"></path>
+                                <path class="fill-[red]" d="M12 22c5.514 0 10-4.486 10-10S17.514 2 12 2 2 6.486 2 12s4.486 10 10 10zm0-18c4.411 0 8 3.589 8 8s-3.589 8-8 8-8-3.589-8-8 3.589-8 8-8z"></path>
                             </svg>
                         </span>
                     </li>
@@ -613,8 +614,9 @@
                             <span>16:35</span>
                         </div>
                         <span class="w-[15%] flex justify-center max-md:min-w-[100px] ">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                <path class="fill-[red]" d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" >
+                                <path class="fill-[red]" d="M9.172 16.242 12 13.414l2.828 2.828 1.414-1.414L13.414 12l2.828-2.828-1.414-1.414L12 10.586 9.172 7.758 7.758 9.172 10.586 12l-2.828 2.828z"></path>
+                                <path class="fill-[red]" d="M12 22c5.514 0 10-4.486 10-10S17.514 2 12 2 2 6.486 2 12s4.486 10 10 10zm0-18c4.411 0 8 3.589 8 8s-3.589 8-8 8-8-3.589-8-8 3.589-8 8-8z"></path>
                             </svg>
                         </span>
                     </li>
@@ -631,8 +633,9 @@
                             <span>16:35</span>
                         </div>
                         <span class="w-[15%] flex justify-center max-md:min-w-[100px] ">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                <path class="fill-[red]" d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" >
+                                <path class="fill-[red]" d="M9.172 16.242 12 13.414l2.828 2.828 1.414-1.414L13.414 12l2.828-2.828-1.414-1.414L12 10.586 9.172 7.758 7.758 9.172 10.586 12l-2.828 2.828z"></path>
+                                <path class="fill-[red]" d="M12 22c5.514 0 10-4.486 10-10S17.514 2 12 2 2 6.486 2 12s4.486 10 10 10zm0-18c4.411 0 8 3.589 8 8s-3.589 8-8 8-8-3.589-8-8 3.589-8 8-8z"></path>
                             </svg>
                         </span>
                     </li>
@@ -649,8 +652,9 @@
                             <span>16:35</span>
                         </div>
                         <span class="w-[15%] flex justify-center max-md:min-w-[100px] ">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                <path class="fill-[red]" d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" >
+                                <path class="fill-[red]" d="M9.172 16.242 12 13.414l2.828 2.828 1.414-1.414L13.414 12l2.828-2.828-1.414-1.414L12 10.586 9.172 7.758 7.758 9.172 10.586 12l-2.828 2.828z"></path>
+                                <path class="fill-[red]" d="M12 22c5.514 0 10-4.486 10-10S17.514 2 12 2 2 6.486 2 12s4.486 10 10 10zm0-18c4.411 0 8 3.589 8 8s-3.589 8-8 8-8-3.589-8-8 3.589-8 8-8z"></path>
                             </svg>
                         </span>
                     </li>
@@ -716,7 +720,7 @@
                 <!-- title -->
                  <div class="flex justify-between items-center mb-[40px] max-[400px]:flex-col max-[400px]:gap-y-[20px]">
                     <h3 class="text-[30px] font-light leading-[36.31px] dark:text-white text-black
-                    max-[500px]:text-[20px] max-[400px]:w-full">Детали платежа</h3>
+                    max-[500px]:text-[20px] max-[400px]:w-full">Детали выплаты</h3>
                     <div class="h-[24px] max-w-[160px] w-full relative max-md:min-w-[160px] max-[400px]:max-w-full">
                         <div class="absolute left-0 top-0 wrapper max-w-[160px] w-full h-full transition-all max-h-[24px]
                             dark:border-white overflow-hidden bg-transparent z-10 overflow-y-hidden">
@@ -744,48 +748,36 @@
                     </div>
                  </div>
                 <!-- title end -->
-                 <ul class="max-w-[350px] w-full flex flex-col gap-y-[30px] mb-[50px]">
-                    <li class="flex items-center justify-between">
-                        <p class="text-page !font-light text-colorGray2 dark:text-colorGray w-[50%]">№ Платежа</p>
+                 <ul class="max-w-[450px] w-full flex flex-col gap-y-[30px] mb-[50px]">
+                    <li class="flex items-center justify-between ">
+                        <p class="text-page !font-light text-colorGray2 dark:text-colorGray w-[50%]">№ Выплаты</p>
                         <span class="text-page w-[50%]">878-456-345</span>
                     </li>
-                    <li class="flex items-center justify-between w-full">
-                        <p class="text-page !font-light text-colorGray2 dark:text-colorGray w-[50%]">Эл. почта</p>
-                        <span class="text-page w-[50%]">mail@mail.ru</span>
-                    </li>
-                    <li class="flex items-center justify-between w-full">
+                    <li class="flex items-center justify-between w-full ">
                         <p class="text-page !font-light text-colorGray2 dark:text-colorGray w-[50%]">Метод</p>
-                        <span class="text-page w-[50%]">Банк. карта</span>
+                        <span class="text-page w-[50%]">Tether</span>
                     </li>
-                    <li class="flex items-center justify-between w-full">
+                    <li class="flex items-center justify-between w-full ">
+                        <p class="text-page !font-light text-colorGray2 dark:text-colorGray w-[50%]">Счет получателя</p>
+                        <span class="text-page w-[50%]">aBVSapsdsfaskkfgbbnsaasggTkmsaATF</span>
+                    </li>
+                    <li class="flex items-center justify-between w-full ">
                         <p class="text-page !font-light text-colorGray2 dark:text-colorGray w-[50%]">Сумма</p>
                         <span class="text-page !font-semibold w-[50%]">12 540 ₽</span>
                     </li>
-                    <li class="flex items-center justify-between w-full">
-                        <p class="text-page !font-light text-colorGray2 dark:text-colorGray w-[50%]">Комиссия</p>
-                        <span class="text-page !font-semibold w-[50%]">540 ₽</span>
-                    </li>
-                    <li class="flex items-center justify-between w-full">
-                        <p class="text-page !font-light text-colorGray2 dark:text-colorGray w-[50%]">Сумма зачисления</p>
-                        <span class="text-page !font-semibold w-[50%]">12 540 ₽</span>
+                    <li class="flex items-center justify-between w-full ">
+                        <p class="text-page !font-light text-colorGray2 dark:text-colorGray w-[50%]">Сумма получения</p>
+                        <span class="text-page !font-semibold w-[50%]">20.02 USDT</span>
                     </li>
                  </ul>
-                 <ul class="max-w-[350px] w-full flex flex-col gap-y-[30px]">
-                    <li class="flex items-center justify-between w-full">
-                        <p class="text-page !font-light text-colorGray2 dark:text-colorGray w-[50%]">№ Заказа</p>
-                        <span class="text-page w-[50%]">354354354</span>
-                    </li>
-                    <li class="flex items-center justify-between w-full">
+                 <ul class="max-w-[450px] w-full flex flex-col gap-y-[30px]">
+                    <li class="flex items-center justify-between w-full ">
                         <p class="text-page !font-light text-colorGray2 dark:text-colorGray w-[50%]">Статус</p>
-                        <span class="text-page !text-[#22D98C] w-[50%]">Оплачен</span>
+                        <span class="text-page w-[50%] dakr:text-colorGray">В процессе</span>
                     </li>
-                    <li class="flex items-center justify-between w-full">
+                    <li class="flex items-center justify-between w-full ">
                         <p class="text-page !font-light text-colorGray2 dark:text-colorGray w-[50%]">Дата создания</p>
-                        <span class="text-page w-[50%]">25 мая 2024</span>
-                    </li>
-                    <li class="flex items-center justify-between w-full">
-                        <p class="text-page !font-light text-colorGray2 dark:text-colorGray w-[50%]">Дата обработки</p>
-                        <span class="text-page !font-semibold w-[50%]">25 мая 2024</span>
+                        <span class="text-page w-[50%] dakr:text-colorGray">20.10.24 04:55:01</span>
                     </li>
                  </ul>
             </div>
