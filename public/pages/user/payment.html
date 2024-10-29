@@ -73,9 +73,14 @@
                 </ul>
                 <!-- menu end -->
                  <!-- menu btn open -->
-                  <button class="menu-btn w-fit h-fit mx-auto mt-auto max-[1400px]:mt-0 max-[1400px]:w-fit max-[1400px]:mx-0 max-[1400px]:ml-[40px]">
+                  <button class="menu-btn w-fit h-fit mx-auto mt-auto max-[1400px]:mt-0 max-[1400px]:w-fit max-[1400px]:mx-0 max-[1400px]:ml-[40px]
+                  max-md:hidden">
                     <img class="max-sm:w-[24px]" src="../../images/icons/menu.svg" alt="menu-btn" width="32px" height="32px">
                   </button>
+                  <div class="menu-burger hidden max-md:block main-menu-burger-mobile ml-[10px]">
+                    <span></span>
+                    <span></span>
+                  </div>
                  <!-- menu btn open end -->
                 <!-- logo end -->
              </div>
@@ -512,6 +517,93 @@
                 <!-- весь контент после заголовка end -->
             </div>
            
+             <!-- главное меню -->
+             <div class="">
+                <!-- pc version -->
+                <div class="max-md:!hidden fixed right-0 top-0 w-[calc(100%-90px)] h-full bg-black  flex-col justify-center pl-[200px]
+                max-[1400px]:left-0 max-[1400px]:w-full max-[1400px]:h-full max-[1400px]:bottom-0 max-[1400px]:top-auto hidden main-menu
+                max-xl:pl-[100px]">
+                    <!-- close btn -->
+                    <button type="button" class="mb-[50px] close-main-menu-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-white w-[40px] h-[40px]">
+                            <path d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z"></path>
+                        </svg>
+                    </button>
+                    <!-- close btn end -->
+                    <!-- menu -->
+                     <div class="flex gap-x-[200px] max-lg:gap-x-[100px]">
+                        <ul class="flex flex-col gap-y-[30px]">
+                            <p class="text-colorGray2 text-[16px] font-normal">Главное</p>
+                            <li><a href="/pages/about.html" class="text-[16px] text-white transition-all hover:transition-all
+                                hover:text-yellow-500">О сервисе</a></li>
+                            <li><a href="#" class="text-[16px] text-white
+                                transition-all hover:transition-all
+                                hover:text-yellow-500">Новости</a></li>
+                            <li><a href="/pages/requirements.html" class="text-[16px] text-white
+                                transition-all hover:transition-all
+                                hover:text-yellow-500">Требования к сайтам</a></li>
+                            <li><a href="#" class="text-[16px] text-white
+                                transition-all hover:transition-all
+                                hover:text-yellow-500">Публичная оферта</a></li>
+                        </ul>
+                        <ul class="flex flex-col gap-y-[30px]">
+                            <p class="text-colorGray2 text-[16px] font-normal">Клиентам</p>
+                            <li><a href="/pages/user/support.html" class="text-[16px] text-white
+                                transition-all hover:transition-all
+                                hover:text-yellow-500">Помощь</a></li>
+                            <li><a href="#" class="text-[16px] text-white
+                                transition-all hover:transition-all
+                                hover:text-yellow-500">Тарифы</a></li>
+                            <li><a href="#" class="text-[16px] text-white
+                                transition-all hover:transition-all
+                                hover:text-yellow-500">CMS модули</a></li>
+                            <li><a href="#" class="text-[16px] text-white
+                                transition-all hover:transition-all
+                                hover:text-yellow-500">Документация</a></li>
+                        </ul>
+                        <ul class="flex flex-col gap-y-[30px]">
+                            <p class="text-colorGray2 text-[16px] font-normal">Плательщикам</p>
+                            <li><a href="/pages/contact.html" class="text-[16px] text-white
+                                transition-all hover:transition-all
+                                hover:text-yellow-500">Контакты</a></li>
+                            <li><a href="#" class="text-[16px] text-white
+                                transition-all hover:transition-all
+                                hover:text-yellow-500">Инструкция по оплате</a></li>
+                            <li><a href="#" class="text-[16px] text-white
+                                transition-all hover:transition-all
+                                hover:text-yellow-500">Условия оплаты</a></li>
+                        </ul>
+                     </div>
+                    <!-- menu end -->
+                     <!-- links social media -->
+                     <!-- <ul>
+
+                     </ul> -->
+                     <!-- links social media end -->
+                </div>
+                <!-- pc version end -->
+                <!-- mobile version -->
+                <div class="hidden bg-[rgb(0,0,0,.5)] main-menu-mobile fixed right-0 top-0 w-full h-full
+                 justify-end">
+                    <div class="max-w-[300px] w-full bg-white py-[40px] pl-[40px] relative dark:bg-dark">
+                        <p class="text-[16px] text-colorGray2 dark:text-colorGray">Баланс:</p>
+                        <strong class="text-[22px] font-bold text-black mb-[30px] block dark:text-white">
+                            0 ₽
+                        </strong>
+                        <ul class="flex flex-col gap-y-[25px]">
+                            <li><a href="/pages/user/controlPanel.html" class="dark:text-white">Проекты</a></li>
+                            <li><a href="/pages/user/withdrawal.html" class="dark:text-white">Выплаты</a></li>
+                            <li><a href="/pages/user/security.html" class="dark:text-white">Безопасность</a></li>
+                            <li><a href="/pages/auth.html" class="text-red-600">Выход</a></li>
+                        </ul>
+                        <a href="/pages/user/support.html" class="text-black rounded-[10px] px-[20px] h-[40px] bg-colorBlue
+                        flex justify-center items-center max-w-[200px] w-full absolute bottom-[40px] left-[50%] translate-x-[-50%]">Служба поддержки</a>
+                    </div>
+                </div>
+                <!-- mobile version end -->
+            </div>
+        <!-- главное меню end -->
+
         </main>
         <!-- content end -->
     </div>
@@ -566,6 +658,37 @@
                 });
             });
         }
+        
+         // main menu scripts
+         function openMainMenu () {
+            const btn = document.querySelector('.menu-btn');
+            const mainMenu = document.querySelector('.main-menu');
+            const closeBtn = document.querySelector('.close-main-menu-btn');
+            btn.onclick = () => {
+                mainMenu.classList.add('active')
+            }
+            closeBtn.onclick = () => {
+                mainMenu.classList.remove('active')
+            }
+        };
+       
+        function openMainMenuMobile() {
+            const btn = document.querySelector('.main-menu-burger-mobile');
+            
+            const block = document.querySelector('.main-menu-mobile');
+            console.log(btn,block);
+            btn.onclick = ()=>{
+                block.classList.add('active');
+            }
+            block.onclick = (e)=>{
+                if(e.target.className !== 'max-w-[320px] w-full bg-white py-[40px] pl-[40px] relative'){
+                    block.classList.remove('active')
+                }
+                
+            }
+        };
+        openMainMenu();
+        openMainMenuMobile();
     </script>
 </body>
 </html>

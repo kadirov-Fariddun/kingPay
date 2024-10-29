@@ -238,11 +238,11 @@ img {
     transition-all max-md:min-w-[700px];
 }
 .history-item-pay.gray{
-    @apply bg-[#FBFBFB] dark:bg-colorBlack max-sm:min-w-[700px];
+    @apply bg-[#FBFBFB] dark:bg-colorBlack max-sm:min-w-[700px] ;
 }
 .history-item-pay{
     @apply h-[50px] overflow-hidden w-full px-[20px] rounded-[10px] flex items-center /*max-[1400px]:rounded-none*/ max-sm:text-nowrap cursor-pointer 
-    transition-all hover:transition-all hover:bg-[#d1d1d1] z-0 max-md:min-w-[700px] dark:hover:bg-[rgb(0,0,0,.2)];
+    transition-all hover:transition-all hover:bg-[#d1d1d1] z-0 max-md:min-w-[700px] dark:hover:bg-[rgb(0,0,0,.2)] max-lg:rounded-none;
 }
 .history-item.gray{
     @apply bg-[#FBFBFB] dark:bg-colorBlack max-sm:min-w-[435px];
@@ -314,7 +314,7 @@ img {
 
 .input-placeholder-before{
     @apply max-w-[200px] w-full h-[40px] text-[14px] 
-    outline-none border-b border-colorGray focus:border-yellow-400 bg-transparent dark:text-white;
+    outline-none border-b border-colorGray focus:border-colorBlue bg-transparent dark:text-white;
 }
 .pay-input-text{
     @apply text-colorGray font-normal text-[14px] leading-[16.94px] max-md:hidden;
@@ -393,7 +393,7 @@ img {
 }
 /* profile form input */
 .profile-form-input{
-    @apply h-fit max-w-[300px] w-full border-b border-colorGray text-black outline-none focus:border-yellow-500
+    @apply h-fit max-w-[300px] w-full border-b border-colorGray text-black outline-none focus:border-colorBlue
     bg-transparent dark:text-white max-lg:max-w-[485px] max-[500px]:h-[40px] max-[500px]:text-[14px];
 }
 
