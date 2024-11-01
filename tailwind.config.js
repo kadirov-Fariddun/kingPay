@@ -19,6 +19,7 @@ export default {
         colorBlack:'#292D32',
         colorBlue:'#47E1DD',
         colorGray2:'#6A6A6A',
+        colorGray3:'#B7B7B7',
         dark:'#1b1b1b'
       },
       fontFamily:{

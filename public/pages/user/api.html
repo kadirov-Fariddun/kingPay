@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KingPay | Безопасность</title>
-    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <!-- подключаем шрифт -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,11 +12,9 @@
 </head>
 <body>
     <div class="flex max-[1400px]:flex-col max-[1400px]:relative">
-        <aside class="w-[90px] min-h-screen bg-white relative max-[1400px]:w-full max-[1400px]:min-h-[85px] max-[1400px]:static max-[1400px]:top-0
-        dark:bg-[#1B1B1B]">
+        <aside class="sidebar">
             <!-- menu static -->
-             <div class="sticky left-0 top-0 pt-[20px] w-full min-h-screen pb-[20px] flex flex-col max-[1400px]:flex-row max-[1400px]:min-h-[85px]
-             max-[1400px]:px-[30px] max-[1400px]:items-center max-[1400px]:py-0 max-[1400px]:sticky max-[1400px]:top-0">
+             <div class="sidebar-wrapp">
                  <!-- logo -->
                  <div class="w-full flex justify-center h-fit max-[1400px]:w-fit">
                     <img class="logo max-sm:w-[30px] max-sm:h-auto" src="../../images/logo-small-black.svg" alt="logo" width="40px" height="56px">
@@ -28,12 +26,9 @@
                         <span class="menu-item-text">Проекты</span>
                         <a href="/pages/user/controlPanel.html" class="w-full flex justify-center items-center h-full  max-[1400px]:px-[5px]">
                             <div class="relative w-fit">
-                                <span class="w-[26px] h-[26px] rounded-full flex justify-center items-center 
-                                text-[12px] leading-[14.52px] text-black font-medium 
-                                bg-colorBlue absolute right-0 translate-x-[50%] top-0 translate-y-[-50%]
-                                max-sm:w-[22px] max-sm:h-[22px] max-sm:text-[10px]">12</span>
+                                <span class="menu-link-num">12</span>
                                 <svg class="max-sm:w-[24px]" width="32" height="32" viewBox="0 0 32 32" fill="" xmlns="http://www.w3.org/2000/svg">
-                                    <path class="dark:fill-[#b7b7b7]" d="M22.6666 30.3333H9.33329C3.45329 30.3333 1.66663 28.5467 1.66663 22.6667V9.33334C1.66663 
+                                    <path class="dark:fill-colorGray3" d="M22.6666 30.3333H9.33329C3.45329 30.3333 1.66663 28.5467 1.66663 22.6667V9.33334C1.66663 
                                     3.45334 3.45329 1.66667 9.33329 1.66667H11.3333C13.6666 1.66667 14.4 2.42667 15.3333 3.66667L17.3333 
                                     6.33334C17.7733 6.92 17.84 7 18.6666 7H22.6666C28.5466 7 30.3333 8.78667 30.3333 14.6667V22.6667C30.3333 
                                     28.5467 28.5466 30.3333 22.6666 30.3333ZM9.33329 3.66667C4.57329 3.66667 3.66663 4.57334 3.66663 
@@ -49,9 +44,9 @@
                         <a href="/pages/user/withdrawal.html" class="w-full flex justify-center items-center h-full max-[1400px]:px-[5px]">
                             <div class="relative w-fit">
                                 <svg class="max-sm:w-[24px]" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path class="dark:fill-[#b7b7b7]"  fill-rule="evenodd" clip-rule="evenodd" d="M2.66663 16C2.11434 16 1.66663 16.4477 1.66663 17V18C1.66663 25.24 4.75996 28.3333 12 28.3333H20C27.24 28.3333 30.3333 25.24 30.3333 18V17C30.3333 16.4477 29.8856 16 29.3333 16C28.781 16 28.3333 16.4477 28.3333 17V18C28.3333 24.1467 26.1466 26.3333 20 26.3333H12C5.85329 26.3333 3.66663 24.1467 3.66663 18V17C3.66663 16.4477 3.21891 16 2.66663 16Z" fill="#6A6A6A"/>
-                                    <path class="dark:fill-[#b7b7b7]"  d="M19.9998 9.68001C19.7465 9.68001 19.4932 9.58668 19.2932 9.38668L15.9998 6.09336L12.7065 9.38668C12.3198 9.77335 11.6798 9.77335 11.2932 9.38668C10.9065 9.00001 10.9065 8.36002 11.2932 7.97335L15.2932 3.97335C15.6798 3.58668 16.3198 3.58668 16.7065 3.97335L20.7065 7.97335C21.0932 8.36002 21.0932 9.00001 20.7065 9.38668C20.5065 9.58668 20.2532 9.68001 19.9998 9.68001Z" fill="#6A6A6A"/>
-                                    <path class="dark:fill-[#b7b7b7]"  d="M16 20C15.4533 20 15 19.4274 15 18.7368V5.26316C15 4.57263 15.4533 4 16 4C16.5467 4 17 4.57263 17 5.26316V18.7368C17 19.4442 16.5467 20 16 20Z" fill="#6A6A6A"/>
+                                    <path class="dark:fill-colorGray3"  fill-rule="evenodd" clip-rule="evenodd" d="M2.66663 16C2.11434 16 1.66663 16.4477 1.66663 17V18C1.66663 25.24 4.75996 28.3333 12 28.3333H20C27.24 28.3333 30.3333 25.24 30.3333 18V17C30.3333 16.4477 29.8856 16 29.3333 16C28.781 16 28.3333 16.4477 28.3333 17V18C28.3333 24.1467 26.1466 26.3333 20 26.3333H12C5.85329 26.3333 3.66663 24.1467 3.66663 18V17C3.66663 16.4477 3.21891 16 2.66663 16Z" fill="#6A6A6A"/>
+                                    <path class="dark:fill-colorGray3"  d="M19.9998 9.68001C19.7465 9.68001 19.4932 9.58668 19.2932 9.38668L15.9998 6.09336L12.7065 9.38668C12.3198 9.77335 11.6798 9.77335 11.2932 9.38668C10.9065 9.00001 10.9065 8.36002 11.2932 7.97335L15.2932 3.97335C15.6798 3.58668 16.3198 3.58668 16.7065 3.97335L20.7065 7.97335C21.0932 8.36002 21.0932 9.00001 20.7065 9.38668C20.5065 9.58668 20.2532 9.68001 19.9998 9.68001Z" fill="#6A6A6A"/>
+                                    <path class="dark:fill-colorGray3"  d="M16 20C15.4533 20 15 19.4274 15 18.7368V5.26316C15 4.57263 15.4533 4 16 4C16.5467 4 17 4.57263 17 5.26316V18.7368C17 19.4442 16.5467 20 16 20Z" fill="#6A6A6A"/>
                                 </svg>
                             </div>
                         </a>
@@ -61,8 +56,8 @@
                         <a href="/pages/user/profile.html" class="w-full flex justify-center items-center h-full max-[1400px]:px-[5px] menu-active">
                             <div class="relative w-fit">
                                 <svg class="max-sm:w-[24px]" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path class="dark:fill-[#b7b7b7]"   d="M16 17C11.7734 17 8.33337 13.56 8.33337 9.33332C8.33337 5.10666 11.7734 1.66666 16 1.66666C20.2267 1.66666 23.6667 5.10666 23.6667 9.33332C23.6667 13.56 20.2267 17 16 17ZM16 3.66666C12.88 3.66666 10.3334 6.21332 10.3334 9.33332C10.3334 12.4533 12.88 15 16 15C19.12 15 21.6667 12.4533 21.6667 9.33332C21.6667 6.21332 19.12 3.66666 16 3.66666Z" fill="#6A6A6A"/>
-                                    <path class="dark:fill-[#b7b7b7]"  d="M27.4535 30.3333C26.9069 30.3333 26.4535 29.88 26.4535 29.3333C26.4535 24.7333 21.7602 21 
+                                    <path class="dark:fill-colorGray3"   d="M16 17C11.7734 17 8.33337 13.56 8.33337 9.33332C8.33337 5.10666 11.7734 1.66666 16 1.66666C20.2267 1.66666 23.6667 5.10666 23.6667 9.33332C23.6667 13.56 20.2267 17 16 17ZM16 3.66666C12.88 3.66666 10.3334 6.21332 10.3334 9.33332C10.3334 12.4533 12.88 15 16 15C19.12 15 21.6667 12.4533 21.6667 9.33332C21.6667 6.21332 19.12 3.66666 16 3.66666Z" fill="#6A6A6A"/>
+                                    <path class="dark:fill-colorGray3"  d="M27.4535 30.3333C26.9069 30.3333 26.4535 29.88 26.4535 29.3333C26.4535 24.7333 21.7602 21 
                                     16.0002 21C10.2402 21 5.54687 24.7333 5.54687 29.3333C5.54687 29.88 5.09354 
                                     30.3333 4.54687 30.3333C4.00021 30.3333 3.54688 29.88 3.54688 29.3333C3.54688 23.64 9.13354 19 
                                     16.0002 19C22.8669 19 28.4535 23.64 28.4535 29.3333C28.4535 29.88 28.0002 30.3333 27.4535 30.3333Z" fill="#6A6A6A"/>
@@ -99,7 +94,7 @@
                     <!-- balance -->
                      <div class="py-[15px] px-[36px] rounded-[10px] border border-black max-lg:px-[20px]
                      dark:border-white dark:">
-                        <p class="text-[14px] leading-[16.94px] font-normal text-colorGray2 dark:text-[#B7B7B7]">
+                        <p class="text-[14px] leading-[16.94px] font-normal text-colorGray2 dark:text-colorGray3">
                             Баланс:
                             <strong class="text-black text-[16px] leading-[19.36px] dark:text-white">315 780 ₽</strong></p>
                      </div>
@@ -108,9 +103,9 @@
                       <div class="">
                         <button class="relative btn-notification" onclick="clickOpenBlock2(this,'block-notification')">
                             <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path class="dark:fill-white" d="M16.0267 27.3733C12.92 27.3733 9.81332 26.88 6.86665 25.8933C5.74665 25.5067 4.89332 24.72 4.51999 23.6933C4.13332 22.6667 4.26665 21.5333 4.87999 20.52L6.41332 17.9733C6.73332 17.44 7.02665 16.3733 7.02665 15.7467V11.8933C7.02665 6.93333 11.0667 2.89333 16.0267 2.89333C20.9867 2.89333 25.0267 6.93333 25.0267 11.8933V15.7467C25.0267 16.36 25.32 17.44 25.64 17.9867L27.16 20.52C27.7333 21.48 27.84 22.64 27.4533 23.6933C27.0667 24.7467 26.2267 25.5467 25.1733 25.8933C22.24 26.88 19.1333 27.3733 16.0267 27.3733ZM16.0267 4.89333C12.1733 4.89333 9.02666 8.02667 9.02666 11.8933V15.7467C9.02666 16.72 8.62666 18.16 8.13332 19L6.59999 21.5467C6.30665 22.04 6.22666 22.56 6.39999 23C6.55999 23.4533 6.95999 23.8 7.50666 23.9867C13.08 25.8533 18.9867 25.8533 24.56 23.9867C25.04 23.8267 25.4133 23.4667 25.5867 22.9867C25.76 22.5067 25.72 21.9867 25.4533 21.5467L23.92 19C23.4133 18.1333 23.0267 16.7067 23.0267 15.7333V11.8933C23.0267 8.02667 19.8933 4.89333 16.0267 4.89333Z" fill="#292D32"/>
-                                <path class="dark:fill-white" d="M18.5067 5.25333C18.4133 5.25333 18.32 5.24 18.2267 5.21333C17.84 5.10667 17.4667 5.02667 17.1067 4.97333C15.9733 4.82667 14.88 4.90667 13.8533 5.21333C13.48 5.33333 13.08 5.21333 12.8267 4.93333C12.5733 4.65333 12.4933 4.25333 12.64 3.89333C13.1867 2.49333 14.52 1.57333 16.04 1.57333C17.56 1.57333 18.8933 2.48 19.44 3.89333C19.5733 4.25333 19.5067 4.65333 19.2533 4.93333C19.0533 5.14667 18.7733 5.25333 18.5067 5.25333Z" fill="#292D32"/>
-                                <path class="dark:fill-white" d="M16.0266 30.4133C14.7066 30.4133 13.4266 29.88 12.4933 28.9467C11.5599 28.0133 11.0266 26.7333 11.0266 25.4133H13.0266C13.0266 26.2 13.3466 26.9733 13.9066 27.5333C14.4666 28.0933 15.2399 28.4133 16.0266 28.4133C17.6799 28.4133 19.0266 27.0667 19.0266 25.4133H21.0266C21.0266 28.1733 18.7866 30.4133 16.0266 30.4133Z" fill="#292D32"/>
+                                <path class="dark-fill-white" d="M16.0267 27.3733C12.92 27.3733 9.81332 26.88 6.86665 25.8933C5.74665 25.5067 4.89332 24.72 4.51999 23.6933C4.13332 22.6667 4.26665 21.5333 4.87999 20.52L6.41332 17.9733C6.73332 17.44 7.02665 16.3733 7.02665 15.7467V11.8933C7.02665 6.93333 11.0667 2.89333 16.0267 2.89333C20.9867 2.89333 25.0267 6.93333 25.0267 11.8933V15.7467C25.0267 16.36 25.32 17.44 25.64 17.9867L27.16 20.52C27.7333 21.48 27.84 22.64 27.4533 23.6933C27.0667 24.7467 26.2267 25.5467 25.1733 25.8933C22.24 26.88 19.1333 27.3733 16.0267 27.3733ZM16.0267 4.89333C12.1733 4.89333 9.02666 8.02667 9.02666 11.8933V15.7467C9.02666 16.72 8.62666 18.16 8.13332 19L6.59999 21.5467C6.30665 22.04 6.22666 22.56 6.39999 23C6.55999 23.4533 6.95999 23.8 7.50666 23.9867C13.08 25.8533 18.9867 25.8533 24.56 23.9867C25.04 23.8267 25.4133 23.4667 25.5867 22.9867C25.76 22.5067 25.72 21.9867 25.4533 21.5467L23.92 19C23.4133 18.1333 23.0267 16.7067 23.0267 15.7333V11.8933C23.0267 8.02667 19.8933 4.89333 16.0267 4.89333Z" fill="#292D32"/>
+                                <path class="dark-fill-white" d="M18.5067 5.25333C18.4133 5.25333 18.32 5.24 18.2267 5.21333C17.84 5.10667 17.4667 5.02667 17.1067 4.97333C15.9733 4.82667 14.88 4.90667 13.8533 5.21333C13.48 5.33333 13.08 5.21333 12.8267 4.93333C12.5733 4.65333 12.4933 4.25333 12.64 3.89333C13.1867 2.49333 14.52 1.57333 16.04 1.57333C17.56 1.57333 18.8933 2.48 19.44 3.89333C19.5733 4.25333 19.5067 4.65333 19.2533 4.93333C19.0533 5.14667 18.7733 5.25333 18.5067 5.25333Z" fill="#292D32"/>
+                                <path class="dark-fill-white" d="M16.0266 30.4133C14.7066 30.4133 13.4266 29.88 12.4933 28.9467C11.5599 28.0133 11.0266 26.7333 11.0266 25.4133H13.0266C13.0266 26.2 13.3466 26.9733 13.9066 27.5333C14.4666 28.0933 15.2399 28.4133 16.0266 28.4133C17.6799 28.4133 19.0266 27.0667 19.0266 25.4133H21.0266C21.0266 28.1733 18.7866 30.4133 16.0266 30.4133Z" fill="#292D32"/>
                             </svg>
                             <span class="w-[10px] h-[10px] rounded-full bg-[#47E1DD] border-2 border-white absolute right-[3px] top-[5px]"></span>
                             <!-- block с увидомлением -->
@@ -139,15 +134,15 @@
                                 <ul>
                                     <li class="w-full h-fit">
                                         <a href="#" class="px-[25px] py-[10px] flex items-center justify-center text-[#1c1c1c] text-[15px] 
-                                    duration-[.2s] hover:duration-[.2s] hover:text-yellow-500 text-nowrap text-left">Личный кабинет</a>
+                                    duration-[.2s] hover:duration-[.2s] hover:text-colorBlue text-nowrap text-left">Личный кабинет</a>
                                     </li>
                                     <li class="w-full h-fit">
                                         <a href="#" class="px-[25px] py-[10px] flex items-center justify-center text-[#1c1c1c] text-[15px] 
-                                    duration-[.2s] hover:duration-[.2s] hover:text-yellow-500 text-nowrap text-left">Безопасность</a>
+                                    duration-[.2s] hover:duration-[.2s] hover:text-colorBlue text-nowrap text-left">Безопасность</a>
                                     </li>
                                     <li class="w-full h-fit">
                                         <a href="/pages/user/support.html" class="px-[25px] py-[10px] flex items-center justify-center text-[#1c1c1c] text-[15px] 
-                                    duration-[.2s] hover:duration-[.2s] hover:text-yellow-500 text-nowrap text-left">Помощь</a>
+                                    duration-[.2s] hover:duration-[.2s] hover:text-colorBlue text-nowrap text-left">Помощь</a>
                                     </li>
                                     <li>
                                         <a href="../auth.html" class="px-[25px] py-[10px] text-red-600 text-[15px] text-left">Выход</a>
@@ -177,7 +172,7 @@
                                 <!-- balance -->
                                 <div class="py-[15px] px-[36px] rounded-[10px] border border-black max-lg:px-[15px]
                                 dark:border-white">
-                                    <p class="text-[14px] leading-[16.94px] font-normal text-colorGray2 dark:text-[#B7B7B7]">
+                                    <p class="text-[14px] leading-[16.94px] font-normal text-colorGray2 dark:text-colorGray3">
                                         Баланс: 
                                         <strong class="text-black text-[16px] leading-[19.36px] dark:text-white">315 780 ₽</strong></p>
                                 </div>
@@ -186,9 +181,9 @@
                                 <div>
                                     <button class="relative btn-notification" onclick="clickOpenBlock2(this,'block-notification')">
                                         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path class="dark:fill-white" d="M16.0267 27.3733C12.92 27.3733 9.81332 26.88 6.86665 25.8933C5.74665 25.5067 4.89332 24.72 4.51999 23.6933C4.13332 22.6667 4.26665 21.5333 4.87999 20.52L6.41332 17.9733C6.73332 17.44 7.02665 16.3733 7.02665 15.7467V11.8933C7.02665 6.93333 11.0667 2.89333 16.0267 2.89333C20.9867 2.89333 25.0267 6.93333 25.0267 11.8933V15.7467C25.0267 16.36 25.32 17.44 25.64 17.9867L27.16 20.52C27.7333 21.48 27.84 22.64 27.4533 23.6933C27.0667 24.7467 26.2267 25.5467 25.1733 25.8933C22.24 26.88 19.1333 27.3733 16.0267 27.3733ZM16.0267 4.89333C12.1733 4.89333 9.02666 8.02667 9.02666 11.8933V15.7467C9.02666 16.72 8.62666 18.16 8.13332 19L6.59999 21.5467C6.30665 22.04 6.22666 22.56 6.39999 23C6.55999 23.4533 6.95999 23.8 7.50666 23.9867C13.08 25.8533 18.9867 25.8533 24.56 23.9867C25.04 23.8267 25.4133 23.4667 25.5867 22.9867C25.76 22.5067 25.72 21.9867 25.4533 21.5467L23.92 19C23.4133 18.1333 23.0267 16.7067 23.0267 15.7333V11.8933C23.0267 8.02667 19.8933 4.89333 16.0267 4.89333Z" fill="#292D32"/>
-                                            <path class="dark:fill-white" d="M18.5067 5.25333C18.4133 5.25333 18.32 5.24 18.2267 5.21333C17.84 5.10667 17.4667 5.02667 17.1067 4.97333C15.9733 4.82667 14.88 4.90667 13.8533 5.21333C13.48 5.33333 13.08 5.21333 12.8267 4.93333C12.5733 4.65333 12.4933 4.25333 12.64 3.89333C13.1867 2.49333 14.52 1.57333 16.04 1.57333C17.56 1.57333 18.8933 2.48 19.44 3.89333C19.5733 4.25333 19.5067 4.65333 19.2533 4.93333C19.0533 5.14667 18.7733 5.25333 18.5067 5.25333Z" fill="#292D32"/>
-                                            <path class="dark:fill-white" d="M16.0266 30.4133C14.7066 30.4133 13.4266 29.88 12.4933 28.9467C11.5599 28.0133 11.0266 26.7333 11.0266 25.4133H13.0266C13.0266 26.2 13.3466 26.9733 13.9066 27.5333C14.4666 28.0933 15.2399 28.4133 16.0266 28.4133C17.6799 28.4133 19.0266 27.0667 19.0266 25.4133H21.0266C21.0266 28.1733 18.7866 30.4133 16.0266 30.4133Z" fill="#292D32"/>
+                                            <path class="dark-fill-white" d="M16.0267 27.3733C12.92 27.3733 9.81332 26.88 6.86665 25.8933C5.74665 25.5067 4.89332 24.72 4.51999 23.6933C4.13332 22.6667 4.26665 21.5333 4.87999 20.52L6.41332 17.9733C6.73332 17.44 7.02665 16.3733 7.02665 15.7467V11.8933C7.02665 6.93333 11.0667 2.89333 16.0267 2.89333C20.9867 2.89333 25.0267 6.93333 25.0267 11.8933V15.7467C25.0267 16.36 25.32 17.44 25.64 17.9867L27.16 20.52C27.7333 21.48 27.84 22.64 27.4533 23.6933C27.0667 24.7467 26.2267 25.5467 25.1733 25.8933C22.24 26.88 19.1333 27.3733 16.0267 27.3733ZM16.0267 4.89333C12.1733 4.89333 9.02666 8.02667 9.02666 11.8933V15.7467C9.02666 16.72 8.62666 18.16 8.13332 19L6.59999 21.5467C6.30665 22.04 6.22666 22.56 6.39999 23C6.55999 23.4533 6.95999 23.8 7.50666 23.9867C13.08 25.8533 18.9867 25.8533 24.56 23.9867C25.04 23.8267 25.4133 23.4667 25.5867 22.9867C25.76 22.5067 25.72 21.9867 25.4533 21.5467L23.92 19C23.4133 18.1333 23.0267 16.7067 23.0267 15.7333V11.8933C23.0267 8.02667 19.8933 4.89333 16.0267 4.89333Z" fill="#292D32"/>
+                                            <path class="dark-fill-white" d="M18.5067 5.25333C18.4133 5.25333 18.32 5.24 18.2267 5.21333C17.84 5.10667 17.4667 5.02667 17.1067 4.97333C15.9733 4.82667 14.88 4.90667 13.8533 5.21333C13.48 5.33333 13.08 5.21333 12.8267 4.93333C12.5733 4.65333 12.4933 4.25333 12.64 3.89333C13.1867 2.49333 14.52 1.57333 16.04 1.57333C17.56 1.57333 18.8933 2.48 19.44 3.89333C19.5733 4.25333 19.5067 4.65333 19.2533 4.93333C19.0533 5.14667 18.7733 5.25333 18.5067 5.25333Z" fill="#292D32"/>
+                                            <path class="dark-fill-white" d="M16.0266 30.4133C14.7066 30.4133 13.4266 29.88 12.4933 28.9467C11.5599 28.0133 11.0266 26.7333 11.0266 25.4133H13.0266C13.0266 26.2 13.3466 26.9733 13.9066 27.5333C14.4666 28.0933 15.2399 28.4133 16.0266 28.4133C17.6799 28.4133 19.0266 27.0667 19.0266 25.4133H21.0266C21.0266 28.1733 18.7866 30.4133 16.0266 30.4133Z" fill="#292D32"/>
                                         </svg>
                                         <span class="w-[10px] h-[10px] rounded-full bg-[#47E1DD] border-2 border-white absolute right-[3px] top-[5px]"></span>
                                           <!-- block с увидомлением -->
@@ -218,15 +213,15 @@
                                     <ul>
                                         <li class="w-full h-fit">
                                             <a href="#" class="px-[25px] py-[10px] flex items-center justify-center text-[#1c1c1c] text-[15px] 
-                                        duration-[.2s] hover:duration-[.2s] hover:text-yellow-500 text-nowrap text-left">Личный кабинет</a>
+                                        duration-[.2s] hover:duration-[.2s] hover:text-colorBlue text-nowrap text-left">Личный кабинет</a>
                                         </li>
                                         <li class="w-full h-fit">
                                             <a href="#" class="px-[25px] py-[10px] flex items-center justify-center text-[#1c1c1c] text-[15px] 
-                                        duration-[.2s] hover:duration-[.2s] hover:text-yellow-500 text-nowrap text-left">Безопасность</a>
+                                        duration-[.2s] hover:duration-[.2s] hover:text-colorBlue text-nowrap text-left">Безопасность</a>
                                         </li>
                                         <li class="w-full h-fit">
                                             <a href="/pages/user/support.html" class="px-[25px] py-[10px] flex items-center justify-center text-[#1c1c1c] text-[15px] 
-                                        duration-[.2s] hover:duration-[.2s] hover:text-yellow-500 text-nowrap text-left">Помощь</a>
+                                        duration-[.2s] hover:duration-[.2s] hover:text-colorBlue text-nowrap text-left">Помощь</a>
                                         </li>
                                         <li>
                                             <a href="../auth.html" class="px-[25px] py-[10px] text-red-600 text-[15px] text-left">Выход</a>
@@ -247,9 +242,7 @@
                  <div class="flex gap-x-[70px] max-[1536px]:gap-x-[20px]
                  max-lg:flex-col max-lg:gap-y-[40px] ">
                     <!-- menu profile -->
-                     <ul class="flex flex-col gap-y-[40px] menu-profile
-                     max-lg:flex-row max-lg:gap-x-[20px] max-md:w-full max-md:overflow-hidden 
-                     max-md:overflow-x-auto max-[500px]:px-[20px] w-[205px]">
+                     <ul class="menu-profile-wrapp">
                         <li>
                             <a href="/pages/user/profile.html">
                                 <?xml version="1.0" encoding="UTF-8"?>
@@ -386,9 +379,7 @@
               <!-- главное меню -->
               <div class="">
                 <!-- pc version -->
-                <div class="max-md:!hidden fixed right-0 top-0 w-[calc(100%-90px)] h-full bg-black  flex-col justify-center pl-[200px]
-                max-[1400px]:left-0 max-[1400px]:w-full max-[1400px]:h-full max-[1400px]:bottom-0 max-[1400px]:top-auto hidden main-menu
-                max-xl:pl-[100px]">
+                <div class="main-menu-wrapp main-menu">
                     <!-- close btn -->
                     <button type="button" class="mb-[50px] close-main-menu-btn">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-white w-[40px] h-[40px]">
@@ -400,45 +391,51 @@
                      <div class="flex gap-x-[200px] max-lg:gap-x-[100px]">
                         <ul class="flex flex-col gap-y-[30px]">
                             <p class="text-colorGray2 text-[16px] font-normal">Главное</p>
-                            <li><a href="/pages/about.html" class="text-[16px] text-white transition-all hover:transition-all
-                                hover:text-yellow-500">О сервисе</a></li>
+                            <li><a href="/pages/cards.html" class="text-[16px] text-white transition-all hover:transition-all
+                                hover:text-colorBlue">Иностранные карты</a></li>
                             <li><a href="#" class="text-[16px] text-white
                                 transition-all hover:transition-all
-                                hover:text-yellow-500">Новости</a></li>
-                            <li><a href="/pages/requirements.html" class="text-[16px] text-white
+                                hover:text-colorBlue">Публичная оферта</a></li>
+                            <li><a href="/pages/user/support.html" class="text-[16px] text-white
                                 transition-all hover:transition-all
-                                hover:text-yellow-500">Требования к сайтам</a></li>
+                                hover:text-colorBlue">Помощь</a></li>
                             <li><a href="#" class="text-[16px] text-white
                                 transition-all hover:transition-all
-                                hover:text-yellow-500">Публичная оферта</a></li>
+                                hover:text-colorBlue">Условия оплаты</a></li>
+                            <li><a href="#" class="text-[16px] text-white
+                                transition-all hover:transition-all
+                                hover:text-colorBlue">Инструкция по оплате</a></li>
                         </ul>
                         <ul class="flex flex-col gap-y-[30px]">
                             <p class="text-colorGray2 text-[16px] font-normal">Клиентам</p>
-                            <li><a href="/pages/user/support.html" class="text-[16px] text-white
-                                transition-all hover:transition-all
-                                hover:text-yellow-500">Помощь</a></li>
                             <li><a href="#" class="text-[16px] text-white
                                 transition-all hover:transition-all
-                                hover:text-yellow-500">Тарифы</a></li>
+                                hover:text-colorBlue">Онлайн касса по 54-Ф3</a></li>
                             <li><a href="#" class="text-[16px] text-white
                                 transition-all hover:transition-all
-                                hover:text-yellow-500">CMS модули</a></li>
+                                hover:text-colorBlue">Политика конфиденциальности</a></li>
                             <li><a href="#" class="text-[16px] text-white
                                 transition-all hover:transition-all
-                                hover:text-yellow-500">Документация</a></li>
+                                hover:text-colorBlue">Политика AML</a></li>
+                            <li><a href="#" class="text-[16px] text-white
+                                transition-all hover:transition-all
+                                hover:text-colorBlue">Защита данных</a></li>
+                            <li><a href="#" class="text-[16px] text-white
+                                transition-all hover:transition-all
+                                hover:text-colorBlue">Пользовательское соглашение</a></li>
                         </ul>
-                        <ul class="flex flex-col gap-y-[30px]">
+                        <!-- <ul class="flex flex-col gap-y-[30px]">
                             <p class="text-colorGray2 text-[16px] font-normal">Плательщикам</p>
                             <li><a href="/pages/contact.html" class="text-[16px] text-white
                                 transition-all hover:transition-all
-                                hover:text-yellow-500">Контакты</a></li>
+                                hover:text-colorBlue">Контакты</a></li>
                             <li><a href="#" class="text-[16px] text-white
                                 transition-all hover:transition-all
-                                hover:text-yellow-500">Инструкция по оплате</a></li>
+                                hover:text-colorBlue">Инструкция по оплате</a></li>
                             <li><a href="#" class="text-[16px] text-white
                                 transition-all hover:transition-all
-                                hover:text-yellow-500">Условия оплаты</a></li>
-                        </ul>
+                                hover:text-colorBlue">Условия оплаты</a></li>
+                        </ul> -->
                      </div>
                     <!-- menu end -->
                      <!-- links social media -->
@@ -460,6 +457,7 @@
                             <li><a href="/pages/user/controlPanel.html" class="dark:text-white">Проекты</a></li>
                             <li><a href="/pages/user/withdrawal.html" class="dark:text-white">Выплаты</a></li>
                             <li><a href="/pages/user/security.html" class="dark:text-white">Безопасность</a></li>
+                            <li><a href="/pages/user/support.html" class="dark:text-white">Помощь</a></li>
                             <li><a href="/pages/auth.html" class="text-red-600">Выход</a></li>
                         </ul>
                         <a href="/pages/user/support.html" class="text-black rounded-[10px] px-[20px] h-[40px] bg-colorBlue
